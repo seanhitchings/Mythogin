@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- key variable that controls the base directory -->
+  <base href="/mythogin/">
+
+  <title>Mythogin — Creativity, Criticism, Culture</title>
+  <meta name="description" content="Storytelling in American Culture: Books, Film, Television, Games, and Emerging Media" />
+
+  <!-- FILE LOCATION: /Mythogin/main.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components (match Film index conventions) -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/main-hero.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/topics.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="css/pages/main.css">
+</head>
+
+<body class="main">
+
+  <!-- Shared Nav -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <!-- Recommendations -->
+          <a class="nav-link"
+             href="recommendations/index.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Features -->
+          <a class="nav-link"
+             href="features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <!-- Hero-Journeys -->
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="hero-journeys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Hero-Journeys categories">
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <!-- Perspective -->
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
+
+          <!-- About -->
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <!-- Search -->
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" aria-label="Mythogin hero">
+    <div class="container">
+      <div class="hero-card hero-card--image bleed-pad">
+
+        <div class="hero-media">
+          <img class="hero-bg" src="images/main/hero.webp" alt="Mythogin hero image" />
+          <img class="hero-title-img" src="images/main/title.webp" alt="Mythogin" />
+          <div class="hero-media-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-inner hero-inner--overlay">
+          <p class="hero-tagline hero-tagline--fancy hero-tagline--funnel hero-tagline--funnel-3">
+            <span class="line line-1">Storytelling in American Culture</span>
+            <span class="line line-2"><span class="key">Books</span>, Film, TV &amp; <span class="key">Games</span></span>
+            <span class="line line-3">and Emerging Media</span>
+          </p>
+        </div>
+
+        <div class="cta-row">
+          <!-- optional CTAs -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<section class="hf" aria-label="Featured story">
+  <div class="container">
+
+    <div class="hf-card bleed-pad" data-role="featured-story">
+
+      <div class="hf-head">
+        <h2 class="hf-title">Featured Story</h2>
+        <span class="hf-chip" data-bind="badge">new</span>
+      </div>
+
+      <div class="hf-body">
+        <a class="hf-media" href="hero-journeys/tv/andor/index.html" aria-label="Open featured story">
+          <img
+            class="hf-img"
+            src="images/topics/tv/andor-ls.webp"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+
+        <div class="hf-copy">
+          <h3 class="hf-name">
+            <span class="hf-name-main" data-bind="title-main">Rebellion without consequence</span>
+            <span class="hf-name-sub" data-bind="title-sub">Disney strikes again — Andor</span>
+          </h3>
+
+          <p class="hf-desc" data-bind="desc">
+            Andor depicts the seeds of rebellion but neglects to describe what's wrong with the empire or why a rebellion is necessary. Here's where all the momentum should have led.
+          </p>
+
+          <div class="hf-actions">
+            <a class="btn primary" data-bind="read-url" href="hero-journeys/tv/andor/index.html">Read essay</a>
+
+            <div class="hf-chip hf-chip--audio" role="group" aria-label="Audio options">
+              <span class="hf-audio-label">🎧 Audio</span>
+              <a class="hf-audio-link" data-bind="audio-listen-url" href="hero-journeys/tv/andor/audio.mp3">Listen</a>
+              <a class="hf-audio-link" data-bind="audio-download-url" href="hero-journeys/tv/andor/audio.mp3" download>Download</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hf-divider" aria-hidden="true"></div>
+
+      <div class="hf-discover">
+        <h2 class="section-title">Discover new Stories</h2>
+        <p class="section-sub section-sub--split">
+          <span>Mythogin features in-depth discussion on stories selected across culture:</span>
+          <span>Each one includes constructive criticism, creative improvements, and impact upon society.</span>
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="hero-journeys/index.html">Browse Topics</a>
+          <a class="btn" href="features/index.html">See Media</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <main class="story recs">
+
+    <!-- HIGHLIGHTED FEATURES (match Features page card grid) -->
+    <section class="books-catalogue" aria-label="Highlighted features">
+      <div class="container">
+
+        <div class="section-card card--surface bleed-pad">
+          <header class="section-head">
+            <h2 class="section-title">Highlighted Features</h2>
+            <p class="section-sub">
+              A small set of featured appearances worth starting with.
+            </p>
+          </header>
+
+          <div class="books-grid">
+
+            <!-- Highlighted: Podcast -->
+            <article class="section-card card--portrait card--stack card--contain">
+              <div class="card-media" aria-hidden="true">
+                <img src="images/features/podcasts-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="card-body">
+                <div class="card-head">
+                  <span class="chip">Featured</span>
+                  <span class="chip chip--muted">Podcast</span>
+                </div>
+
+                <h3 class="card-title">
+                  <a href="#" style="color:inherit; text-decoration:none;">Why Actual Epics are so Rare</a>
+                </h3>
+
+                <p class="card-desc">
+                  The Storycraft Podcast — a wide-ranging conversation about epics and why they’re paradoxically scarce.
+                </p>
+
+                <div class="card-actions" style="justify-content:center">
+                  <a class="btn primary" href="#">Listen</a>
+                </div>
+
+                <div class="audio-chip" aria-label="Audio options">
+                  <span class="audio-chip-label">Audio</span>
+                  <div class="audio-chip-actions">
+                    <a class="audio-chip-btn" href="#">Listen</a>
+                    <a class="audio-chip-btn" href="#" download>Download</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Highlighted: Talk -->
+            <article class="section-card card--portrait card--stack card--contain">
+              <div class="card-media" aria-hidden="true">
+                <img src="images/features/dream-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="card-body">
+                <div class="card-head">
+                  <span class="chip">Featured</span>
+                  <span class="chip chip--muted">Talk</span>
+                </div>
+
+                <h3 class="card-title">
+                  <a href="#" style="color:inherit; text-decoration:none;">The Fate of the American Dream</a>
+                </h3>
+
+                <p class="card-desc">
+                  A conversation about the organizing principle of the American empire and what might replace it.
+                </p>
+
+                <div class="card-actions" style="justify-content:center">
+                  <a class="btn primary" href="#">Explore</a>
+                </div>
+
+                <div class="audio-chip" aria-label="Audio options">
+                  <span class="audio-chip-label">Audio</span>
+                  <div class="audio-chip-actions">
+                    <a class="audio-chip-btn" href="#">Listen</a>
+                    <a class="audio-chip-btn" href="#" download>Download</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Highlighted: Essay / Read -->
+            <article class="section-card card--portrait card--stack card--contain">
+              <div class="card-media" aria-hidden="true">
+                <img src="images/features/politics-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="card-body">
+                <div class="card-head">
+                  <span class="chip">Featured</span>
+                  <span class="chip chip--muted">Essay</span>
+                </div>
+
+                <h3 class="card-title">
+                  <a href="#" style="color:inherit; text-decoration:none;">Mythmaking in politics</a>
+                </h3>
+
+                <p class="card-desc">
+                  An objective (apolitical) analysis of how myths shape political discourse.
+                </p>
+
+                <div class="card-actions" style="justify-content:center">
+                  <a class="btn primary" href="#">Explore</a>
+                </div>
+
+                <div class="audio-chip" aria-label="Audio options">
+                  <span class="audio-chip-label">Audio</span>
+                  <div class="audio-chip-actions">
+                    <a class="audio-chip-btn" href="#">Listen</a>
+                    <a class="audio-chip-btn" href="#" download>Download</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /.books-grid -->
+        </div><!-- /.section-card -->
+
+      </div><!-- /.container -->
+    </section>
+
+    <!-- Pillars / Perspective -->
+    <section class="pillars-wrap" aria-label="Perspective pillars">
+      <div class="container">
+        <div class="section-card card--surface bleed-pad">
+          <header class="section-head">
+            <h2 class="section-title">Storytelling Perspectives</h2>
+            <p class="section-sub">The Significance, Structure, and Role of Storytelling.</p>
+          </header>
+
+          <div class="pillars pillars--four">
+
+            <a class="pillar pillar--meaning" href="perspective/meaning/index.html">
+              <div class="pillar-img" aria-hidden="true">
+                <img class="pillar-photo" src="images/perspective/meaning-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="pillar-body">
+                <div class="meta"><span>What Stories Do</span></div>
+                <h3 class="pillar-title">Storytelling gives Experience Meaning</h3>
+                <p class="pillar-text">
+                  Stories are how people remember their true nature, as self-awareness grows. They communicate values and experiences across distance and time.
+                </p>
+              </div>
+            </a>
+
+            <a class="pillar pillar--erosion" href="perspective/erosion/index.html">
+              <div class="pillar-img" aria-hidden="true">
+                <img class="pillar-photo" src="images/perspective/collapse-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="pillar-body">
+                <div class="meta"><span>Why they Matter</span></div>
+                <h3 class="pillar-title">The Erosion of Myth Precedes Civilization's</h3>
+                <p class="pillar-text">
+                  Without myth, culture no longer inspires cooperation, but fragments into mindless spectacle—where distraction becomes the goal.
+                </p>
+              </div>
+            </a>
+
+            <a class="pillar pillar--resonate" href="perspective/restoration/index.html">
+              <div class="pillar-img" aria-hidden="true">
+                <img class="pillar-photo" src="images/perspective/resonate-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="pillar-body">
+                <div class="meta"><span>How Restoration Occurs</span></div>
+                <h3 class="pillar-title">How to Make Stories Resonate</h3>
+                <p class="pillar-text">
+                  Epics challenge assumptions and invite new perspectives. This changes culture for good or ill.
+                </p>
+              </div>
+            </a>
+
+          </div><!-- /.pillars -->
+        </div><!-- /.section-card -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- Industry / The Story Industry -->
+    <section class="curtain-wrap" aria-label="Industry">
+      <div class="container">
+        <div class="section-card curtain-card card--surface bleed-pad">
+
+          <header class="section-head">
+            <h2 class="section-title">The Story Industry</h2>
+            <p class="section-sub">
+              A wide-angle look at the industry behind modern storytelling — The psychology, sociology, and political-economy of the entertainment industry.
+            </p>
+          </header>
+
+          <div class="curtain-grid">
+
+            <a class="curtain-pillar curtain-pillar--system" href="perspective/industry/index.html">
+              <div class="curtain-img" aria-hidden="true">
+                <img class="curtain-photo" src="images/perspective/economy-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="curtain-body">
+                <div class="curtain-kicker">The System</div>
+                <h3 class="curtain-title">The Political Economy of Storytelling</h3>
+                <p class="curtain-text">
+                  Incentives, risk-minimization, and brand protection turn art into a pipeline — producing spectacle without soul.
+                </p>
+              </div>
+            </a>
+
+            <a class="curtain-pillar curtain-pillar--output" href="perspective/industry/index.html#output">
+              <div class="curtain-img" aria-hidden="true">
+                <img class="curtain-photo" src="images/perspective/assembly-ls.webp" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="curtain-body">
+                <div class="curtain-kicker">The Output</div>
+                <h3 class="curtain-title">Why Everything Now Feels the Same</h3>
+                <p class="curtain-text">
+                  The structural reasons originality is punished — and why audiences feel the hollowness before they can name it.
+                </p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <!-- Mythogin -->
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="footer-col">
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
+          <ul>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+          </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="footer-col">
+          <h4><a href="features/index.html">Features</a></h4>
+          <ul>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Hero-Journeys -->
+        <div class="footer-col">
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+          <ul>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/film/index.html">Film</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <!-- Perspective -->
+        <div class="footer-col">
+          <h4><a href="perspective/index.html">Perspective</a></h4>
+          <ul>
+            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script defer src="js/story-data.js"></script>
+  <!-- <script defer src="js/featured.js"></script> -->
+  <script defer src="js/main.js"></script>
+
+</body>
+</html>
