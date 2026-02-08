@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Mythogin — tokens.css
+   Global design tokens + font registration only.
+   No layout rules.
+   No element styling.
+   ========================================================================== */
+
+/* ==========================================================================
+   Core Tokens
+   ========================================================================== */
+
+:root{
+
+  /* -----------------------------------------------------------------------
+     Core palette
+     ----------------------------------------------------------------------- */
+  --bg: #0b0d10;
+  --text: #e8edf5;
+  --muted: #aab4c3;
+  --line: rgba(255,255,255,.10);
+
+  --panel: #11151b;
+  --panel2:#0f1319;
+
+  /* Accent palette */
+  --accent:  #d7bca1;
+  --accent2: #a1bbd7;
+  --accent3: #e5e6fa;
+
+  /* Links */
+  --link: #f0e2a0;
+  --link-hover: #ffffff;
+  --link-underline: rgba(240,226,160,.42);
+
+  /* -----------------------------------------------------------------------
+     Layout primitives
+     ----------------------------------------------------------------------- */
+  --max: 1160px;
+  --pad: clamp(16px, 2.2vw, 28px);
+
+  --radius: 18px;
+  --radius-sm: 14px;
+
+  --shadow: 0 14px 40px rgba(0,0,0,.45);
+
+  /* -----------------------------------------------------------------------
+     Typography stacks
+     ----------------------------------------------------------------------- */
+
+  /* Primary serif (site headings & hero text) */
+  --serif:
+    "Cormorant Garamond",
+    ui-serif,
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
+
+  /* UI / body text */
+  --sans:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Arial,
+    "Noto Sans",
+    "Liberation Sans",
+    sans-serif;
+
+  /* Code / technical */
+  --mono:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+
+  /* -----------------------------------------------------------------------
+     Landing page tokens
+     ----------------------------------------------------------------------- */
+  --landing-max: var(--max);
+  --landing-gutter: var(--pad);
+  --landing-overlap: 64px;
+}
+
+/* ==========================================================================
+   Global Font Registrations
+   These must NOT live inside :root
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Cormorant Garamond — variable font
+   -------------------------------------------------------------------------- */
+
+@font-face{
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf")
+       format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/Cormorant_Garamond/CormorantGaramond-Italic-VariableFont_wght.ttf")
+       format("truetype");
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --------------------------------------------------------------------------
+   Italianno — display font (Recommendations page)
+   -------------------------------------------------------------------------- */
+
+@font-face{
+  font-family: "Italianno";
+  src: url("../fonts/Italianno.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+
+  <title>Mythogin — Mythmaking in Politics</title>
+  <meta name="description" content="An objective (apolitical) analysis of how myths shape political discourse: identity, moral theater, and persuasion." />
+  <link rel="canonical" href="/features/mythmaking-politics/index.html" />
+  <!-- FILE LOCATION: /Mythogin/features/mythmaking-politics/index.html -->
+
+  <!-- Social (safe defaults) -->
+  <meta property="og:site_name" content="Mythogin" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Mythmaking in Politics" />
+  <meta property="og:description" content="An objective (apolitical) analysis of how myths shape political discourse: identity, moral theater, and persuasion." />
+  <meta property="og:image" content="/images/topics/politics.webp" />
+  <meta property="og:url" content="/features/mythmaking-politics/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0f1319" />
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css" />
+  <link rel="stylesheet" href="css/components/hero.css" />
+  <link rel="stylesheet" href="css/components/card.css" />
+  <link rel="stylesheet" href="css/components/footer.css" />
+  <link rel="stylesheet" href="css/components/utilities.css" />
+
+  <!-- Story layout (grid + toc layout) -->
+  <link rel="stylesheet" href="css/components/story-card.css" />
+
+  <!-- NEW: Features hero (landscape banner) -->
+  <link rel="stylesheet" href="css/components/features-card.css" />
+
+  <!-- TOC / widgets -->
+  <link rel="stylesheet" href="css/components/drawer.css" />
+  <link rel="stylesheet" href="css/components/topic-nav.css" />
+</head>
+
+<body class="story story--features">
+
+  <a class="skip-link sr-only" href="#main">Skip to content</a>
+
+  <!-- Shared Nav -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="/home.html" aria-label="Mythogin home">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin" />
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="/recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- NOTE: no aria-current here; main.js will set it for /features/* -->
+          <a class="nav-link"
+             href="/features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Hero-Journeys categories">
+              <a role="menuitem" href="/herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="/herojourneys/film/index.html">Film</a>
+              <a role="menuitem" href="/herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="/herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="/herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="/herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="/perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="/perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="/about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="/topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Feature hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <!-- Landscape banner frame (features-card.css controls aspect/fit) -->
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/politics.webp" alt="" loading="eager" decoding="async" />
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content story-hero-content">
+            <p class="story-kicker">Feature</p>
+
+            <h1 class="topics-hero-title">Mythmaking in Politics</h1>
+
+            <p class="topics-hero-lead">
+              An apolitical analysis of myth as social technology: how narratives coordinate groups, create moral theater,
+              and convert attention into legitimacy.
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip (template-ready) -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <button class="audio-chip-btn" type="button" data-audio-action="play" aria-label="Listen">
+                  Listen
+                </button>
+                <a class="audio-chip-btn" href="#" download aria-label="Download audio">
+                  Download
+                </a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY -->
+    <section class="story-body" aria-label="Feature content">
+      <div class="container">
+
+        <div class="story-layout story-layout--toc">
+
+          <article class="story-article">
+
+            <section class="story-section section-card card--surface bleed-pad" id="thesis">
+              <header class="section-head">
+                <h2 class="section-title">Thesis</h2>
+                <p class="section-sub">What “mythmaking” does, regardless of ideology.</p>
+              </header>
+
+              <p>
+                Mythmaking is the process of turning complexity into a story that feels morally obvious.
+                The story produces identity (“who we are”), threat (“what endangers us”), and duty (“what must be done”).
+                It compresses an infinite world into a few emotionally loaded symbols that people can coordinate around.
+              </p>
+
+              <ul class="story-bullets">
+                <li><strong>Identity:</strong> belonging, status, purity, the in-group face.</li>
+                <li><strong>Enemy:</strong> a simplified antagonist that holds the system’s anxieties.</li>
+                <li><strong>Ritual:</strong> slogans, hashtags, chants, spectacles.</li>
+                <li><strong>Permission:</strong> “we’re justified” becomes “we must.”</li>
+              </ul>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="mechanics">
+              <header class="section-head">
+                <h2 class="section-title">Core Mechanics</h2>
+                <p class="section-sub">How the narrative machine runs.</p>
+              </header>
+
+              <p>
+                Keep this section concrete: show the moving parts. If you have examples, keep them neutral (or use historical examples).
+                The goal is to make the pattern visible without turning the page into a partisan document.
+              </p>
+
+              <ul class="story-bullets">
+                <li><strong>Compression:</strong> a complex system is reduced to a single cause.</li>
+                <li><strong>Moralization:</strong> disagreement becomes sin.</li>
+                <li><strong>Overfitting:</strong> one story explains everything; contrary facts become “propaganda.”</li>
+                <li><strong>Reward loops:</strong> outrage and certainty are rewarded with attention.</li>
+              </ul>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="antidotes">
+              <header class="section-head">
+                <h2 class="section-title">Antidotes</h2>
+                <p class="section-sub">How to resist myth when it becomes coercive.</p>
+              </header>
+
+              <p>
+                You can frame the “fix” as habits of mind: how to keep meaning without becoming possessed by narrative.
+              </p>
+
+              <ul class="story-bullets">
+                <li><strong>Multiple models:</strong> hold competing explanations simultaneously.</li>
+                <li><strong>Steelman:</strong> describe the other side in a way they’d recognize.</li>
+                <li><strong>Time horizon:</strong> ask “what happens in 10 years if we do this?”</li>
+                <li><strong>Institutional humility:</strong> incentives distort perception; assume distortion.</li>
+              </ul>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (INSIDE the article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Features navigation"
+                     data-topic-nav="features"
+                     data-topic-playlist="popular_myths"
+                     data-topic-slug="mythmaking-politics">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async" />
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="/features/index.html" data-crumb-topics>Features</a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <!-- Playlist / Category crumb (filled by features-nav.js) -->
+                    <li class="crumb">
+                      <a href="#" data-crumb-playlist-link>
+                        <span data-crumb-playlist-text>Loading…</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Features navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button"
+                    data-toc-toggle
+                    aria-expanded="false"
+                    aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog"
+                 aria-label="On this page"
+                 aria-hidden="true"
+                 data-toc-panel>
+
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button"
+                        data-toc-close
+                        aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections">
+                <!-- If you generate links via JS, keep this empty -->
+              </nav>
+
+            </div>
+          </aside>
+
+        </div><!-- /.story-layout -->
+      </div><!-- /.container -->
+    </section><!-- /.story-body -->
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Mythogin</h4>
+          <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/recommendations.html">Recommendations</a></li>
+            <li><a href="/features/index.html">Features</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/herojourneys/books/index.html">Books</a></li>
+            <li><a href="/herojourneys/film/index.html">Film</a></li>
+            <li><a href="/herojourneys/tv/index.html">TV</a></li>
+            <li><a href="/herojourneys/games/index.html">Games</a></li>
+            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Perspective</h4>
+          <ul>
+            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="/perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="/contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/features-nav.js"></script>
+  <script src="js/drawer.js"></script>
+</body>
+</html>

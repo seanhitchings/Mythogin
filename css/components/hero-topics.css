@@ -1,0 +1,165 @@
+/* ==========================================================================
+   components/hero-topics.css — Unified Topics/Hubs hero
+   Goal:
+   - Banner sizing from the “hero-media” system (16/7 + min/max)
+   - Title + lead BELOW the image (stacked layout like topics.css extraction)
+   - No text overlay on the banner
+   ========================================================================== */
+
+:root{
+  /* Default media sizing (matches your working banner behavior) */
+  --topics-hero-ar: 16 / 7;
+  --topics-hero-min-h: 280px;
+  --topics-hero-max-h: 520px;
+
+  /* Text inset: match container padding */
+  --topics-hero-pad: var(--pad);
+}
+
+.topics-hero{
+  padding: clamp(18px, 2.6vw, 28px) 0;
+  margin-bottom: 18px;
+}
+
+/* Card surface */
+.topics-hero-card{
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 8px);
+  background: linear-gradient(180deg, rgba(17,21,27,.92), rgba(15,19,25,.92));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  /* Stacked hero: image row + text row */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Media frame (constrains hero height) — banner-only
+   -------------------------------------------------------------------------- */
+
+.topics-hero-media{
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--topics-hero-ar);
+  min-height: var(--topics-hero-min-h);
+  max-height: var(--topics-hero-max-h);
+  overflow: hidden;
+
+  /* IMPORTANT: no inner frame — card owns the border/radius */
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+/* Image fills the constrained frame */
+.topics-hero-media img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.03);
+}
+
+/* Overlay belongs to MEDIA only (not the whole card) */
+.topics-hero-overlay{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(900px 360px at 18% 16%, rgba(215,188,161,.18), transparent 62%),
+    radial-gradient(760px 320px at 86% 18%, rgba(161,187,215,.14), transparent 58%),
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.42));
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Content BELOW image (NOT overlay)
+   This is the key fix vs your “overlay titles” version.
+   -------------------------------------------------------------------------- */
+
+.topics-hero-content{
+  position: static; /* ensure normal document flow */
+  padding-left: var(--topics-hero-pad);
+  padding-right: var(--topics-hero-pad);
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  display: grid;
+  gap: 10px;
+}
+
+/* Title + lead typography (your richer version) */
+.topics-hero-title{
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 700;
+
+  /* smaller + tighter growth */
+  font-size: clamp(24px, 2.0vw, 30px);
+
+  letter-spacing: .008em;
+  line-height: 1.10;
+
+  color: rgba(248,250,252,.98);
+  text-wrap: balance;
+}
+
+.topics-hero-lead{
+  margin: 0;
+  max-width: 70ch;
+
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(15px, 1.55vw, 19px);
+  letter-spacing: .01em;
+  line-height: 1.5;
+
+  color: rgba(170,180,195,.9);
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 760px){
+  :root{
+    --topics-hero-ar: 16 / 9;
+    --topics-hero-min-h: 220px;
+  }
+
+  .topics-hero-media img{
+    transform: none;
+  }
+}
+
+@media (max-width: 640px){
+  :root{
+    --topics-hero-min-h: 200px;
+    --topics-hero-max-h: 420px;
+  }
+
+  .topics-hero-card{
+    gap: 12px;
+  }
+
+  .topics-hero-title{
+    font-size: clamp(20px, 5vw, 26px);
+  }
+
+  .topics-hero-lead{
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1100px){
+  :root{
+    --topics-hero-ar: 21 / 9;
+    --topics-hero-max-h: 540px;
+  }
+}

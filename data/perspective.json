@@ -1,0 +1,39 @@
+{
+  "philosophy": {
+    "genre": "non fiction",
+    "name": "Philosophy",
+    "stories": [
+      {
+        "title": "What Stories Do",
+        "slug": "meaning",
+        "url": "perspective/philosophy/meaning/index.html"
+      },
+      {
+        "title": "Why Stories Matter",
+        "slug": "erosion",
+        "url": "perspective/philosophy/erosion/index.html"
+      },
+      {
+        "title": "What Resonates in Stories",
+        "slug": "resonate",
+        "url": "perspective/philosophy/resonate/index.html"
+      }
+    ]
+  },
+  "industry": {
+    "genre": "non fiction",
+    "name": "Industry",
+    "stories": [
+      {
+        "title": "Process",
+        "slug": "process",
+        "url": "perspective/industry/process/index.html"
+      },
+      {
+        "title": "Output",
+        "slug": "output",
+        "url": "perspective/industry/output/index.html"
+      }
+    ]
+  }
+}

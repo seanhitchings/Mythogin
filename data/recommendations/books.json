@@ -1,0 +1,84 @@
+{
+  "category": "recommendations",
+  "type": "books",
+  "items": [
+    {
+      "title": "Alice’s Adventures in Wonderland",
+      "year": 1865,
+      "genre": "sci-fi",
+      "url": "/Mythogin/recommendations/books/alices-adventures-in-wonderland/index.html"
+    },
+    {
+      "title": "The Brothers Karamazov",
+      "year": 1880,
+      "genre": "drama",
+      "url": "/Mythogin/recommendations/books/the-brothers-karamazov/index.html"
+    },
+    {
+      "title": "Cloud Atlas",
+      "year": 2004,
+      "genre": "sci-fi",
+      "url": "/Mythogin/recommendations/books/cloud-atlas/index.html"
+    },
+    {
+      "title": "The Dark Is Rising",
+      "year": 1973,
+      "genre": "drama",
+      "url": "/Mythogin/recommendations/books/the-dark-is-rising/index.html"
+    },
+    {
+      "title": "Doctor Zhivago",
+      "year": 1957,
+      "genre": "drama",
+      "url": "/Mythogin/recommendations/books/doctor-zhivago/index.html"
+    },
+    {
+      "title": "Dune",
+      "year": 1965,
+      "genre": "sci-fi",
+      "url": "/Mythogin/recommendations/books/dune/index.html"
+    },
+    {
+      "title": "The Golden Compass",
+      "year": 1995,
+      "genre": "sci-fi",
+      "url": "/Mythogin/recommendations/books/the-golden-compass/index.html"
+    },
+    {
+      "title": "Les Misérables",
+      "year": 1862,
+      "genre": "drama",
+      "url": "/Mythogin/recommendations/books/les-miserables/index.html"
+    },
+    {
+      "title": "The Lord of the Rings",
+      "year": 1954,
+      "genre": "drama",
+      "url": "/Mythogin/recommendations/books/the-lord-of-the-rings/index.html"
+    },
+    {
+      "title": "The Odyssey",
+      "year": null,
+      "genre": "drama",
+      "url": "/Mythogin/recommendations/books/the-odyssey/index.html"
+    },
+    {
+      "title": "Paradise Lost",
+      "year": 1667,
+      "genre": "drama",
+      "url": "/Mythogin/recommendations/books/paradise-lost/index.html"
+    },
+    {
+      "title": "A Wizard of Earthsea",
+      "year": 1968,
+      "genre": "sci-fi",
+      "url": "/Mythogin/recommendations/books/wizard-of-earthsea/index.html"
+    },
+    {
+      "title": "The Wheel of Time",
+      "year": 1990,
+      "genre": "sci-fi",
+      "url": "/Mythogin/recommendations/books/the-wheel-of-time/index.html"
+    }
+  ]
+}

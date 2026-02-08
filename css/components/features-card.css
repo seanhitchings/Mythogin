@@ -1,0 +1,108 @@
+/* ==========================================================================
+   components/features-card.css — Features story pages ONLY
+   Purpose:
+   - Landscape hero banner for Features
+   - Cleanly separate from Hero-Journeys poster logic
+   - Deconflict topics.css + story-card.css safely
+   ========================================================================== */
+
+/* ==========================================================================
+   0) Scope lock
+   ========================================================================== */
+
+body.story.story--features{
+  /* Match your hero container width */
+  --max: var(--hero-max);
+}
+
+/* ==========================================================================
+   1) FEATURES HERO: landscape banner
+   - Your markup uses: .topics-hero-card.story-hero-card + .topics-hero-media.story-hero-media
+   - So we target the combined classes (NOT the generic poster rules)
+   ========================================================================== */
+
+/* Force the Features story hero to be a stacked banner layout */
+body.story.story--features .story-hero .topics-hero-card.story-hero-card{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: clamp(14px, 2vw, 18px);
+  align-items: stretch;
+  padding: clamp(14px, 2vw, 18px);
+}
+
+/* Banner frame (use the actual media wrapper in your markup) */
+body.story.story--features .story-hero .topics-hero-media.story-hero-media{
+  position: relative;
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 6px);
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 14px 34px rgba(0,0,0,.32);
+
+  /* Ensure the wrapper itself is the ratio box */
+  aspect-ratio: 16 / 9;
+  max-height: none !important;
+}
+
+/* Landscape image */
+body.story.story--features .story-hero .topics-hero-media.story-hero-media img{
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover !important;
+  object-position: center;
+
+  transform: none !important;
+  background: none;
+  border: 0;
+  box-shadow: none;
+
+  /* Important: do NOT let other sheets force poster sizing */
+  aspect-ratio: auto !important;
+}
+
+/* Overlay stays intact */
+body.story.story--features .story-hero .topics-hero-overlay{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   2) Content alignment
+   ========================================================================== */
+
+body.story.story--features .story-hero .topics-hero-content.story-hero-content{
+  padding: 0;
+  align-content: start;
+}
+
+/* ==========================================================================
+   3) HARD DECONFLICTS
+   Prevent topics.css and story-card.css from hijacking layout
+   ========================================================================== */
+
+/* Neutralize the generic story poster rules on Features pages */
+body.story.story--features .story-hero-media img{
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  transform: none !important;
+}
+
+/* Ensure Topics banner sizing rules don't clamp/override our banner */
+body.story.story--features .topics-hero-media{
+  max-height: none !important;
+  overflow: hidden !important;
+}
+
+/* ==========================================================================
+   4) Optional widescreen polish
+   ========================================================================== */
+
+@media (min-width: 1200px){
+  body.story.story--features .story-hero .topics-hero-media.story-hero-media{
+    aspect-ratio: 21 / 9;
+  }
+}

@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+
+  <title>Mythogin — Why Actual Epics are so Rare</title>
+  <meta name="description" content="A conversation about why real epics are rare: synthesis, meaning, tradition, and the constraints modern media inherits." />
+  <link rel="canonical" href="/features/why-epics/index.html" />
+  <!-- FILE LOCATION: /Mythogin/features/why-epics/index.html -->
+
+  <!-- Social (safe defaults) -->
+  <meta property="og:site_name" content="Mythogin" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Why Actual Epics are so Rare" />
+  <meta property="og:description" content="A conversation about why real epics are rare: synthesis, meaning, tradition, and the constraints modern media inherits." />
+  <meta property="og:image" content="/images/topics/podcasts.webp" />
+  <meta property="og:url" content="/features/why-epics/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0f1319" />
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css" />
+  <link rel="stylesheet" href="css/components/hero.css" />
+  <link rel="stylesheet" href="css/components/card.css" />
+  <link rel="stylesheet" href="css/components/footer.css" />
+  <link rel="stylesheet" href="css/components/utilities.css" />
+  <link rel="stylesheet" href="css/components/story-card.css" />
+  <link rel="stylesheet" href="css/components/features-card.css" />
+  <link rel="stylesheet" href="css/components/drawer.css" />
+  <link rel="stylesheet" href="css/components/topic-nav.css" />
+  <link rel="stylesheet" href="css/components/accordion.css" />
+  <link rel="stylesheet" href="css/components/featured-card.css" />
+</head>
+
+<body class="story story--features">
+
+  <a class="skip-link sr-only" href="#main">Skip to content</a>
+
+  <!-- Shared Nav -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="/home.html" aria-label="Mythogin home">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin" />
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="/recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Do NOT hardcode aria-current; main.js should mark /features/ and children -->
+          <a class="nav-link"
+             href="/features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Hero-Journeys categories">
+              <a role="menuitem" href="/herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="/herojourneys/film/index.html">Film</a>
+              <a role="menuitem" href="/herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="/herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="/herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="/herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="/perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="/perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="/about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="/topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Feature hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <!-- Landscape banner frame (features-card.css controls aspect/fit) -->
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/podcasts.webp" alt="" loading="eager" decoding="async" />
+            <div class="topics-hero-overlay"></div>
+          </div>
+          <div class="topics-hero-content features-hero-content">
+            <p class="story-kicker">Feature</p>
+
+            <h1 class="topics-hero-title">Why Actual Epics are so Rare</h1>
+
+            <p class="topics-hero-lead">
+              A conversation about synthesis: why “epic” is not a genre label, but a civilizational achievement—and why modern media
+              struggles to produce it consistently.
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip (template-ready) -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <button class="audio-chip-btn" type="button" data-audio-action="play" aria-label="Listen">
+                  Listen
+                </button>
+                <a class="audio-chip-btn" href="#" download aria-label="Download audio">
+                  Download
+                </a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY -->
+    <section class="story-body" aria-label="Feature">
+      <div class="container">
+
+        <div class="story-layout story-layout--toc">
+
+          <article class="story-article">
+
+            <section class="story-section section-card card--surface bleed-pad" id="premise">
+              <header class="section-head">
+                <h2 class="section-title">Premise</h2>
+                <p class="section-sub">What “epic” actually means here (and what it doesn’t).</p>
+              </header>
+
+              <p>
+                “Epic” isn’t just length, budget, scale, or seriousness. It’s a kind of integration: a story that can carry
+                metaphysics, psychology, history, and ethics in one coherent motion, without collapsing into sermon or spectacle.
+                Most modern works can do one or two of these layers, but struggle to synthesize them.
+              </p>
+
+              <ul class="story-bullets">
+                <li><strong>Scale:</strong> not only big events—big stakes in the interior life.</li>
+                <li><strong>Synthesis:</strong> the parts of the world connect; nothing feels arbitrary.</li>
+                <li><strong>Tradition:</strong> the work talks to older forms, not just current trends.</li>
+                <li><strong>Cost:</strong> choices have weight; meaning is earned, not announced.</li>
+              </ul>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="constraints">
+              <header class="section-head">
+                <h2 class="section-title">Why It’s Rare</h2>
+                <p class="section-sub">The structural constraints that push against epic.</p>
+              </header>
+
+              <p>
+                Epics are rare partly because they demand unusual authorial courage: you can’t hide behind irony, or ideology,
+                or pure technique. But they’re also rare because institutions make them rare. Studios, publishers, and platforms
+                have incentives to optimize for predictability and fast engagement, not long integration.
+              </p>
+
+              <ul class="story-bullets">
+                <li><strong>Time horizon:</strong> epic needs patience; markets reward velocity.</li>
+                <li><strong>Risk profile:</strong> synthesis is hard to test; spectacle is easy to market.</li>
+                <li><strong>Audience split:</strong> modern audiences are fragmented into micro-tastes.</li>
+                <li><strong>Prestige traps:</strong> “serious” often becomes self-protective ambiguity.</li>
+              </ul>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="mechanics">
+              <header class="section-head">
+                <h2 class="section-title">Mechanics of Epic</h2>
+                <p class="section-sub">What the story has to do on the page/screen to count.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">A world with an intelligible order</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Epic implies a cosmos you can learn, even if it’s tragic. The rules might be divine, natural, social, or moral—
+                      but the work doesn’t treat reality as a random generator. The audience feels a hidden structure underneath events.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Interior transformation, not only plot</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Epic transformation isn’t “character growth” as a checkbox. It’s a change in perception—what the person can see,
+                      what they can’t unsee, and what that costs them. The plot is the pressure-cooker that makes that change unavoidable.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Moral weight without propaganda</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Epics take morality seriously, but they don’t flatten the world into slogans. The work can show horror without
+                      being possessed by it; it can show goodness without sentimentalizing it.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="takeaways">
+              <header class="section-head">
+                <h2 class="section-title">Takeaways</h2>
+                <p class="section-sub">How to use this lens when choosing what to read/watch.</p>
+              </header>
+
+              <p>
+                The point isn’t to elitify taste. It’s to clarify what you’re actually hungry for when you say “nothing feels like it used to.”
+                Often what’s missing is integration: stories that can carry meaning without collapsing into cynicism or marketing.
+              </p>
+
+              <ul class="story-bullets">
+                <li><strong>Ask:</strong> does the work synthesize, or merely reference?</li>
+                <li><strong>Notice:</strong> is the “big” only visual, or also moral/psychological?</li>
+                <li><strong>Track:</strong> do consequences accumulate, or reset each episode?</li>
+                <li><strong>Prefer:</strong> creators who can risk clarity, not just style.</li>
+              </ul>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="links">
+              <header class="section-head">
+                <h2 class="section-title">Links</h2>
+                <p class="section-sub">Podcast / episode page / transcript.</p>
+              </header>
+
+              <ul class="story-bullets">
+                <li><strong>Listen:</strong> <a href="#" rel="noopener">Add link</a></li>
+                <li><strong>Episode page:</strong> <a href="#" rel="noopener">Add link</a></li>
+                <li><strong>Transcript:</strong> <a href="#" rel="noopener">Add link</a></li>
+              </ul>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (INSIDE the article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Features navigation"
+                     data-topic-nav="features"
+                     data-topic-playlist="why_myths_matter"
+                     data-topic-slug="why-epics">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async" />
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="/features/index.html" data-crumb-topics>Features</a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <!-- Playlist / Category crumb (filled by features-nav.js) -->
+                    <li class="crumb">
+                      <a href="#" data-crumb-playlist-link>
+                        <span data-crumb-playlist-text>Loading…</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Features navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button"
+                    data-toc-toggle
+                    aria-expanded="false"
+                    aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog"
+                 aria-label="On this page"
+                 aria-hidden="true"
+                 data-toc-panel>
+
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button"
+                        data-toc-close
+                        aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <!-- Mythogin -->
+      <div class="footer-col">
+        <h4><a href="index.html">Mythogin</a></h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Recommendations -->
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <!-- Features -->
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+      <!-- Hero-Journeys -->
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
+
+      <!-- Perspective -->
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/features-nav.js"></script>
+  <script src="js/drawer.js"></script>
+</body>
+</html>

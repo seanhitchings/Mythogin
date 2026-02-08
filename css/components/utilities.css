@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Mythogin — components/utilities.css
+   Small, reusable UI primitives ONLY
+   (Buttons, cards, audio chips live in card.css)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+/* Visually hidden (screen-reader only) */
+.sr-only{
+  position:absolute !important;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+
+/* ==========================================================================
+   Layout Utilities
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Full-bleed surface INSIDE container padding (SAFE)
+   Rule:
+   - By default, do NOT bleed (prevents accidental overflow)
+   - Only bleed when a direct child of .container
+   - On small screens, collapse back to normal width
+   -------------------------------------------------------------------------- */
+
+.bleed-pad{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Only “bleed” when we’re definitely inside a container */
+.container > .bleed-pad{
+  width: calc(100% + (var(--pad) * 2));
+  margin-left: calc(var(--pad) * -1);
+  margin-right: calc(var(--pad) * -1);
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* Mobile: never bleed (prevents horizontal scroll) */
+@media (max-width: 640px){
+  .container > .bleed-pad{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+/* Simple spacer helpers */
+.u-space-10{ height: 10px; }
+.u-space-16{ height: 16px; }
+.u-space-24{ height: 24px; }
+
+
+/* ==========================================================================
+   Image Utilities
+   ========================================================================== */
+
+/* Force contain behavior (no crop / no zoom) */
+.u-hero-contain{
+  object-fit: contain !important;
+  transform: none !important;
+  background: rgba(0,0,0,.25);
+}
+
+/* Allow image-native aspect ratio (no forced banner crop) */
+.page--curtain .hero-media--natural .topics-hero-media{
+  aspect-ratio: auto;
+  height: auto !important;
+  max-height: none !important;
+  overflow: hidden;
+}
+
+.page--curtain .hero-media--natural .topics-hero-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transform: none;
+}
+
+
+/* ==========================================================================
+   Micro-Primitives
+   ========================================================================== */
+
+/* Small accent dot used in chips / callouts */
+.dot{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(215,188,161,.9);
+  box-shadow: 0 0 0 4px rgba(215,188,161,.14);
+  display: inline-block;
+}
+
+
+/* ==========================================================================
+   Semantic Callouts
+   ========================================================================== */
+
+/* Etymology pill (used on etymology pages / callouts) */
+.etymology{
+  margin-top: 18px;
+  padding: 10px 14px;
+
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(7,8,10,.35);
+
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.etymology .mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace;
+  color: rgba(232,237,245,.9);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+}
+
+.etymology .roots{
+  font-size: 13px;
+}
+
+
+/* ==========================================================================
+   Navigation / Pager helpers
+   ========================================================================== */
+
+/* Disabled pager links */
+.pager a.is-disabled{
+  opacity: .45;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Inline content link (body text) */
+.text-link{
+  color: rgba(215,188,161,.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .15s ease, opacity .15s ease;
+}
+
+.text-link:hover{
+  color: rgba(232,237,245,1);
+}
+
+.text-link:focus-visible{
+  outline: 2px solid rgba(215,188,161,.55);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

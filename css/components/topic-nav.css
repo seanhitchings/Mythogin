@@ -1,0 +1,302 @@
+/* ==========================================================================
+   components/topic-nav.css — STORY-GRID LOCKED (NO CONTAINER MATH)
+   Logic:
+   - The topic nav must be a DIRECT CHILD of .story-layout--toc grid.
+   - On widescreen, it is forced into grid column 1 (article column ~980px).
+   - On <=980px, the story grid collapses to 1 column, so nav becomes full width.
+   - No dedicated container class.
+   - No bleed utilities.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1) Default widget styles (reusable)
+   ========================================================================== */
+
+.topic-nav-surface{
+  position: relative;
+  padding: 46px 0;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.topic-nav-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.topic-nav-bg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.85) brightness(.65);
+}
+
+/* Card */
+.topic-nav-card{
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+
+  padding: 18px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.12);
+
+  background: linear-gradient(
+    180deg,
+    rgba(12,14,18,.92),
+    rgba(8,10,14,.92)
+  );
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Breadcrumbs */
+.crumbs{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.crumbs-list{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.crumbs-list a{
+  color: rgba(232,237,245,.9);
+  text-decoration: none;
+
+  display: inline-block;
+  max-width: 26ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+
+.crumbs-list a:hover{
+  color: var(--text);
+}
+
+.crumbs-list .sep{
+  opacity: .55;
+}
+
+/* Pager */
+.pager{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.pager-back{
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  color: rgba(232,237,245,.9);
+  text-decoration: none;
+  transition: transform .12s ease, border-color .15s ease, background .15s ease;
+}
+
+.pager-back:hover{
+  transform: translateY(-1px);
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.08);
+}
+
+.pager-edges{
+  display: flex;
+  gap: 10px;
+  min-width: 0;
+}
+
+.pager-prev,
+.pager-next{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.02);
+  color: rgba(232,237,245,.92);
+  text-decoration: none;
+
+  min-width: 0;
+  transition: transform .12s ease, border-color .15s ease, background .15s ease;
+}
+
+.pager-prev:hover,
+.pager-next:hover{
+  transform: translateY(-1px);
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.08);
+}
+
+.pager .meta{
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.pager .kicker{
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(170,180,195,.8);
+}
+
+.pager .title{
+  font-size: 13px;
+  color: rgba(232,237,245,.95);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20ch;
+}
+
+.pager .arrow{
+  opacity: .85;
+}
+
+
+/* ==========================================================================
+   2) STORY PAGE VARIANT (grid-attached)
+   ========================================================================== */
+
+/* Used only when the section is INSIDE the story grid */
+body.story .topic-nav-surface--story{
+  padding: 22px 0;
+  border-bottom: 0;
+  overflow: visible;
+  min-width: 0;
+}
+
+/* Put the whole section into the ARTICLE grid column on widescreen */
+@media (min-width: 981px){
+  body.story .story-layout--toc > .topic-nav-surface--story{
+    grid-column: 1 / 2;
+  }
+}
+
+/* Ensure the card fills that column */
+body.story .topic-nav-surface--story .topic-nav-card{
+  width: 100%;
+}
+
+/* <=860: stack controls */
+@media (max-width: 860px){
+  .topic-nav-card{
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .crumbs-list{
+    white-space: normal;
+    flex-wrap: wrap;
+  }
+
+  .crumbs-list a{
+    max-width: none;
+  }
+
+  .pager-edges{
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ==========================================================================
+   3) STORY VARIANT: card-only (no band frame), keep TOC rail in place
+   ========================================================================== */
+
+/* 1) Story pages: the surface wrapper should NOT draw a frame */
+body.story .topic-nav-surface--story{
+  padding: 0;                 /* remove band padding */
+  border: 0;                  /* remove any border from the wrapper */
+  background: transparent;     /* no panel background */
+  overflow: visible;          /* don't clip shadows */
+}
+
+/* If your base .topic-nav-surface draws a divider line, kill it here too */
+body.story .topic-nav-surface--story::before,
+body.story .topic-nav-surface--story::after{
+  content: none !important;
+}
+
+/* 2) Make the background image behave like a subtle underlay, not a framed box */
+body.story .topic-nav-surface--story .topic-nav-bg{
+  border-radius: 0;           /* avoid “inner frame” corners */
+  overflow: visible;
+  opacity: .35;               /* optional: tone it down so it doesn't read as a panel */
+  pointer-events: none;
+}
+
+/* 3) Place nav in article column, but keep it AFTER the aside in DOM */
+@media (min-width: 981px){
+  body.story .story-layout--toc > .topic-nav-surface--story{
+    grid-column: 1 / 2;
+    margin-top: 18px;         /* spacing below the article stack */
+  }
+}
+
+/* 4) Ensure the card itself is the ONLY visible border box */
+body.story .topic-nav-surface--story .topic-nav-card{
+  width: 100%;
+}
+
+
+/* ==========================================================================
+   4) STORY: rail-aligned WITHOUT overflow (REPLACES width+negative margins)
+   - The old "width: calc(100% + var(--pad)*2)" can create horizontal scroll
+   - Instead: pad the wrapper so the card aligns with the story rail safely
+   ========================================================================== */
+
+body.story .topic-nav-surface--story{
+  /* spacing between Impact card and nav */
+  margin-top: 18px;
+
+  /* safe rail alignment */
+  padding-inline: var(--pad);
+  box-sizing: border-box;
+}
+
+body.story .topic-nav-surface--story .topic-nav-card{
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Small screens: keep normal page padding (still safe) */
+@media (max-width: 640px){
+  body.story .topic-nav-surface--story{
+    padding-inline: var(--pad);
+  }
+  body.story .topic-nav-surface--story .topic-nav-card{
+    width: 100%;
+    margin: 0;
+  }
+}

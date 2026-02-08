@@ -1,0 +1,450 @@
+/* ==========================================================================
+   Search Page — Mythogin
+   - Page title/subtitle OUTSIDE inner card container
+   - 2-part search container: Filters + Results
+   - Results use card-first layout (image tile, then name/meta)
+   - Controls stay DARK (including option backgrounds)
+   - No sitewide layout/footer overrides (scoped to .search-page)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page header (outside card)
+   -------------------------------------------------------------------------- */
+
+.search-page .search-page-head{
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 14px;
+  padding: 0 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Search card (inner container)
+   -------------------------------------------------------------------------- */
+
+.search-page .search-card{
+  display: grid;
+  gap: 14px;
+}
+
+/* Panels inside the card */
+.search-page .panel{
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(12,14,18,.35);
+  padding: 14px;
+}
+
+.search-page .panel-label{
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .75;
+  margin-bottom: 10px;
+}
+
+.search-page .panel-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   Controls layout
+   -------------------------------------------------------------------------- */
+
+.search-page .search-controls{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1.6fr repeat(3, minmax(160px, 1fr)) auto;
+  align-items: end;
+}
+
+@media (max-width: 1140px){
+  .search-page .search-controls{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 980px){
+  .search-page .search-controls{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.search-page .control{
+  display: grid;
+  gap: 6px;
+}
+
+.search-page .control-label{
+  font-size: 12px;
+  letter-spacing: .02em;
+  opacity: .85;
+}
+
+/* --------------------------------------------------------------------------
+   Inputs & selects — DARK (and force option background)
+   -------------------------------------------------------------------------- */
+
+.search-page .search-controls input,
+.search-page .search-controls select{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+
+  background: rgb(10,12,16);
+  color: rgba(232,237,245,.95);
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.search-page .search-controls input::placeholder{
+  color: rgba(232,237,245,.45);
+}
+
+.search-page .search-controls input:focus,
+.search-page .search-controls select:focus{
+  outline: none;
+  border-color: rgba(232,237,245,.35);
+  box-shadow: 0 0 0 3px rgba(232,237,245,.06);
+}
+
+.search-page .search-controls select option,
+.search-page .search-controls select optgroup{
+  background: rgb(10,12,16);
+  color: rgba(232,237,245,.95);
+}
+
+.search-page .search-controls select{
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.search-page .btn{
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgb(10,12,16);
+  color: rgba(232,237,245,.95);
+  cursor: pointer;
+}
+
+.search-page .btn:hover{
+  border-color: rgba(232,237,245,.35);
+}
+
+.search-page .btn:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232,237,245,.06);
+}
+
+/* --------------------------------------------------------------------------
+   Status pill (Results header)
+   -------------------------------------------------------------------------- */
+
+.search-page .search-meta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-page .panel-head{
+  position: relative;
+}
+
+.search-page .search-meta{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-page #searchStatus{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(10,12,16,.75);
+}
+
+.search-page #searchStatus.is-good{
+  border-color: rgba(160, 210, 170, .40);
+  background: rgba(20, 32, 24, .55);
+}
+
+/* --------------------------------------------------------------------------
+   Results area container
+   -------------------------------------------------------------------------- */
+
+.search-page .results-wrap{
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(12,14,18,.30);
+  padding: 12px;
+}
+
+.search-page .results-grid{
+  display: grid;
+  gap: 12px;
+}
+
+.search-page .results-empty{
+  padding: 10px 6px;
+  color: rgba(232,237,245,.70);
+}
+
+/* --------------------------------------------------------------------------
+   Result cards — CARD FIRST then NAME
+   -------------------------------------------------------------------------- */
+
+.search-page .result-card{
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+
+  padding: 14px 14px 14px 44px; /* room for rail + chevron */
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: rgb(12,14,18);
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+
+/* Soft “success rail”
+.search-page .result-card::before{
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 999px;
+  background: rgba(232,237,245,.14);
+}
+ */
+
+/* Chevron marker 
+.search-page .result-card::after{
+  content: "›";
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  font-size: 18px;
+  line-height: 1;
+  opacity: .70;
+}
+*/
+
+.search-page .result-card:hover{
+  border-color: rgba(232,237,245,.35);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.28);
+}
+
+.search-page .result-card:focus-within{
+  border-color: rgba(232,237,245,.40);
+  box-shadow: 0 0 0 3px rgba(232,237,245,.06), 0 10px 24px rgba(0,0,0,.28);
+}
+
+/* --------------------------------------------------------------------------
+   Media tile (the “card”)
+   -------------------------------------------------------------------------- */
+
+.search-page .result-media{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-page .result-img{
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(10,12,16,.75);
+
+  /* a clean, consistent “poster/card” tile */
+  aspect-ratio: 3 / 2;
+}
+
+.search-page .result-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fallback tile if no image */
+.search-page .result-img-placeholder{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(20,24,32,.85),
+    rgba(10,12,16,.85)
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Result body
+   -------------------------------------------------------------------------- */
+
+.search-page .result-body{
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.search-page .result-top{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.search-page .result-title{
+  font-weight: 650;
+  letter-spacing: .01em;
+  color: rgba(232,237,245,.95);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.search-page .result-title:hover{
+  border-bottom-color: rgba(232,237,245,.35);
+}
+
+.search-page .result-year{
+  color: rgba(232,237,245,.65);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Badges */
+.search-page .badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.search-page .badge{
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  opacity: .95;
+}
+
+
+/* Result description text (optional) */
+.search-page .result-text{
+  margin: 2px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(232,237,245,.70);
+
+  /* Clamp to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* --------------------------------------------------------------------------
+   Query field icon — white magnifying glass
+   -------------------------------------------------------------------------- */
+
+.search-page .control--search{
+  position: relative;
+}
+
+.search-page .control--search input{
+  padding-left: 36px; /* make room for icon */
+}
+
+/* magnifier icon */
+.search-page .control--search::after{
+  content: "";
+  position: absolute;
+
+  left: 12px;
+  bottom: 10px;
+
+  width: 14px;
+  height: 14px;
+
+  /* bright white like your reference */
+  background-color: rgba(255,255,255,.92);
+
+  /* SVG mask so color is controlled by background-color */
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z'/%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z'/%3E%3C/svg%3E") center / contain no-repeat;
+
+  opacity: .95;
+  pointer-events: none;
+}
+
+/* optional: slightly brighter on focus */
+.search-page .control--search:focus-within::after{
+  opacity: 1;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   Small screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 760px){
+  .search-page .panel{
+    padding: 12px;
+  }
+
+  .search-page .results-wrap{
+    padding: 10px;
+  }
+
+  .search-page .result-card{
+    grid-template-columns: 110px 1fr;
+    padding: 12px 12px 12px 40px;
+    gap: 12px;
+  }
+
+  
+  .search-page .result-card::after{
+     top: 13px; 
+  }
+
+  .search-page .result-img{
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 520px){
+  .search-page .result-card{
+    grid-template-columns: 1fr;
+    padding-left: 40px;
+  }
+
+  .search-page .result-img{
+    aspect-ratio: 16 / 9;
+  }
+}

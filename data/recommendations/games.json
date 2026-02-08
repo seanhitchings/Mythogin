@@ -1,0 +1,16 @@
+{
+  "category": "recommendations",
+  "type": "games",
+  "genre": "sci-fi",
+  "items": [
+    { "title": "Dark Souls", "url": "/Mythogin/recommendations/games/dark-souls/index.html" },
+    { "title": "Elden Ring", "url": "/Mythogin/recommendations/games/elden-ring/index.html" },
+    { "title": "Fallout", "url": "/Mythogin/recommendations/games/fallout/index.html" },
+    { "title": "Metroid", "url": "/Mythogin/recommendations/games/metroid/index.html" },
+    { "title": "Mirror’s Edge", "url": "/Mythogin/recommendations/games/mirrors-edge/index.html" },
+    { "title": "The Last of Us", "url": "/Mythogin/recommendations/games/the-last-of-us/index.html" },
+    { "title": "Ultima 5", "url": "/Mythogin/recommendations/games/ultima-5/index.html" },
+    { "title": "Unreal", "url": "/Mythogin/recommendations/games/unreal/index.html" },
+    { "title": "Wizardry 7", "url": "/Mythogin/recommendations/games/wizardry-7/index.html" }
+  ]
+}

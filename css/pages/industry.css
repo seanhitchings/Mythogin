@@ -1,0 +1,324 @@
+/* ==========================================================================
+   FILE: /Mythogin/css/pages/industry.css
+   Purpose: Industry hub + children (Process/Output)
+            - stacked hero (image above text)
+            - LANDSCAPE hero media (16:9)
+            - NO widescreen breakpoint crop
+            - consistent “bleed” widths across hero + cards
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0) CONSISTENT BLEED WIDTHS (Industry only)
+   - Prevent regressions when a bleed utility class is missing.
+   - Makes hero + section cards match the same width system.
+-------------------------------------------------------------------------- */
+
+/* Hero card: if bleed-pad exists, fine; if not, this keeps it consistent */
+.page--curtain .container > .topics-hero-card{
+  width: calc(100% + (var(--pad) * 2));
+  margin-left: calc(var(--pad) * -1);
+  margin-right: calc(var(--pad) * -1);
+}
+
+/* All stacked section cards should match that same bleed */
+.page--curtain .container > .section-card.card--stack{
+  width: calc(100% + (var(--pad) * 2));
+  margin-left: calc(var(--pad) * -1);
+  margin-right: calc(var(--pad) * -1);
+}
+
+/* --------------------------------------------------------------------------
+   1) HERO (Industry hub + children)
+   - Reuses Topics hero markup/classes (.topics-hero-*)
+   - NOTE: Hero media sizing is handled by the shared Topics hero rules.
+     (Industry no longer overrides .topics-hero-media / img / overlay / content.)
+-------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   1b) HUB-ONLY hero text measure (does NOT affect bleed widths)
+-------------------------------------------------------------------------- */
+
+.page--curtain-hub .topics-hero-content{
+  max-width: none; /* do not shrink the card; only control line-length below */
+}
+
+.page--curtain-hub .topics-hero-title{
+  max-width: 28ch;
+  text-wrap: balance;
+}
+
+.page--curtain-hub .topics-hero-lead{
+  max-width: 62ch; /* tracks the title visually better than 77ch */
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   2) CONTENT WRAP
+-------------------------------------------------------------------------- */
+
+.curtain-wrap{
+  padding: clamp(22px, 3vw, 34px) 0;
+}
+
+/* Card system */
+.page--curtain .section-card{
+  overflow: hidden;
+}
+
+.page--curtain .section-card .card-body{
+  padding: 18px 18px 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.curtain-intro{
+  padding: 0 0 clamp(22px, 3vw, 34px);
+}
+
+.curtain-intro-text{
+  color: rgba(232,237,245,.92);
+  line-height: 1.55;
+}
+
+.industry-intro{
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+  max-width: 68ch;
+  color: rgba(232,237,245,.92);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   3) PILLAR GRID
+-------------------------------------------------------------------------- */
+
+.curtain-grid{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 14px;
+}
+
+.curtain-pillar{
+  grid-column: span 6;
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  transition: transform .12s ease, border-color .15s ease, background .15s ease;
+  min-width: 0;
+}
+
+.curtain-pillar:hover{
+  transform: translateY(-2px);
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.06);
+}
+
+.curtain-img{
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.curtain-pillar--system .curtain-img{
+  background-image: url("../../images/perspective/economy.webp");
+}
+
+.curtain-pillar--output .curtain-img{
+  background-image: url("../../images/perspective/assembly.webp");
+}
+
+.curtain-body{
+  padding: 14px 14px 16px 14px;
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.curtain-kicker{
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(232,237,245,.92);
+}
+
+.curtain-title{
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+  letter-spacing: .01em;
+}
+
+.curtain-text{
+  margin: 0;
+  color: rgba(170,180,195,.92);
+  line-height: 1.45;
+  max-width: 70ch;
+}
+
+.story-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* =======================================================================
+   Perspective / Industry curtain tiles — NO CROP
+   Fix: curtain-img backgrounds were using "cover" (crops).
+   ======================================================================= */
+
+/* Make the image frame predictable and prevent height clamps from cropping */
+.curtain-img{
+  /* keep your existing sizing if you already set it; otherwise: */
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: calc(var(--radius) + 6px);
+  overflow: hidden;
+
+  /* NO CROP */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* letterbox tone so contain doesn’t look broken */
+  background-color: rgba(0,0,0,.25);
+}
+
+/* =======================================================================
+   Storytelling Machine cards (Industry hub)
+   - Vertical cards: image on top, text under, centered CTA, audio chip bottom
+   - Scoped so it doesn't affect other curtain tiles
+   ======================================================================= */
+
+.storytelling-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 14px;
+}
+
+/* Keep cards visually like your screenshot */
+.storytelling-grid .section-card{
+  max-width: none;
+}
+
+/* Force a consistent card media frame */
+.storytelling-grid .section-card .card-media{
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* Center the content stack like the screenshot */
+.storytelling-grid .section-card .card-body{
+  text-align: center;
+  justify-items: center;
+}
+
+/* Button row centered */
+.storytelling-grid .section-card .card-actions{
+  justify-content: center;
+}
+
+/* Title spacing: your global card.css adds margin-bottom:16px; keep it */
+.storytelling-grid .section-card .card-title{
+  margin-top: 6px;
+}
+
+/* Audio chip belongs at the bottom and centered (your card.css already does this),
+   but this makes sure it doesn't look cramped. */
+.storytelling-grid .section-card .audio-chip{
+  margin-top: 14px;
+}
+
+/* ======================================================================
+   Meaning page — Hero "Explore" block (attached + styled)
+   Scoped to story--perspective so it won't touch Industry hubs.
+   ====================================================================== */
+
+.story--perspective .topics-hero-content .hero-actions{
+  margin-top: 14px;
+  padding: 12px 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: calc(var(--radius) + 10px);
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+
+  display: grid;
+  gap: 10px;
+
+  /* Keep it feeling “connected” to the text column */
+  max-width: 62ch;
+}
+
+.story--perspective .hero-actions-head{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.story--perspective .hero-actions-title{
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(232,237,245,.86);
+}
+
+/* Keep the chip from looking like it’s drifting */
+.story--perspective .topics-hero-content .audio-chip{
+  margin: 0;
+  width: max-content;
+}
+
+@media (max-width: 640px){
+  .story--perspective .topics-hero-content .hero-actions{
+    width: 100%;
+    max-width: none;
+  }
+  .story--perspective .topics-hero-content .audio-chip{
+    width: 100%;
+  }
+  .story--perspective .topics-hero-content .audio-chip .audio-chip-actions{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 980px){
+  .storytelling-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* Optional: if your curtain tiles rely on a fixed height instead of aspect-ratio */
+@supports not (aspect-ratio: 16 / 9){
+  .curtain-img{
+    height: 180px; /* adjust to match your design */
+  }
+}
+
+@media (max-width: 980px){
+  .curtain-pillar{ grid-column: span 12; }
+}

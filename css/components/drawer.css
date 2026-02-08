@@ -1,0 +1,345 @@
+/* ==========================================================================
+   components/drawer.css — TOC drawer / rail UI ONLY
+   Owns:
+   - .toc-toggle button
+   - .toc-panel styling + open/close behavior
+   - rail spacing so it NEVER overlaps article
+   - Desktop sticky rail that NEVER rides over footer (bounded by .story-body)
+   Depends on:
+   - body.toc-open toggled by drawer.js
+   Scoped to:
+   - body.story (story pages only)
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1) Toggle button (always visible)
+   -------------------------------------------------------------------------- */
+
+body.story .toc-toggle{
+  appearance: none;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(17,21,27,.92);
+  color: rgba(232,237,245,.92);
+
+  border-radius: 12px;
+  padding: 8px 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  width: 100%;
+  max-width: 100%;
+
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+body.story .toc-toggle:hover{
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.06);
+}
+
+body.story .toc-toggle:focus-visible{
+  outline: none;
+  border-color: rgba(215,188,161,.6);
+}
+
+
+/* --------------------------------------------------------------------------
+   2) Panel styling (shared)
+   -------------------------------------------------------------------------- */
+
+body.story .toc-panel{
+  margin-top: 10px;
+
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: calc(var(--radius) + 6px);
+  background: rgba(17,21,27,.96);
+  box-shadow: var(--shadow);
+
+  overflow: hidden;
+  z-index: 65;
+}
+
+body.story .toc-panel-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+body.story .toc-panel-title{
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: .01em;
+  color: rgba(232,237,245,.92);
+}
+
+body.story .toc-panel-close{
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  line-height: 30px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.story .toc-panel-close:hover{
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.06);
+}
+
+body.story .toc-panel-nav{
+  display: grid;
+  gap: 8px;
+  padding: 12px 14px 14px;
+}
+
+body.story .toc-panel-nav .toc-link{
+  text-decoration: none;
+  color: rgba(232,237,245,.86);
+
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,.02);
+}
+
+body.story .toc-panel-nav .toc-link:hover{
+  border-color: rgba(215,188,161,.25);
+  background: rgba(215,188,161,.06);
+}
+
+body.story .toc-panel-nav .toc-link.is-active{
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.10);
+  color: rgba(232,237,245,.96);
+}
+
+
+/* --------------------------------------------------------------------------
+   3) Small screens (<640): bottom drawer + backdrop (overlay)
+   -------------------------------------------------------------------------- */
+
+body.story .toc-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 64;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease;
+}
+
+@media (max-width: 639px){
+  body.story .toc-panel{
+    position: fixed;
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+
+    max-height: 72vh;
+
+    transform: translateY(120%);
+    transition: transform .18s ease;
+  }
+
+  body.story.toc-open .toc-panel{
+    transform: translateY(0);
+  }
+
+  body.story.toc-open .toc-backdrop{
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4) Medium + Desktop (>=640): TOC stays on the RIGHT (no stacking)
+   IMPORTANT:
+   - story-card.css stacks to 1 col at max-width:980px
+   - We override that here so 640–980 is still 2-col with a right rail.
+   + Sticky rail is bounded by .story-body so it won't float over footer.
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 640px){
+
+  /* Footer-safe runway: sticky is bounded by .story-body.
+     This padding gives the rail room to "unstick" before footer. */
+  body.story .story-body{
+    padding-bottom: 140px; /* tune 120–220 based on footer height */
+  }
+
+  /* Create clear air between article column and rail */
+  body.story .story-layout--toc{
+    grid-template-columns: minmax(0, 1fr) 320px;
+
+    /* More space so the drawer never “kisses” the container edge visually */
+    column-gap: clamp(26px, 3vw, 44px);
+    row-gap: 28px;
+
+    align-items: start;
+    width: 100%;
+  }
+
+  /* CLOSED: collapse rail but keep a slim strip for the toggle */
+  body.story:not(.toc-open) .story-layout--toc{
+    grid-template-columns: minmax(0, 1fr) 52px;
+
+    column-gap: clamp(22px, 2.6vw, 36px);
+    row-gap: 22px;
+  }
+
+  /* Make the entire rail sticky (bounded by .story-body) */
+  body.story .story-aside{
+    position: sticky;
+
+    /* Use a token if you have one; fallback keeps it stable */
+    top: calc(var(--nav-h, 72px) + 18px);
+
+    align-self: start;
+    min-width: 0;
+    z-index: 10;
+
+    /* Optional micro-offset so the rail feels detached from the container edge */
+    padding-left: 2px;
+
+    /* Slight breathing room from the container edge */
+    padding-right: 10px;
+  }
+
+  /* Hide the panel when closed (right rail collapses to toggle strip) */
+  body.story:not(.toc-open) .toc-panel{
+    display: none;
+  }
+
+  /* Panel stays in-flow inside the sticky rail */
+  body.story .toc-panel{
+    position: static;
+    width: 100%;
+  }
+
+  /* No backdrop on >=640 (it’s not an overlay drawer anymore) */
+  body.story .toc-backdrop{
+    display: none !important;
+  }
+
+  /* When the rail is collapsed, rotate the toggle label */
+  body.story:not(.toc-open) .toc-toggle{
+    justify-content: center;
+    padding: 8px 6px;
+    border-radius: 14px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  body.story:not(.toc-open) .toc-toggle .nav-caret{
+    display: none;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   5) Widescreen polish (>=981): stop any “edge kiss” and micro-overlap feel
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 981px){
+  body.story .story-aside{
+    padding-right: 12px; /* a touch more than 2px so it reads clean on big screens */
+  }
+}
+
+/* Extra air on very wide screens */
+@media (min-width: 981px){
+  body.story .story-layout--toc{
+    column-gap: clamp(34px, 3vw, 52px);
+  }
+}
+
+
+/* ==========================================================================
+   TOC: second-level (h3) styling
+   ========================================================================== */
+
+body.story .toc-panel-nav .toc-link--h3{
+  margin-left: 12px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  opacity: .92;
+  background: rgba(255,255,255,.015);
+}
+
+body.story .toc-panel-nav .toc-link--h3::before{
+  content: "•";
+  opacity: .45;
+  margin-right: 8px;
+}
+
+body.story .toc-panel-nav .toc-link--h3.is-active{
+  opacity: 1;
+}
+
+/* Second-level TOC links */
+body.story .toc-sub{
+  display: grid;
+  gap: 8px;
+  margin: -2px 0 10px;
+  padding-left: 14px;
+  border-left: 1px solid rgba(255,255,255,.08);
+}
+
+body.story .toc-sublink{
+  text-decoration: none;
+  color: rgba(232,237,245,.78);
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,.015);
+}
+
+body.story .toc-sublink:hover{
+  border-color: rgba(215,188,161,.20);
+  background: rgba(215,188,161,.05);
+}
+
+body.story .toc-sublink.is-active{
+  border-color: rgba(215,188,161,.30);
+  background: rgba(215,188,161,.08);
+  color: rgba(232,237,245,.92);
+}
+
+/* Desktop rail: remove redundant modal UI */
+@media (min-width: 640px){
+  /* Hide inner header title */
+  body.story .toc-panel-title{
+    display: none;
+  }
+
+  /* Hide close button (not a modal on desktop) */
+  body.story .toc-panel-close{
+    display: none;
+  }
+
+  /* Tighten header spacing now that it's empty */
+  body.story .toc-panel-head{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: none;
+  }
+}

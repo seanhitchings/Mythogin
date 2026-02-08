@@ -1,0 +1,188 @@
+/* ==========================================================================
+   pages/topics.css — Topics hub ONLY
+   Purpose:
+   - Owns Topics page layout + Topics hero banner behavior 
+   - MUST NOT define card system (.section-card, .card-*) or any catalogue grids
+     used by Books/Features/etc.
+   Depends on:
+   - tokens.css, base.css, layout.css
+   - components/nav.css, components/hero.css, components/card.css (for cards elsewhere)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Page Shell (SCOPED)
+   ========================================================================== */
+
+body.topics{
+  /* Topic banner images are 1.5 AR (3:2) */
+  --topics-banner-ar: 3 / 2;
+
+  /* Clamp target: ~600px */
+  --topics-banner-max-h: 600px;
+
+  /* Text inset: match your system pad (same as .container padding) */
+  --topics-hero-pad: var(--pad);
+}
+
+body.topics{
+  padding-bottom: 72px;
+}
+
+/* If you use a page-level wrapper like <main class="topics topics-page"> */
+body.topics .topics-page{
+  /* no global overrides here */
+}
+
+
+/* ==========================================================================
+   HERO (Topics banners) — SCOPED
+   - Stacked hero card: image above text
+   - Use 3:2 (1.5) to match topic banner assets
+   - Clamp height without letterboxing (crop via object-fit: cover)
+   - Keep title/lead aligned via padding on .topics-hero-content
+   ========================================================================== */
+
+body.topics .topics-hero{
+  margin-bottom: 18px;
+}
+
+body.topics .topics-hero-card{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 14px;
+}
+
+/* Media:
+   - aspect-ratio keeps the shape
+   - max-height clamps the rendered box (crop happens via img cover)
+   - IMPORTANT: do NOT hard-set height here unless you truly need it;
+     height constraints can fight aspect-ratio in some layouts.
+*/
+body.topics .topics-hero-media{
+  width: 100%;
+  aspect-ratio: var(--topics-banner-ar);
+  max-height: var(--topics-banner-max-h);
+
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+body.topics .topics-hero-media img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Title + lead inset (fixes “not indenting” even if bleed-pad changes) */
+body.topics .topics-hero-content{
+  padding-left: var(--topics-hero-pad);
+  padding-right: var(--topics-hero-pad);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+body.topics .topics-hero-title{
+  margin: 0;
+}
+
+body.topics .topics-hero-lead{
+  margin-top: 6px;
+  margin-bottom: 0;
+  max-width: 70ch;
+  color: rgba(170,180,195,.9);
+}
+
+/* Small screens: keep hero compact but still 3:2 */
+@media (max-width: 640px){
+  body.topics .topics-hero-card{
+    gap: 12px;
+  }
+
+  /* optional: slightly lower cap on phones */
+  body.topics .topics-hero-media{
+    max-height: 420px;
+  }
+}
+
+
+/* ==========================================================================
+   SECTION HEAD (Topics headings) — SCOPED
+   ========================================================================== */
+
+body.topics .section-head{
+  display: grid;
+  gap: 8px;
+  margin: 22px 0 14px;
+}
+
+body.topics .section-title{
+  margin: 0;
+}
+
+body.topics .section-sub{
+  margin: 0;
+  max-width: 70ch;
+  color: rgba(170,180,195,.9);
+}
+
+
+/* ==========================================================================
+   TOPIC CATEGORIES / INTRO BLOCK — SCOPED
+   - .topics-cats-sub must span container (no weird max widths)
+   ========================================================================== */
+
+body.topics .topics-cats{
+  padding: 18px 0 8px;
+}
+
+body.topics .topics-cats-title{
+  margin: 0 0 8px;
+}
+
+body.topics .topics-cats-sub{
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  color: rgba(170,180,195,.9);
+}
+
+
+/* ==========================================================================
+   TOPICS GRID (for the Topics hub tiles/sections) — SCOPED
+   - IMPORTANT: This is NOT the Books grid.
+   ========================================================================== */
+
+body.topics .topics-grid{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+}
+
+/* Typical 3-up layout (12-col -> 4 each) */
+body.topics .topics-grid > *{
+  grid-column: span 4;
+}
+
+/* Medium: 2-up */
+@media (max-width: 980px){
+  body.topics .topics-grid > *{
+    grid-column: span 6;
+  }
+}
+
+/* Small: 1-up */
+@media (max-width: 640px){
+  body.topics .topics-grid{
+    gap: 14px;
+  }
+  body.topics .topics-grid > *{
+    grid-column: span 12;
+  }
+}
+

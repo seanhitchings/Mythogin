@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+
+  <title>Mythogin — The Fate of the American Dream</title>
+  <meta name="description" content="A conversation about the organizing principle of the American empire and what might replace it." />
+  <link rel="canonical" href="/features/fate-dream/index.html" />
+  <!-- FILE LOCATION: /Mythogin/features/fate-dream/index.html -->
+
+  <!-- Social (safe defaults) -->
+  <meta property="og:site_name" content="Mythogin" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Fate of the American Dream" />
+  <meta property="og:description" content="A conversation about the organizing principle of the American empire and what might replace it." />
+  <meta property="og:image" content="/images/topics/dream.webp" />
+  <meta property="og:url" content="/features/fate-dream/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0f1319" />
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css" />
+  <link rel="stylesheet" href="css/components/hero.css" />
+  <link rel="stylesheet" href="css/components/card.css" />
+  <link rel="stylesheet" href="css/components/footer.css" />
+  <link rel="stylesheet" href="css/components/utilities.css" />
+
+  <!-- Story layout (grid + toc layout) -->
+  <link rel="stylesheet" href="css/components/story-card.css" />
+
+  <!-- NEW: Features hero (landscape banner) -->
+  <link rel="stylesheet" href="css/components/features-card.css" />
+
+  <!-- TOC / widgets -->
+  <link rel="stylesheet" href="css/components/drawer.css" />
+  <link rel="stylesheet" href="css/components/topic-nav.css" />
+  <link rel="stylesheet" href="css/components/accordion.css" />
+</head>
+
+<body class="story story--features">
+
+  <a class="skip-link sr-only" href="#main">Skip to content</a>
+
+  <!-- Shared Nav -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="/home.html" aria-label="Mythogin home">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin" />
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="/recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Do NOT hardcode aria-current; main.js should mark /features/ and children -->
+          <a class="nav-link"
+             href="/features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Hero-Journeys categories">
+              <a role="menuitem" href="/herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="/herojourneys/film/index.html">Film</a>
+              <a role="menuitem" href="/herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="/herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="/herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="/herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="/perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="/perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="/about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="/topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Feature hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <!-- Landscape banner frame (features-card.css controls aspect/fit) -->
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/dream.webp" alt="" loading="eager" decoding="async" />
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content story-hero-content">
+            <p class="story-kicker">Feature</p>
+
+            <h1 class="topics-hero-title">The Fate of the American Dream</h1>
+
+            <p class="topics-hero-lead">
+              A conversation about the organizing principle of the American empire and what might replace it.
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip (template-ready) -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <button class="audio-chip-btn" type="button" data-audio-action="play" aria-label="Listen">
+                  Listen
+                </button>
+                <a class="audio-chip-btn" href="#" download aria-label="Download audio">
+                  Download
+                </a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY -->
+    <section class="story-body" aria-label="Feature">
+      <div class="container">
+
+        <div class="story-layout story-layout--toc">
+
+          <article class="story-article">
+
+            <section class="story-section section-card card--surface bleed-pad" id="intro">
+              <header class="section-head">
+                <h2 class="section-title">Intro</h2>
+                <p class="section-sub">
+                  Replace this with the framing: what “American Dream” means as a civilizational myth,
+                  and what happens when it breaks.
+                </p>
+              </header>
+              <p>Replace this with your intro.</p>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="highlights">
+              <header class="section-head">
+                <h2 class="section-title">Highlights</h2>
+                <p class="section-sub">Key claims, moments, or clips.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="highlights-claim-1" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The myth as organizing principle</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>…</p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="highlights-claim-2">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Collapse without villains</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>…</p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <section class="story-section section-card card--surface bleed-pad" id="links">
+              <header class="section-head">
+                <h2 class="section-title">Links</h2>
+                <p class="section-sub">Watch / listen / transcript.</p>
+              </header>
+
+              <ul class="story-bullets">
+                <li><strong>Watch:</strong> <a href="#" rel="noopener">Add link</a></li>
+                <li><strong>Audio:</strong> <a href="#" rel="noopener">Add link</a></li>
+                <li><strong>Transcript:</strong> <a href="#" rel="noopener">Add link</a></li>
+              </ul>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (INSIDE the article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Features navigation"
+                     data-topic-nav="features"
+                     data-topic-playlist="popular_myths"
+                     data-topic-slug="fate-dream">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async" />
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="/features/index.html" data-crumb-topics>Features</a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <!-- Playlist / Category crumb (filled by features-nav.js) -->
+                    <li class="crumb">
+                      <a href="#" data-crumb-playlist-link>
+                        <span data-crumb-playlist-text>Loading…</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Features navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button"
+                    data-toc-toggle
+                    aria-expanded="false"
+                    aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog"
+                 aria-label="On this page"
+                 aria-hidden="true"
+                 data-toc-panel>
+
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button"
+                        data-toc-close
+                        aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections">
+                <!-- If you generate links via JS, keep this empty -->
+              </nav>
+
+            </div>
+          </aside>
+
+        </div><!-- /.story-layout -->
+      </div><!-- /.container -->
+    </section><!-- /.story-body -->
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Mythogin</h4>
+          <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/recommendations.html">Recommendations</a></li>
+            <li><a href="/features/index.html">Features</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/herojourneys/books/index.html">Books</a></li>
+            <li><a href="/herojourneys/film/index.html">Film</a></li>
+            <li><a href="/herojourneys/tv/index.html">TV</a></li>
+            <li><a href="/herojourneys/games/index.html">Games</a></li>
+            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Perspective</h4>
+          <ul>
+            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="/perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="/contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/features-nav.js"></script>
+  <script src="js/drawer.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+/* ==========================================================================
+   pages/home.css — landing hero (responsive bands + clean seam)
+   + Hero image height clamp
+   + Stable page edges
+   + Glossy non-interactive tagline pills (smaller + quieter)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   ROOT / PAGE SAFETY
+   -------------------------------------------------------------------------- */
+
+html{
+  background:#070a12;
+  scrollbar-gutter: stable;
+}
+
+body.landing{
+  background:#070a12;
+  margin:0;
+
+  --landing-max: var(--max, 1160px);
+  --landing-gutter: var(--pad, clamp(16px, 2.2vw, 28px));
+
+  /* HERO media sizing */
+  --landing-hero-ar: 16 / 7;
+  --landing-hero-min-h: 280px;
+  --landing-hero-max-h: 520px;
+}
+
+.landing-wrap{
+  width:100%;
+  max-width:100%;
+}
+
+/* --------------------------------------------------------------------------
+   HERO STRUCTURE
+   -------------------------------------------------------------------------- */
+
+.landing-hero{
+  width:100%;
+  background:#4B346C;
+}
+
+/* Purple bands */
+.hero-band{
+  min-height:100px;
+  height:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  padding:14px 16px;
+}
+
+/* Headline */
+.hero-h1{
+  margin:0;
+  font-family: "Cormorant Garamond", var(--serif);
+
+  font-size: clamp(18px, 2.6vw, 34px);
+  font-weight: 580;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+
+  color:#FEE440;
+  line-height: 1.22;
+  letter-spacing: .005em;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  max-width: min(58ch, 100%);
+}
+
+.h1-line{ display:block; }
+
+/* Logo */
+.hero-logo{
+  max-height:120px;
+  width:auto;
+}
+
+/* --------------------------------------------------------------------------
+   HERO IMAGE
+   -------------------------------------------------------------------------- */
+
+.hero-image{
+  position:relative;
+  width:100%;
+  max-width:100%;
+
+  aspect-ratio:var(--landing-hero-ar);
+  min-height:var(--landing-hero-min-h);
+  max-height:var(--landing-hero-max-h);
+
+  overflow:hidden;
+  background:#4B346C;
+}
+
+.hero-image img{
+  width:100%;
+  height:100%;
+  display:block;
+
+  object-fit:cover;
+  object-position:center center;
+}
+
+/* --------------------------------------------------------------------------
+   TAGLINE BELOW HERO
+   -------------------------------------------------------------------------- */
+
+.hero-tagline{
+  margin:28px auto 10px;
+  max-width:var(--landing-max);
+  padding-inline:var(--landing-gutter);
+
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px 22px;
+
+  font-family: "Cormorant Garamond", var(--serif);
+  font-optical-sizing: auto;
+  font-kerning: normal;
+
+  font-size:clamp(22px,2.3vw,26px);
+  font-style:italic;
+
+  color:#FE8701;
+  text-align:center;
+}
+
+/* --------------------------------------------------------------------------
+   Quieter tagline pills — decorative, non-interactive
+   -------------------------------------------------------------------------- */
+
+.hero-tagline span{
+  position:relative;
+
+  /* smaller */
+  padding:3px 9px;
+  font-size:0.8em;
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 540;
+  font-variation-settings: "wght" 540;
+
+  border-radius:999px;
+  cursor:default;
+  user-select:none;
+
+  /* quieter surface */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,210,120,.14) 0%,
+      rgba(255,170,60,.06) 30%,
+      rgba(0,0,0,.35) 100%
+    );
+
+  border:1px solid rgba(255,200,120,.18);
+
+  /* softer depth */
+  box-shadow:
+    inset 0 1px 0 rgba(255,230,180,.25),
+    inset 0 -4px 8px rgba(0,0,0,.45),
+    0 2px 6px rgba(0,0,0,.45);
+
+  /* quieter orange */
+  color:#EFA42A;
+}
+
+/* softer gloss highlight */
+.hero-tagline span::before{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:inherit;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,235,200,.45) 0%,
+      rgba(255,210,160,.15) 35%,
+      transparent 65%
+    );
+
+  opacity:.25;
+}
+
+/* subtle inner sheen */
+.hero-tagline span::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.04);
+}
+
+/* --------------------------------------------------------------------------
+   BELOW HERO CONTENT
+   -------------------------------------------------------------------------- */
+
+.landing-text{
+  max-width:var(--landing-max);
+  margin-inline:auto;
+  padding:12px var(--landing-gutter) 64px;
+  text-align:center;
+
+  font-family: "Cormorant Garamond", var(--serif);
+  font-optical-sizing: auto;
+  font-kerning: normal;
+}
+
+.landing-statement{
+  max-width:min(88ch,100%);
+  margin:0 auto 22px;
+
+  font-size:20px;
+  line-height:1.6;
+
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+
+  letter-spacing:.01em;
+
+  color:rgba(220,225,235,.85);
+}
+
+.landing-split{
+  max-width:min(88ch,100%);
+  margin:0 auto 18px;
+}
+
+.ls-line1,
+.ls-line2{ display:block; }
+
+.ls-line2{ margin-top:4px; }
+
+/* CTA */
+
+.landing-cta{
+  margin-top:22px;
+  margin-bottom:26px;   /* pushes pills down */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;              /* breathing room between buttons */
+}
+
+.landing-cta .btn.primary{
+  padding:12px 20px;
+  font-size:17px;
+  color:#F6D78A; /* light gold */
+}
+
+.landing-cta .btn:not(.primary){
+  font-size:16px;
+  padding:8px 16px;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+
+@media (max-width:760px){
+  body.landing{
+    --landing-hero-ar:16 / 9;
+    --landing-hero-min-h:220px;
+  }
+
+  .hero-band{ padding:12px 14px; }
+}
+
+@media (max-width:640px){
+  body.landing{
+    --landing-hero-min-h:200px;
+    --landing-hero-max-h:420px;
+  }
+}
+
+@media (max-width:600px){
+
+  .hero-band{
+    min-height:86px;
+    padding:12px 14px;
+  }
+
+  .hero-logo{ max-height:56px; }
+
+  .hero-h1{
+    font-size:clamp(18px,4.8vw,22px);
+    line-height:1.15;
+  }
+
+  .hero-tagline{
+    margin-top:22px;
+    gap:10px 12px;
+    font-size:clamp(16px,4.4vw,19px);
+    padding-inline:14px;
+  }
+
+  /* keep pills readable on small screens */
+  .hero-tagline span{
+    padding:4px 10px;
+    font-size:0.85em;
+  }
+
+  .landing-text{ padding:10px 18px 56px; }
+}
+
+@media (max-width:400px){
+
+  .hero-h1{ font-size:clamp(17px,5vw,20px); }
+
+  .hero-tagline{
+    gap:8px 10px;
+    font-size:clamp(15px,4.6vw,18px);
+    padding-inline:12px;
+  }
+
+  .landing-text{ padding-inline:14px; }
+}
+
+@media (max-width:340px){
+
+  .hero-band{
+    min-height:72px;
+    padding:10px;
+  }
+
+  .hero-logo{ max-height:48px; }
+
+  .hero-h1{
+    font-size:16px;
+    line-height:1.1;
+  }
+
+  .hero-tagline{
+    font-size:15px;
+    gap:6px 8px;
+    padding-inline:8px;
+  }
+
+  .landing-text{ padding-inline:10px; }
+}
