@@ -1,0 +1,9 @@
+{
+  "category": "recommendations",
+  "type": "podcasts",
+  "genre": null,
+  "items": [
+    { "title": "The Fall of Civilizations", "url": "/Mythogin/recommendations/podcasts/the-fall-of-civilizations/index.html" },
+    { "title": "The World Beneath", "url": "/Mythogin/recommendations/podcasts/the-world-beneath/index.html" }
+  ]
+}

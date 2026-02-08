@@ -1,0 +1,16 @@
+{
+  "category": "recommendations",
+  "type": "documentaries",
+  "genre": null,
+  "items": [
+    { "title": "A People’s History of the United States", "url": "/Mythogin/recommendations/documentaries/a-peoples-history-of-the-united-states/index.html" },
+    { "title": "Aristotle's Children", "url": "/Mythogin/recommendations/documentaries/aristotles-children/index.html" },
+    { "title": "Earth Machine", "url": "/Mythogin/recommendations/documentaries/earth-machine/index.html" },
+    { "title": "How the Irish Saved Civilization", "url": "/Mythogin/recommendations/documentaries/how-the-irish-saved-civilization/index.html" },
+    { "title": "Out for Blood", "url": "/Mythogin/recommendations/documentaries/out-for-blood/index.html" },
+    { "title": "PBS Brain Series", "url": "/Mythogin/recommendations/documentaries/pbs-brain-series/index.html" },
+    { "title": "Pirates of Silicon Valley", "url": "/Mythogin/recommendations/documentaries/pirates-of-silicon-valley/index.html" },
+    { "title": "The Elegant Universe", "url": "/Mythogin/recommendations/documentaries/the-elegant-universe/index.html" },
+    { "title": "The Revolutionary War", "url": "/Mythogin/recommendations/documentaries/the-revolutionary-war/index.html" }
+  ]
+}

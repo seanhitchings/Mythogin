@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/mythogin/">
+
+  <title>Mythogin — What Stories Do</title>
+  <meta name="description"
+        content="What Stories Do on Mythogin: meaning as trained attention — values, empathy, and the moral imagination." />
+  <!-- FILE LOCATION: /mythogin/perspective/philosophy/meaning/index.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/story-card.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
+    <link rel="stylesheet" href="css/pages/industry.css">
+
+  <!-- Accordion (shared component) -->
+  <link rel="stylesheet" href="css/components/accordion.css">
+</head>
+
+<body class="story story--perspective">
+
+  <!-- Shared Nav -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <!-- Recommendations -->
+          <a class="nav-link"
+             href="recommendations/index.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Features -->
+          <a class="nav-link"
+             href="features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <!-- Hero-Journeys -->
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="hero-journeys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <!-- Perspective -->
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
+
+          <!-- About -->
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <!-- Search -->
+            <form class="nav-search" action="search/index.html" method="get" role="search">
+              <input name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+            </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="story">
+
+<!-- HERO -->
+<section class="topics-hero" aria-label="Philosophy hero">
+  <div class="container">
+    <div class="topics-hero-card bleed-pad">
+
+      <div class="topics-hero-media" aria-hidden="true">
+        <img
+          src="images/perspective/meaning.webp"
+          alt=""
+          loading="eager"
+          decoding="async"
+        />
+        <div class="topics-hero-overlay"></div>
+      </div>
+
+      <div class="topics-hero-content">
+        <h1 class="topics-hero-title">What Stories Do</h1>
+        <p class="topics-hero-lead">
+          Stories are not entertainment objects — they are meaning engines.
+          They train attention, transmit values, model empathy, and shape the
+          moral imagination that makes shared life possible.
+        </p>
+
+        <!-- Explore block (attaches the audio chip to the hero) -->
+        <div class="hero-actions" aria-label="Explore">
+          <div class="hero-actions-head">
+            <span class="hero-actions-title">Explore</span>
+          </div>
+
+          <div class="audio-chip" aria-label="Audio">
+            <span class="audio-chip-label">Audio</span>
+            <span class="audio-chip-actions">
+              <a class="audio-chip-btn"
+                 href="perspective/philosophy/meaning/audio.mp3">Listen</a>
+              <a class="audio-chip-btn"
+                 href="perspective/philosophy/meaning/audio.mp3"
+                 download>Download</a>
+            </span>
+          </div>
+        </div>
+
+      </div><!-- /.topics-hero-content -->
+
+    </div><!-- /.topics-hero-card -->
+  </div><!-- /.container -->
+</section>
+
+
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY + TOC RAIL -->
+    <section class="story-body" aria-label="Essay">
+      <div class="container">
+
+        <div class="story-layout story-layout--toc">
+
+          <!-- Article column -->
+          <article class="story-article">
+
+            <!-- Intro -->
+            <section class="story-section section-card card--surface bleed-pad" id="intro">
+              <header class="section-head">
+                <h2 class="section-title">Intro</h2>
+                <p class="section-sub">
+                  Stories are not “content.” They are a technology of meaning: they compress experience into pattern,
+                  train attention, and make values legible without slogans.
+                </p>
+              </header>
+
+              <p>
+                Replace this intro with your final prose. Keep paragraphs short and concrete; let each claim land cleanly.
+              </p>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What modern storytelling often forgets about meaning.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-attention" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Attention is the real currency</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-values">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Values are learned through consequence</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-empathy">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Empathy is perspective under pressure</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Meaning</strong> comes from patterned attention, not from “themes.”</li>
+                <li><strong>Character</strong> is a value-system under stress: choices reveal hierarchy.</li>
+                <li><strong>Myth</strong> is compressed moral reality — a shared orientation tool.</li>
+              </ul>
+            </section>
+
+            <!-- Fix -->
+            <section class="story-section section-card card--surface bleed-pad" id="fix">
+              <header class="section-head">
+                <h2 class="section-title">Fix</h2>
+                <p class="section-sub">How to write (or judge) stories that actually build meaning.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="fix-stakes" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Make consequences real</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-structure">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Use structure as a meaning engine</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-embodiment">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Embodied values, not speeches</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="story-section section-card card--surface bleed-pad" id="impact">
+              <header class="section-head">
+                <h2 class="section-title">Impact</h2>
+                <p class="section-sub">What “meaning” does to a person — and to a culture.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="impact-culture" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Shared orientation</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-soul">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The interior life</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-restoration">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Restoration after collapse</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>...</p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Philosophy navigation"
+                     data-topic-nav="philosophy"
+                     data-topic-slug="meaning">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb"><a href="perspective/index.html">Perspective</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="perspective/philosophy/index.html" data-crumb-section-link>
+                        <span data-crumb-section-text>Philosophy</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Philosophy navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <!-- Right rail TOC -->
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <!-- Mythogin -->
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+      <!-- Recommendations -->
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <!-- Features -->
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+      <!-- Hero-Journeys -->
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
+
+      <!-- Perspective -->
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/topic-nav.js"></script>
+</body>
+</html>

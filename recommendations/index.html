@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/mythogin/">
+
+  <title>Mythogin — Recommendations</title>
+  <meta name="description"
+        content="Top recommendations by medium and genre across books, TV, film, games, podcasts, and documentaries." />
+  <!-- FILE LOCATION: /mythogin/recommendations/index.html -->
+
+  <link rel="canonical" href="/mythogin/recommendations/index.html" />
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="css/pages/recommendations.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
+</head>
+
+<body class="story recs-page">
+
+  <!-- =========================
+       GLOBAL NAV
+  ========================== -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="recommendations/index.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <a class="nav-link"
+             href="features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="hero-journeys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="topics recs" role="main">
+
+    <!-- HERO (standard Topics/Hubs banner) -->
+    <section class="topics-hero" aria-label="Recommendations hero">
+      <div class="container">
+        <div class="topics-hero-card bleed-pad">
+
+          <div class="topics-hero-media" aria-hidden="true">
+            <img
+              src="images/recommendations/recommendations.webp"
+              alt=""
+              loading="eager"
+              decoding="async"
+            />
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content">
+            <h1 class="topics-hero-title">Our Recommendations</h1>
+            <p class="topics-hero-lead">
+              Top recommendations in books, tv, film, games, podcasts, and documentaries.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO (standardized template: container > section-card.card--surface.bleed-pad) -->
+    <section class="topics-intro recs-intro" aria-label="Recommendations introduction">
+      <div class="container">
+        <div class="section-card card--surface bleed-pad">
+
+          <header class="section-head">
+            <h2 class="recs-lists-title">Introduction</h2>
+          </header>
+
+          <div class="section-text">
+            <p>
+              Mythogin features in-depth discussion on stories selected across culture.
+            </p>
+
+            <p>
+              We believe the stories listed on this page are engaging and interesting. They might not be the most insightful
+              or profound stories—these are not necessarily epics with some type of hero journey. (For those stories please visit our
+              <a href="hero-journeys/index.html" class="text-link">Hero-Journeys pages.</a>) But we find them to be dramatic, funny, thought-provoking, and/or emotionally satisfying.
+              Before we get to our curated catalogue, we should mention why this is page is really necessary.
+            </p>
+          </div>
+
+          <!-- CHANGED: this is now an H3 -->
+          <header class="section-head" style="margin-top: 18px;">
+            <h3 class="section-title">Why It’s so Hard to Find Good Stories</h3>
+          </header>
+
+          <div class="section-text">
+            <p>
+              It’s becoming increasingly difficult to identify quality stories in a media landscape drowning in unoriginal content.
+              Large sites like IMDB and Rotten Tomatoes can provide statistically significant ratings, but such systems break down
+              when users only rank stories with a 1 or a 10 score. If users aren’t willing to use the entire scale, then the scale
+              itself becomes counterproductive: it stops measuring the story in lieu of measuring the polarity of the viewership.
+            </p>
+
+            <p>
+              Amazon’s system used to be good until they started selling visibility and rankings to distributors. By now, it's difficult to distinguish advertizing from actual user content.
+            </p>
+
+            <p>
+              Netflix has a powerful recommendation algorithm that can compare similar content. However, the value of their algorithm depends
+              upon the quality of their content. When Netflix ran out of quality content, they started to mass produce generic content
+              to feed their own algorithms. For this reason, their business shifted from being a content provider to being a mass marketer. For this and other reasons, Netflix is in serious business trouble. We'll be providing a discussion of this in our
+              <a href="perspective/industry/index.html" class="text-link">Industry Pages.</a>
+            </p>
+
+            <p>
+              The overproduction of generic content and the dearth of objective measurment makes it very difficult and time-consuming to find good stories these days.
+            </p>
+          </div>
+
+          <!-- CHANGED: this is now an H3 -->
+          <header class="section-head" style="margin-top: 18px;">
+            <h3 class="section-title">The Value of Mythogin</h3>
+          </header>
+
+          <div class="section-text">
+            <p>
+              The purpose of Mythogin isn’t to develop new technology to identify good stories and filter out the bad. Our focus is more
+              circumspect: to provide a transparent lens to evaluate stories. That way, you can determine how helpful this lens is to you or not.
+            </p>
+
+            <p>
+              Storytelling is deeply personal, situational, and intrinsically subjective. What moves one person on one day, might not on another.
+              However, part of what makes stories "good" or "bad" is objective. This relates to characterization, pacing, premise, originality,
+              plotting, and so forth. It's upon this objective basis, that it becomes practical to identify and filter out "bad" stories.
+            </p>
+
+            <p>
+              The lens we use to distinguish good stories is twofold (bi-focals as it were): the originality of the story is the first lens; the second is the storytelling.
+              Just being original isn’t enough for a story to be good—it could just be weird. On other hand, some stories might be good,
+              even if they are partly covering old-ground—because the implementation is strong (great writing, great acting, etc.)
+            </p>
+
+            <p>
+              Even though we can’t promise that you will like every one of our selections, we can promise that there is something of value in
+              each one. It’s likewise possible, that your favorite story isn’t on this list. Please don’t be offended. We might have overlooked it.
+              So please write to us and tell us why it is your favorite, and we will take it seriously.
+            </p>
+
+            <p>
+              We will be adding listings to this catalogue as we discover more content. And we will be providing more detail on our reasoning for the selection of each title as time allows.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY CHART -->
+    <section class="recs-grid-section" id="chart" aria-label="Recommendations summary chart">
+      <div class="container">
+        <div class="recs-bleed">
+          <div class="recs-surface">
+            <div class="recs-bleed__inner">
+
+              <header class="recs-chart-head">
+                <!-- CHANGED: H2 (already H2, kept as requested) -->
+                <h2 class="recs-chart-title">Top Picks</h2>
+                <p class="recs-chart-sub">
+                  Choose a title by medium and genre then click to jump to its notes below.
+                </p>
+              </header>
+
+              <div class="recs-grid">
+
+                <!-- BOOKS -->
+                <article class="recs-chart-card" aria-label="Books top picks">
+                  <div class="recs-chart-type-media" aria-hidden="true">
+                    <img src="images/hero-journeys/books-ls.webp" alt="" loading="lazy" decoding="async">
+                  </div>
+
+                  <h3 class="recs-chart-card-title">Books</h3>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Comedy</div>
+                    <div class="recs-chart-mount" data-top-mount="books" data-top-genre="comedy"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Drama</div>
+                    <div class="recs-chart-mount" data-top-mount="books" data-top-genre="drama"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Sci-Fi</div>
+                    <div class="recs-chart-mount" data-top-mount="books" data-top-genre="scifi"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Non-Fiction</div>
+                    <div class="recs-chart-mount" data-top-mount="books" data-top-genre="nonfiction"></div>
+                  </div>
+                </article>
+
+                <!-- TV -->
+                <article class="recs-chart-card" aria-label="TV top picks">
+                  <div class="recs-chart-type-media" aria-hidden="true">
+                    <img src="images/hero-journeys/tv-ls.webp" alt="" loading="lazy" decoding="async">
+                  </div>
+
+                  <h3 class="recs-chart-card-title">TV</h3>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Comedy</div>
+                    <div class="recs-chart-mount" data-top-mount="tv" data-top-genre="comedy"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Drama</div>
+                    <div class="recs-chart-mount" data-top-mount="tv" data-top-genre="drama"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Sci-Fi</div>
+                    <div class="recs-chart-mount" data-top-mount="tv" data-top-genre="scifi"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Non-Fiction</div>
+                    <div class="recs-chart-mount" data-top-mount="tv" data-top-genre="nonfiction"></div>
+                  </div>
+                </article>
+
+                <!-- FILM -->
+                <article class="recs-chart-card" aria-label="Film top picks">
+                  <div class="recs-chart-type-media" aria-hidden="true">
+                    <img src="images/hero-journeys/movies-ls.webp" alt="" loading="lazy" decoding="async">
+                  </div>
+
+                  <h3 class="recs-chart-card-title">Film</h3>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Comedy</div>
+                    <div class="recs-chart-mount" data-top-mount="film" data-top-genre="comedy"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Drama</div>
+                    <div class="recs-chart-mount" data-top-mount="film" data-top-genre="drama"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Sci-Fi</div>
+                    <div class="recs-chart-mount" data-top-mount="film" data-top-genre="scifi"></div>
+                  </div>
+
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Non-Fiction</div>
+                    <div class="recs-chart-mount" data-top-mount="film" data-top-genre="nonfiction"></div>
+                  </div>
+                </article>
+
+                <!-- GAMES -->
+                <article class="recs-chart-card" aria-label="Games top picks">
+                  <div class="recs-chart-type-media" aria-hidden="true">
+                    <img src="images/hero-journeys/games-ls.webp" alt="" loading="lazy" decoding="async">
+                  </div>
+
+                  <h3 class="recs-chart-card-title">Games</h3>
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Top picks</div>
+                    <div class="recs-chart-mount" data-top-mount="games" data-top-genre="all"></div>
+                  </div>
+                </article>
+
+                <!-- PODCASTS -->
+                <article class="recs-chart-card" aria-label="Podcasts top picks">
+                  <div class="recs-chart-type-media" aria-hidden="true">
+                    <img src="images/hero-journeys/podcasts-ls.webp" alt="" loading="lazy" decoding="async">
+                  </div>
+
+                  <h3 class="recs-chart-card-title">Podcasts</h3>
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Top picks</div>
+                    <div class="recs-chart-mount" data-top-mount="podcasts" data-top-genre="all"></div>
+                  </div>
+                </article>
+
+                <!-- DOCUMENTARIES -->
+                <article class="recs-chart-card" aria-label="Documentaries top picks">
+                  <div class="recs-chart-type-media" aria-hidden="true">
+                    <img src="images/hero-journeys/documentaries-ls.webp" alt="" loading="lazy" decoding="async">
+                  </div>
+
+                  <h3 class="recs-chart-card-title">Documentaries</h3>
+                  <div class="recs-chart-block">
+                    <div class="recs-chart-block-title">Top picks</div>
+                    <div class="recs-chart-mount" data-top-mount="documentaries" data-top-genre="all"></div>
+                  </div>
+                </article>
+
+              </div><!-- /.recs-grid -->
+
+            </div><!-- /.recs-bleed__inner -->
+          </div><!-- /.recs-surface -->
+        </div><!-- /.recs-bleed -->
+      </div><!-- /.container -->
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- =========================================================
+         CATALOGUE INTRO
+         ========================================================= -->
+    <section class="recs-intro recs-intro--catalogue" aria-label="Catalogue introduction">
+      <div class="container">
+        <div class="recs-bleed">
+          <div class="recs-bleed__inner">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CATALOGUE + TOC RAIL
+         ========================================================= -->
+    <section class="recs-body" aria-label="Catalogue + navigation">
+      <div class="container">
+        <div class="recs-bleed">
+          <div class="recs-surface">
+            <div class="recs-bleed__inner">
+
+              <div class="recs-catalogue-layout">
+
+                <!-- LEFT: Catalogue column -->
+                <div class="recs-catalogue-main">
+
+                  <section class="recs-lists" id="lists" aria-label="Full recommendation lists">
+
+                    <header class="recs-lists-head">
+                      <!-- CHANGED: H2 (already H2, kept as requested) -->
+                      <h2 class="recs-lists-title">Full Catalogue</h2>
+                      <p class="recs-lists-sub">
+                        Browse a title by medium, then filter by type. If a title is discussed as Hero-Journey, a link is provided to its dedicated page. If you prefer direct search, click search archive.
+                      </p>
+
+                      <!-- NEW: Sort + Search link -->
+                      <div class="recs-controls" aria-label="Catalogue controls">
+                        <label class="recs-control" style="display:flex; align-items:center; gap:8px;">
+                          <span class="recs-subindex-label" style="margin:0;">Sort:</span>
+                          <select class="recs-select" data-recs-sort aria-label="Sort catalogue">
+                            <option value="title-asc" selected>Alphabetical (A–Z)</option>
+                            <option value="title-desc">Alphabetical (Z–A)</option>
+                            <option value="year-desc">Year (New → Old)</option>
+                            <option value="year-asc">Year (Old → New)</option>
+                          </select>
+                        </label>
+
+                        <a class="recs-pill" href="search/index.html" title="Search Mythogin">
+                          Search the archive →
+                        </a>
+                      </div>
+                    </header>
+
+                    <!-- BOOKS -->
+                    <details class="recs-medium" id="lists-books">
+                      <summary class="recs-medium-summary">
+                        <span class="recs-medium-title">Books</span>
+                      </summary>
+                      <div class="recs-medium-body">
+                        <nav class="recs-subindex" aria-label="Books index">
+                          <div class="recs-subindex-row">
+                            <span class="recs-subindex-label">By type:</span>
+                            <a class="recs-subindex-link" href="#books-comedy-list">Comedy</a>
+                            <a class="recs-subindex-link" href="#books-drama-list">Drama</a>
+                            <a class="recs-subindex-link" href="#books-scifi-list">Sci-Fi</a>
+                            <a class="recs-subindex-link" href="#books-nonfiction-list">Non-Fiction</a>
+                          </div>
+                        </nav>
+                        <div data-recs-mount="books"></div>
+                      </div>
+                    </details>
+
+                    <!-- TV -->
+                    <details class="recs-medium" id="lists-tv">
+                      <summary class="recs-medium-summary">
+                        <span class="recs-medium-title">TV</span>
+                      </summary>
+                      <div class="recs-medium-body">
+                        <nav class="recs-subindex" aria-label="TV index">
+                          <div class="recs-subindex-row">
+                            <span class="recs-subindex-label">By type:</span>
+                            <a class="recs-subindex-link" href="#tv-comedy-list">Comedy</a>
+                            <a class="recs-subindex-link" href="#tv-drama-list">Drama</a>
+                            <a class="recs-subindex-link" href="#tv-scifi-list">Sci-Fi</a>
+                            <a class="recs-subindex-link" href="#tv-nonfiction-list">Non-Fiction</a>
+                          </div>
+                        </nav>
+                        <div data-recs-mount="tv"></div>
+                      </div>
+                    </details>
+
+                    <!-- FILM -->
+                    <details class="recs-medium" id="lists-film">
+                      <summary class="recs-medium-summary">
+                        <span class="recs-medium-title">Film</span>
+                      </summary>
+                      <div class="recs-medium-body">
+                        <nav class="recs-subindex" aria-label="Film index">
+                          <div class="recs-subindex-row">
+                            <span class="recs-subindex-label">By type:</span>
+                            <a class="recs-subindex-link" href="#film-comedy-list">Comedy</a>
+                            <a class="recs-subindex-link" href="#film-drama-list">Drama</a>
+                            <a class="recs-subindex-link" href="#film-scifi-list">Sci-Fi</a>
+                            <a class="recs-subindex-link" href="#film-nonfiction-list">Non-Fiction</a>
+                          </div>
+                        </nav>
+                        <div data-recs-mount="film"></div>
+                      </div>
+                    </details>
+
+                    <!-- GAMES -->
+                    <details class="recs-medium" id="lists-games">
+                      <summary class="recs-medium-summary">
+                        <span class="recs-medium-title">Games</span>
+                      </summary>
+                      <div class="recs-medium-body">
+                        <div data-recs-mount="games"></div>
+                      </div>
+                    </details>
+
+                    <!-- PODCASTS -->
+                    <details class="recs-medium" id="lists-podcasts">
+                      <summary class="recs-medium-summary">
+                        <span class="recs-medium-title">Podcasts</span>
+                      </summary>
+                      <div class="recs-medium-body">
+                        <div data-recs-mount="podcasts"></div>
+                      </div>
+                    </details>
+
+                    <!-- DOCUMENTARIES -->
+                    <details class="recs-medium" id="lists-documentaries">
+                      <summary class="recs-medium-summary">
+                        <span class="recs-medium-title">Documentaries</span>
+                      </summary>
+                      <div class="recs-medium-body">
+                        <div data-recs-mount="documentaries"></div>
+                      </div>
+                    </details>
+
+                  </section>
+                </div><!-- /.recs-catalogue-main -->
+
+                <!-- RIGHT: TOC rail -->
+                <aside class="recs-catalogue-aside story-aside" aria-label="On this page">
+
+                  <button class="toc-toggle"
+                          type="button"
+                          data-toc-open
+                          data-recs-toc-open
+                          aria-expanded="false"
+                          aria-controls="recsTocPanel">
+                    On this page <span class="nav-caret" aria-hidden="true">▾</span>
+                  </button>
+
+                  <div class="toc-panel"
+                       id="recsTocPanel"
+                       aria-hidden="true"
+                       aria-label="Recommendations table of contents">
+
+                    <div class="toc-panel-head">
+                      <div class="toc-panel-title">On this page</div>
+                      <button class="toc-panel-close"
+                              type="button"
+                              data-toc-close
+                              data-recs-toc-close
+                              aria-label="Close table of contents">✕</button>
+                    </div>
+
+                    <nav class="toc-panel-nav" aria-label="Recommendations table of contents">
+                      <!-- populated by recommendations-drawer.js -->
+                    </nav>
+                  </div>
+
+                </aside>
+
+              </div><!-- /.recs-catalogue-layout -->
+
+            </div><!-- /.recs-bleed__inner -->
+          </div><!-- /.recs-surface -->
+        </div><!-- /.recs-bleed -->
+      </div><!-- /.container -->
+    </section>
+
+  </main>
+
+  <!-- ONE backdrop only (global, like your other story pages) -->
+  <div class="toc-backdrop"
+       data-toc-backdrop
+       data-recs-toc-backdrop
+       aria-hidden="true"></div>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
+          <ul>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4><a href="features/index.html">Features</a></h4>
+          <ul>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+          <ul>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/film/index.html">Film</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4><a href="perspective/index.html">Perspective</a></h4>
+          <ul>
+            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/recommendations.js"></script>
+  <script src="js/recommendations-drawer.js"></script>
+
+</body>
+</html>
