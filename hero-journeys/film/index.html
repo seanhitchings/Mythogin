@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Refactor: match Books hub behavior -->
+  <base href="/mythogin/">
+
+  <title>Mythogin — Film</title>
+  <meta name="description"
+        content="Film on Mythogin: cinema as myth-machine — meaning vs spectacle — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/hero-journeys/film/index.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+
+
+</head>
+
+<body class="film-page">
+
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
+
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/film/index.html" aria-current="page">Film</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
+        </div>
+
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
+          <a class="nav-link"
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
+
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
+
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+<!-- Hub loader contract -->
+<main class="topics film" data-hub data-hub-jsons="data/search-index.json">
+
+  <!-- HERO -->
+  <section class="topics-hero" aria-label="Film hero">
+    <div class="container">
+      <div class="topics-hero-card bleed-pad">
+
+        <div class="topics-hero-media" aria-hidden="true">
+          <img src="images/hero-journeys/movies.webp" alt="" loading="eager" decoding="async">
+          <div class="topics-hero-overlay"></div>
+        </div>
+
+        <div class="topics-hero-content">
+          <h1 class="topics-hero-title">Film</h1>
+          <p class="topics-hero-lead">
+            Cinema is the compressed epic — image, rhythm, and myth distilled into two hours of meaning (or spectacle).
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- 1) INTRODUCTION -->
+  <section class="topics-intro" aria-label="Film introduction">
+    <div class="container">
+      <div class="section-card card--surface bleed-pad">
+        <header class="section-head">
+          <h2 class="section-title">Introduction</h2>
+        </header>
+        <p class="section-sub">
+          These films are selected for what they reveal about character, conscience, power, and the modern imagination.
+          Essays are organized into <strong>Critique</strong>, <strong>Fix</strong>, and <strong>Impact</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) HIGHLIGHTED ESSAYS (3 only) -->
+  <section class="books-catalogue" aria-label="Highlighted film essays">
+    <div class="container">
+
+      <div class="section-card card--surface bleed-pad">
+        <header class="section-head">
+          <h2 class="section-title">Highlighted Essays</h2>
+          <p class="section-sub">Three anchor essays to start with.</p>
+        </header>
+
+        <div class="books-grid">
+
+          <!-- The Matrix -->
+          <article class="section-card card--portrait card--stack card--contain">
+            <div class="card-media" aria-hidden="true">
+              <img src="images/topics/film/the-matrix.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="card-body">
+              <div class="card-head">
+                <span class="chip">Featured</span>
+                <span class="chip chip--muted">Critique</span>
+              </div>
+
+              <h3 class="card-title">
+                <a href="hero-journeys/film/the-matrix/index.html" style="color:inherit; text-decoration:none;">The Matrix</a>
+              </h3>
+
+              <p class="card-question">
+                Awakening as genre — illusion, discipline, and the violence required to see clearly.
+              </p>
+
+              <div class="card-actions" style="justify-content:center">
+                <a class="btn primary" href="hero-journeys/film/the-matrix/index.html">Explore</a>
+              </div>
+
+              <div class="audio-chip" aria-label="Audio options">
+                <span class="audio-chip-label">Audio</span>
+                <div class="audio-chip-actions">
+                  <a class="audio-chip-btn" href="#">Listen</a>
+                  <a class="audio-chip-btn" href="#" download>Download</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Batman Begins -->
+          <article class="section-card card--portrait card--stack card--contain">
+            <div class="card-media" aria-hidden="true">
+              <img src="images/topics/film/batman-begins.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="card-body">
+              <div class="card-head">
+                <span class="chip">Featured</span>
+                <span class="chip chip--muted">Fix</span>
+              </div>
+
+              <h3 class="card-title">
+                <a href="hero-journeys/film/batman-begins/index.html" style="color:inherit; text-decoration:none;">Batman Begins</a>
+              </h3>
+
+              <p class="card-question">
+                Fear as fuel — discipline, identity, and the ethics of becoming a symbol.
+              </p>
+
+              <div class="card-actions" style="justify-content:center">
+                <a class="btn primary" href="hero-journeys/film/batman-begins/index.html">Explore</a>
+              </div>
+
+              <div class="audio-chip" aria-label="Audio options">
+                <span class="audio-chip-label">Audio</span>
+                <div class="audio-chip-actions">
+                  <a class="audio-chip-btn" href="#">Listen</a>
+                  <a class="audio-chip-btn" href="#" download>Download</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Prometheus -->
+          <article class="section-card card--portrait card--stack card--contain">
+            <div class="card-media" aria-hidden="true">
+              <img src="images/topics/film/prometheus.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="card-body">
+              <div class="card-head">
+                <span class="chip">Featured</span>
+                <span class="chip chip--muted">Impact</span>
+              </div>
+
+              <h3 class="card-title">
+                <a href="hero-journeys/film/prometheus/index.html" style="color:inherit; text-decoration:none;">Prometheus</a>
+              </h3>
+
+              <p class="card-question">
+                Origins as horror — creation, contempt, and the peril of meeting your makers.
+              </p>
+
+              <div class="card-actions" style="justify-content:center">
+                <a class="btn primary" href="hero-journeys/film/prometheus/index.html">Explore</a>
+              </div>
+
+              <div class="audio-chip" aria-label="Audio options">
+                <span class="audio-chip-label">Audio</span>
+                <div class="audio-chip-actions">
+                  <a class="audio-chip-btn" href="#">Listen</a>
+                  <a class="audio-chip-btn" href="#" download>Download</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3) BROWSE ALL FILM (JS populated) -->
+  <section class="books-catalogue"
+           aria-label="Browse all film"
+           data-hub-cat="film">
+    <div class="container">
+
+      <div class="section-card card--surface bleed-pad">
+        <header class="section-head">
+          <h2 class="section-title" data-hub-cat-title>Browse all Film</h2>
+          <p class="section-sub">
+            The full list of entries on Mythogin (no default tags—only highlights are tagged).
+          </p>
+        </header>
+
+        <div class="books-grid" data-hub-cat-grid></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+</main>
+
+<!-- Footer: updated to match Books hub footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html" aria-current="page">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/hub-loader.js"></script>
+
+
+</body>
+</html>

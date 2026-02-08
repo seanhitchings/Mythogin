@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/">
+
+  <title>Mythogin — Aristotle’s Children</title>
+  <meta name="description" content="Aristotle’s Children on Mythogin: reason inherits the sacred, the medieval mind meets Greece, and metaphysics becomes a shared language — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/herojourneys/documentaries/aristotles-children/index.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/story-card.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
+
+  <!-- Accordion (shared component) -->
+  <link rel="stylesheet" href="css/components/accordion.css">
+</head>
+
+<body class="story story--documentaries">
+
+  <!-- Shared Nav (same as hubs) -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <a class="nav-link"
+             href="features.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
+              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Story hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/documentaries/aristotles-children.webp" alt="" loading="eager" decoding="async">
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content story-hero-content">
+            <p class="story-kicker">Documentaries</p>
+
+            <h1 class="topics-hero-title">Aristotle’s Children</h1>
+
+            <p class="topics-hero-lead">
+              Reason inherits the sacred: the medieval mind meets Greece, and a shared metaphysical grammar is born.
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip (MATCHES TEMPLATE) -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <a class="audio-chip-btn" href="#" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY + TOC RAIL -->
+    <section class="story-body" aria-label="Essay">
+      <div class="container">
+
+        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
+        <div class="story-layout story-layout--toc">
+
+          <!-- Article column -->
+          <article class="story-article">
+
+            <!-- Intro -->
+            <section class="story-section section-card card--surface bleed-pad" id="intro">
+              <header class="section-head">
+                <h2 class="section-title">Intro</h2>
+                <p class="section-sub">
+                  When Aristotle returns, he doesn’t arrive as “information.” He arrives as a toolset—logic, categories, causality—capable of reorganizing the mind.
+                </p>
+              </header>
+
+              <p>
+                <em>Aristotle’s Children</em> is a hinge-story about transmission: how Greek philosophy—filtered through Arabic scholarship and re-entering Latin Europe—
+                reshapes medieval thought. The shock is not merely “new ideas,” but a new <em>discipline</em> of thought: definition, argument, structure, and method.
+              </p>
+
+              <p>
+                The documentary’s deeper theme is psychological. A culture inherits a language for thinking, and suddenly questions become legible that were previously
+                inexpressible. Theology doesn’t disappear; it is forced to clarify itself—sometimes to its own surprise.
+              </p>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What the documentary gets exactly right — and what it can flatten.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-translation" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Translation as creation, not copying</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The strongest reading is that “translation” is a creative act. Words don’t move intact between worlds.
+                      Concepts have to be <em>rebuilt</em> inside a new mental and theological ecosystem. What emerges is not pure Greece
+                      or pure Christianity, but a hybrid vocabulary capable of precision.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-simplify">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The risk: a too-clean “West inherits Greece” story</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      If told too neatly, the narrative can imply a straight line of progress. But what actually happened is messier:
+                      competing schools, political pressures, institutional gatekeeping, and genuine metaphysical fear about what certain ideas
+                      might do to the soul and the social order.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-consciousness">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">What’s underemphasized: the interior shift</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The most important consequence is not academic. It’s a shift in <em>how</em> a person can think.
+                      Once you have categories, causes, definitions, and formal argument, you can hold complexity without dissolving into mysticism
+                      or authority. You can disagree without pure factionalism. This is a technology of consciousness.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Method</strong> becomes a cultural asset—definitions and arguments start to matter.</li>
+                <li><strong>Institutions</strong> mediate truth—ideas travel through power.</li>
+                <li><strong>Metaphysics</strong> turns into grammar—questions become speakable.</li>
+              </ul>
+            </section>
+
+            <!-- Fix -->
+            <section class="story-section section-card card--surface bleed-pad" id="fix">
+              <header class="section-head">
+                <h2 class="section-title">Fix</h2>
+                <p class="section-sub">Three ways to sharpen the documentary’s explanatory power.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="fix-map" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Show the transmission map as a recurring motif</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Keep a simple, consistent map on-screen: Greek sources → Arabic commentators → Latin translators → university debates.
+                      Not as trivia, but as a reminder that ideas are carried by people, institutions, and incentives.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-example">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Use one concept all the way through</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Pick one high-impact concept—say <em>causality</em> (formal/material/efficient/final) or <em>substance</em> and <em>accident</em>—
+                      and trace it through a concrete dispute. Viewers remember arguments when they see them tested against a real problem.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-psychology">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Make the psychological stakes explicit</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Frame the conflict as a fear about what logic could do: undermine authority, destabilize doctrine, and change the soul’s relationship to certainty.
+                      That’s the real tension—reason isn’t neutral when a civilization is built on sacred claims.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="story-section section-card card--surface bleed-pad" id="impact">
+              <header class="section-head">
+                <h2 class="section-title">Impact</h2>
+                <p class="section-sub">Why this “inheritance” still matters now.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="impact-synthesis" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Synthesis as cultural survival</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The story is a reminder that civilizations survive by integrating tools without losing the question of meaning.
+                      Aristotle is not “the answer.” He is a disciplined way to ask, test, and refine questions that would otherwise collapse into slogans.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-language">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">A shared language for disagreement</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      When argument becomes formal, disagreement can become productive instead of purely tribal.
+                      The inheritance is not “Greek content,” but a public standard for coherence: define terms, give reasons, face objections.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (inside article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Documentaries navigation"
+                     data-topic-nav="documentaries"
+                     data-topic-slug="aristotles-children">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="#" data-crumb-section-link>
+                        <span data-crumb-section-text>Documentaries</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Documentaries navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <!-- Right rail TOC (SIBLING of article — REQUIRED) -->
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Mythogin</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/herojourneys/books/index.html">Books</a></li>
+            <li><a href="/herojourneys/film/index.html">Film</a></li>
+            <li><a href="/herojourneys/tv/index.html">TV</a></li>
+            <li><a href="/herojourneys/games/index.html">Games</a></li>
+            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Perspective</h4>
+          <ul>
+            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="/perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/topic-nav.js"></script>
+</body>
+</html>
