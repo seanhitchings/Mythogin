@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <base href="/mythogin/">
+
+  <title>Mythogin — Podcasts</title>
+  <meta name="description"
+        content="Podcasts on Mythogin: longform conversation as myth-making—ideas tested in public." />
+  <!-- FILE LOCATION: /mythogin/hero-journeys/podcasts/index.html -->
+
+  <!-- Social (kept) -->
+  <meta property="og:site_name" content="Mythogin" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Podcasts" />
+  <meta property="og:description" content="Longform conversation as myth-making—ideas tested in public." />
+  <meta property="og:image" content="images/hero-journeys/podcasts.webp" />
+  <meta property="og:url" content="hero-journeys/podcasts/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0f1319" />
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components (MATCH BOOKS TEMPLATE) -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+   <link rel="stylesheet" href="css/components/featured.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+</head>
+
+<body class="podcasts-page">
+
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
+
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html" aria-current="page">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
+        </div>
+
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
+          <a class="nav-link"
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
+
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
+
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+<main class="topics podcasts" data-hub data-hub-jsons="data/search-index.json">
+
+  <!-- HERO -->
+  <section class="topics-hero" aria-label="Podcasts hero">
+    <div class="container">
+      <div class="topics-hero-card bleed-pad">
+
+        <div class="topics-hero-media" aria-hidden="true">
+          <img src="images/hero-journeys/podcasts.webp" alt="" loading="eager" decoding="async">
+          <div class="topics-hero-overlay"></div>
+        </div>
+
+        <div class="topics-hero-content">
+          <h1 class="topics-hero-title">Podcasts</h1>
+          <p class="topics-hero-lead">
+            Longform conversation as myth-making — ideas tested in public, refined through friction.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- INTRO -->
+  <section class="topics-intro" aria-label="Podcasts introduction">
+    <div class="container">
+      <div class="section-card card--surface bleed-pad">
+        <header class="section-head">
+          <h2 class="section-title">Introduction</h2>
+        </header>
+        <p class="section-sub">
+          Podcasts are where meaning gets pressure-tested: claims meet counterclaims, and narrative meets evidence.
+          These entries focus on the mythic layer beneath “topics”—the value systems and incentives doing the real work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 2) HIGHLIGHTED ESSAYS (3 only) -->
+<section class="books-catalogue" aria-label="Highlighted book essays">
+  <div class="container">
+    <div class="section-card card--surface bleed-pad">
+      <header class="section-head">
+        <h2 class="section-title">Highlighted Essays</h2>
+        <p class="section-sub">Three anchor essays to start with.</p>
+      </header>
+
+      <!-- JS mounts cards here (from search-index.json via featured.js) -->
+      <div class="books-grid" data-top-picks-grid data-top-picks-category="essays" data-top-picks-type="podcasts" data-top-picks-limit="3"></div>
+    </div>
+  </div>
+</section>
+
+  <!-- BROWSE ALL -->
+  <section class="books-catalogue"
+           aria-label="Browse all podcasts"
+           data-hub-cat="podcasts">
+    <div class="container">
+      <div class="section-card card--surface bleed-pad">
+
+        <header class="section-head">
+          <h2 class="section-title" data-hub-cat-title>
+            Browse all Podcasts
+          </h2>
+          <p class="section-sub">
+            The full list of entries on Mythogin (no default tags—only highlights are tagged).
+          </p>
+        </header>
+
+        <div class="books-grid" data-hub-cat-grid></div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <div class="footer-col">
+        <h4><a href="index.html">Mythogin</a></h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search/index.html">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html" aria-current="page">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+  <script src="js/featured.js"></script>
+<script src="js/hub-loader.js"></script>
+</body>
+</html>
