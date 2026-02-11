@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+  <base href="/mythogin/">
 
-  <title>Mythogin — Andor</title>
-  <meta name="description" content="Andor on Mythogin: rebellion under bureaucracy, moral cost, and seriousness without spectacle — critique, fix, impact." />
-  <!-- FILE LOCATION: /Mythogin/herojourneys/tv/andor/index.html -->
+  <title>Mythogin — Fallout</title>
+  <meta name="description" content="Fallout on Mythogin: cheerful apocalypse, corporate mythology, and survival as moral compromise — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/hero-journeys/tv/fallout/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -30,83 +30,87 @@
 
 <body class="story story--tv">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary">
-
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
           <a class="nav-link"
-             href="recommendations.html"
-             data-tip="What to read, watch, or play next">
-            Recommendations
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
-          <a class="nav-link"
-             href="features.html"
-             data-tip="Multimedia presentations & debates">
-            Features
-          </a>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="/herojourneys/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="perspective/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <a class="nav-link"
-             href="about.html"
-             data-tip="What Mythogin is and who its for">
-            About
-          </a>
+      </nav>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
-
-      </div>
     </div>
   </div>
+</div>
+
 
   <main class="story">
 
@@ -116,26 +120,25 @@
         <div class="topics-hero-card story-hero-card bleed-pad">
 
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/tv/andor.webp" alt="" loading="eager" decoding="async">
+            <img src="images/topics/tv/fallout.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
 
           <div class="topics-hero-content story-hero-content">
             <p class="story-kicker">TV</p>
 
-            <h1 class="topics-hero-title">Andor</h1>
+            <h1 class="topics-hero-title">Fallout</h1>
 
             <p class="topics-hero-lead">
-              Rebellion under bureaucracy: the real pressure is procedure, fear, and the cost of choosing.
+              A cheerful apocalypse where the real monster is the old world’s smile: corporate myths, curated innocence, and survival as compromise.
             </p>
 
             <div class="u-space-10" aria-hidden="true"></div>
 
-            <!-- Audio chip (MATCHES BOOK TEMPLATE) -->
+            <!-- Audio chip (MATCHES TEMPLATE) -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
-                <!-- Adjust hrefs to your real audio asset(s) -->
                 <a class="audio-chip-btn" href="#" aria-label="Listen to audio">Listen</a>
                 <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
               </span>
@@ -153,7 +156,6 @@
     <section class="story-body" aria-label="Essay">
       <div class="container">
 
-        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
         <div class="story-layout story-layout--toc">
 
           <!-- Article column -->
@@ -164,61 +166,155 @@
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  Andor tries to make rebellion feel real: not a costume, but a chain of irreversible choices made under surveillance.
+                  <em>Fallout</em> is post-apocalypse with a grin: the joke is funny until you realize it’s the same grin that built the bomb.
                 </p>
               </header>
 
               <p>
-                Replace this with your intro. Keep paragraphs short and concrete; let each claim land cleanly.
-                Anchor the essay in what makes <em>Andor</em> distinct: institutions, incentives, and consequence.
+                The series inherits the franchise’s best contradiction: a world annihilated by modern confidence, still dressed in the costumes
+                of mid-century optimism. That aesthetic isn’t just flavor — it’s the theme. “Better living” becomes a mask worn over brutality,
+                and “the future” becomes a sales pitch that keeps working even after the end.
+              </p>
+
+              <p>
+                What makes <em>Fallout</em> land is its moral texture. This world is not a clean battle between good people and bad factions.
+                It’s a market of survival: deals, betrayals, protection rackets, experiments, and myths — each one an attempt to build order
+                out of rubble without admitting what created the rubble.
+              </p>
+
+              <p>
+                Mythogin’s lens: <em>Fallout</em> is a story about the persistence of ideology. Catastrophe doesn’t erase the old world;
+                it reveals what the old world really was. The question isn’t “How do we rebuild?” It’s “What are we rebuilding <em>from</em>?”
               </p>
             </section>
 
-            <!-- Critique -->
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <!-- The Machine -->
+            <section class="story-section section-card card--surface bleed-pad" id="machine">
               <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the series nails — and where it compromises.</p>
+                <h2 class="section-title">The Machine</h2>
+                <p class="section-sub">Why the wasteland is frightening here: it’s not chaos — it’s continuity.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="critique-consequence" open>
+                <details class="accordion-item" id="machine-vaults" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Consequence is the real special effect</h3>
+                    <h3 class="accordion-title">1) The Vaults are ideology in a box</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Write about pressure built through systems: incentives, surveillance, fear, and scarcity—not “plot magic.”</p>
+                    <p>
+                      The Vault is a promise: safety through design. But that promise always comes with governance — rules, roles,
+                      propaganda, controlled history. The series uses the Vault not merely as a location, but as a moral technology:
+                      innocence is manufactured, and obedience is framed as gratitude.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-banal-evil">
+                <details class="accordion-item" id="machine-corporate">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The Empire is banal — and that’s the point</h3>
+                    <h3 class="accordion-title">2) Corporate myth survives the apocalypse</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Write about bureaucracy, careerism, language, and how violence can arrive as “policy.”</p>
+                    <p>
+                      The old world’s brands and slogans persist like religion: mascots, jingles, products, uniforms.
+                      That persistence is the critique — capitalism doesn’t only sell objects; it sells meaning.
+                      Even after collapse, people still organize themselves around the same symbolic furniture.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-hollow">
+                <details class="accordion-item" id="machine-violence">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Why it can still feel hollow</h3>
+                    <h3 class="accordion-title">3) Violence becomes a currency</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. If you argue “rebellion without consequence,” define the missing cost: moral, relational, metaphysical, or narrative.</p>
+                    <p>
+                      In a broken world, protection is scarce — so protection becomes a business. Moral compromise stops being an exception
+                      and becomes the default transaction cost. The wasteland’s “order” is often just a ledger: who can enforce terms.
+                    </p>
                   </div>
                 </details>
 
               </div>
 
               <ul class="story-bullets">
-                <li><strong>Systems</strong> create pressure—people crack or harden.</li>
-                <li><strong>Language</strong> sanitizes violence—procedure becomes permission.</li>
-                <li><strong>Courage</strong> is local—heroism is usually small and ugly.</li>
+                <li><strong>Order</strong> is built through controlled narratives.</li>
+                <li><strong>Meaning</strong> is inherited from the old world’s ads and myths.</li>
+                <li><strong>Survival</strong> turns ethics into negotiation.</li>
+              </ul>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What the series nails — and where its charm can soften the blade.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-tone" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The tonal contradiction is the engine</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The show’s humor isn’t a break from darkness — it’s the expression of it. The cheerful surface makes the violence feel stranger,
+                      and the violence makes the cheer feel uncanny. That tension is the franchise’s signature: apocalypse as a theme park built by cynics.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-worldbuilding">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Worldbuilding is dense without becoming homework</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The series does a rare adaptation trick: it feels like the games without turning into fan-service cosplay.
+                      It respects the iconography while staying readable to newcomers — the best kind of translation.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-satire">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The risk: satire can become wallpaper</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      When the aesthetic is strong, it can absorb the critique. The viewer enjoys the retro-future vibe
+                      without feeling the indictment of it. <em>Fallout</em> is strongest when the joke curdles — when you see
+                      how “optimism” is used to anesthetize cruelty.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-heart">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The heart must keep earning its place</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The story works when the characters’ needs are simple and human: safety, truth, belonging, revenge, redemption.
+                      If the show ever leans too far into spectacle-of-weirdness, it risks becoming a tour instead of a journey.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Strength:</strong> tone is the critique, not decoration.</li>
+                <li><strong>Strength:</strong> adaptation respects the world without collapsing into fan-service.</li>
+                <li><strong>Risk:</strong> satire can become vibe instead of verdict.</li>
               </ul>
             </section>
 
@@ -226,38 +322,50 @@
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">If you could sharpen one structural, one character, and one thematic choice.</p>
+                <p class="section-sub">Three upgrades that sharpen <em>Fallout</em> as a Mythogin “tool for thinking.”</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="fix-structure" open>
+                <details class="accordion-item" id="fix-ledger" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Structural adjustment</h3>
+                    <h3 class="accordion-title">1) Track a visible “moral ledger” per arc</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Describe the change, where it lands, and what it unlocks.</p>
+                    <p>
+                      <em>Fallout</em> is about compromise. Make it explicit with a recurring motif:
+                      what each character traded (trust, innocence, mercy, truth) to survive this chapter.
+                      It would deepen the show’s ethics without changing tone.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-character">
+                <details class="accordion-item" id="fix-oldworld">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Character adjustment</h3>
+                    <h3 class="accordion-title">2) One “old world” parable per episode</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Pick one arc and make the cost explicit: what they lose, what they become unable to do.</p>
+                    <p>
+                      The franchise shines when it links wasteland absurdity to pre-war logic.
+                      A brief parable — a training film, a corporate memo, a mascot performance — that shows
+                      the exact reasoning that normalized disaster. Comedy becomes diagnosis.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-theme">
+                <details class="accordion-item" id="fix-mythic">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Thematic adjustment</h3>
+                    <h3 class="accordion-title">3) Add a thin mythic spine: “the garden” vs “the vault”</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Decide what you want the audience to feel in their bones: hope, dread, responsibility, or complicity.</p>
+                    <p>
+                      The Vault is controlled paradise. The wasteland is uncontrolled reality.
+                      Make the central symbolic question explicit: is salvation safety — or freedom?
+                      Then force characters to choose which story of humanity they actually believe.
+                    </p>
                   </div>
                 </details>
 
@@ -268,28 +376,50 @@
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">What Andor reveals about the moment_toggle..</p>
+                <p class="section-sub">Why <em>Fallout</em> resonates: it treats collapse as a continuation of everyday incentives.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="impact-seriousness" open>
+                <details class="accordion-item" id="impact-ideology" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">A hunger for seriousness in an age of spectacle</h3>
+                    <h3 class="accordion-title">Ideology outlives the world</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Connect it to Mythogin themes: meaning vs process, conscience vs compliance, truth vs performance.</p>
+                    <p>
+                      The show’s sharpest point is that catastrophe doesn’t reset culture.
+                      People keep worshiping the same symbols, repeating the same myths, and chasing the same status —
+                      just with fewer resources and more guns.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="impact-institutions">
+                <details class="accordion-item" id="impact-compromise">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Institutions as character</h3>
+                    <h3 class="accordion-title">Survival as moral erosion</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Argue how the show makes systems feel like weather—inescapable, impersonal, yet built by people.</p>
+                    <p>
+                      <em>Fallout</em> makes a hard truth entertaining: most evil is incremental.
+                      You don’t become a monster by deciding to be one — you become one by paying the same small price
+                      for “necessity” again and again until it’s your personality.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-humor">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Humor as the last anesthetic</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The retro cheer isn’t just style — it’s a coping mechanism. The show captures how people survive horror:
+                      by turning it into routine, by turning routine into jokes, and by letting the joke keep them from feeling
+                      what they’re doing. That is the darkest kind of comedy.
+                    </p>
                   </div>
                 </details>
 
@@ -302,7 +432,7 @@
             <section class="topic-nav-surface topic-nav-surface--story"
                      aria-label="TV navigation"
                      data-topic-nav="tv"
-                     data-topic-slug="andor">
+                     data-topic-slug="fallout">
 
               <div class="topic-nav-bg" aria-hidden="true">
                 <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
@@ -312,10 +442,10 @@
 
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
                     <li class="crumb">
@@ -378,64 +508,75 @@
 
   <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-      <div class="footer-brand">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
         <div class="footer-name">Mythogin</div>
         <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
+    <nav class="footer-nav" aria-label="Footer navigation">
 
+      <!-- Mythogin -->
         <div class="footer-col">
-          <h4>Mythogin</h4>
+          <h4><a href="index.html">Mythogin</a></h4>
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
-          </ul>
-        </div>
+      <!-- Recommendations -->
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Hero-Journeys</h4>
-          <ul>
-            <li><a href="/herojourneys/books/index.html">Books</a></li>
-            <li><a href="/herojourneys/film/index.html">Film</a></li>
-            <li><a href="/herojourneys/tv/index.html">TV</a></li>
-            <li><a href="/herojourneys/games/index.html">Games</a></li>
-            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
-          </ul>
-        </div>
+      <!-- Features -->
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Perspective</h4>
-          <ul>
-            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="/perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
+      <!-- Hero-Journeys -->
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
-          </ul>
-        </div>
+      <!-- Perspective -->
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
 
-      </nav>
+    </nav>
 
-    </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
   <script src="js/drawer.js"></script>

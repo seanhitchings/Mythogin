@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+  <base href="/mythogin/">
 
   <title>Mythogin — Andor</title>
-  <meta name="description" content="Andor on Mythogin: rebellion under bureaucracy, moral cost, and seriousness without spectacle — critique, fix, impact." />
-  <!-- FILE LOCATION: /Mythogin/herojourneys/tv/andor/index.html -->
+  <meta name="description" content="Andor on Mythogin: rebellion under bureaucracy, the moral cost of resistance, and seriousness without spectacle — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/hero-journeys/tv/andor/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -30,83 +30,87 @@
 
 <body class="story story--tv">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary">
-
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
           <a class="nav-link"
-             href="recommendations.html"
-             data-tip="What to read, watch, or play next">
-            Recommendations
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
-          <a class="nav-link"
-             href="features.html"
-             data-tip="Multimedia presentations & debates">
-            Features
-          </a>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="/herojourneys/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="perspective/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <a class="nav-link"
-             href="about.html"
-             data-tip="What Mythogin is and who its for">
-            About
-          </a>
+      </nav>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
-
-      </div>
     </div>
   </div>
+</div>
+
 
   <main class="story">
 
@@ -126,16 +130,15 @@
             <h1 class="topics-hero-title">Andor</h1>
 
             <p class="topics-hero-lead">
-              Rebellion under bureaucracy: the real pressure is procedure, fear, and the cost of choosing.
+              Rebellion under bureaucracy: the real pressure is procedure, surveillance, and the cost of choosing — long before the blasters.
             </p>
 
             <div class="u-space-10" aria-hidden="true"></div>
 
-            <!-- Audio chip (MATCHES BOOK TEMPLATE) -->
+            <!-- Audio chip (MATCHES TEMPLATE) -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
-                <!-- Adjust hrefs to your real audio asset(s) -->
                 <a class="audio-chip-btn" href="#" aria-label="Listen to audio">Listen</a>
                 <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
               </span>
@@ -153,7 +156,6 @@
     <section class="story-body" aria-label="Essay">
       <div class="container">
 
-        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
         <div class="story-layout story-layout--toc">
 
           <!-- Article column -->
@@ -164,21 +166,91 @@
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  Andor tries to make rebellion feel real: not a costume, but a chain of irreversible choices made under surveillance.
+                  <em>Andor</em> makes rebellion feel real: not a costume, but a chain of irreversible choices made under surveillance.
                 </p>
               </header>
 
               <p>
-                Replace this with your intro. Keep paragraphs short and concrete; let each claim land cleanly.
-                Anchor the essay in what makes <em>Andor</em> distinct: institutions, incentives, and consequence.
+                Most Star Wars stories treat oppression as a vibe: a symbol you can overthrow with heroism and a climactic fight.
+                <em>Andor</em> treats oppression as an operating system — paperwork, quotas, informants, budgets, career ladders,
+                and the quiet certainty that punishment is “policy,” not personal.
               </p>
+
+              <p>
+                That choice changes everything. Violence becomes a last resort instead of a language. Courage becomes local instead of legendary.
+                And the series’ central question is not “Will the rebels win?” but “What must a person become to resist without becoming the thing they hate?”
+              </p>
+
+              <p>
+                Mythogin’s lens: this is a story about legitimacy. Empires don’t only rule through force — they rule by making obedience feel normal,
+                and dissent feel irrational. <em>Andor</em> shows how that normality is built, maintained, and finally cracked.
+              </p>
+            </section>
+
+            <!-- The Machine (NEW) -->
+            <section class="story-section section-card card--surface bleed-pad" id="machine">
+              <header class="section-head">
+                <h2 class="section-title">The Machine</h2>
+                <p class="section-sub">Why the Empire is frightening here: not because it’s monstrous, but because it’s organized.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="machine-bureaucracy" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">1) Bureaucracy is the weapon</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The show’s most radical move is treating administration as violence. The Empire doesn’t need constant spectacle.
+                      It needs compliance at scale — forms, schedules, approvals, sentencing guidelines, transport routes, labor extraction.
+                      The “banality” isn’t a downgrade; it’s the mechanism.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="machine-surveillance">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">2) Surveillance is social engineering</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Surveillance doesn’t only catch criminals — it reshapes behavior. People pre-comply, self-censor, and isolate.
+                      Trust becomes expensive. The revolution begins when enough people become willing to pay that cost again.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="machine-legitimacy">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">3) Legitimacy is maintained by routine</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Empires endure when their routine feels inevitable. <em>Andor</em> shows how the routine is defended:
+                      through incentives, punishments, and status. People aren’t all villains. Many are simply “doing their job.”
+                      That’s what makes resistance morally complex and psychologically heavy.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Oppression</strong> is standardized—scaled through procedure.</li>
+                <li><strong>Fear</strong> is distributed—people police themselves.</li>
+                <li><strong>Rebellion</strong> begins as a trust network, not a battle.</li>
+              </ul>
             </section>
 
             <!-- Critique -->
             <section class="story-section section-card card--surface bleed-pad" id="critique">
               <header class="section-head">
                 <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the series nails — and where it compromises.</p>
+                <p class="section-sub">What the series nails — and where its strengths can become blind spots.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
@@ -189,7 +261,11 @@
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Write about pressure built through systems: incentives, surveillance, fear, and scarcity—not “plot magic.”</p>
+                    <p>
+                      <em>Andor</em> restores consequence to a franchise that often treats destruction as fireworks.
+                      Plans fail. Costs compound. Trauma doesn’t reset between episodes. Even “wins” arrive with loss,
+                      moral residue, and future vulnerability. The show builds tension by making reality non-negotiable.
+                    </p>
                   </div>
                 </details>
 
@@ -199,26 +275,48 @@
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Write about bureaucracy, careerism, language, and how violence can arrive as “policy.”</p>
+                    <p>
+                      The series’ best political insight is that cruelty rarely needs personal hatred. It needs permission.
+                      People rise inside institutions by enforcing the institution’s goals. “Policy” becomes an emotional shield.
+                      The show makes the Empire legible as a career ecosystem — and that is more chilling than cartoon villainy.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-hollow">
+                <details class="accordion-item" id="critique-ice">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Why it can still feel hollow</h3>
+                    <h3 class="accordion-title">The risk: the tone can go cold</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. If you argue “rebellion without consequence,” define the missing cost: moral, relational, metaphysical, or narrative.</p>
+                    <p>
+                      By refusing spectacle, <em>Andor</em> sometimes risks emotional distance: the system is vivid,
+                      but a few relationships can feel like functions of the plot rather than the heat-source of the story.
+                      The series is strongest when love, loyalty, and grief are not just “motivation,” but a visible wound.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-myth">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The mythic register is intentionally muted</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      This is both feature and tradeoff. The show chooses a modern political realism over Star Wars’ older
+                      spiritual grammar. It gains seriousness, but it narrows the “cosmic” dimension that once made the saga
+                      feel like a myth instead of a thriller. That trade is coherent — but it’s still a trade.
+                    </p>
                   </div>
                 </details>
 
               </div>
 
               <ul class="story-bullets">
-                <li><strong>Systems</strong> create pressure—people crack or harden.</li>
-                <li><strong>Language</strong> sanitizes violence—procedure becomes permission.</li>
-                <li><strong>Courage</strong> is local—heroism is usually small and ugly.</li>
+                <li><strong>Strength:</strong> consequence restores gravity.</li>
+                <li><strong>Strength:</strong> bureaucracy becomes the villain.</li>
+                <li><strong>Risk:</strong> realism can cool the mythic heat.</li>
               </ul>
             </section>
 
@@ -226,38 +324,50 @@
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">If you could sharpen one structural, one character, and one thematic choice.</p>
+                <p class="section-sub">Three upgrades that sharpen the series as a Mythogin “tool for thinking.”</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="fix-structure" open>
+                <details class="accordion-item" id="fix-factions" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Structural adjustment</h3>
+                    <h3 class="accordion-title">1) Keep a visible “factions + incentives” board</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Describe the change, where it lands, and what it unlocks.</p>
+                    <p>
+                      <em>Andor</em> is already systems-first. Make that even clearer with a recurring 20-second motif:
+                      the major factions, their constraints, and what they currently need (money, secrecy, legitimacy, leverage).
+                      It would amplify clarity without changing tone — and make every choice feel even more contingent.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-character">
+                <details class="accordion-item" id="fix-cost">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Character adjustment</h3>
+                    <h3 class="accordion-title">2) Make one moral “line-crossing” explicit per arc</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Pick one arc and make the cost explicit: what they lose, what they become unable to do.</p>
+                    <p>
+                      The show implies moral cost constantly. Sharpen it by naming the line in plain language:
+                      “We are doing X, and it means we can no longer claim Y.” Then show the aftertaste — the relational damage,
+                      the self-justification, the numbness, or the shame. This turns politics into soul-work, not just strategy.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-theme">
+                <details class="accordion-item" id="fix-mythic">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Thematic adjustment</h3>
+                    <h3 class="accordion-title">3) Add a thin mythic thread without changing realism</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Decide what you want the audience to feel in their bones: hope, dread, responsibility, or complicity.</p>
+                    <p>
+                      Not “Force magic.” Just a recurring symbolic question: what is the rebellion <em>for</em> when it finally wins?
+                      A single repeated image, ritual, or vow that represents the future — something small, human, and sacred.
+                      Realism doesn’t have to mean spiritual emptiness.
+                    </p>
                   </div>
                 </details>
 
@@ -268,7 +378,7 @@
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">What Andor reveals about the moment_toggle..</p>
+                <p class="section-sub">Why <em>Andor</em> lands now: it treats politics as lived psychology instead of fandom wallpaper.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
@@ -279,7 +389,11 @@
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Connect it to Mythogin themes: meaning vs process, conscience vs compliance, truth vs performance.</p>
+                    <p>
+                      <em>Andor</em> proves audiences still want stories where meaning is earned, not announced.
+                      It doesn’t flatter the viewer with easy catharsis. It asks for attention — and repays it with coherence.
+                      In Mythogin terms: it treats story as a moral instrument, not content.
+                    </p>
                   </div>
                 </details>
 
@@ -289,7 +403,25 @@
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Argue how the show makes systems feel like weather—inescapable, impersonal, yet built by people.</p>
+                    <p>
+                      The show makes systems feel like weather — impersonal, inescapable, and yet built by people.
+                      That paradox matters: it rejects both naive hero-worship (“one savior fixes it”) and fatalism (“nothing can change”).
+                      Change is shown as coordination under stress.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-resistance">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Resistance as formation, not expression</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The series reframes rebellion as a disciplined practice: secrecy, trust-building, sacrifice, and the willingness
+                      to accept incomplete victories. The real enemy is not only tyranny — it is the internal drift toward comfort,
+                      compliance, and silence.
+                    </p>
                   </div>
                 </details>
 
@@ -312,10 +444,10 @@
 
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
                     <li class="crumb">
@@ -378,64 +510,75 @@
 
   <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-      <div class="footer-brand">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
         <div class="footer-name">Mythogin</div>
         <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
+    <nav class="footer-nav" aria-label="Footer navigation">
 
+      <!-- Mythogin -->
         <div class="footer-col">
-          <h4>Mythogin</h4>
+          <h4><a href="index.html">Mythogin</a></h4>
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
-          </ul>
-        </div>
+      <!-- Recommendations -->
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Hero-Journeys</h4>
-          <ul>
-            <li><a href="/herojourneys/books/index.html">Books</a></li>
-            <li><a href="/herojourneys/film/index.html">Film</a></li>
-            <li><a href="/herojourneys/tv/index.html">TV</a></li>
-            <li><a href="/herojourneys/games/index.html">Games</a></li>
-            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
-          </ul>
-        </div>
+      <!-- Features -->
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Perspective</h4>
-          <ul>
-            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="/perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
+      <!-- Hero-Journeys -->
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
-          </ul>
-        </div>
+      <!-- Perspective -->
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
 
-      </nav>
+    </nav>
 
-    </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
   <script src="js/drawer.js"></script>

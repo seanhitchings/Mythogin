@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+  <base href="/mythogin/">
 
-  <title>Mythogin — Andor</title>
-  <meta name="description" content="Andor on Mythogin: rebellion under bureaucracy, moral cost, and seriousness without spectacle — critique, fix, impact." />
-  <!-- FILE LOCATION: /Mythogin/herojourneys/tv/andor/index.html -->
+  <title>Mythogin — The Saboteurs</title>
+  <meta name="description" content="The Saboteurs on Mythogin: covert courage, trust under surveillance, and the quiet heroism of anonymity — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/hero-journeys/tv/the-saboteurs/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -30,83 +30,87 @@
 
 <body class="story story--tv">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary">
-
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
           <a class="nav-link"
-             href="recommendations.html"
-             data-tip="What to read, watch, or play next">
-            Recommendations
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
-          <a class="nav-link"
-             href="features.html"
-             data-tip="Multimedia presentations & debates">
-            Features
-          </a>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="/herojourneys/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="perspective/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <a class="nav-link"
-             href="about.html"
-             data-tip="What Mythogin is and who its for">
-            About
-          </a>
+      </nav>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
-
-      </div>
     </div>
   </div>
+</div>
+
 
   <main class="story">
 
@@ -116,28 +120,27 @@
         <div class="topics-hero-card story-hero-card bleed-pad">
 
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/tv/andor.webp" alt="" loading="eager" decoding="async">
+            <img src="images/topics/tv/the-saboteurs.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
 
           <div class="topics-hero-content story-hero-content">
             <p class="story-kicker">TV</p>
 
-            <h1 class="topics-hero-title">Andor</h1>
+            <h1 class="topics-hero-title">The Saboteurs</h1>
 
             <p class="topics-hero-lead">
-              Rebellion under bureaucracy: the real pressure is procedure, fear, and the cost of choosing.
+              Covert war as quiet heroism: fear is constant, trust is scarce, and duty means risking anonymity itself.
             </p>
 
             <div class="u-space-10" aria-hidden="true"></div>
 
-            <!-- Audio chip (MATCHES BOOK TEMPLATE) -->
+            <!-- Audio chip (MATCHES TEMPLATE) -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
-                <!-- Adjust hrefs to your real audio asset(s) -->
-                <a class="audio-chip-btn" href="#" aria-label="Listen to audio">Listen</a>
-                <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
+                <a class="audio-chip-btn" href="hero-journeys/tv/the-saboteurs/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/tv/the-saboteurs/audio.mp3" download aria-label="Download audio">Download</a>
               </span>
             </div>
 
@@ -153,7 +156,6 @@
     <section class="story-body" aria-label="Essay">
       <div class="container">
 
-        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
         <div class="story-layout story-layout--toc">
 
           <!-- Article column -->
@@ -164,61 +166,144 @@
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  Andor tries to make rebellion feel real: not a costume, but a chain of irreversible choices made under surveillance.
+                  <em>The Saboteurs</em> is about courage without applause: the kind that survives by staying invisible.
                 </p>
               </header>
 
               <p>
-                Replace this with your intro. Keep paragraphs short and concrete; let each claim land cleanly.
-                Anchor the essay in what makes <em>Andor</em> distinct: institutions, incentives, and consequence.
+                This story treats resistance as a discipline rather than a pose. It’s not the fantasy of the lone hero,
+                but the reality of networks: people moving in silence, making small decisions that compound into strategy.
+                And the costs aren’t just physical. They’re social. Psychological. Moral.
+              </p>
+
+              <p>
+                In covert war, the enemy is not only the occupier — it’s exposure. A single mistake can erase months of work,
+                endanger families, and destroy the fragile trust that makes action possible at all.
+              </p>
+
+              <p>
+                Mythogin’s lens: this is a story about anonymity as virtue. A culture trained to chase recognition has trouble
+                honoring the kind of service that cannot be credited. <em>The Saboteurs</em> asks what it means to choose duty
+                when you may never be known as the one who chose it.
               </p>
             </section>
 
-            <!-- Critique -->
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <!-- The Machine -->
+            <section class="story-section section-card card--surface bleed-pad" id="machine">
               <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the series nails — and where it compromises.</p>
+                <h2 class="section-title">The Machine</h2>
+                <p class="section-sub">What drives the tension: secrecy, coordination, and the fragility of trust under pressure.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="critique-consequence" open>
+                <details class="accordion-item" id="machine-cover" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Consequence is the real special effect</h3>
+                    <h3 class="accordion-title">1) Cover stories are moral load-bearing beams</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Write about pressure built through systems: incentives, surveillance, fear, and scarcity—not “plot magic.”</p>
+                    <p>
+                      “Lying” in covert resistance isn’t just deception — it’s survival architecture.
+                      Every fabricated detail becomes a shared burden: if one person breaks, everyone breaks.
+                      The danger is not just being caught; it’s being forced to implicate others.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-banal-evil">
+                <details class="accordion-item" id="machine-trust">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The Empire is banal — and that’s the point</h3>
+                    <h3 class="accordion-title">2) Trust is a scarce resource</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Write about bureaucracy, careerism, language, and how violence can arrive as “policy.”</p>
+                    <p>
+                      Resistance is a trust network with a built-in paranoia problem.
+                      You need people to act — but every new person is a risk. So the story becomes an ethics of selection:
+                      who is allowed to know, who is protected from knowing, and who is sacrificed to keep the line intact.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-hollow">
+                <details class="accordion-item" id="machine-fear">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Why it can still feel hollow</h3>
+                    <h3 class="accordion-title">3) Fear is continuous, not episodic</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. If you argue “rebellion without consequence,” define the missing cost: moral, relational, metaphysical, or narrative.</p>
+                    <p>
+                      The show’s realism lives in duration: the slow grinding uncertainty between missions.
+                      Courage isn’t a moment. It’s persistence — waking up again, going back into public, and acting normal
+                      while your body is still bracing for consequence.
+                    </p>
                   </div>
                 </details>
 
               </div>
 
               <ul class="story-bullets">
-                <li><strong>Systems</strong> create pressure—people crack or harden.</li>
-                <li><strong>Language</strong> sanitizes violence—procedure becomes permission.</li>
-                <li><strong>Courage</strong> is local—heroism is usually small and ugly.</li>
+                <li><strong>Secrecy</strong> is infrastructure, not mood.</li>
+                <li><strong>Trust</strong> is rationed and defended.</li>
+                <li><strong>Fear</strong> is the ambient condition of resistance.</li>
+              </ul>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What it nails — and where the genre’s strengths can narrow the human picture.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-quiet" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Quiet heroism feels earned</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The story’s power is restraint. It refuses glamour. It honors the reality that most consequential acts
+                      are small, repeated, and unrewarded — and that bravery is often a kind of endurance.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-institution">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The occupier can become “weather”</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      When a story focuses on clandestine operations, the enemy risks becoming faceless — pure force.
+                      That can be thematically correct, but it also compresses moral complexity: systems are built by people,
+                      and sometimes the most interesting tension is how ordinary people become operators of coercion.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-relationships">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The hardest part can be underplayed: intimacy under secrecy</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Covert life corrodes relationships. Not just because of danger — because of withheld truth.
+                      The genre can over-index on mission mechanics and under-index on the slow grief of becoming unknowable
+                      to the people you love.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Strength:</strong> restraint makes courage believable.</li>
+                <li><strong>Risk:</strong> the enemy can flatten into pure atmosphere.</li>
+                <li><strong>Risk:</strong> mission logic can crowd out intimacy.</li>
               </ul>
             </section>
 
@@ -226,38 +311,50 @@
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">If you could sharpen one structural, one character, and one thematic choice.</p>
+                <p class="section-sub">Three upgrades that sharpen the series as a Mythogin “tool for thinking.”</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="fix-structure" open>
+                <details class="accordion-item" id="fix-trust" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Structural adjustment</h3>
+                    <h3 class="accordion-title">1) Make “trust decisions” explicit in each arc</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Describe the change, where it lands, and what it unlocks.</p>
+                    <p>
+                      Each arc should have a visible trust threshold: “Who gets told what?”
+                      Name it. Argue it. Show the cost of telling — and the cost of not telling.
+                      This makes covert war feel like ethics, not just tactics.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-character">
+                <details class="accordion-item" id="fix-cost">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Character adjustment</h3>
+                    <h3 class="accordion-title">2) Show one “domestic consequence” per mission</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Pick one arc and make the cost explicit: what they lose, what they become unable to do.</p>
+                    <p>
+                      After each major operation, linger on a small human fracture: a relationship strain,
+                      a missed rite of life, a parent lying to a child, a friend drifting away.
+                      This keeps the story anchored in what the sabotage is <em>for</em>.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-theme">
+                <details class="accordion-item" id="fix-virtue">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Thematic adjustment</h3>
+                    <h3 class="accordion-title">3) Frame anonymity as a virtue, not a tragedy</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Decide what you want the audience to feel in their bones: hope, dread, responsibility, or complicity.</p>
+                    <p>
+                      Give the show a recurring moral refrain: the point is not to be remembered — it’s to make the future possible.
+                      A single repeated image, phrase, or ritual that honors the unnamed would elevate the theme from “sad sacrifice”
+                      to “chosen discipline.”
+                    </p>
                   </div>
                 </details>
 
@@ -268,28 +365,49 @@
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">What Andor reveals about the moment_toggle..</p>
+                <p class="section-sub">Why it lands: it restores respect for duty without spectacle, in an era addicted to visibility.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="impact-seriousness" open>
+                <details class="accordion-item" id="impact-recognition" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">A hunger for seriousness in an age of spectacle</h3>
+                    <h3 class="accordion-title">A counter-myth to the cult of recognition</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Connect it to Mythogin themes: meaning vs process, conscience vs compliance, truth vs performance.</p>
+                    <p>
+                      The story pushes against a modern reflex: if it isn’t seen, it isn’t real.
+                      <em>The Saboteurs</em> insists the opposite: the unseen may be the most real.
+                      What matters is not the narrative you get credit for — but the reality your actions create.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="impact-institutions">
+                <details class="accordion-item" id="impact-network">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Institutions as character</h3>
+                    <h3 class="accordion-title">Networks beat heroes</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Placeholder. Argue how the show makes systems feel like weather—inescapable, impersonal, yet built by people.</p>
+                    <p>
+                      The show makes collective action intelligible: not as ideology, but as logistics under threat.
+                      It’s a story of coordination: signals, timing, compartmentalization, patience — the boring virtues that win.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-courage">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Courage as endurance</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The deepest takeaway is personal: bravery isn’t a peak moment.
+                      It’s the willingness to continue under stress, without becoming cruel, careless, or performative.
+                      In Mythogin terms: it’s a discipline of character.
+                    </p>
                   </div>
                 </details>
 
@@ -302,7 +420,7 @@
             <section class="topic-nav-surface topic-nav-surface--story"
                      aria-label="TV navigation"
                      data-topic-nav="tv"
-                     data-topic-slug="andor">
+                     data-topic-slug="the-saboteurs">
 
               <div class="topic-nav-bg" aria-hidden="true">
                 <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
@@ -312,10 +430,10 @@
 
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
                     <li class="crumb">
@@ -378,64 +496,75 @@
 
   <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-      <div class="footer-brand">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
         <div class="footer-name">Mythogin</div>
         <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
+    <nav class="footer-nav" aria-label="Footer navigation">
 
+      <!-- Mythogin -->
         <div class="footer-col">
-          <h4>Mythogin</h4>
+          <h4><a href="index.html">Mythogin</a></h4>
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
-          </ul>
-        </div>
+      <!-- Recommendations -->
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Hero-Journeys</h4>
-          <ul>
-            <li><a href="/herojourneys/books/index.html">Books</a></li>
-            <li><a href="/herojourneys/film/index.html">Film</a></li>
-            <li><a href="/herojourneys/tv/index.html">TV</a></li>
-            <li><a href="/herojourneys/games/index.html">Games</a></li>
-            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
-          </ul>
-        </div>
+      <!-- Features -->
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Perspective</h4>
-          <ul>
-            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="/perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
+      <!-- Hero-Journeys -->
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
-          </ul>
-        </div>
+      <!-- Perspective -->
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
 
-      </nav>
+    </nav>
 
-    </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
   <script src="js/drawer.js"></script>

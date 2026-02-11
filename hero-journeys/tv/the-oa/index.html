@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <base href="/mythogin/">
 
-  <title>Mythogin — Game of Thrones</title>
-  <meta name="description" content="Game of Thrones on Mythogin: power as predation, honor as handicap, and the return of myth into politics — critique, fix, impact." />
-  <!-- FILE LOCATION: /Mythogin/hero-journeys/tv/game-of-thrones/index.html -->
+  <title>Mythogin — The OA</title>
+  <meta name="description" content="The OA on Mythogin: faith vs proof, trauma as initiation, and the risk of meaning-making in a disenchanted world — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/hero-journeys/tv/the-oa/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -30,83 +30,87 @@
 
 <body class="story story--tv">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary">
-
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
           <a class="nav-link"
-             href="recommendations.html"
-             data-tip="What to read, watch, or play next">
-            Recommendations
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
-          <a class="nav-link"
-             href="features.html"
-             data-tip="Multimedia presentations & debates">
-            Features
-          </a>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="hero-journeys/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
-              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
-              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
-              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
-              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="perspective/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <a class="nav-link"
-             href="about.html"
-             data-tip="What Mythogin is and who its for">
-            About
-          </a>
+      </nav>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
-
-      </div>
     </div>
   </div>
+</div>
+
 
   <main class="story">
 
@@ -116,17 +120,17 @@
         <div class="topics-hero-card story-hero-card bleed-pad">
 
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/tv/game-of-thrones.webp" alt="" loading="eager" decoding="async">
+            <img src="images/topics/tv/the-oa.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
 
           <div class="topics-hero-content story-hero-content">
             <p class="story-kicker">TV</p>
 
-            <h1 class="topics-hero-title">Game of Thrones</h1>
+            <h1 class="topics-hero-title">The OA</h1>
 
             <p class="topics-hero-lead">
-              Power as predation: honor as handicap, loyalty as leverage, and myth returning to a world that thought it had outgrown gods.
+              A modern gospel for a disenchanted age: trauma as initiation, belief as practice, and meaning as something you build together.
             </p>
 
             <div class="u-space-10" aria-hidden="true"></div>
@@ -135,8 +139,8 @@
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
-                <a class="audio-chip-btn" href="#" aria-label="Listen to audio">Listen</a>
-                <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
+                <a class="audio-chip-btn" href="audio/topics/tv/the-oa.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="audio/topics/tv/the-oa.mp3" download aria-label="Download audio">Download</a>
               </span>
             </div>
 
@@ -162,24 +166,25 @@
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  <em>Game of Thrones</em> begins as political realism and gradually reveals its deeper thesis: history can’t stay “secular” forever — winter returns.
+                  <em>The OA</em> isn’t asking “Is this true?” first. It’s asking “What kind of person do you become if you live as if it’s true?”
                 </p>
               </header>
 
               <p>
-                At first, the series feels like a correction to fantasy: no chosen one, no clean virtue, no moral bookkeeping.
-                It’s inheritance law, supply lines, marriages, hostages, reputations — power as a practical craft.
+                The show is built on a dangerous premise: that meaning might not be discovered like evidence,
+                but forged through commitment, ritual, and community. It treats faith not as naïveté,
+                but as a technology for surviving fracture — a way to hold the self together when the world won’t.
               </p>
 
               <p>
-                But that realism is a trapdoor. The world’s elites are so absorbed by the throne that they ignore the older truth
-                the story keeps whispering: politics is not the whole of reality. Beyond the court is the frontier, and beyond the frontier
-                is the thing that makes all crowns irrelevant.
+                That’s why it divides people. Some viewers want the contract of realism: rules, proofs, closure.
+                <em>The OA</em> wants something older: the logic of myth. Initiation. Testimony. A circle of witnesses.
+                And a leap that can’t be justified to anyone who hasn’t taken it.
               </p>
 
               <p>
-                Mythogin’s lens: this is a story about legitimacy under collapse. When institutions rot, people return to primal currencies:
-                fear, blood, prophecy, revenge, and belonging. The “game” is what societies play when they still think they control the board.
+                Mythogin’s lens: this is a story about re-enchantment — not as fantasy, but as an ethical stance.
+                When the world is cold, the question becomes: do you let it stay cold, or do you insist on a sacred dimension anyway?
               </p>
             </section>
 
@@ -187,61 +192,49 @@
             <section class="story-section section-card card--surface bleed-pad" id="machine">
               <header class="section-head">
                 <h2 class="section-title">The Machine</h2>
-                <p class="section-sub">Why the realm is so brutal: incentives are misaligned, and violence is a rational option.</p>
+                <p class="section-sub">What actually drives the plot: captivity, witness, and belief as a coordinated act.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="machine-legitimacy" open>
+                <details class="accordion-item" id="machine-testimony" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">1) Legitimacy is theater backed by steel</h3>
+                    <h3 class="accordion-title">1) Testimony is the engine</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The crown’s authority is partly myth (“rightful rule”) and partly enforcement. When belief erodes,
-                      rulers compensate with spectacle or cruelty. The show is merciless about this: many speeches about honor
-                      are simply cover for coalition maintenance.
+                      The series runs on storytelling inside the story: someone speaks their truth to a small circle,
+                      and the circle decides whether to become a container for that truth. This is ancient structure:
+                      the myth isn’t “proved,” it’s <em>received</em>. The listener becomes part of the tale.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="machine-kinship">
+                <details class="accordion-item" id="machine-trauma">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">2) Kinship is the operating system</h3>
+                    <h3 class="accordion-title">2) Trauma becomes initiation</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Houses are institutions. Marriage is diplomacy. Children are continuity. Betrayal is a strategic move.
-                      In this world, affection is real — but it’s also a weakness others can monetize.
+                      The show doesn’t romanticize suffering, but it does insist that suffering changes perception.
+                      The “other world” can be read literally or symbolically — either way, the point is that rupture
+                      can open a door in the psyche. Not to escape pain, but to transmute it into purpose.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="machine-violence">
+                <details class="accordion-item" id="machine-ritual">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">3) Violence is a negotiation tool</h3>
+                    <h3 class="accordion-title">3) Ritual is coordination under despair</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The series treats violence the way some states treat sanctions: a lever, not an accident.
-                      That’s why “good people” lose — they assume shared rules, while predators treat rules as optional.
-                      The show’s horror is not gore; it’s incentive clarity.
-                    </p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="machine-winter">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">4) The forgotten threat is the real test</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>
-                      The White Walkers function like a mythic audit: are you capable of unity, sacrifice, and long-term thinking —
-                      or are you trapped in short-term status games? The tragedy is that most leaders fail the audit.
+                      The “movements” are the show’s core provocation: meaning enacted through the body.
+                      Whether you read them as metaphysical keys or psychological anchors, they are a claim that belief
+                      is not just a thought — it’s a practice performed together. A way to generate courage on demand.
                     </p>
                   </div>
                 </details>
@@ -249,9 +242,9 @@
               </div>
 
               <ul class="story-bullets">
-                <li><strong>Power</strong> is coalition management under threat.</li>
-                <li><strong>Honor</strong> is valuable — and exploitable.</li>
-                <li><strong>Myth</strong> returns when institutions fail.</li>
+                <li><strong>Truth</strong> arrives as testimony, not evidence.</li>
+                <li><strong>Transformation</strong> follows rupture and witness.</li>
+                <li><strong>Ritual</strong> turns belief into shared action.</li>
               </ul>
             </section>
 
@@ -259,61 +252,49 @@
             <section class="story-section section-card card--surface bleed-pad" id="critique">
               <header class="section-head">
                 <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the saga nails — and where its strengths can curdle into spectacle.</p>
+                <p class="section-sub">What it nails — and where its strengths can become liabilities.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="critique-clarity" open>
+                <details class="accordion-item" id="critique-reenchant" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">It makes incentives intelligible</h3>
+                    <h3 class="accordion-title">Re-enchantment without cynicism</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The early seasons are a masterclass in “why people do what they do.” Alliances, betrayals, and compromises
-                      read like responses to constraints, not authorial whims. Even cruelty often has a logic — which is exactly what makes it chilling.
+                      The show refuses the fashionable posture that everything sacred is fake. It’s willing to be earnest
+                      about longing, destiny, and the possibility that reality has more rooms than we’re taught to admit.
+                      That sincerity is rare — and it’s why the story lingers.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-mythic">
+                <details class="accordion-item" id="critique-ambiguity">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">It fuses political realism with mythic dread</h3>
+                    <h3 class="accordion-title">Ambiguity is power — until it becomes fog</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The best version of <em>Game of Thrones</em> is not cynicism — it’s tragic realism.
-                      It says: virtue matters, but virtue alone doesn’t override structure. To change the structure,
-                      you need strategy, sacrifice, and institutions that outlast heroes.
+                      <em>The OA</em> thrives in the space between psychological and metaphysical readings.
+                      But if the viewer can’t feel the “rules” of that space, tension leaks out.
+                      Mystery needs a spine: not answers, but constraints.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-cruelty">
+                <details class="accordion-item" id="critique-melodrama">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The risk: cruelty becomes a currency of attention</h3>
+                    <h3 class="accordion-title">The risk: the emotional register can tip into melodrama</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      When shock becomes expected, the story can drift into “event violence” — moments engineered to stun
-                      rather than deepen meaning. The series is strongest when brutality reveals consequences and moral injury,
-                      not when it functions as proof of “grit.”
-                    </p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="critique-endgame">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">The endgame wants inevitability, but earns it unevenly</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>
-                      The later arcs aim for mythic closure — destiny, collapse, renewal — but sometimes compress the causal chain.
-                      When a story teaches you to respect consequence, you can’t skip consequence without breaking its own moral contract.
+                      When a story is built on faith, it’s always at risk of feeling unearned to skeptics.
+                      The show’s intensity can read as profound or implausible depending on whether the viewer
+                      has accepted the premise. That’s not a flaw so much as the price of its ambition.
                     </p>
                   </div>
                 </details>
@@ -321,9 +302,9 @@
               </div>
 
               <ul class="story-bullets">
-                <li><strong>Strength:</strong> incentives drive character choices.</li>
-                <li><strong>Strength:</strong> myth returns as existential audit.</li>
-                <li><strong>Risk:</strong> shock can replace meaning; compression can break consequence.</li>
+                <li><strong>Strength:</strong> sincerity in an ironic age.</li>
+                <li><strong>Strength:</strong> mythic structure inside modern life.</li>
+                <li><strong>Risk:</strong> ambiguity can become atmosphere without tension.</li>
               </ul>
             </section>
 
@@ -331,47 +312,47 @@
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">Three upgrades that sharpen the saga as a Mythogin “tool for thinking.”</p>
+                <p class="section-sub">Three upgrades that sharpen the series as a Mythogin “tool for thinking.”</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="fix-audit" open>
+                <details class="accordion-item" id="fix-rules" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">1) Keep a visible “winter audit” scoreboard</h3>
+                    <h3 class="accordion-title">1) Clarify the “rules of crossing” without explaining the mystery</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Treat the existential threat like a recurring metric: food, shelter, unity, trust, time.
-                      Each political move either helps pass the audit or fails it. Make that accounting explicit —
-                      so the throne game feels increasingly absurd as winter approaches.
+                      Give the audience a few hard constraints: what always matters, what never works, what exact conditions
+                      must be met. You don’t need exposition — just repeated cause-and-effect that makes the unknown feel structured.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-cost">
+                <details class="accordion-item" id="fix-skeptic" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">2) Make moral “lines” concrete, not atmospheric</h3>
+                    <h3 class="accordion-title">2) Keep one “skeptic’s thread” active inside the circle</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Whenever a character crosses a boundary, name what was traded away: innocence, mercy, trust, identity.
-                      Then show the aftertaste for more than one scene. This preserves the series’ signature: consequence as the real magic.
+                      A persistent internal skeptic strengthens faith-based stories. Not to mock belief, but to ask the hard questions
+                      that prevent the series from feeling like it’s asking for blind submission. Faith becomes stronger when it’s tested.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-institutions">
+                <details class="accordion-item" id="fix-sacred">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">3) Shift the thesis from “who wins” to “what lasts”</h3>
+                    <h3 class="accordion-title">3) Give the ritual a moral cost, not only a metaphysical effect</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The most mythic question isn’t “who sits the throne?” It’s “what kind of order survives catastrophe?”
-                      Put institutional design on-screen: laws, succession rules, legitimacy rituals, reconciliation. Make renewal legible.
+                      The “movements” are powerful, but the most Mythogin-aligned upgrade is to tie them to ethics:
+                      what does it demand of the practitioner? What does it risk? What must be sacrificed to keep the sacred alive?
+                      That keeps re-enchantment from becoming escapism.
                     </p>
                   </div>
                 </details>
@@ -383,46 +364,48 @@
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">Why <em>Game of Thrones</em> hit: it made adult audiences believe fantasy could be serious again.</p>
+                <p class="section-sub">Why it matters: it attempts a new myth for an era of loneliness and disbelief.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="impact-revival" open>
+                <details class="accordion-item" id="impact-gospel" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">It revived the public appetite for epic</h3>
+                    <h3 class="accordion-title">A secular gospel of witness</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The show proved an epic could be political, tragic, intimate, and still massively popular.
-                      It re-opened the “myth window” in modern TV — not by preaching virtue, but by dramatizing stakes that feel civilizational.
+                      The show argues that salvation is not individual enlightenment. It’s a network of witnesses
+                      willing to hold someone’s story long enough for it to change reality. In that sense, it’s less “sci-fi”
+                      than a myth about community as metaphysics.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="impact-cynicism">
+                <details class="accordion-item" id="impact-risk">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">It trained viewers to read power systems</h3>
+                    <h3 class="accordion-title">The courage to be earnest is now countercultural</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Even when people call it “cynical,” its real gift is literacy: you begin to see incentives, propaganda,
-                      coalition fragility, and the difference between symbols and actual capacity. It made politics feel like physics.
+                      In a culture trained to flinch at sincerity, <em>The OA</em> insists on it — even at the risk of ridicule.
+                      That’s why it becomes a “cult” experience: not because it’s obscure, but because it asks the viewer to participate.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="impact-myth">
+                <details class="accordion-item" id="impact-meaning">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">It staged the return of myth to a “rational” world</h3>
+                    <h3 class="accordion-title">Meaning-making as practice, not discovery</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The White Walkers aren’t just monsters. They’re a reminder: nature, death, and time don’t negotiate.
-                      When humans waste their lives in status games, winter arrives anyway. That is the story’s most mythic truth.
+                      The show’s deepest claim is Mythogin-core: stories are tools that build minds, bonds, and futures.
+                      The question isn’t whether the myth is “real.” It’s whether living by it makes you more awake,
+                      more courageous, and more capable of love.
                     </p>
                   </div>
                 </details>
@@ -436,7 +419,7 @@
             <section class="topic-nav-surface topic-nav-surface--story"
                      aria-label="TV navigation"
                      data-topic-nav="tv"
-                     data-topic-slug="game-of-thrones">
+                     data-topic-slug="the-oa">
 
               <div class="topic-nav-bg" aria-hidden="true">
                 <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">

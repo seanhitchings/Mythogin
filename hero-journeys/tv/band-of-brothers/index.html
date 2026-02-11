@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+  <base href="/mythogin/">
 
   <title>Mythogin — Band of Brothers</title>
-  <meta name="description" content="Band of Brothers on Mythogin: brotherhood under pressure, moral endurance, and the cost of duty — critique, fix, impact." />
-  <!-- FILE LOCATION: /Mythogin/herojourneys/tv/band-of-brothers/index.html -->
+  <meta name="description" content="Band of Brothers on Mythogin: brotherhood under extreme constraint, the moral weather of war, and leadership as earned trust — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/hero-journeys/tv/band-of-brothers/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -30,83 +30,87 @@
 
 <body class="story story--tv">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary">
-
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
           <a class="nav-link"
-             href="recommendations.html"
-             data-tip="What to read, watch, or play next">
-            Recommendations
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
-          <a class="nav-link"
-             href="features.html"
-             data-tip="Multimedia presentations & debates">
-            Features
-          </a>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="/herojourneys/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="perspective/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <a class="nav-link"
-             href="about.html"
-             data-tip="What Mythogin is and who its for">
-            About
-          </a>
+      </nav>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
-
-      </div>
     </div>
   </div>
+</div>
+
 
   <main class="story">
 
@@ -116,6 +120,7 @@
         <div class="topics-hero-card story-hero-card bleed-pad">
 
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <!-- Update to your real asset if different -->
             <img src="images/topics/tv/band-of-brothers.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
@@ -126,16 +131,15 @@
             <h1 class="topics-hero-title">Band of Brothers</h1>
 
             <p class="topics-hero-lead">
-              Brotherhood under sustained terror: duty becomes a moral technology for staying human.
+              Brotherhood under extreme constraint: leadership as earned trust, courage as routine, and the moral weather of war.
             </p>
 
             <div class="u-space-10" aria-hidden="true"></div>
 
-            <!-- Audio chip (MATCHES BOOK TEMPLATE) -->
+            <!-- Audio chip (MATCHES TEMPLATE) -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
-                <!-- Adjust hrefs to your real audio asset(s) -->
                 <a class="audio-chip-btn" href="#" aria-label="Listen to audio">Listen</a>
                 <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
               </span>
@@ -153,7 +157,6 @@
     <section class="story-body" aria-label="Essay">
       <div class="container">
 
-        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
         <div class="story-layout story-layout--toc">
 
           <!-- Article column -->
@@ -164,83 +167,75 @@
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  War here is not spectacle — it is a long test of attention, loyalty, and moral endurance.
+                  <em>Band of Brothers</em> is less a “war story” than a trust story: how cohesion is built when fear is constant and errors are fatal.
                 </p>
               </header>
 
               <p>
-                <em>Band of Brothers</em> treats combat as sustained pressure rather than a sequence of “moments.”
-                The series keeps returning to the same question in different forms: what does it take to keep
-                a soul intact when your environment is designed to grind it down?
+                Most war dramas sell intensity. <em>Band of Brothers</em> sells proximity: the long hours, the cold, the waiting,
+                the boredom punctured by terror, and the way a unit becomes a small society with its own justice system.
+                It earns realism not through gore, but through routine.
               </p>
 
               <p>
-                The show’s secret weapon is not violence but <strong>continuity</strong>: the same faces, the same unit,
-                the same fear migrating into new bodies. “Brotherhood” becomes a kind of shared scaffolding —
-                a way to remain coherent when the world is trying to reduce you to panic, reflex, and numbness.
+                The series’ emotional engine is not victory. It’s reliability. Who can you count on when you’re exhausted,
+                misinformed, and surrounded? Who becomes steadier under pressure — and who becomes dangerous?
+                The show treats competence as a moral trait, because incompetence costs lives.
+              </p>
+
+              <p>
+                Mythogin’s lens: this is an epic of fraternity and formation. It asks what kind of people emerge
+                when a group is forged by shared risk — and what that forging does to the soul when the war ends.
               </p>
             </section>
 
-            <!-- Critique -->
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <!-- The Bond (NEW) -->
+            <section class="story-section section-card card--surface bleed-pad" id="bond">
               <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the series nails — and where it quietly simplifies.</p>
+                <h2 class="section-title">The Bond</h2>
+                <p class="section-sub">Why “brotherhood” works here: it’s not sentiment — it’s a survival technology.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="critique-brotherhood" open>
+                <details class="accordion-item" id="bond-trust" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Brotherhood as a discipline, not a mood</h3>
+                    <h3 class="accordion-title">1) Trust is built by repetition, not speeches</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The series doesn’t romanticize camaraderie as feel-good sentiment. It frames it as a practical
-                      method for surviving reality: carrying fear together, distributing responsibility, and preventing
-                      isolation from becoming collapse.
-                    </p>
-                    <p>
-                      The strongest moments are small: a gesture, an order, a refusal to abandon someone. The moral
-                      insight is blunt: in extreme environments, you don’t “find yourself.” You either keep faith with
-                      others — or you disintegrate.
+                      The show’s best scenes aren’t “hero moments.” They’re small confirmations: someone shares ammo,
+                      someone holds position, someone keeps moving when they’re terrified. Brotherhood is depicted
+                      as the accumulation of reliable acts under stress.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-leadership">
+                <details class="accordion-item" id="bond-leadership">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Leadership under moral weather</h3>
+                    <h3 class="accordion-title">2) Leadership is a contract with consequences</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The show is unusually honest about how command corrodes. “Good intentions” aren’t enough —
-                      a leader’s temperament becomes everyone else’s climate. Competence is not just tactical; it is
-                      emotional regulation under permanent stress.
-                    </p>
-                    <p>
-                      Where it’s most haunting: decisions made under uncertainty that cannot be redeemed by later
-                      explanation. You don’t get to rewind the dead.
+                      Leaders earn authority by making good decisions when information is bad — and by owning the costs.
+                      The series is unusually clear that rank doesn’t create legitimacy; competence does.
+                      In Mythogin terms: legitimacy is continuously re-earned, or it collapses.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-simplifies">
+                <details class="accordion-item" id="bond-moral-weather">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Where it can still simplify the cost</h3>
+                    <h3 class="accordion-title">3) War produces “moral weather”</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Even with its restraint, the series can imply a kind of narrative cleanliness: the unit remains
-                      legible, the bonds remain usable, the meaning remains stable. But trauma is not simply pain — it
-                      is often a re-writing of perception itself.
-                    </p>
-                    <p>
-                      If you want to push your Mythogin lens here: track the subtler losses — attention, trust,
-                      tenderness, the ability to imagine a future. The series gestures at this, but it can be sharpened.
+                      The show understands that war isn’t only danger — it’s atmosphere. Exhaustion, grief, adrenaline, resentment,
+                      loyalty, numbness. Those conditions shape behavior the way climate shapes ecology.
+                      A moral decision made in warmth is not the same decision made in freezing mud.
                     </p>
                   </div>
                 </details>
@@ -248,9 +243,69 @@
               </div>
 
               <ul class="story-bullets">
-                <li><strong>Brotherhood</strong> is a shared structure for staying coherent under terror.</li>
-                <li><strong>Command</strong> is moral climate: a leader’s stability becomes everyone’s weather.</li>
-                <li><strong>Cost</strong> is not only death — it’s the erosion of perception, trust, and future.</li>
+                <li><strong>Brotherhood</strong> is reliability under fear.</li>
+                <li><strong>Legitimacy</strong> is earned through competence.</li>
+                <li><strong>Character</strong> is revealed by exhaustion.</li>
+              </ul>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What the series nails — and the places its strengths can distort the frame.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-embodiment" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">It makes war feel embodied, not cinematic</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The series excels at physical truth: weight, cold, noise, confusion. Combat is not choreography;
+                      it’s a breakdown of plans. That realism is what makes courage legible — not as swagger, but as continuing
+                      to function when your body is screaming to stop.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-leadership">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">It treats leadership as moral competence</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The show’s harshness toward bad officers is earned: incompetence isn’t merely “unlikable” — it’s lethal.
+                      But this can also simplify: some failures are structural (doctrine, intelligence gaps, logistics),
+                      not only personal. The best moments show both: the system and the individual inside it.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-myth">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The risk: it can become an “honor myth” by default</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Even when a story is honest, it can still tilt toward reverence — not propaganda, but sanctification.
+                      <em>Band of Brothers</em> is strongest when it shows ambiguity: moments of fear, pettiness, revenge,
+                      and moral fatigue. When those moments recede, the narrative can drift toward a clean “good war” aura.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Strength:</strong> the body and the environment become the story.</li>
+                <li><strong>Strength:</strong> competence is treated as ethical.</li>
+                <li><strong>Risk:</strong> reverence can soften ambiguity.</li>
               </ul>
             </section>
 
@@ -258,49 +313,49 @@
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">If you could sharpen one structural, one character, and one thematic choice.</p>
+                <p class="section-sub">Three upgrades that would make the series even sharper as a Mythogin “tool for thinking.”</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="fix-structure" open>
+                <details class="accordion-item" id="fix-context" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Structural adjustment</h3>
+                    <h3 class="accordion-title">1) Keep a lightweight “context rail” for the larger system</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Give the series one more quiet “after” movement — not as epilogue, but as a final test:
-                      reintegration as a second battlefield. Let the audience feel how hard it is to re-enter
-                      ordinary life once your nervous system has been trained for catastrophe.
+                      Add brief, recurring context that clarifies constraints: supply lines, replacement flow, objectives,
+                      intelligence uncertainty. Not exposition dumps — just enough to show when a tragedy is produced
+                      by bad information, bad planning, or unavoidable tradeoffs.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-character">
+                <details class="accordion-item" id="fix-moral">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Character adjustment</h3>
+                    <h3 class="accordion-title">2) Make one moral “aftertaste” explicit per arc</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Pick one member of Easy Company and track a single internal fracture across multiple episodes:
-                      a subtle moral injury (guilt, numbness, disgust, shame) that doesn’t “resolve” — it merely
-                      becomes managed. Make the cost cumulative and specific.
+                      The show hints at it, but could sharpen it: what does war teach people to become good at?
+                      What habits survive the war and poison peace? A short reflection beat — not speechifying, just clarity —
+                      would deepen the series’ psychological honesty.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-theme">
+                <details class="accordion-item" id="fix-return">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Thematic adjustment</h3>
+                    <h3 class="accordion-title">3) Strengthen the “return home” theme as the final battlefield</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      Clarify the thesis: not “war is hell,” but <strong>war changes what the mind calls real</strong>.
-                      Make perception the battleground. Then brotherhood isn’t just loyalty — it’s an agreement to keep
-                      reality shared when everything tries to make it private and unbearable.
+                      The true ending of a war story is what happens afterward: who can reintegrate, who can’t,
+                      and what kind of society receives them. Emphasize the transition as a concluding pressure test:
+                      not glory, but meaning.
                     </p>
                   </div>
                 </details>
@@ -312,35 +367,49 @@
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">What Band of Brothers reveals about culture — then and now.</p>
+                <p class="section-sub">Why this series persists: it makes fraternity believable, and cost unavoidable.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="impact-anti-spectacle" open>
+                <details class="accordion-item" id="impact-fraternity" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">A corrective to spectacle-war storytelling</h3>
+                    <h3 class="accordion-title">It rehabilitates the idea of fraternity</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      In an era that often treats violence as visual pleasure, <em>Band of Brothers</em> makes
-                      violence heavy again. It reattaches consequence to action and refuses to let adrenaline
-                      become meaning.
+                      In a culture that often treats loyalty as naive, <em>Band of Brothers</em> shows loyalty as earned,
+                      tested, and maintained through sacrifice. It’s not “friendship.” It’s shared obligation under risk —
+                      the kind of bond that built older civilizations and still underwrites modern ones.
                     </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="impact-duty">
+                <details class="accordion-item" id="impact-meaning">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Duty as a way to keep meaning intact</h3>
+                    <h3 class="accordion-title">It shows meaning as load-bearing</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
                     <p>
-                      The series argues — without preaching — that meaning is not an emotion. It is a practice.
-                      “Duty” here is not obedience for its own sake; it’s an agreement to remain accountable to
-                      something larger than fear and appetite.
+                      Soldiers endure when the story makes endurance rational. The show makes that mechanism visible:
+                      duty, comradeship, competence, and the refusal to abandon the person next to you. Mythogin takeaway:
+                      meaning is not decoration — it is operational power.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-memory">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">It preserves memory without flattening it into myth</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The series functions as cultural memory: a record of what coordinated courage looks like.
+                      Its best gift is not patriotism — it’s respect for the human capacity to hold steady when everything collapses.
+                      That respect can coexist with ambiguity, and that tension is where mature remembrance lives.
                     </p>
                   </div>
                 </details>
@@ -364,10 +433,10 @@
 
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
                     <li class="crumb">
@@ -430,64 +499,75 @@
 
   <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-      <div class="footer-brand">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
         <div class="footer-name">Mythogin</div>
         <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
+    <nav class="footer-nav" aria-label="Footer navigation">
 
+      <!-- Mythogin -->
         <div class="footer-col">
-          <h4>Mythogin</h4>
+          <h4><a href="index.html">Mythogin</a></h4>
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
-          </ul>
-        </div>
+      <!-- Recommendations -->
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Hero-Journeys</h4>
-          <ul>
-            <li><a href="/herojourneys/books/index.html">Books</a></li>
-            <li><a href="/herojourneys/film/index.html">Film</a></li>
-            <li><a href="/herojourneys/tv/index.html">TV</a></li>
-            <li><a href="/herojourneys/games/index.html">Games</a></li>
-            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
-          </ul>
-        </div>
+      <!-- Features -->
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Perspective</h4>
-          <ul>
-            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="/perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
+      <!-- Hero-Journeys -->
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
-          </ul>
-        </div>
+      <!-- Perspective -->
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
 
-      </nav>
+    </nav>
 
-    </div>
-  </footer>
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
   <script src="js/drawer.js"></script>
