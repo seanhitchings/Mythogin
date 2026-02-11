@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+
+  <!-- IMPORTANT: Mythogin base -->
+  <base href="/mythogin/">
 
   <title>Mythogin — Dark Souls</title>
   <meta name="description" content="Dark Souls on Mythogin: cyclical entropy, the architecture of despair, and finding meaning in a dying world — critique, fix, impact." />
+
+  <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
 
+  <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/card.css">
@@ -19,42 +24,65 @@
   <link rel="stylesheet" href="css/components/utilities.css">
   <link rel="stylesheet" href="css/components/story-card.css">
   <link rel="stylesheet" href="css/components/drawer.css">
-
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
 
 <body class="story story--games">
 
+  <!-- Shared Nav (canonical paths) -->
   <div class="topbar">
     <div class="container container--topbar">
       <div class="topbar-inner">
 
         <div class="brand-main">
           <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
           </a>
         </div>
 
         <nav class="navlinks" aria-label="Primary">
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats">
+          <!-- Recommendations -->
+          <a class="nav-link"
+             href="recommendations/index.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Features -->
+          <a class="nav-link"
+             href="features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <!-- Hero-Journeys -->
+          <div class="nav-item has-submenu is-pinned-herojourneys">
+            <a class="nav-link"
+               href="hero-journeys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
               Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
             </a>
+
             <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
             </div>
           </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="perspective/index.html" aria-haspopup="true" aria-expanded="false" data-tip="How meaning is created or lost">
+          <!-- Perspective -->
+          <div class="nav-item has-submenu is-pinned-perspective">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
               Perspective <span class="nav-caret" aria-hidden="true">▾</span>
             </a>
             <div class="submenu" role="menu" aria-label="Perspective sections">
@@ -63,13 +91,18 @@
             </div>
           </div>
 
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is and who its for">About</a>
+          <!-- About -->
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
+          <!-- Search -->
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
           </form>
+
         </nav>
 
       </div>
@@ -78,20 +111,28 @@
 
   <main class="story">
 
+    <!-- HERO -->
     <section class="topics-hero story-hero" aria-label="Story hero">
       <div class="container">
         <div class="topics-hero-card story-hero-card bleed-pad">
+
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
             <img src="images/topics/games/dark-souls.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
+
           <div class="topics-hero-content story-hero-content">
             <p class="story-kicker">Games</p>
+
             <h1 class="topics-hero-title">Dark Souls</h1>
+
             <p class="topics-hero-lead">
               In a world where light is fading and history is written in ruins, struggle isn't a path to victory—it is the only proof of life.
             </p>
+
             <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
@@ -99,18 +140,23 @@
                 <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
               </span>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
 
     <div class="divider" aria-hidden="true"></div>
 
+    <!-- BODY + TOC RAIL -->
     <section class="story-body" aria-label="Essay">
       <div class="container">
         <div class="story-layout story-layout--toc">
 
+          <!-- Article -->
           <article class="story-article">
+
             <section class="story-section section-card card--surface bleed-pad" id="intro">
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
@@ -118,9 +164,11 @@
                   Entropy as a mechanic: how Lordran teaches us that the greatest tragedy isn't death, but the loss of purpose.
                 </p>
               </header>
+
               <p>
                 <em>Dark Souls</em> is a masterpiece of negative space. It refuses to explain itself through traditional exposition, instead embedding its narrative in the weight of its weapons, the placement of its corpses, and the architecture of its decaying gods.
               </p>
+
               <p>
                 To play is to experience "Hollowing" firsthand—not just as a lore beat, but as a player’s urge to give up. The game’s true victory is the refusal to go hollow, finding meaning in the repetition of a struggle that the world itself has forgotten.
               </p>
@@ -131,14 +179,18 @@
                 <h2 class="section-title">Critique</h2>
                 <p class="section-sub">Where the atmosphere excels—and where the mechanical friction serves the myth.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
+
                 <details class="accordion-item" id="critique-environment" open>
                   <summary class="accordion-summary">
                     <h3 class="accordion-title">Architecture as narrative</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Lordran’s verticality is a physical timeline. Climbing from the Blighttown swamps to the heights of Anor Londo is a journey through social and theological strata. The level design tells the story of the First Flame better than any cinematic could.</p>
+                    <p>
+                      Lordran’s verticality is a physical timeline. Climbing from the Blighttown swamps to the heights of Anor Londo is a journey through social and theological strata. The level design tells the story of the First Flame better than any cinematic could.
+                    </p>
                   </div>
                 </details>
 
@@ -148,10 +200,14 @@
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>The "Hard but Fair" philosophy isn't just about challenge; it's about making the world feel indifferent to the player. It enforces the theme that you are not the chosen one—you are just another Undead who happened to have enough resolve to keep trying.</p>
+                    <p>
+                      The "Hard but Fair" philosophy isn't just about challenge; it's about making the world feel indifferent to the player. It enforces the theme that you are not the chosen one—you are just another Undead who happened to have enough resolve to keep trying.
+                    </p>
                   </div>
                 </details>
+
               </div>
+
               <ul class="story-bullets">
                 <li><strong>Cyclical Decay</strong>: The choice to link the fire or let it fade highlights the futility of fighting entropy.</li>
                 <li><strong>Solitary Multiplayer</strong>: Ghosts and messages create a sense of shared hardship in a lonely world.</li>
@@ -163,6 +219,7 @@
                 <h2 class="section-title">Fix</h2>
                 <p class="section-sub">Refining the late-game slump and the clarity of mechanical intent.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
                 <details class="accordion-item" id="fix-structure" open>
                   <summary class="accordion-summary">
@@ -170,7 +227,9 @@
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>The final act (after the Lordvessel) feels fragmented. Tightening the environmental interconnectedness of areas like Lost Izalith would prevent the sense of "check-listing" bosses and maintain the cohesive atmosphere of the first half.</p>
+                    <p>
+                      The final act (after the Lordvessel) feels fragmented. Tightening the environmental interconnectedness of areas like Lost Izalith would prevent the sense of "check-listing" bosses and maintain the cohesive atmosphere of the first half.
+                    </p>
                   </div>
                 </details>
               </div>
@@ -181,6 +240,7 @@
                 <h2 class="section-title">Impact</h2>
                 <p class="section-sub">How Dark Souls redefined "player agency" as a form of endurance.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
                 <details class="accordion-item" id="impact-cynicism" open>
                   <summary class="accordion-summary">
@@ -188,7 +248,9 @@
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Unlike power fantasies, <em>Dark Souls</em> asks the player to find beauty in ruin and worth in failure. It posits that the most heroic act isn't saving the world—which might be impossible—but maintaining one's humanity while the world ends.</p>
+                    <p>
+                      Unlike power fantasies, <em>Dark Souls</em> asks the player to find beauty in ruin and worth in failure. It posits that the most heroic act isn't saving the world—which might be impossible—but maintaining one's humanity while the world ends.
+                    </p>
                   </div>
                 </details>
               </div>
@@ -196,39 +258,59 @@
 
             <div class="divider" aria-hidden="true"></div>
 
-            <section class="topic-nav-surface topic-nav-surface--story" 
-                     aria-label="Game navigation" 
-                     data-topic-nav="games" 
+            <!-- Bottom navigation -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Game navigation"
+                     data-topic-nav="games"
                      data-topic-slug="dark-souls">
               <div class="topic-nav-bg" aria-hidden="true">
                 <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
               </div>
+
               <div class="topic-nav-card">
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a href="#" data-crumb-section-link><span data-crumb-section-text>Games</span></a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a aria-current="page" data-crumb-current>Dark Souls</a></li>
                   </ol>
                 </nav>
+
                 <div class="pager" aria-label="Game navigation">
                   <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#"><span class="arrow" aria-hidden="true">←</span><span class="meta"><span class="kicker">Previous</span><span class="title" data-prev-title>Loading…</span></span></a>
-                    <a class="pager-next" data-pager-next href="#"><span class="meta"><span class="kicker">Next</span><span class="title" data-next-title>Loading…</span></span><span class="arrow" aria-hidden="true">→</span></a>
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
                   </div>
                 </div>
+
               </div>
             </section>
+
           </article>
 
+          <!-- TOC rail -->
           <aside class="story-aside" aria-label="On this page">
             <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
               On this page <span class="nav-caret" aria-hidden="true">▾</span>
             </button>
+
             <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
               <div class="toc-panel-head">
                 <h3 class="toc-panel-title">On this page</h3>
@@ -241,28 +323,84 @@
         </div>
       </div>
     </section>
+
+    <!-- IMPORTANT: backdrop belongs inside main (same pattern as story pages) -->
+    <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
   </main>
 
-  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
         <div class="footer-name">Mythogin</div>
         <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-col"><h4>Mythogin</h4><ul><li><a href="home.html">Home</a></li><li><a href="about.html">About</a></li></ul></div>
-        <div class="footer-col"><h4>Explore</h4><ul><li><a href="recommendations.html">Recommendations</a></li><li><a href="features.html">Features</a></li></ul></div>
-        <div class="footer-col"><h4>Hero-Journeys</h4><ul><li><a href="/herojourneys/books/index.html">Books</a></li><li><a href="/herojourneys/film/index.html">Film</a></li><li><a href="/herojourneys/games/index.html">Games</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in touch</a></li></ul></div>
-      </nav>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
     </div>
-  </footer>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <!-- Mythogin -->
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+      <!-- Recommendations -->
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <!-- Features -->
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+      <!-- Hero-Journeys -->
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
+
+      <!-- Perspective -->
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+          <li><a href="perspective/industry/index.html">Industry</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
   <script src="js/drawer.js"></script>
   <script src="js/topic-nav.js"></script>
 </body>
-</html>t
+</html>

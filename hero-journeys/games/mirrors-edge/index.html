@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+
+  <!-- IMPORTANT: Mythogin base -->
+  <base href="/mythogin/">
 
   <title>Mythogin — Mirror's Edge</title>
   <meta name="description" content="Mirror's Edge on Mythogin: the flow of resistance, corporate minimalism, and the body as a political tool — critique, fix, impact." />
+
+  <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
 
+  <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/card.css">
@@ -19,45 +24,85 @@
   <link rel="stylesheet" href="css/components/utilities.css">
   <link rel="stylesheet" href="css/components/story-card.css">
   <link rel="stylesheet" href="css/components/drawer.css">
-
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
 
 <body class="story story--games">
 
+  <!-- Shared Nav (canonical paths) -->
   <div class="topbar">
     <div class="container container--topbar">
       <div class="topbar-inner">
 
         <div class="brand-main">
           <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
           </a>
         </div>
 
         <nav class="navlinks" aria-label="Primary">
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats">
+          <!-- Recommendations -->
+          <a class="nav-link"
+             href="recommendations/index.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Features -->
+          <a class="nav-link"
+             href="features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <!-- Hero-Journeys -->
+          <div class="nav-item has-submenu is-pinned-herojourneys">
+            <a class="nav-link"
+               href="hero-journeys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
               Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
             </a>
+
             <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
             </div>
           </div>
 
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is and who its for">About</a>
+          <!-- Perspective -->
+          <div class="nav-item has-submenu is-pinned-perspective">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
+          <!-- About -->
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <!-- Search -->
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
           </form>
+
         </nav>
 
       </div>
@@ -66,20 +111,28 @@
 
   <main class="story">
 
+    <!-- HERO -->
     <section class="topics-hero story-hero" aria-label="Story hero">
       <div class="container">
         <div class="topics-hero-card story-hero-card bleed-pad">
+
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
             <img src="images/topics/games/mirrors-edge.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
+
           <div class="topics-hero-content story-hero-content">
             <p class="story-kicker">Games</p>
+
             <h1 class="topics-hero-title">Mirror's Edge</h1>
+
             <p class="topics-hero-lead">
-              Above the sterile white skyline of a surveilled city, "Flow" isn't just a mechanic—it's the only way to stay free.
+              Above the sterile white skyline of a surveilled city, “flow” isn’t just a mechanic—it’s the only way to stay free.
             </p>
+
             <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
@@ -87,92 +140,153 @@
                 <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
               </span>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
 
     <div class="divider" aria-hidden="true"></div>
 
+    <!-- BODY + TOC RAIL -->
     <section class="story-body" aria-label="Essay">
       <div class="container">
         <div class="story-layout story-layout--toc">
 
+          <!-- Article -->
           <article class="story-article">
+
             <section class="story-section section-card card--surface bleed-pad" id="intro">
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  The architecture of control: how Faith Connors uses the very structures of oppression as a playground for liberation.
+                  The architecture of control: how Faith Connors turns the city’s geometry into a language of escape.
                 </p>
               </header>
+
               <p>
-                <em>Mirror's Edge</em> is a sensory experiment in first-person momentum. In the City of Glass, everything is curated, monitored, and bleached of character. The "Runners" exist in the margins, delivering information by hand to bypass the digital dragnet.
+                <em>Mirror’s Edge</em> is a first-person manifesto written in momentum. The City of Glass is curated, monitored,
+                and bleached of character—“safety” achieved by sterilizing complexity. The Runners exist in the seams,
+                moving information by hand because the network is the net.
               </p>
+
               <p>
-                To play as Faith is to experience the "Flow State." The game subverts the standard FPS by making your body—rather than your gun—your primary interface with the world. It’s a journey about reclaiming physical agency in a society that has traded its privacy for a frictionless, aesthetic peace.
+                To play as Faith is to inhabit a politics of the body. The game subverts the FPS default by making your
+                primary verb not “shoot,” but “move.” It’s about reclaiming physical agency in a society that traded privacy
+                for frictionless order—and then calls that trade “peace.”
               </p>
             </section>
 
             <section class="story-section section-card card--surface bleed-pad" id="critique">
               <header class="section-head">
                 <h2 class="section-title">Critique</h2>
-                <p class="section-sub">Visual language and the visceral weight of movement.</p>
+                <p class="section-sub">Visual language, surveillance aesthetics, and the visceral weight of motion.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
+
                 <details class="accordion-item" id="critique-aesthetic" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Minimalism as a narrative tool</h3>
+                    <h3 class="accordion-title">Minimalism as narrative pressure</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>The high-contrast, primary-color palette (Runner Vision) isn't just a guide for the player; it's a thematic contrast. The clinical white of the corporate world represents order and stagnation, while the splashes of red represent the path of the rebel—messy, dangerous, and vital.</p>
+                    <p>
+                      The city’s clinical whites don’t read as “utopia”—they read as “curated obedience.” Runner Vision’s
+                      splashes of color function like contraband: the rebel’s path interrupts the corporate tableau.
+                      It’s guidance that doubles as theme.
+                    </p>
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-movement">
+                <details class="accordion-item" id="critique-movement" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The kinetic 'First Person'</h3>
+                    <h3 class="accordion-title">A kinetic first-person body</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>The game captures the weight of a human body better than almost any peer. The sound of Faith’s breathing, the way the camera tilts during a tuck-and-roll, and the blur of the periphery all serve to ground the "hero" in biology rather than just being a floating camera.</p>
+                    <p>
+                      Few games sell human momentum like this: breathing, footfalls, camera tilt, the panic of a missed ledge.
+                      You aren’t a floating gun—your body is the interface. That embodiment is the real immersion,
+                      and it’s what makes every rooftop feel politically charged.
+                    </p>
                   </div>
                 </details>
+
+                <details class="accordion-item" id="critique-freedom">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Freedom as route-finding, not domination</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The fantasy isn’t power-over; it’s escape-from. Success is remaining unpinned—staying unreadable
+                      to the machine long enough to deliver truth. It’s resistance as logistics.
+                    </p>
+                  </div>
+                </details>
+
               </div>
             </section>
 
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">Eliminating the friction of forced combat.</p>
+                <p class="section-sub">Remove forced combat friction so every encounter becomes a movement puzzle.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
+
                 <details class="accordion-item" id="fix-combat" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Pure Momentum</h3>
+                    <h3 class="accordion-title">Pure momentum</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>The biggest flaw in the original journey was forced gunplay or static combat arenas. To sharpen the theme, the "Fix" is to make every encounter a puzzle of evasion. Faith should never have to stop moving; victory should come from out-maneuvering the machine, not shooting it.</p>
+                    <p>
+                      The sharpest version of <em>Mirror’s Edge</em> never asks Faith to stop. Replace static arenas with
+                      pursuit choreography: more vaults, more routes, more “lose the tail” geometry. Let enemies shape
+                      the line you choose—without forcing you to become a shooter.
+                    </p>
                   </div>
                 </details>
+
+                <details class="accordion-item" id="fix-flow">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Reward flow with systemic payoffs</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Make speed a resource: sustained flow opens alternate exits, disables lockdown doors, or turns
+                      hazards into opportunities. The game already feels like a poem—this would make the poem
+                      mechanically legible.
+                    </p>
+                  </div>
+                </details>
+
               </div>
             </section>
 
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">A cult classic that redefined environmental interaction.</p>
+                <p class="section-sub">A cult classic that proved movement can be the main expressive system.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
                 <details class="accordion-item" id="impact-influence" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Defining the Parkour Genre</h3>
+                    <h3 class="accordion-title">Defining the parkour language</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p><em>Mirror's Edge</em> paved the way for games like <em>Dying Light</em> and <em>Titanfall</em> by proving that movement could be as expressive and skill-based as combat. It remains a singular example of "Atmospheric Action," where the city itself is the antagonist and the ally.</p>
+                    <p>
+                      <em>Mirror’s Edge</em> helped mainstream the idea that traversal can be as skillful and expressive
+                      as combat. You can feel its DNA in later movement-first designs: momentum shooters, parkour sandboxes,
+                      and any game that treats space as something you argue with using your body.
+                    </p>
                   </div>
                 </details>
               </div>
@@ -180,39 +294,59 @@
 
             <div class="divider" aria-hidden="true"></div>
 
-            <section class="topic-nav-surface topic-nav-surface--story" 
-                     aria-label="Game navigation" 
-                     data-topic-nav="games" 
+            <!-- Bottom navigation -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Game navigation"
+                     data-topic-nav="games"
                      data-topic-slug="mirrors-edge">
               <div class="topic-nav-bg" aria-hidden="true">
                 <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
               </div>
+
               <div class="topic-nav-card">
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a href="#" data-crumb-section-link><span data-crumb-section-text>Games</span></a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a aria-current="page" data-crumb-current>Mirror's Edge</a></li>
                   </ol>
                 </nav>
+
                 <div class="pager" aria-label="Game navigation">
                   <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#"><span class="arrow" aria-hidden="true">←</span><span class="meta"><span class="kicker">Previous</span><span class="title" data-prev-title>Loading…</span></span></a>
-                    <a class="pager-next" data-pager-next href="#"><span class="meta"><span class="kicker">Next</span><span class="title" data-next-title>Loading…</span></span><span class="arrow" aria-hidden="true">→</span></a>
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
                   </div>
                 </div>
+
               </div>
             </section>
+
           </article>
 
+          <!-- TOC rail -->
           <aside class="story-aside" aria-label="On this page">
             <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
               On this page <span class="nav-caret" aria-hidden="true">▾</span>
             </button>
+
             <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
               <div class="toc-panel-head">
                 <h3 class="toc-panel-title">On this page</h3>
@@ -225,19 +359,80 @@
         </div>
       </div>
     </section>
+
+    <!-- IMPORTANT: backdrop belongs inside main (same pattern as story pages) -->
+    <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
   </main>
 
+  <!-- Footer (YOUR canonical template) -->
   <footer class="site-footer">
     <div class="container footer-inner">
+
       <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
         <div class="footer-copy">© <span id="year"></span></div>
       </div>
+
       <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-col"><h4>Mythogin</h4><ul><li><a href="home.html">Home</a></li></ul></div>
-        <div class="footer-col"><h4>Hero-Journeys</h4><ul><li><a href="/herojourneys/games/index.html">Games</a></li></ul></div>
+
+        <!-- Mythogin -->
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="footer-col">
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
+          <ul>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+          </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="footer-col">
+          <h4><a href="features/index.html">Features</a></h4>
+          <ul>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Hero-Journeys -->
+        <div class="footer-col">
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+          <ul>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/film/index.html">Film</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <!-- Perspective -->
+        <div class="footer-col">
+          <h4><a href="perspective/index.html">Perspective</a></h4>
+          <ul>
+            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
       </nav>
+
     </div>
   </footer>
 

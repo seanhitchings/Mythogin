@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+
+  <!-- IMPORTANT: Mythogin base -->
+  <base href="/mythogin/">
 
   <title>Mythogin — Metroid</title>
   <meta name="description" content="Metroid on Mythogin: solitary exploration, the architecture of isolation, and the evolution of the hunter — critique, fix, impact." />
+
+  <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
 
+  <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/card.css">
@@ -19,45 +24,85 @@
   <link rel="stylesheet" href="css/components/utilities.css">
   <link rel="stylesheet" href="css/components/story-card.css">
   <link rel="stylesheet" href="css/components/drawer.css">
-
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
 
 <body class="story story--games">
 
+  <!-- Shared Nav (canonical paths) -->
   <div class="topbar">
     <div class="container container--topbar">
       <div class="topbar-inner">
 
         <div class="brand-main">
           <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
           </a>
         </div>
 
         <nav class="navlinks" aria-label="Primary">
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats">
+          <!-- Recommendations -->
+          <a class="nav-link"
+             href="recommendations/index.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Features -->
+          <a class="nav-link"
+             href="features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <!-- Hero-Journeys -->
+          <div class="nav-item has-submenu is-pinned-herojourneys">
+            <a class="nav-link"
+               href="hero-journeys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
               Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
             </a>
+
             <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
             </div>
           </div>
 
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is and who its for">About</a>
+          <!-- Perspective -->
+          <div class="nav-item has-submenu is-pinned-perspective">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
+          <!-- About -->
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <!-- Search -->
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
           </form>
+
         </nav>
 
       </div>
@@ -66,20 +111,28 @@
 
   <main class="story">
 
+    <!-- HERO -->
     <section class="topics-hero story-hero" aria-label="Story hero">
       <div class="container">
         <div class="topics-hero-card story-hero-card bleed-pad">
+
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
             <img src="images/topics/games/metroid.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
+
           <div class="topics-hero-content story-hero-content">
             <p class="story-kicker">Games</p>
+
             <h1 class="topics-hero-title">Metroid</h1>
+
             <p class="topics-hero-lead">
               Descent into the alien deep: how a bounty hunter’s upgrades transform a terrifying labyrinth into a path of empowerment.
             </p>
+
             <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
@@ -87,74 +140,127 @@
                 <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
               </span>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
 
     <div class="divider" aria-hidden="true"></div>
 
+    <!-- BODY + TOC RAIL -->
     <section class="story-body" aria-label="Essay">
       <div class="container">
         <div class="story-layout story-layout--toc">
 
+          <!-- Article -->
           <article class="story-article">
+
             <section class="story-section section-card card--surface bleed-pad" id="intro">
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  The silence of Zebes: Metroid redefined the "Hero" not through dialogue, but through the mechanical dialogue between a body and its environment.
+                  The silence of Zebes: <em>Metroid</em> redefined the “hero” through the mechanical dialogue between a body and its environment.
                 </p>
               </header>
+
               <p>
-                <em>Metroid</em> is the pioneer of atmospheric dread in gaming. By stripping away the traditional supporting cast, it places the player in the suit of Samus Aran—a character whose strength is defined by her adaptability and her silence.
+                <em>Metroid</em> is the pioneer of atmospheric dread in gaming. By stripping away the traditional supporting cast,
+                it places the player in the suit of Samus Aran—whose competence is defined not by chatter, but by composure.
+                You enter a world that doesn’t want you there, and the game’s most radical move is how little it explains.
               </p>
+
               <p>
-                The journey is a literal "leveling up" of the self. Every power-up discovered in a forgotten Chozo ruin isn't just a weapon; it is a key that unlocks a new perspective on the world. What was once an insurmountable wall becomes a doorway, turning the hunter from an intruder into the master of the ecosystem.
+                The journey is a literal “leveling up” of the self. Each power-up recovered from ancient ruins isn’t just a tool;
+                it’s a new way of interpreting space. A dead end becomes a future promise. A locked door becomes a memory.
+                Gradually, fear is transmuted into literacy: you learn the planet the way a hunter learns terrain.
               </p>
             </section>
 
             <section class="story-section section-card card--surface bleed-pad" id="critique">
               <header class="section-head">
                 <h2 class="section-title">Critique</h2>
-                <p class="section-sub">Non-linear growth and the horror of the unknown.</p>
+                <p class="section-sub">Non-linear growth and the horror (and pleasure) of the unknown.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
+
                 <details class="accordion-item" id="critique-isolation" open>
                   <summary class="accordion-summary">
                     <h3 class="accordion-title">Isolation as a mechanic</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>The series excels at making the player feel small. The absence of NPCs and traditional quest markers forces a reliance on environmental cues. You aren't being told a story; you are excavating one from the ruins and the bioluminescent caves.</p>
+                    <p>
+                      The series excels at making the player feel small. The absence of NPCs and traditional quest markers forces
+                      reliance on environmental cues. You aren’t being told a story—you’re excavating it from ruins, bones,
+                      biomes, and the quiet hostility of the map.
+                    </p>
                   </div>
                 </details>
 
                 <details class="accordion-item" id="critique-pacing">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The "Aha!" moment</h3>
+                    <h3 class="accordion-title">The “aha!” moment is the core reward</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Metroidvania design is at its best when it rewards memory. Seeing a purple door and remembering it three hours later when you find the Wave Beam creates a unique sense of intellectual satisfaction that purely linear games cannot match.</p>
+                    <p>
+                      Metroidvania design is at its best when it rewards memory. Seeing a barrier early, forgetting it,
+                      and later returning with the correct ability creates a rare satisfaction: you didn’t “level up” in a menu,
+                      you leveled up in understanding.
+                    </p>
                   </div>
                 </details>
+
+                <details class="accordion-item" id="critique-identity">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Power fantasy with an edge of vulnerability</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Samus becomes formidable, but the world never becomes safe. Even at peak strength, the atmosphere stays cold.
+                      That tension is the signature: empowerment without comfort—competence earned under pressure.
+                    </p>
+                  </div>
+                </details>
+
               </div>
             </section>
 
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">Modernizing the "lost" feeling without the frustration.</p>
+                <p class="section-sub">Modernize the “lost” feeling without turning solitude into frustration.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
                 <details class="accordion-item" id="fix-hinting" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Subtle Guidance</h3>
+                    <h3 class="accordion-title">Subtle guidance that preserves immersion</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>To fix the "wall-hugging" frustration of older titles, modern Metroid should lean into organic hinting—using lighting, creature behavior, or suit-scanning to guide the player toward secrets without breaking the immersion of being alone.</p>
+                    <p>
+                      Keep the loneliness, but reduce wall-hugging: use organic hinting—lighting, sound, creature behavior,
+                      or optional suit scans—to suggest “this is interactable” without painting objectives on the HUD.
+                      The best guidance feels like ecology, not instructions.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-map">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Make the map teach, not merely record</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Let players pin mysteries in a diegetic way (suit markers, “anomaly” tags) so memory becomes a supported skill,
+                      not a tax. This preserves the genre’s identity while respecting modern play sessions.
+                    </p>
                   </div>
                 </details>
               </div>
@@ -163,56 +269,97 @@
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">How Samus Aran broke the mold and birthed a genre.</p>
+                <p class="section-sub">How Samus Aran broke the mold—and how a map became a character.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
+
                 <details class="accordion-item" id="impact-genre" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The Metroidvania Legacy</h3>
+                    <h3 class="accordion-title">The Metroidvania legacy</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>By blending platforming with a sophisticated, interlocking world map, <em>Metroid</em> (and later <em>Castlevania</em>) created a design blueprint that still dominates the indie scene today. It proved that "the world" could be the most important character in a game.</p>
+                    <p>
+                      By blending platforming with an interlocking world that unlocks through abilities, <em>Metroid</em> helped create
+                      a design blueprint that still dominates. It proved “the world” could be the most important character in a game—
+                      a memory palace you slowly learn to navigate.
+                    </p>
                   </div>
                 </details>
+
+                <details class="accordion-item" id="impact-hero">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">A new kind of hero: competence in silence</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Samus became iconic not through speeches, but through poise: a protagonist defined by capability,
+                      curiosity, and the willingness to go deeper alone. That model—heroism as endurance plus intelligence—
+                      quietly reshaped what action protagonists could be.
+                    </p>
+                  </div>
+                </details>
+
               </div>
             </section>
 
             <div class="divider" aria-hidden="true"></div>
 
-            <section class="topic-nav-surface topic-nav-surface--story" 
-                     aria-label="Game navigation" 
-                     data-topic-nav="games" 
+            <!-- Bottom navigation -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Game navigation"
+                     data-topic-nav="games"
                      data-topic-slug="metroid">
               <div class="topic-nav-bg" aria-hidden="true">
                 <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
               </div>
+
               <div class="topic-nav-card">
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a href="#" data-crumb-section-link><span data-crumb-section-text>Games</span></a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a aria-current="page" data-crumb-current>Metroid</a></li>
                   </ol>
                 </nav>
+
                 <div class="pager" aria-label="Game navigation">
                   <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#"><span class="arrow" aria-hidden="true">←</span><span class="meta"><span class="kicker">Previous</span><span class="title" data-prev-title>Loading…</span></span></a>
-                    <a class="pager-next" data-pager-next href="#"><span class="meta"><span class="kicker">Next</span><span class="title" data-next-title>Loading…</span></span><span class="arrow" aria-hidden="true">→</span></a>
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
                   </div>
                 </div>
+
               </div>
             </section>
+
           </article>
 
+          <!-- TOC rail -->
           <aside class="story-aside" aria-label="On this page">
             <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
               On this page <span class="nav-caret" aria-hidden="true">▾</span>
             </button>
+
             <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
               <div class="toc-panel-head">
                 <h3 class="toc-panel-title">On this page</h3>
@@ -225,19 +372,80 @@
         </div>
       </div>
     </section>
+
+    <!-- IMPORTANT: backdrop belongs inside main (same pattern as story pages) -->
+    <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
   </main>
 
+  <!-- Footer (YOUR canonical template) -->
   <footer class="site-footer">
     <div class="container footer-inner">
+
       <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
         <div class="footer-copy">© <span id="year"></span></div>
       </div>
+
       <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-col"><h4>Mythogin</h4><ul><li><a href="home.html">Home</a></li></ul></div>
-        <div class="footer-col"><h4>Hero-Journeys</h4><ul><li><a href="/herojourneys/books/index.html">Books</a></li><li><a href="/herojourneys/film/index.html">Film</a></li><li><a href="/herojourneys/games/index.html">Games</a></li></ul></div>
+
+        <!-- Mythogin -->
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="footer-col">
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
+          <ul>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+          </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="footer-col">
+          <h4><a href="features/index.html">Features</a></h4>
+          <ul>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Hero-Journeys -->
+        <div class="footer-col">
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+          <ul>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/film/index.html">Film</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <!-- Perspective -->
+        <div class="footer-col">
+          <h4><a href="perspective/index.html">Perspective</a></h4>
+          <ul>
+            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
       </nav>
+
     </div>
   </footer>
 

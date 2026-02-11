@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/">
+
+  <!-- IMPORTANT: Mythogin base -->
+  <base href="/mythogin/">
 
   <title>Mythogin — Unreal</title>
   <meta name="description" content="Unreal on Mythogin: alien majesty, the tech of immersion, and the rise of the arena — critique, fix, impact." />
+
+  <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
 
+  <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/card.css">
@@ -19,45 +24,85 @@
   <link rel="stylesheet" href="css/components/utilities.css">
   <link rel="stylesheet" href="css/components/story-card.css">
   <link rel="stylesheet" href="css/components/drawer.css">
-
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
 
 <body class="story story--games">
 
+  <!-- Shared Nav (canonical paths) -->
   <div class="topbar">
     <div class="container container--topbar">
       <div class="topbar-inner">
 
         <div class="brand-main">
           <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
           </a>
         </div>
 
         <nav class="navlinks" aria-label="Primary">
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats">
+          <!-- Recommendations -->
+          <a class="nav-link"
+             href="recommendations/index.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <!-- Features -->
+          <a class="nav-link"
+             href="features/index.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <!-- Hero-Journeys -->
+          <div class="nav-item has-submenu is-pinned-herojourneys">
+            <a class="nav-link"
+               href="hero-journeys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
               Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
             </a>
+
             <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
             </div>
           </div>
 
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is and who its for">About</a>
+          <!-- Perspective -->
+          <div class="nav-item has-submenu is-pinned-perspective">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            </div>
+          </div>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
+          <!-- About -->
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <!-- Search -->
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
           </form>
+
         </nav>
 
       </div>
@@ -66,20 +111,28 @@
 
   <main class="story">
 
+    <!-- HERO -->
     <section class="topics-hero story-hero" aria-label="Story hero">
       <div class="container">
         <div class="topics-hero-card story-hero-card bleed-pad">
+
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
             <img src="images/topics/games/unreal.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
+
           <div class="topics-hero-content story-hero-content">
             <p class="story-kicker">Games</p>
+
             <h1 class="topics-hero-title">Unreal</h1>
+
             <p class="topics-hero-lead">
               From the wreckage of Prisoner 849 to the hyper-kinetic arenas of the future: a journey through the evolution of digital spectacle.
             </p>
+
             <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
@@ -87,74 +140,110 @@
                 <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
               </span>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
 
     <div class="divider" aria-hidden="true"></div>
 
+    <!-- BODY + TOC RAIL -->
     <section class="story-body" aria-label="Essay">
       <div class="container">
         <div class="story-layout story-layout--toc">
 
+          <!-- Article -->
           <article class="story-article">
+
             <section class="story-section section-card card--surface bleed-pad" id="intro">
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  More than a tech demo: Unreal transformed the First-Person Shooter into a cinematic, world-driven experience.
+                  More than a tech demo: <em>Unreal</em> turned the FPS into a world-first experience—scale, light, and atmosphere as story.
                 </p>
               </header>
+
               <p>
-                In 1998, <em>Unreal</em> didn't just compete with <em>Quake</em>; it offered a different philosophy. While others were exploring cramped, brown corridors, <em>Unreal</em> opened the door to Na Pali—a world of vast blue skies, ancient temples, and a hauntingly beautiful soundtrack.
+                In 1998, <em>Unreal</em> didn’t just compete with <em>Quake</em>; it proposed a different future. Instead of endless brown corridors,
+                it invited players into Na Pali—wide skies, impossible architecture, and a soundtrack that made solitude feel sacred.
               </p>
+
               <p>
-                The journey of Prisoner 849 is one of accidental messianism. By surviving the crash of the Vortex Rikers, the player becomes an unintended liberator for the enslaved Nali people. It was an early masterclass in using light, scale, and environmental logs to build a "Hero's Journey" without a single line of spoken dialogue from the protagonist.
+                Prisoner 849’s journey is accidental messianism: a crash-landing becomes an unchosen role as liberator of the Nali.
+                Without a talkative protagonist, the game tells its myth through environments, logs, and the pure emotional effect of place.
               </p>
             </section>
 
             <section class="story-section section-card card--surface bleed-pad" id="critique">
               <header class="section-head">
                 <h2 class="section-title">Critique</h2>
-                <p class="section-sub">Atmosphere, AI, and the transition to the Arena.</p>
+                <p class="section-sub">Wonder, AI presence, and the franchise’s pivot from pilgrimage to arena.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
+
                 <details class="accordion-item" id="critique-vistas" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The Power of the Vista</h3>
+                    <h3 class="accordion-title">The power of the vista</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p><em>Unreal</em> understood that wonder is as powerful as adrenaline. The first time the player exits the crashed ship and sees the waterfall and the flying creatures, the "Hero's Journey" shifts from survival to exploration. It was the first FPS to make "the view" a reward in itself.</p>
+                    <p>
+                      <em>Unreal</em> understood that wonder is as potent as adrenaline. The first open-air reveal—water, sky, creatures—
+                      reframes the “hero” from survivor to explorer. The view becomes a reward, and the world becomes the thesis.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-hostility">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Hostile ecology</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Na Pali feels alive because threats don’t read like “enemy placements”—they read like a food chain.
+                      Creatures and spaces signal danger through sound, distance, and pacing. It’s immersion built from mood, not scripts.
+                    </p>
                   </div>
                 </details>
 
                 <details class="accordion-item" id="critique-tournament">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The 'Tournament' Shift</h3>
+                    <h3 class="accordion-title">The tournament shift</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>With <em>Unreal Tournament</em>, the series pivoted to a different kind of myth: the futuristic gladiator. It stripped away the narrative to focus on "Flow" and mechanical mastery, proving that a competitive arena could have as much "soul" as a single-player campaign through character design and iconic map architecture like Facing Worlds.</p>
+                    <p>
+                      With <em>Unreal Tournament</em>, the myth changes: from alien pilgrimage to futuristic gladiator sport.
+                      Narrative recedes, but “soul” survives through iconography—map silhouettes, movement feel, and a new kind of hero:
+                      the competitor chasing mastery.
+                    </p>
                   </div>
                 </details>
+
               </div>
             </section>
 
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">Reclaiming the mystery of the Skaarj.</p>
+                <p class="section-sub">Bridge the franchise split: combine arena movement with the quiet terror and mystery of Na Pali.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
-                <details class="accordion-item" id="fix-mystery" open>
+                <details class="accordion-item" id="fix-bridge" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Narrative Cohesion</h3>
+                    <h3 class="accordion-title">A campaign that earns speed</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>The series' biggest hurdle was the split identity between its RPG-lite beginnings and its e-sports future. A modern "Fix" would involve a game that bridges the two: a single-player campaign that uses the high-speed movement of the Tournament but retains the quiet, alien mystery of Na Pali.</p>
+                    <p>
+                      The modern “fix” is a single-player journey where tournament-grade mobility is contextual—earned, necessary, and mythic—
+                      while the world stays strange and ancient. Keep the arena’s flow, but make it serve exploration, dread, and revelation.
+                    </p>
                   </div>
                 </details>
               </div>
@@ -163,17 +252,20 @@
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
-                <p class="section-sub">The engine that built the modern industry.</p>
+                <p class="section-sub">The engine that reshaped production—and the aesthetic idea that “place” is gameplay.</p>
               </header>
+
               <div class="accordion accordion--tight accordion--spaced">
                 <details class="accordion-item" id="impact-engine" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The Unreal Engine Legacy</h3>
+                    <h3 class="accordion-title">The Unreal Engine legacy</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
-                    <p>Beyond the games, the <em>Unreal Engine</em> (UE) is perhaps the most significant contribution to digital culture. By democratizing high-fidelity tools, Epic Games allowed thousands of other "Hero's Journeys" to be told, from <em>BioShock</em> to <em>The Mandalorian</em>.</p>
-                    
+                    <p>
+                      Beyond the games, Unreal’s most enduring artifact is its toolchain. By making high-fidelity creation accessible,
+                      Epic helped thousands of other worlds come into being—an invisible infrastructure behind modern games and beyond.
+                    </p>
                   </div>
                 </details>
               </div>
@@ -181,39 +273,59 @@
 
             <div class="divider" aria-hidden="true"></div>
 
-            <section class="topic-nav-surface topic-nav-surface--story" 
-                     aria-label="Game navigation" 
-                     data-topic-nav="games" 
+            <!-- Bottom navigation -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Game navigation"
+                     data-topic-nav="games"
                      data-topic-slug="unreal">
               <div class="topic-nav-bg" aria-hidden="true">
                 <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
               </div>
+
               <div class="topic-nav-card">
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a href="#" data-crumb-section-link><span data-crumb-section-text>Games</span></a></li>
                     <li class="sep" aria-hidden="true">›</li>
                     <li class="crumb"><a aria-current="page" data-crumb-current>Unreal</a></li>
                   </ol>
                 </nav>
+
                 <div class="pager" aria-label="Game navigation">
                   <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#"><span class="arrow" aria-hidden="true">←</span><span class="meta"><span class="kicker">Previous</span><span class="title" data-prev-title>Loading…</span></span></a>
-                    <a class="pager-next" data-pager-next href="#"><span class="meta"><span class="kicker">Next</span><span class="title" data-next-title>Loading…</span></span><span class="arrow" aria-hidden="true">→</span></a>
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
                   </div>
                 </div>
+
               </div>
             </section>
+
           </article>
 
+          <!-- TOC rail -->
           <aside class="story-aside" aria-label="On this page">
             <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
               On this page <span class="nav-caret" aria-hidden="true">▾</span>
             </button>
+
             <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
               <div class="toc-panel-head">
                 <h3 class="toc-panel-title">On this page</h3>
@@ -226,19 +338,80 @@
         </div>
       </div>
     </section>
+
+    <!-- IMPORTANT: backdrop belongs inside main (same pattern as story pages) -->
+    <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
   </main>
 
+  <!-- Footer (YOUR canonical template) -->
   <footer class="site-footer">
     <div class="container footer-inner">
+
       <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
         <div class="footer-copy">© <span id="year"></span></div>
       </div>
+
       <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-col"><h4>Mythogin</h4><ul><li><a href="home.html">Home</a></li></ul></div>
-        <div class="footer-col"><h4>Hero-Journeys</h4><ul><li><a href="/herojourneys/games/index.html">Games</a></li></ul></div>
+
+        <!-- Mythogin -->
+        <div class="footer-col">
+          <h4><a href="index.html">Mythogin</a></h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
+          </ul>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="footer-col">
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
+          <ul>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+          </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="footer-col">
+          <h4><a href="features/index.html">Features</a></h4>
+          <ul>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Hero-Journeys -->
+        <div class="footer-col">
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+          <ul>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/film/index.html">Film</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <!-- Perspective -->
+        <div class="footer-col">
+          <h4><a href="perspective/index.html">Perspective</a></h4>
+          <ul>
+            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/industry/index.html">Industry</a></li>
+          </ul>
+        </div>
+
       </nav>
+
     </div>
   </footer>
 
