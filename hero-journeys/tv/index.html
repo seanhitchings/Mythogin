@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Refactor: match Books hub behavior -->
-  <base href="/">
+  <base href="/mythogin/">
 
   <title>Mythogin — TV</title>
   <meta name="description"
@@ -112,8 +112,12 @@
   </div>
 </div>
 
-<!-- Refactor: match Books hub loader contract + search-index.json -->
-<main class="topics tv" data-hub data-hub-jsons="data/search-index.json">
+<!-- toggles audio-->
+<main class="topics tv"
+      data-hub
+      data-hub-jsons="data/search-index.json"
+      data-hub-audio="on">
+
 
   <!-- HERO -->
   <section class="topics-hero" aria-label="TV hero">
@@ -164,7 +168,7 @@
       </header>
 
       <!-- JS mounts cards here (from search-index.json via featured.js) -->
-      <div class="books-grid" data-top-picks-grid data-top-picks-category="essays" data-top-picks-type="games" data-top-picks-limit="3"></div>
+      <div class="books-grid" data-top-picks-grid data-top-picks-category="essays" data-top-picks-type="tv" data-top-picks-limit="3"></div>
     </div>
   </div>
 </section>
@@ -264,7 +268,5 @@
   <script src="js/featured.js"></script>
 <script src="js/hub-loader.js"></script>
 
-</script>
 </body>
 </html>
-
