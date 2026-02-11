@@ -3,6 +3,7 @@
   "use strict";
 
   async function loadStories() {
+    // Base-relative: resolves under <base href="/Mythogin/">
     const res = await fetch("data/stories.json", { cache: "no-store" });
     if (!res.ok) throw new Error("Failed to load data/stories.json");
     const stories = await res.json();
@@ -43,7 +44,7 @@
     const titleSub = escapeHtml(story.titleSub);
     const summary = escapeHtml(story.summary);
     const storyHref = escapeHtml(story.storyHref);
-    const browseHref = escapeHtml(story.browseHref || "Topics/topics.html");
+    const browseHref = escapeHtml(story.browseHref || "topics/index.html");
     const audioHref = escapeHtml(story.audioHref || (story.storyHref + "#audio"));
 
     const mediaStyle = cssBgImage(story.image, story.imagePos);

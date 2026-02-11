@@ -1,21 +1,11 @@
 (function(){
-  // Mythogin Topic Nav (UPDATED)
-  // Sources:
-  // - data/essays.json  (flat index: { generated_utc, items: [...] })
-  // - data/perspective.json (special-case)
-  // - data/nav-index.json  (legacy fallback)
+  // Mythogin Topic Nav (ESSAYS.JSON + legacy-safe)
+  // Canonical source for essays: data/essays.json
+  // Legacy fallback: data/nav-index.json
 
-  const CANDIDATE_ESSAYS_JSON = [
-    "data/essays.json"
-  ];
-
-  const CANDIDATE_JSON = [
-    "data/nav-index.json"
-  ];
-
-  const CANDIDATE_PERSPECTIVE_JSON = [
-    "data/perspective.json"
-  ];
+  const CANDIDATE_ESSAYS_JSON = ["data/essays.json"];
+  const CANDIDATE_NAV_INDEX_JSON = ["data/nav-index.json"];
+  const CANDIDATE_PERSPECTIVE_JSON = ["data/perspective.json"];
 
   const SECTION_LABELS = {
     books: "Books",
@@ -27,6 +17,25 @@
     philosophy: "Philosophy",
     industry: "Industry"
   };
+
+  function setText(el, txt){ if (el) el.textContent = txt; }
+  function setHref(el, href){ if (el) el.setAttribute("href", href); }
+  function hide(el){ if (el) el.style.display = "none"; }
+  function show(el){ if (el) el.style.display = ""; }
+
+  async function fetchFirstJson(urls){
+    let lastErr = null;
+    for (const url of urls){
+      try{
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+        return await res.json();
+      }catch(err){
+        lastErr = { url, err };
+      }
+    }
+    throw lastErr;
+  }
 
   function normPathnameFromUrl(u){
     try{
@@ -48,28 +57,6 @@
     }
   }
 
-  async function fetchFirstJson(urls){
-    let lastErr = null;
-    for (const url of urls){
-      try{
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-        return await res.json();
-      }catch(err){
-        lastErr = { url, err };
-      }
-    }
-    throw lastErr;
-  }
-
-  function setText(el, txt){ if (el) el.textContent = txt; }
-  function setHref(el, href){
-    if (!el) return;
-    el.setAttribute("href", href);
-  }
-  function hide(el){ if (el) el.style.display = "none"; }
-  function show(el){ if (el) el.style.display = ""; }
-
   function findIndexBySlug(items, slug){
     const s = (slug || "").trim().toLowerCase();
     if (!s) return -1;
@@ -85,18 +72,24 @@
   }
 
   function getStoryTypeFromBody(){
-    // expects: <body class="story story--books"> etc.
     const m = document.body && document.body.className
       ? document.body.className.match(/\bstory--([a-z0-9-]+)\b/i)
       : null;
     return (m && m[1]) ? m[1].toLowerCase() : "";
   }
 
-  function resolveHrefMaybe(raw){
-    return (raw || "").trim() || "#";
+  // IMPORTANT: keep hrefs base-relative, but ALSO normalize legacy "herojourneys/" -> "hero-journeys/"
+  function normalizeHref(raw){
+    let s = (raw || "").trim();
+    if (!s) return "#";
+
+    // Fix common legacy path, without touching other parts
+    // (also handles "/herojourneys/..." and "herojourneys/...")
+    s = s.replace(/^\/?herojourneys\//i, "hero-journeys/");
+
+    return s;
   }
 
-  // perspective.json adapter -> nav-index compatible section
   function buildSectionFromPerspectiveJson(persp, sectionKey){
     const sec = persp && persp[sectionKey];
     if (!sec || !Array.isArray(sec.stories) || sec.stories.length === 0) return null;
@@ -120,7 +113,6 @@
     };
   }
 
-  // essays.json adapter -> section for a given type (books/film/etc)
   function buildSectionFromEssaysJson(essaysJson, sectionKey){
     const arr = essaysJson && Array.isArray(essaysJson.items) ? essaysJson.items : [];
     if (!arr.length) return null;
@@ -131,29 +123,25 @@
         String(r.type || "").toLowerCase() === String(sectionKey || "").toLowerCase() &&
         r.url && r.slug
       )
-      // stable ordering: sort by title so prev/next is deterministic
+      // deterministic ordering for prev/next
       .slice()
       .sort((a, b) => String(a.title || "").localeCompare(String(b.title || ""), undefined, { sensitivity: "base" }))
       .map(r => ({
         name: String(r.title || r.name || "—"),
         slug: String(r.slug || ""),
-        url: String(r.url || "")
+        url: normalizeHref(String(r.url || "")) // normalize on ingest
       }));
 
     if (!items.length) return null;
 
-    // browse hub for that essay type
-    const browse_url = `hero-journeys/${sectionKey}/index.html`;
-
     return {
       name: SECTION_LABELS[sectionKey] || sectionKey,
-      browse_url,
+      browse_url: `hero-journeys/${sectionKey}/index.html`,
       items
     };
   }
 
   async function init(){
-    // If body has story--X, prefer matching widget with data-topic-nav="X"
     const typeFromBody = getStoryTypeFromBody();
 
     const selector =
@@ -183,7 +171,7 @@
     try{
       let section = null;
 
-      // Perspective special-cases
+      // Perspective special case
       if (sectionKey === "philosophy" || sectionKey === "industry"){
         try{
           const persp = await fetchFirstJson(CANDIDATE_PERSPECTIVE_JSON);
@@ -193,7 +181,7 @@
         }
       }
 
-      // Essays (new canonical)
+      // Canonical: essays.json for story types
       if (!section){
         try{
           const essays = await fetchFirstJson(CANDIDATE_ESSAYS_JSON);
@@ -205,19 +193,26 @@
 
       // Legacy fallback
       if (!section){
-        const nav = await fetchFirstJson(CANDIDATE_JSON);
+        const nav = await fetchFirstJson(CANDIDATE_NAV_INDEX_JSON);
         section = nav ? nav[sectionKey] : null;
+        // normalize legacy urls if present
+        if (section && Array.isArray(section.items)){
+          section.items = section.items.map(it => ({
+            ...it,
+            url: normalizeHref(it && it.url ? String(it.url) : "")
+          }));
+          if (section.browse_url) section.browse_url = normalizeHref(String(section.browse_url));
+        }
       }
 
       if (!section || !Array.isArray(section.items) || section.items.length === 0){
-        console.error("[topic-nav] Missing/empty section:", sectionKey, section);
         setText(crumbCurrent, "—");
         hide(prevEl); hide(nextEl); hide(backEl);
         return;
       }
 
       const items = section.items;
-      const browseUrl = resolveHrefMaybe(section.browse_url);
+      const browseUrl = normalizeHref(section.browse_url || "");
 
       // Back (optional)
       if (browseUrl && browseUrl !== "#" && backEl){
@@ -228,16 +223,13 @@
       }
 
       // Breadcrumb section link
-      setHref(crumbSectionLink, browseUrl);
+      setHref(crumbSectionLink, browseUrl || "#");
 
       // Resolve current
       let idx = findIndexBySlug(items, slug);
       if (idx === -1) idx = findIndexByUrl(items);
 
       if (idx === -1){
-        console.error("[topic-nav] Could not match current page.", {
-          sectionKey, slug, here: window.location.href, base: document.baseURI, sample: items.slice(0, 5)
-        });
         setText(crumbCurrent, "—");
         hide(prevEl); hide(nextEl);
         return;
@@ -254,7 +246,7 @@
       const n = items[nextIdx];
 
       if (p && p.url){
-        setHref(prevEl, resolveHrefMaybe(p.url));
+        setHref(prevEl, normalizeHref(p.url));
         setText(prevTitle, p.name || "Previous");
         show(prevEl);
       }else{
@@ -262,7 +254,7 @@
       }
 
       if (n && n.url){
-        setHref(nextEl, resolveHrefMaybe(n.url));
+        setHref(nextEl, normalizeHref(n.url));
         setText(nextTitle, n.name || "Next");
         show(nextEl);
       }else{
