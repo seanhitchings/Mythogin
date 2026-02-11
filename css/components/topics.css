@@ -1,5 +1,5 @@
 /* ==========================================================================
-   pages/topics.css — Topics hub ONLY
+   components/topics.css — Topics hub ONLY
    Purpose:
    - Owns Topics page layout + Topics hero banner behavior 
    - MUST NOT define card system (.section-card, .card-*) or any catalogue grids

@@ -1,0 +1,342 @@
+/* FILE: /Mythogin/css/pages/perspective.css
+   Purpose: Perspective hub + children use STACKED hero cards (image above text),
+            and force LANDSCAPE media. Also overrides story.css horizontal hero.
+*/
+
+/* --------------------------------------------------------------------------
+   1) HERO OVERRIDES (Perspective pages only)
+   - Your markup uses BOTH: .topics-hero-* AND .story-hero-*
+   - story.css likely forces horizontal layout via .story-hero-card/.story-hero-media
+   - So we override the STORY classes too (with higher specificity + !important)
+-------------------------------------------------------------------------- */
+
+/* Force stacked layout (kills horizontal/flex row from story.css) */
+body.story--perspective .story-hero-card{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: auto 1fr !important;
+}
+
+/* Make sure media becomes a full-width, landscape block */
+body.story--perspective .story-hero-media{
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+/* Image fill (landscape crop) */
+body.story--perspective .story-hero-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  display: block;
+  transform: scale(1.03);
+}
+
+/* Ensure content is below image (not absolute overlay) */
+body.story--perspective .story-hero-content{
+  position: static !important;
+  padding: clamp(16px, 2.2vw, 24px);
+  display: grid;
+  gap: 12px;
+}
+
+/* FILE: /Mythogin/css/pages/perspective.css
+   Purpose: Perspective hub + children use STACKED hero cards (image above text),
+            and force LANDSCAPE media. Also overrides story.css horizontal hero.
+*/
+
+/* --------------------------------------------------------------------------
+   1) HERO OVERRIDES (Perspective pages only)
+   - Your markup uses BOTH: .topics-hero-* AND .story-hero-*
+   - story.css likely forces horizontal layout via .story-hero-card/.story-hero-media
+   - So we override the STORY classes too (with higher specificity + !important)
+-------------------------------------------------------------------------- */
+
+/* Force stacked layout (kills horizontal/flex row from story.css) */
+body.story--perspective .story-hero-card{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: auto 1fr !important;
+}
+
+/* Make sure media becomes a full-width, landscape block */
+body.story--perspective .story-hero-media{
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+/* Image fill (landscape crop) */
+body.story--perspective .story-hero-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  display: block;
+  transform: scale(1.03);
+}
+
+/* Ensure content is below image (not absolute overlay) */
+body.story--perspective .story-hero-content{
+  position: static !important;
+  padding: clamp(16px, 2.2vw, 24px);
+  display: grid;
+  gap: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   2) TOPICS HERO (Perspective hub + children)
+   - Keep your original intent for .topics-hero-* as well
+-------------------------------------------------------------------------- */
+
+.perspective-page .topics-hero-card,
+.story--perspective .topics-hero-card{
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.perspective-page .topics-hero-media,
+.story--perspective .topics-hero-media{
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.perspective-page .topics-hero-media img,
+.story--perspective .topics-hero-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  display: block;
+  transform: scale(1.03);
+}
+
+.perspective-page .topics-hero-content,
+.story--perspective .topics-hero-content{
+  position: static;
+  padding: clamp(16px, 2.2vw, 24px);
+  display: grid;
+  gap: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   3) PERSPECTIVE HUB GRID (3 child cards)
+   - Same stacked card language as book-card: image on top, text below
+-------------------------------------------------------------------------- */
+
+.perspective-grid{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(12, 1fr);
+  padding: clamp(22px, 3vw, 34px) 0;
+}
+
+.perspective-card{
+  grid-column: span 4;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform .12s ease, border-color .15s ease, background .15s ease;
+  min-width: 0;
+}
+
+.perspective-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.06);
+}
+
+.perspective-card-media{
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.perspective-card-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  display: block;
+  transform: scale(1.03);
+}
+
+.perspective-card-body{
+  padding: 14px 14px 16px 14px;
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.perspective-card-title{
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+  letter-spacing: .01em;
+}
+
+.perspective-card-desc{
+  margin: 0;
+  color: rgba(170,180,195,.92);
+  line-height: 1.45;
+}
+
+.perspective-card-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Industry: force the “Behind the Curtain” card row to be TRUE 2-up
+   (don’t rely on .books-grid which may be 3-up on desktop)
+   ========================================================================== */
+
+.industry-two-grid{
+  display: grid;
+  gap: clamp(18px, 2.2vw, 28px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+/* Match your site’s responsive breakpoints */
+@media (max-width: 980px){
+  .industry-two-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px){
+  .perspective-card{ grid-column: span 6; }
+}
+
+@media (max-width: 640px){
+  .perspective-card{ grid-column: span 12; }
+}
+
+/* --------------------------------------------------------------------------
+   2) TOPICS HERO (Perspective hub + children)
+   - Keep your original intent for .topics-hero-* as well
+-------------------------------------------------------------------------- */
+
+.perspective-page .topics-hero-card,
+.story--perspective .topics-hero-card{
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.perspective-page .topics-hero-media,
+.story--perspective .topics-hero-media{
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.perspective-page .topics-hero-media img,
+.story--perspective .topics-hero-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  display: block;
+  transform: scale(1.03);
+}
+
+.perspective-page .topics-hero-content,
+.story--perspective .topics-hero-content{
+  position: static;
+  padding: clamp(16px, 2.2vw, 24px);
+  display: grid;
+  gap: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   3) PERSPECTIVE HUB GRID (3 child cards)
+   - Same stacked card language as book-card: image on top, text below
+-------------------------------------------------------------------------- */
+
+.perspective-grid{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(12, 1fr);
+  padding: clamp(22px, 3vw, 34px) 0;
+}
+
+.perspective-card{
+  grid-column: span 4;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform .12s ease, border-color .15s ease, background .15s ease;
+  min-width: 0;
+}
+
+.perspective-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(215,188,161,.35);
+  background: rgba(215,188,161,.06);
+}
+
+.perspective-card-media{
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.perspective-card-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  display: block;
+  transform: scale(1.03);
+}
+
+.perspective-card-body{
+  padding: 14px 14px 16px 14px;
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.perspective-card-title{
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+  letter-spacing: .01em;
+}
+
+.perspective-card-desc{
+  margin: 0;
+  color: rgba(170,180,195,.92);
+  line-height: 1.45;
+}
+
+.perspective-card-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 980px){
+  .perspective-card{ grid-column: span 6; }
+}
+
+@media (max-width: 640px){
+  .perspective-card{ grid-column: span 12; }
+}

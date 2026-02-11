@@ -1,12 +1,19 @@
 /* ==========================================================================
-   components/hero.css — Hero card + media stack (CLEANED / DEDUPED)
-   Landing/Home hero only (NO Topics page banner rules)
+   components/main-hero.css — Main/Home hero
+   Supports BOTH:
+   1) overlay tagline (old layout)
+   2) bar tagline (new layout)
    ========================================================================== */
 
 .hero{
   padding-top: 24px;
-  padding-bottom: 72px; /* ensures Media begins fully below the Featured+Discover card */
+  padding-bottom: 36px;
+  --hero-title-nudge-x: -6px;
 }
+
+/* --------------------------------------------------------------------------
+   Hero card
+   -------------------------------------------------------------------------- */
 
 .hero-card{
   position: relative;
@@ -17,7 +24,6 @@
   box-shadow: var(--shadow);
 }
 
-/* Keep internal glow INSIDE the card */
 .hero-card::before{
   content:"";
   position:absolute;
@@ -41,23 +47,25 @@
   opacity:.05;
 }
 
-/* HERO CARD — Image inside card */
 .hero-card.hero-card--image{
-  padding: 0; /* (position/overflow already handled by .hero-card) */
+  padding: 0;
 }
 
-/* HERO MEDIA STACK */
+/* --------------------------------------------------------------------------
+   Hero media
+   -------------------------------------------------------------------------- */
+
 .hero-media{
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 7;
   min-height: 300px;
-  max-height: 520px;
+  max-height: 600px;
   overflow: hidden;
+
   border-radius: calc(var(--radius) + 6px);
 }
 
-/* Background hero image */
 .hero-media .hero-bg{
   width: 100%;
   height: 100%;
@@ -68,7 +76,6 @@
   z-index: 1;
 }
 
-/* Gradient overlay */
 .hero-media-overlay{
   position: absolute;
   inset: 0;
@@ -76,21 +83,21 @@
   pointer-events: none;
 }
 
-/* Centered title image */
 .hero-title-img{
   position: absolute;
   left: 50%;
-  top: 15%;
-  transform: translate(-50%, -50%);
-  width: min(780px, 62%);
-  max-width: 780px;
-  height: auto;
+  top: 14%;
+  transform: translate(calc(-50% + var(--hero-title-nudge-x)), -50%);
+  width: clamp(220px, 32vw, 400px);
   z-index: 3;
   pointer-events: none;
   filter: drop-shadow(0 10px 28px rgba(0,0,0,.55));
 }
 
-/* Tagline overlay sits above everything */
+/* --------------------------------------------------------------------------
+   OLD overlay tagline (still supported)
+   -------------------------------------------------------------------------- */
+
 .hero-inner.hero-inner--overlay{
   position: absolute;
   left: 0;
@@ -101,7 +108,7 @@
   z-index: 4;
 }
 
-/* Stronger “book light” bloom rising into the scene */
+/* Stronger “book light” bloom rising into the scene (overlay mode) */
 .hero-inner.hero-inner--overlay::before{
   content:"";
   position:absolute;
@@ -122,6 +129,44 @@
   mix-blend-mode: screen;
 }
 
+/* --------------------------------------------------------------------------
+   NEW colored bar version (tagline lives here)
+   -------------------------------------------------------------------------- */
+
+.hero-bar{
+
+  background:   #07080A; /* #0E1B1D; dark green bar */
+  padding: clamp(12px, 2.2vw, 18px) clamp(14px, 2.4vw, 22px);
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,.28);
+}
+
+.hero-inner.hero-inner--bar{
+  position: relative;
+  z-index: 4;
+}
+
+/* Soft bloom rising into the bar (bar mode) */
+.hero-inner.hero-inner--bar::before{
+  content:"";
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -14px;
+  width: min(820px, 94vw);
+  height: 140px;
+  pointer-events:none;
+  background:
+    radial-gradient(60% 100% at 50% 0%,
+      rgba(215,188,161,.22),
+      rgba(215,188,161,.10) 38%,
+      rgba(80,200,180,.10) 62%,
+      rgba(0,0,0,0) 78%);
+  filter: blur(16px);
+  opacity: .70;
+  mix-blend-mode: screen;
+}
+
 /* ==========================================================================
    Fancy tagline (depth + smoke ribbon + lacquer + motes + shimmer)
    ========================================================================== */
@@ -130,7 +175,7 @@
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 6px 10px;
+  padding: 2px 10px;
   max-width: min(78ch, 92%);
   border-radius: 18px;
 
@@ -152,7 +197,7 @@
   font-size: clamp(15px, 1.6vw, 19px);
   font-weight: 500;
   letter-spacing: .015em;
-  line-height: 1.42;
+  line-height: 1.3;
 
   text-shadow:
     0 3px 14px rgba(0,0,0,.92),
@@ -191,6 +236,7 @@
   content:"";
   position:absolute;
   inset: 2px;
+
   border-radius: inherit;
   pointer-events:none;
   background:
@@ -231,7 +277,31 @@
     0 2px 10px rgba(0,0,0,.85);
 }
 
-/* Funnel (3 lines) */
+@keyframes escort-sweep{
+  from{
+    background-position:
+      -200% 0,
+      0 0,0 0,0 0,0 0,0 0,0 0;
+    opacity: .4;
+  }
+  40%{ opacity: .95; }
+  to{
+    background-position:
+      140% 0,
+      0 0,0 0,0 0,0 0,0 0,0 0;
+    opacity: .4;
+  }
+}
+
+/* Base tagline (if you ever use .hero-tagline without fancy) */
+.hero-tagline{
+  font-size: clamp(16px, 1.8vw, 20px);
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+/* Funnel layout */
+
 .hero-tagline--funnel-3{
   display: inline-flex;
   flex-direction: column;
@@ -264,36 +334,44 @@
   font-size: clamp(14px, 1.5vw, 18px);
   letter-spacing: .06em;
   text-transform: none;
-  color: #FFB13A; /* (  rgba(215,188,161,.95);color) */
+  color: rgba(215,188,161,.95);
   transform: scaleX(.82);
 }
 
 
+/* Funnel layout — 2 lines */
 
-@keyframes escort-sweep{
-  from{
-    background-position:
-      -200% 0,
-      0 0,0 0,0 0,0 0,0 0,0 0;
-    opacity: .4;
-  }
-  40%{ opacity: .95; }
-  to{
-    background-position:
-      140% 0,
-      0 0,0 0,0 0,0 0,0 0,0 0;
-    opacity: .4;
-  }
+.hero-tagline--funnel-2{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Base tagline (if you ever use .hero-tagline without fancy) */
-.hero-tagline{
-  font-size: clamp(16px, 1.8vw, 20px);
-  max-width: 80ch;
+.hero-tagline--funnel-2 .line{
+  display:block;
+  text-align:center;
   margin: 0 auto;
+  white-space: nowrap;
 }
 
-/* Responsive behavior */
+.hero-tagline--funnel-2 .line-1{
+  font-size: clamp(18px, 2vw, 24px);
+  letter-spacing: .01em;
+  color: rgba(248,250,252,.96);
+}
+
+.hero-tagline--funnel-2 .line-2{
+  margin-top: 6px;
+  font-size: clamp(16px, 1.7vw, 21px);
+  letter-spacing: .04em;
+  color: #FFB13A; /* warm gold; pale color: rgba(215,188,161,.95);*/
+  transform: scaleX(.92);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
 @media (max-width: 760px){
   .hero-inner.hero-inner--overlay{
     bottom: 32px;
@@ -310,6 +388,10 @@
   .hero-inner.hero-inner--overlay{
     bottom: 18px;
     padding: 12px 14px;
+  }
+
+  .hero-tagline--funnel-3 .line{
+    white-space: normal;
   }
 }
 

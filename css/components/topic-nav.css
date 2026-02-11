@@ -33,7 +33,7 @@
   filter: saturate(.85) brightness(.65);
 }
 
-/* Card */
+/* Card (layout-only: NO BORDER in default; outer surface owns framing on story pages) */
 .topic-nav-card{
   position: relative;
   z-index: 2;
@@ -45,7 +45,11 @@
 
   padding: 18px 22px;
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.12);
+
+  /* IMPORTANT: no inner frame */
+  border: 0;
+  outline: 0;
+  box-shadow: none;
 
   background: linear-gradient(
     180deg,
@@ -54,7 +58,6 @@
   );
 
   backdrop-filter: blur(10px);
-  box-shadow: 0 18px 40px rgba(0,0,0,.45);
 
   min-width: 0;
   box-sizing: border-box;
@@ -183,14 +186,41 @@
 
 /* ==========================================================================
    2) STORY PAGE VARIANT (grid-attached)
+   - OUTER SURFACE owns the ONLY visible border
+   - INNER CARD has NO border/inset stroke
    ========================================================================== */
 
-/* Used only when the section is INSIDE the story grid */
+/* Story pages: surface becomes the framed container */
 body.story .topic-nav-surface--story{
-  padding: 22px 0;
-  border-bottom: 0;
+  position: relative;
+  padding: 14px var(--pad);     /* tighter: brings card closer to border */
+  margin-top: 18px;
+
+  border: 1px solid var(--line);
+  border-radius: 22px;
+
+  background: transparent;
   overflow: visible;
   min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Kill any decorative dividers/pseudo frames from base surface */
+body.story .topic-nav-surface--story::before,
+body.story .topic-nav-surface--story::after{
+  content: none !important;
+}
+
+/* Background image is a soft underlay only (no framing) */
+body.story .topic-nav-surface--story .topic-nav-bg{
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+
+  border-radius: 0;
+  overflow: visible;
+  opacity: .25;                 /* a bit subtler since the surface is framed */
+  pointer-events: none;
 }
 
 /* Put the whole section into the ARTICLE grid column on widescreen */
@@ -200,9 +230,16 @@ body.story .topic-nav-surface--story{
   }
 }
 
-/* Ensure the card fills that column */
+/* Card fills the framed surface; reduce padding so it doesn’t “fight” the frame */
 body.story .topic-nav-surface--story .topic-nav-card{
   width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+
+  padding: 14px 18px;           /* slightly tighter than default */
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;  /* IMPORTANT: no inset “fake border” */
 }
 
 /* <=860: stack controls */
@@ -228,73 +265,12 @@ body.story .topic-nav-surface--story .topic-nav-card{
   }
 }
 
-
-/* ==========================================================================
-   3) STORY VARIANT: card-only (no band frame), keep TOC rail in place
-   ========================================================================== */
-
-/* 1) Story pages: the surface wrapper should NOT draw a frame */
-body.story .topic-nav-surface--story{
-  padding: 0;                 /* remove band padding */
-  border: 0;                  /* remove any border from the wrapper */
-  background: transparent;     /* no panel background */
-  overflow: visible;          /* don't clip shadows */
-}
-
-/* If your base .topic-nav-surface draws a divider line, kill it here too */
-body.story .topic-nav-surface--story::before,
-body.story .topic-nav-surface--story::after{
-  content: none !important;
-}
-
-/* 2) Make the background image behave like a subtle underlay, not a framed box */
-body.story .topic-nav-surface--story .topic-nav-bg{
-  border-radius: 0;           /* avoid “inner frame” corners */
-  overflow: visible;
-  opacity: .35;               /* optional: tone it down so it doesn't read as a panel */
-  pointer-events: none;
-}
-
-/* 3) Place nav in article column, but keep it AFTER the aside in DOM */
-@media (min-width: 981px){
-  body.story .story-layout--toc > .topic-nav-surface--story{
-    grid-column: 1 / 2;
-    margin-top: 18px;         /* spacing below the article stack */
-  }
-}
-
-/* 4) Ensure the card itself is the ONLY visible border box */
-body.story .topic-nav-surface--story .topic-nav-card{
-  width: 100%;
-}
-
-
-/* ==========================================================================
-   4) STORY: rail-aligned WITHOUT overflow (REPLACES width+negative margins)
-   - The old "width: calc(100% + var(--pad)*2)" can create horizontal scroll
-   - Instead: pad the wrapper so the card aligns with the story rail safely
-   ========================================================================== */
-
-body.story .topic-nav-surface--story{
-  /* spacing between Impact card and nav */
-  margin-top: 18px;
-
-  /* safe rail alignment */
-  padding-inline: var(--pad);
-  box-sizing: border-box;
-}
-
-body.story .topic-nav-surface--story .topic-nav-card{
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 /* Small screens: keep normal page padding (still safe) */
 @media (max-width: 640px){
   body.story .topic-nav-surface--story{
-    padding-inline: var(--pad);
+    padding: 12px var(--pad);
   }
+
   body.story .topic-nav-surface--story .topic-nav-card{
     width: 100%;
     margin: 0;

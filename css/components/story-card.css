@@ -1,9 +1,8 @@
-
 /* ==========================================================================
    0) SAFETY: deconflict any generic “story-body” component styles
    ========================================================================== */
 
-   body.story{
+body.story{
   /* Match your hero container width */
   --max: var(--hero-max);
 }
@@ -75,7 +74,6 @@ body.story .story-hero .topics-hero-card.story-hero-card{
   padding: clamp(14px, 2vw, 18px);
 }
 
-
 body.story .story-hero .topics-hero-media.story-hero-media{
   aspect-ratio: auto !important;
   max-height: none !important;
@@ -138,7 +136,18 @@ body.story .story-article{
    3) Optional: if you ever apply bleed-pad to the WHOLE layout
    Keep the grid “one unit” while preserving content padding alignment.
    ========================================================================== */
+
 body.story .story-layout--toc.bleed-pad{
   padding-left: var(--pad);
   padding-right: var(--pad);
+}
+
+/* ==========================================================================
+   4) STORY TOPIC NAV: remove the “fake border” caused by inset box-shadow
+   (This is the line you identified.)
+   ========================================================================== */
+
+body.story .topic-nav-surface--story .topic-nav-card{
+  /* Keep depth, remove inset frame */
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
 }

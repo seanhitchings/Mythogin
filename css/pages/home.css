@@ -1,8 +1,12 @@
 /* ==========================================================================
    pages/home.css — landing hero (responsive bands + clean seam)
-   + Hero image height clamp
    + Stable page edges
-   + Glossy non-interactive tagline pills (smaller + quieter)
+   + Glossy non-interactive tagline pills
+   + Single primary CTA (clean glass + antique gold)
+   + Unified hero surface (no stark bars)
+   + Full image (no cropping) w/ max-height 640px
+   + Top logo overlays image (no thick top band)
+   + Headline plaque sits ON the banner (sandy surface)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -18,13 +22,15 @@ body.landing{
   background:#070a12;
   margin:0;
 
-  --landing-max: var(--max, 1160px);
-  --landing-gutter: var(--pad, clamp(16px, 2.2vw, 28px));
-
-  /* HERO media sizing */
+  /* HERO media sizing (kept as knobs; not used to crop) */
   --landing-hero-ar: 16 / 7;
   --landing-hero-min-h: 280px;
-  --landing-hero-max-h: 520px;
+  --landing-hero-max-h: 780px;
+
+  /* CTA palette (avoid high-chroma yellow) */
+  --cta-gold: rgba(246, 215, 138, 1);   /* antique gold */
+  --cta-gold-2: rgba(239, 164, 42, 1);  /* warm orange-gold */
+  --cta-ink: rgba(9, 10, 16, 1);        /* deep ink */
 }
 
 .landing-wrap{
@@ -33,17 +39,34 @@ body.landing{
 }
 
 /* --------------------------------------------------------------------------
-   HERO STRUCTURE
+   HERO — unified surface + blended seams + overlays
    -------------------------------------------------------------------------- */
 
 .landing-hero{
+  position: relative;
+  overflow: hidden;
   width:100%;
-  background:#4B346C;
+
+  background:
+    radial-gradient(900px 360px at 50% 0%,
+      rgba(254,135,1,.14) 0%,
+      rgba(75,52,108,.25) 42%,
+      rgba(0,0,0,0) 70%),
+    linear-gradient(180deg,
+      rgba(75,52,108,1) 0%,
+      rgba(75,52,108,.92) 22%,
+      rgba(15,18,28,.85) 60%,
+      rgba(7,10,18,1) 100%);
+
+  box-shadow: none;
 }
 
-/* Purple bands */
+/* Bands base */
 .hero-band{
-  min-height:100px;
+  position: relative;
+  background: transparent;
+
+  min-height: 88px;
   height:auto;
 
   display:flex;
@@ -54,63 +77,229 @@ body.landing{
   padding:14px 16px;
 }
 
-/* Headline */
-.hero-h1{
-  margin:0;
-  font-family: "Cormorant Garamond", var(--serif);
+/* --------------------------------------------------------------------------
+   TOP LOGO OVERLAY (no thick band)
+   -------------------------------------------------------------------------- */
 
-  font-size: clamp(18px, 2.6vw, 34px);
-  font-weight: 580;
-  font-optical-sizing: auto;
-  font-kerning: normal;
+.hero-band--top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
-  color:#FEE440;
-  line-height: 1.22;
-  letter-spacing: .005em;
+  z-index: 6;
 
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: auto;
+  padding: 12px 16px 0;
 
-  max-width: min(58ch, 100%);
+  background: transparent;
+  pointer-events: none; /* makes the overlay feel “non-UI” */
 }
-
-.h1-line{ display:block; }
 
 /* Logo */
 .hero-logo{
   max-height:120px;
   width:auto;
+
+  display:block;
+  margin-inline:auto;
+
+  /* dial this if you want the logo lower/higher on the image */
+  transform: translateY(0px);
+
+  filter: drop-shadow(0 10px 26px rgba(0,0,0,.55));
 }
 
 /* --------------------------------------------------------------------------
-   HERO IMAGE
+   HERO IMAGE — full image (no cropping) + blended seams (max-height: 640px)
    -------------------------------------------------------------------------- */
 
 .hero-image{
-  position:relative;
-  width:100%;
-  max-width:100%;
+  position: relative;
+  z-index: 1;
 
-  aspect-ratio:var(--landing-hero-ar);
-  min-height:var(--landing-hero-min-h);
-  max-height:var(--landing-hero-max-h);
+  width: 100%;
+  max-width: 100%;
 
-  overflow:hidden;
-  background:#4B346C;
+  /* IMPORTANT: remove fixed ratio + min-height clamps that force cropping */
+  aspect-ratio: auto;
+  min-height: 0;
+
+  /* restore your max height */
+  max-height: 640px;
+
+  overflow: hidden; /* keeps seam overlays clean */
+  background: transparent;
+
+  margin-top: 0;
 }
 
+/* Show the entire image (no crop) while honoring max-height */
 .hero-image img{
-  width:100%;
-  height:100%;
-  display:block;
+  max-height: 640px;
 
-  object-fit:cover;
-  object-position:center center;
+  /* keep full image visible without cropping */
+  width: auto;
+  height: 100%;
+
+  display:block;
+  margin-inline:auto; /* centers when width becomes smaller */
+
+  position: relative;
+  z-index: 1;
+
+  filter: saturate(1.02) contrast(1.03);
 }
+
+/* Seam blending overlays */
+.hero-image::before,
+.hero-image::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  pointer-events:none;
+  z-index: 2;
+}
+
+
+/* Top seam — color-matched blend */
+.hero-image::before{
+  top:0;
+  height: clamp(36px, 4vw, 64px);
+
+  background: linear-gradient(
+    180deg,
+    rgba(52,35,74,.95) 0%,   /* #34234A */
+    rgba(60,36,82,.78) 38%,  /* #3C2452 */
+    rgba(60,36,82,.35) 65%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+
+/* Bottom seam: keep a stronger fade for the plaque / transition */
+
+/* Bottom seam:  */
+.hero-image::after{
+  bottom:0;
+  height: clamp(58px, 7vw, 110px);
+
+  background: linear-gradient(
+    0deg,
+    rgba(7,10,18,.78) 0%,
+    rgba(7,10,18,.38) 40%,
+    rgba(7,10,18,.14) 65%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
 
 /* --------------------------------------------------------------------------
-   TAGLINE BELOW HERO
+   HEADLINE PLAQUE ON THE BANNER (sandy surface)
+   - Bottom band becomes overlay on hero-image
+   -------------------------------------------------------------------------- */
+
+.hero-band--bottom{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+
+  z-index: 7;
+
+  min-height: auto;
+  padding: 0 16px;
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  bottom: 22px; /* was 18px */
+}
+
+
+.hero-band--bottom .hero-h1{
+  display: inline-block;
+  margin: 0;
+
+  padding: 14px 22px;
+  border-radius: 18px;
+
+  /* Sandy/stone surface (RGB 215,188,161) */
+  background:
+    radial-gradient(120% 140% at 50% 0%,
+      rgba(255,255,255,.38) 0%,
+      rgba(255,255,255,.14) 36%,
+      rgba(0,0,0,0) 70%),
+    linear-gradient(180deg,
+      rgba(215,188,161,.78) 0%,
+      rgba(215,188,161,.62) 48%,
+      rgba(215,188,161,.52) 100%);
+
+  border: 1px solid rgba(255,255,255,.22);
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.30),
+    inset 0 -12px 20px rgba(0,0,0,.18);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* replace yellow (clashy) with warm ink */
+  color: rgba(20,18,24,.92);
+  text-shadow: 0 1px 0 rgba(255,255,255,.28);
+
+  max-width: min(60ch, 100%);
+}
+
+/* headline typography remains */
+/* Headline plaque — mist glass (matches CTA container language) */
+.hero-band--bottom .hero-h1{
+  display:inline-block;
+  margin:0;
+
+  padding: 14px 22px;
+  border-radius: 18px;
+
+  /* Mist / glass: dark + airy, not sandy */
+  background:
+    radial-gradient(900px 140px at 50% 0%,
+      rgba(255,255,255,.08) 0%,
+      rgba(255,255,255,.035) 42%,
+      rgba(255,255,255,0) 74%),
+    linear-gradient(180deg,
+      rgba(12,14,22,.42) 0%,
+      rgba(10,12,18,.32) 55%,
+      rgba(6,8,12,.22) 100%);
+
+  border: 1px solid rgba(255,255,255,.10);
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* restore gold lead */
+  color: #FEE440; /* original Mythogin headline gold */
+
+  text-shadow:
+    0 1px 0 rgba(0,0,0,.55),
+    0 10px 28px rgba(0,0,0,.55);
+
+  max-width: min(60ch, 96vw);
+}
+
+
+.h1-line{ display:block; }
+
+/* --------------------------------------------------------------------------
+   TAGLINE BELOW HERO (decorative pills — optional)
    -------------------------------------------------------------------------- */
 
 .hero-tagline{
@@ -134,14 +323,9 @@ body.landing{
   text-align:center;
 }
 
-/* --------------------------------------------------------------------------
-   Quieter tagline pills — decorative, non-interactive
-   -------------------------------------------------------------------------- */
-
+/* Tagline pills — decorative */
 .hero-tagline span{
   position:relative;
-
-  /* smaller */
   padding:3px 9px;
   font-size:0.8em;
 
@@ -151,10 +335,8 @@ body.landing{
   font-variation-settings: "wght" 540;
 
   border-radius:999px;
-  cursor:default;
   user-select:none;
 
-  /* quieter surface */
   background:
     linear-gradient(
       180deg,
@@ -165,17 +347,14 @@ body.landing{
 
   border:1px solid rgba(255,200,120,.18);
 
-  /* softer depth */
   box-shadow:
     inset 0 1px 0 rgba(255,230,180,.25),
     inset 0 -4px 8px rgba(0,0,0,.45),
     0 2px 6px rgba(0,0,0,.45);
 
-  /* quieter orange */
   color:#EFA42A;
 }
 
-/* softer gloss highlight */
 .hero-tagline span::before{
   content:"";
   position:absolute;
@@ -194,7 +373,6 @@ body.landing{
   opacity:.25;
 }
 
-/* subtle inner sheen */
 .hero-tagline span::after{
   content:"";
   position:absolute;
@@ -217,55 +395,157 @@ body.landing{
   text-align:center;
 
   font-family: "Cormorant Garamond", var(--serif);
-  font-optical-sizing: auto;
-  font-kerning: normal;
 }
 
 .landing-statement{
   max-width:min(88ch,100%);
-  margin:0 auto 22px;
+  margin:0 auto 18px;
 
   font-size:20px;
   line-height:1.6;
 
   font-weight: 500;
-  font-variation-settings: "wght" 500;
-
   letter-spacing:.01em;
 
   color:rgba(220,225,235,.85);
 }
 
+/* Secondary landing statements — pyramid flow */
 .landing-split{
   max-width:min(88ch,100%);
   margin:0 auto 18px;
 }
 
 .ls-line1,
-.ls-line2{ display:block; }
-
-.ls-line2{ margin-top:4px; }
-
-/* CTA */
-
-.landing-cta{
-  margin-top:22px;
-  margin-bottom:26px;   /* pushes pills down */
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:18px;              /* breathing room between buttons */
+.ls-line2{
+  display:block;
 }
+
+.ls-line1{ margin-bottom:4px; }
+.ls-line2{ margin-top:2px; }
+
+.landing-statement em{
+  font-style:italic;
+  color:rgba(235,240,250,.92);
+}
+
+/* --------------------------------------------------------------------------
+   CTA — single, clean, non-muddy moment
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   CTA — compact centered container
+   -------------------------------------------------------------------------- */
+
+ /*
+.landing-cta{
+  margin:14px auto 22px;
+
+  
+  width: fit-content;
+  max-width: 92vw;
+
+  display:flex;
+  justify-content:center;
+
+  padding:14px 22px;
+  border-radius:18px;
+
+  background:
+    radial-gradient(900px 140px at 50% 0%,
+      rgba(255,255,255,.06) 0%,
+      rgba(255,255,255,.03) 38%,
+      rgba(255,255,255,0) 70%),
+    linear-gradient(180deg,
+      rgba(255,255,255,.025) 0%,
+      rgba(255,255,255,.012) 55%,
+      rgba(0,0,0,0) 100%);
+
+  border:1px solid rgba(255,255,255,.07);
+
+  box-shadow:
+    0 18px 46px rgba(0,0,0,.52),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+ */
 
 .landing-cta .btn.primary{
-  padding:12px 20px;
+  position:relative;
+  margin-top: 12px;
+  padding:12px 24px;
   font-size:17px;
-  color:#F6D78A; /* light gold */
+  letter-spacing:.01em;
+
+  color:  var(--cta-gold-2);/* #FEE440;original Mythogin headline gold */
+
+  /*     */
+
+
+  background:
+    radial-gradient(120% 220% at 50% 0%,
+      rgba(255,255,255,.10) 0%,
+      rgba(255,255,255,.04) 30%,
+      rgba(0,0,0,.62) 100%),
+    linear-gradient(180deg,
+      rgba(246,215,138,.14) 0%,
+      rgba(239,164,42,.10) 35%,
+      rgba(0,0,0,.78) 100%);
+
+  border:1px solid rgba(246,215,138,.20);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.62),
+    inset 0 1px 0 rgba(255,255,255,.06),
+    inset 0 -10px 18px rgba(0,0,0,.55);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    filter .18s ease;
 }
 
-.landing-cta .btn:not(.primary){
-  font-size:16px;
-  padding:8px 16px;
+.landing-cta .btn.primary::before{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:inherit;
+  pointer-events:none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.12) 0%,
+    rgba(255,255,255,.05) 18%,
+    transparent 60%
+  );
+
+  opacity:.85;
+}
+
+.landing-cta .btn.primary:hover{
+  transform:translateY(-1px);
+  border-color: rgba(246,215,138,.30);
+  filter: brightness(1.03);
+
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.68),
+    0 0 0 4px rgba(246,215,138,.08),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    inset 0 -10px 18px rgba(0,0,0,.55);
+}
+
+.landing-cta .btn.primary:active{
+  transform:translateY(0);
+  filter: brightness(.99);
+}
+
+.landing-cta .btn.primary:focus-visible{
+  outline:none;
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.68),
+    0 0 0 4px rgba(246,215,138,.14),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    inset 0 -10px 18px rgba(0,0,0,.55);
 }
 
 /* --------------------------------------------------------------------------
@@ -279,23 +559,27 @@ body.landing{
   }
 
   .hero-band{ padding:12px 14px; }
-}
 
-@media (max-width:640px){
-  body.landing{
-    --landing-hero-min-h:200px;
-    --landing-hero-max-h:420px;
+  .hero-band--bottom{
+    bottom: 14px;
+  }
+
+  .hero-band--bottom .hero-h1{
+    padding: 12px 18px;
+    border-radius: 16px;
   }
 }
 
 @media (max-width:600px){
-
   .hero-band{
     min-height:86px;
     padding:12px 14px;
   }
 
-  .hero-logo{ max-height:56px; }
+  .hero-logo{
+    max-height:56px;
+    transform: translateY(0px);
+  }
 
   .hero-h1{
     font-size:clamp(18px,4.8vw,22px);
@@ -309,19 +593,29 @@ body.landing{
     padding-inline:14px;
   }
 
-  /* keep pills readable on small screens */
   .hero-tagline span{
     padding:4px 10px;
     font-size:0.85em;
   }
 
   .landing-text{ padding:10px 18px 56px; }
+
+  .landing-cta{
+    padding:14px 14px;
+    border-radius:16px;
+  }
+
+  .landing-cta .btn.primary{
+    padding:12px 20px;
+    font-size:16px;
+  }
+
+  /* image max-height stays 640; shrink plaque slightly */
+  .hero-band--bottom{ bottom: 12px; }
+  .hero-band--bottom .hero-h1{ padding: 10px 14px; }
 }
 
 @media (max-width:400px){
-
-  .hero-h1{ font-size:clamp(17px,5vw,20px); }
-
   .hero-tagline{
     gap:8px 10px;
     font-size:clamp(15px,4.6vw,18px);
@@ -329,20 +623,22 @@ body.landing{
   }
 
   .landing-text{ padding-inline:14px; }
+
+  .hero-band--bottom .hero-h1{
+    max-width: 92vw;
+    padding: 10px 12px;
+  }
 }
 
 @media (max-width:340px){
-
   .hero-band{
     min-height:72px;
     padding:10px;
   }
 
-  .hero-logo{ max-height:48px; }
-
-  .hero-h1{
-    font-size:16px;
-    line-height:1.1;
+  .hero-logo{
+    max-height:48px;
+    transform: translateY(0px);
   }
 
   .hero-tagline{
@@ -352,4 +648,9 @@ body.landing{
   }
 
   .landing-text{ padding-inline:10px; }
+
+  .hero-band--bottom{
+    bottom: 10px;
+    padding: 0 10px;
+  }
 }
