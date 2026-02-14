@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/">
+
+  <title>Mythogin — Cloud Atlas</title>
+  <meta name="description" content="Cloud Atlas on Mythogin: nested lives, moral inheritance, and whether power can be refused across time." />
+  <!-- FILE LOCATION: /Mythogin/herojourneys/film/cloud-atlas/index.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/story-card.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
+
+  <!-- Accordion (shared component) -->
+  <link rel="stylesheet" href="css/components/accordion.css">
+</head>
+
+<body class="story story--films">
+
+  <!-- Shared Nav (same as hubs) -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <a class="nav-link"
+             href="features.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="herojourneys/films/index.html">Films</a>
+              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Story hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/film/cloud-atlas.webp" alt="" loading="eager" decoding="async">
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content story-hero-content">
+            <p class="story-kicker">Films</p>
+
+            <h1 class="topics-hero-title">Cloud Atlas</h1>
+
+            <p class="topics-hero-lead">
+              Six eras, one dilemma: will you become what the world rewards — or what the world needs?
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <a class="audio-chip-btn" href="hero-journeys/film/cloud-atlas/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/film/cloud-atlas/audio.mp3" download aria-label="Download audio">Download</a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY + TOC RAIL -->
+    <section class="story-body" aria-label="Essay">
+      <div class="container">
+
+        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
+        <div class="story-layout story-layout--toc">
+
+          <!-- Article column -->
+          <article class="story-article">
+
+            <!-- Intro -->
+            <section class="story-section section-card card--surface bleed-pad" id="intro">
+              <header class="section-head">
+                <h2 class="section-title">Intro</h2>
+                <p class="section-sub">
+                  The film is a braid of moral experiments: the same power-bargain offered under different costumes.
+                </p>
+              </header>
+
+              <p>
+                <em>Cloud Atlas</em> is constructed as a relay of witness. Each segment asks a variation of the same question:
+                when the machine offers you safety, status, or survival, what do you trade to get it — and what do you refuse?
+              </p>
+
+              <p>
+                Its core claim is not mystical reincarnation so much as cultural inheritance: courage is a transmissible signal.
+                A journal, a sextet, a film, a testimony — small artifacts can carry a moral spark forward until it finds a reader
+                who is ready to act.
+              </p>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What the film nails — and where its ambition can blur its own consequences.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-domination" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Domination is the true antagonist</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The villains change faces, but the logic stays constant: extract, justify, erase. Slavery, colonial plunder,
+                      corporate coercion, ideological terror, and engineered caste systems are variations of the same machine.
+                    </p>
+                    <p>
+                      The sharpest insight is that the machine runs mostly on ordinary cooperation: paperwork, incentives,
+                      cowardice, and convenience — not only cruelty.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-transmission">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Meaning persists through transmission</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The emotional engine is witness: someone records the truth — and someone else decides to believe it.
+                      Heroism becomes a form of communication: leaving a map for strangers you will never meet.
+                    </p>
+                    <p>
+                      This is the film’s antidote to cynicism: the future is built by what survives as story.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-breathing-room">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Where the braid can dilute consequence</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The intercut structure gives the film its electricity, but it can also convert consequence into rhythm.
+                      When we leave a turning-point too quickly, aftermath becomes implied rather than felt.
+                    </p>
+                    <p>
+                      Some worlds need a little more oxygen: time for irreversible choices to land.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Power</strong> is a repeatable logic, not one villain.</li>
+                <li><strong>Witness</strong> is a relay: truth survives as artifact.</li>
+                <li><strong>Structure</strong> is the signature, but consequence needs breathing room.</li>
+              </ul>
+            </section>
+
+            <!-- Fix -->
+            <section class="story-section section-card card--surface bleed-pad" id="fix">
+              <header class="section-head">
+                <h2 class="section-title">Fix</h2>
+                <p class="section-sub">Three tweaks that sharpen the causal chain without breaking the braid.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="fix-structure" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Structure: add consequence blocks</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      After each era’s pivotal decision, hold one uninterrupted “consequence block” — a minute of staying put.
+                      Keep the braid, but let the cost register before the next jump.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-character" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Character: make one conversion unavoidable</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Pick one moment where someone stops cooperating with the machine and make the fear concrete:
+                      loss of job, safety, belonging. Then show the exact line they refuse to cross.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-theme" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Theme: make inheritance tangible</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      End on one small artifact passed forward — a page, a recording, a melody, a scar — emphasizing that civilization
+                      is built out of preserved refusals, and forgetting is how tyranny resets.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="story-section section-card card--surface bleed-pad" id="impact">
+              <header class="section-head">
+                <h2 class="section-title">Impact</h2>
+                <p class="section-sub">A modern epic about meaning under scale: why cynicism is the machine’s favorite drug.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="impact-cynicism" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Cynicism is cooperation in disguise</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The film argues that “nothing matters” is not realism — it’s surrender. It’s the ideology that makes exploitation effortless,
+                      because it removes shame and dissolves responsibility.
+                    </p>
+                    <p>
+                      The antidote is not optimism. It’s acting as if your choices will be read later.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-memory" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">History repeats when conscience can’t be transmitted</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Domination is easy to reinvent, but so is courage. The battleground is memory: what a society preserves,
+                      teaches, and refuses to normalize. Cloud Atlas is a parable about cultural immune systems.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (inside article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Film navigation"
+                     data-topic-nav="film"
+                     data-topic-slug="cloud-atlas">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="#" data-crumb-section-link>
+                        <span data-crumb-section-text>Film</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Film navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <!-- Right rail TOC (SIBLING of article — REQUIRED) -->
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Mythogin</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/hero-journeys/books/index.html">Books</a></li>
+            <li><a href="/hero-journeys/films/index.html">Films</a></li>
+            <li><a href="/hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="/hero-journeys/games/index.html">Games</a></li>
+            <li><a href="/hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Perspective</h4>
+          <ul>
+            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="/perspective/economics/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/topic-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/">
+
+  <title>Mythogin — Star Wars</title>
+  <meta name="description" content="Star Wars on Mythogin: the farmboy’s call to courage, rebellion against a machine-empire, and myth rebuilt for modern audiences — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/herojourneys/film/star-wars/index.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/story-card.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
+
+  <!-- Accordion (shared component) -->
+  <link rel="stylesheet" href="css/components/accordion.css">
+</head>
+
+<body class="story story--films">
+
+  <!-- Shared Nav (same as hubs) -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <a class="nav-link"
+             href="features.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="herojourneys/films/index.html">Films</a>
+              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Story hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/film/star-wars.webp" alt="" loading="eager" decoding="async">
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content story-hero-content">
+            <p class="story-kicker">Films</p>
+
+            <h1 class="topics-hero-title">Star Wars</h1>
+
+            <p class="topics-hero-lead">
+              A call from the desert into the galaxy: courage, friendship, and a rebellion that turns myth into momentum.
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <a class="audio-chip-btn" href="hero-journeys/film/star-wars/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/film/star-wars/audio.mp3" download aria-label="Download audio">Download</a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY + TOC RAIL -->
+    <section class="story-body" aria-label="Essay">
+      <div class="container">
+
+        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
+        <div class="story-layout story-layout--toc">
+
+          <!-- Article column -->
+          <article class="story-article">
+
+            <!-- Intro -->
+            <section class="story-section section-card card--surface bleed-pad" id="intro">
+              <header class="section-head">
+                <h2 class="section-title">Intro</h2>
+                <p class="section-sub">
+                  A modern myth built from ancient parts: the orphaned youth, the hidden mentor, the princess in danger,
+                  the tyrant’s fortress, and the moment where faith defeats calculation.
+                </p>
+              </header>
+
+              <p>
+                <em>Star Wars</em> is the cleanest example of a story that doesn’t argue for meaning — it <em>performs</em> it.
+                The world is cold and mechanical: uniforms, corridors, protocols, superweapons. Against that machine,
+                the film places a stubbornly human set of forces: loyalty, improvisation, humor, and the willingness to risk
+                yourself for strangers.
+              </p>
+
+              <p>
+                The genius is that its “spiritual” element is not decorative. The Force functions as a discipline of attention:
+                stop flailing, stop overthinking, stop trying to dominate outcomes — and act in alignment with something larger
+                than your fear.
+              </p>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What the film nails — and what its simplicity can accidentally conceal.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-myth" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Myth made operational</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The film restores the hero template without cynicism: a call, refusal, mentor, initiation,
+                      descent into the enemy’s heart, and a return with a “gift” (hope) that becomes social force.
+                      It’s not “fantasy” because it’s unrealistic — it’s myth because it organizes values into action.
+                    </p>
+                    <p>
+                      The story makes courage <em>contagious</em>: one person’s leap becomes a chain reaction.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-empire">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The Empire as a machine of dehumanization</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The Empire’s menace isn’t just violence. It’s impersonality: bureaucracy fused with terror.
+                      Masks, ranks, codes, and procedures produce a world where no one feels responsible.
+                      That is why a single farmboy matters — not because he’s powerful, but because he is still <em>alive</em>.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-force">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The Force as discipline, not shortcut</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The film treats the Force like a posture of the soul: an alternative to domination.
+                      The climactic act is “trust,” but not blind optimism — trained surrender to the right kind of attention.
+                      Luke wins by refusing the Empire’s logic: total control.
+                    </p>
+                    <p>
+                      It’s a mythic answer to modern anxiety: you can’t control everything, but you can choose your alignment.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-simplicity">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Where the simplicity can flatten the moral terrain</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The film’s clarity is a strength, but it can also hide how tyranny actually spreads:
+                      not only through villains, but through ordinary people choosing comfort, career, or safety over conscience.
+                      The story gestures at this (smugglers, skeptics, defectors), but largely keeps the moral map binary.
+                    </p>
+                    <p>
+                      The myth works anyway — but there’s room to show how rebellion is built, not just declared.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Myth</strong> here isn’t “escapism” — it’s values turned into plot.</li>
+                <li><strong>Empire</strong> is dehumanization by procedure: terror with paperwork.</li>
+                <li><strong>Force</strong> is trained attention — an alternative to control.</li>
+              </ul>
+            </section>
+
+            <!-- Fix -->
+            <section class="story-section section-card card--surface bleed-pad" id="fix">
+              <header class="section-head">
+                <h2 class="section-title">Fix</h2>
+                <p class="section-sub">How to deepen the human cost without breaking the mythic clarity.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="fix-structure" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Structural adjustment</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Add one short “civilian vignette” early: a world under Imperial rule where compliance feels normal
+                      until it suddenly becomes lethal. This would anchor the stakes in ordinary life and make the rebellion
+                      feel less abstract.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-character">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Character adjustment</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Give Luke one clearer “temptation of resignation” after the call: a moment where the safest option is to
+                      stay hidden and let the galaxy burn. Then his decision to go becomes not curiosity, but chosen responsibility.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-theme">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Thematic adjustment</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Make “faith” slightly more concrete: show that trust is earned through practice, not inspiration.
+                      One extra training beat (small, quiet) would reinforce that the climactic “let go” is not magic —
+                      it’s discipline under pressure.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="story-section section-card card--surface bleed-pad" id="impact">
+              <header class="section-head">
+                <h2 class="section-title">Impact</h2>
+                <p class="section-sub">Why this film became a cultural engine: it reinstalled myth in an industrial age.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="impact-myth" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Myth returns as a shared language</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The film gave modern audiences a coherent moral vocabulary: temptation, initiation, discipline,
+                      friendship, sacrifice, redemption. In a fragmented culture, it offered a unified story-shape
+                      people could recognize and inhabit.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-tech">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">A parable of technology and power</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The Death Star is “total control” made physical: an engineering solution to political fear.
+                      The film’s answer is not a bigger weapon — it’s courage, coalition, and a willingness to act without certainty.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-hope">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Hope as coordination, not comfort</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The movie’s optimism isn’t naïve. It’s strategic: hope makes collective action possible.
+                      Without it, you get cynicism — and cynicism is the Empire’s cheapest victory.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (inside article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Film navigation"
+                     data-topic-nav="film"
+                     data-topic-slug="star-wars">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="#" data-crumb-section-link>
+                        <span data-crumb-section-text>Film</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Film navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <!-- Right rail TOC (SIBLING of article — REQUIRED) -->
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Mythogin</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/hero-journeys/books/index.html">Books</a></li>
+            <li><a href="/hero-journeys/films/index.html">Films</a></li>
+            <li><a href="/hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="/hero-journeys/games/index.html">Games</a></li>
+            <li><a href="/hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Perspective</h4>
+          <ul>
+            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="/perspective/economics/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/topic-nav.js"></script>
+</body>
+</html>

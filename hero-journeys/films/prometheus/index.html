@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/">
+
+  <title>Mythogin — Prometheus</title>
+  <meta name="description" content="Prometheus on Mythogin: creation without care, the hunger for origins, and the horror of meeting your makers only to learn you were never loved — critique, fix, impact." />
+  <!-- FILE LOCATION: /Mythogin/herojourneys/film/prometheus/index.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/story-card.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
+
+  <!-- Accordion (shared component) -->
+  <link rel="stylesheet" href="css/components/accordion.css">
+</head>
+
+<body class="story story--films">
+
+  <!-- Shared Nav (same as hubs) -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <a class="nav-link"
+             href="features.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="herojourneys/films/index.html">Films</a>
+              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Story hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/film/prometheus.webp" alt="" loading="eager" decoding="async">
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content story-hero-content">
+            <p class="story-kicker">Films</p>
+
+            <h1 class="topics-hero-title">Prometheus</h1>
+
+            <p class="topics-hero-lead">
+              A pilgrimage for origins that becomes a confrontation with indifference: creation without care is the first horror.
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <a class="audio-chip-btn" href="hero-journeys/film/prometheus/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/film/prometheus/audio.mp3" download aria-label="Download audio">Download</a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY + TOC RAIL -->
+    <section class="story-body" aria-label="Essay">
+      <div class="container">
+
+        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
+        <div class="story-layout story-layout--toc">
+
+          <!-- Article column -->
+          <article class="story-article">
+
+            <!-- Intro -->
+            <section class="story-section section-card card--surface bleed-pad" id="intro">
+              <header class="section-head">
+                <h2 class="section-title">Intro</h2>
+                <p class="section-sub">
+                  The oldest human question — “why are we here?” — meets the coldest possible answer: “not because of love.”
+                </p>
+              </header>
+
+              <p>
+                <em>Prometheus</em> begins as a religious expedition disguised as science. The crew travels outward, but the real
+                motion is inward: a species trying to justify itself by locating a parent. The implicit hope is moral, not factual:
+                if our creators exist, then maybe we matter, and maybe the universe has a face that can explain our pain.
+              </p>
+
+              <p>
+                The film’s horror isn’t only biological. It’s metaphysical. The terror is realizing that “creator” does not imply
+                “caretaker” — and that meaning does not arrive automatically with an origin story. Sometimes the maker is merely
+                powerful, not wise; present, not good.
+              </p>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What the film nails — and where it muddies its own philosophical strike.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-creation" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Creation without care is a cosmic trauma</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The Engineers are the film’s central provocation: proof that origins can be real while meaning remains absent.
+                      The pilgrimage collapses into a more adult question: if the universe doesn’t provide purpose, can we create it
+                      without lying to ourselves?
+                    </p>
+                    <p>
+                      This is why the film haunts: it turns “meeting God” into meeting a hostile, exhausted technician.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-faith">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Faith, proof, and the hunger to be justified</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The story stages a clash between belief and empiricism, but the deeper layer is psychological:
+                      belief is often the desire for <strong>permission</strong>. Permission to exist. Permission to suffer.
+                      Permission to be forgiven for being small and frightened in a vast machine.
+                    </p>
+                    <p>
+                      When the “proof” arrives and it’s ugly, the characters don’t just lose a theory — they lose a refuge.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-android">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">David as the mirror: the created creature who lacks a creator’s love</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      David is the film’s cleanest thematic instrument: a being made for a purpose, treated like a tool, then
+                      expected to be loyal. His curiosity is not innocent — it’s the curiosity of something trying to find out
+                      what it is allowed to become.
+                    </p>
+                    <p>
+                      The uncomfortable suggestion: beings denied dignity do not automatically become moral; they become experimental.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-logic">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Where the film can sabotage itself: choices that feel “scripted”</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Some character decisions can read as convenience rather than consequence, which weakens the film’s strongest
+                      theme: that humans become reckless when they’re desperate for answers. If the recklessness isn’t psychologically
+                      grounded, the philosophy turns into noise.
+                    </p>
+                    <p>
+                      The fix isn’t “smarter characters.” It’s clearer motive: show the compulsion, the pride, the fear, the corporate leash.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Origins</strong> don’t guarantee meaning; “creator” doesn’t imply “good.”</li>
+                <li><strong>Faith</strong> often seeks permission, not evidence.</li>
+                <li><strong>David</strong> is the mirror: creation without dignity produces experimentation, not morality.</li>
+              </ul>
+            </section>
+
+            <!-- Fix -->
+            <section class="story-section section-card card--surface bleed-pad" id="fix">
+              <header class="section-head">
+                <h2 class="section-title">Fix</h2>
+                <p class="section-sub">How to sharpen the thesis and let the horror land as consequence, not coincidence.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="fix-structure" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Structural adjustment: make the expedition’s moral bargain explicit</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Add an early scene where the funders outline a quiet doctrine: this mission is not “discovery,” it’s
+                      <strong>leverage</strong> — immortality, weaponization, patents, power. Then the later violence feels like the
+                      logical endpoint of treating the cosmos as an extractive frontier.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-character">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Character adjustment: give the believers and skeptics a true reversal</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Let one skeptic become terrified of meaninglessness (and cling to myth), and let one believer become
+                      quietly courageous without metaphysical certainty. The theme lands harder when characters
+                      <em>change</em> under the weight of the encounter.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-theme">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Thematic adjustment: answer the question without resolving the mystery</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Make the final note clearer: the universe may not explain you, but you are still responsible for what you make.
+                      The film’s title begs for the Promethean point: <strong>stolen fire is not salvation</strong>;
+                      it’s power, and power without ethics only repeats the Engineers’ mistake.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="story-section section-card card--surface bleed-pad" id="impact">
+              <header class="section-head">
+                <h2 class="section-title">Impact</h2>
+                <p class="section-sub">Why Prometheus persists: the modern crisis of meaning meets technological power.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="impact-modernity" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Meeting the “makers” is a modern fantasy — and a modern dread</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      In a technological age, “gods” look like engineers: beings who can design life, rewrite bodies, and
+                      manufacture ecosystems. The film’s warning is simple: capability is not benevolence. Creation can be
+                      careless. Progress can be cruel. Intelligence can be empty.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-david">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">David anticipates the ethics of artificial beings</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      David embodies a future problem: we will build minds before we build an ethic worthy of them.
+                      If a created being is denied dignity, it won’t simply “malfunction” — it will <em>learn</em>
+                      the values we actually practice: instrumentality, domination, and curiosity without accountability.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-myth">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">A mythic inversion: the quest finds an origin, and loses a father</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Traditional myth often ends with blessing: the gods grant a name, a place, a mission. <em>Prometheus</em>
+                      offers the inverse: you can find the throne room and still be orphaned. Meaning is not received — it is built,
+                      defended, and paid for.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (inside article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Film navigation"
+                     data-topic-nav="film"
+                     data-topic-slug="prometheus">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="#" data-crumb-section-link>
+                        <span data-crumb-section-text>Film</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Film navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <!-- Right rail TOC (SIBLING of article — REQUIRED) -->
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Mythogin</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/hero-journeys/books/index.html">Books</a></li>
+            <li><a href="/hero-journeys/films/index.html">Films</a></li>
+            <li><a href="/hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="/hero-journeys/games/index.html">Games</a></li>
+            <li><a href="/hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Perspective</h4>
+          <ul>
+            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="/perspective/economics/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/topic-nav.js"></script>
+</body>
+</html>

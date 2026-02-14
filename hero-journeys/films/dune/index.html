@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/">
+
+  <title>Mythogin — Dune</title>
+  <meta name="description" content="Dune on Mythogin: prophecy as weapon, ecology as destiny, and the political technology of belief." />
+  <!-- FILE LOCATION: /Mythogin/herojourneys/film/dune/index.html -->
+
+  <!-- Core -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/story-card.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
+
+  <!-- Accordion (shared component) -->
+  <link rel="stylesheet" href="css/components/accordion.css">
+</head>
+
+<body class="story story--films">
+
+  <!-- Shared Nav (same as hubs) -->
+  <div class="topbar">
+    <div class="container container--topbar">
+      <div class="topbar-inner">
+
+        <div class="brand-main">
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+          </a>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+
+          <a class="nav-link"
+             href="recommendations.html"
+             data-tip="What to read, watch, or play next">
+            Recommendations
+          </a>
+
+          <a class="nav-link"
+             href="features.html"
+             data-tip="Multimedia presentations & debates">
+            Features
+          </a>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="/herojourneys/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="Discover epics in these formats">
+              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
+              <a role="menuitem" href="herojourneys/films/index.html">Films</a>
+              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
+              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
+              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <a class="nav-link"
+               href="perspective/index.html"
+               aria-haspopup="true"
+               aria-expanded="false"
+               data-tip="How meaning is created or lost">
+              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+            </a>
+
+            <div class="submenu" role="menu" aria-label="Perspective sections">
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
+            </div>
+          </div>
+
+          <a class="nav-link"
+             href="about.html"
+             data-tip="What Mythogin is and who its for">
+            About
+          </a>
+
+          <form class="nav-search" role="search" action="topics.html" method="get">
+            <label class="sr-only" for="q">Search topics</label>
+            <input id="q" name="q" class="nav-search-input" type="search"
+                   placeholder="Search topics…" autocomplete="off" />
+            <button class="nav-search-btn" type="submit">Search</button>
+          </form>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <main class="story">
+
+    <!-- HERO -->
+    <section class="topics-hero story-hero" aria-label="Story hero">
+      <div class="container">
+        <div class="topics-hero-card story-hero-card bleed-pad">
+
+          <div class="topics-hero-media story-hero-media" aria-hidden="true">
+            <img src="images/topics/film/dune.webp" alt="" loading="eager" decoding="async">
+            <div class="topics-hero-overlay"></div>
+          </div>
+
+          <div class="topics-hero-content story-hero-content">
+            <p class="story-kicker">Films</p>
+
+            <h1 class="topics-hero-title">Dune</h1>
+
+            <p class="topics-hero-lead">
+              Prophecy is a weapon. Ecology is destiny. Power is the ability to make people believe your story.
+            </p>
+
+            <div class="u-space-10" aria-hidden="true"></div>
+
+            <!-- Audio chip -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <a class="audio-chip-btn" href="hero-journeys/film/dune/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/film/dune/audio.mp3" download aria-label="Download audio">Download</a>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- BODY + TOC RAIL -->
+    <section class="story-body" aria-label="Essay">
+      <div class="container">
+
+        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
+        <div class="story-layout story-layout--toc">
+
+          <!-- Article column -->
+          <article class="story-article">
+
+            <!-- Intro -->
+            <section class="story-section section-card card--surface bleed-pad" id="intro">
+              <header class="section-head">
+                <h2 class="section-title">Intro</h2>
+                <p class="section-sub">
+                  Dune is not “a chosen one story.” It’s a manual for how chosen ones are manufactured.
+                </p>
+              </header>
+
+              <p>
+                <em>Dune</em> frames power as a three-part system: <strong>material</strong> (spice), <strong>institutional</strong> (Empire, Houses,
+                Bene Gesserit), and <strong>psychological</strong> (myth, fear, reverence). Arrakis is where those layers collide.
+                Whoever controls the spice controls navigation, trade, and coercion — but control only lasts if the story holds.
+              </p>
+
+              <p>
+                The film’s most chilling insight is that prophecy can function like governance software. Belief is not
+                “private.” It is an infrastructure. If you can seed it early enough, you can route human choices through it
+                later — and call the outcome “destiny.”
+              </p>
+            </section>
+
+            <!-- Critique -->
+            <section class="story-section section-card card--surface bleed-pad" id="critique">
+              <header class="section-head">
+                <h2 class="section-title">Critique</h2>
+                <p class="section-sub">What the film nails — and what any adaptation risks flattening.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="critique-belief" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Belief as technology</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Dune’s core move is turning “religion” into strategy. The Bene Gesserit don’t merely interpret myths;
+                      they <em>plant</em> them, then harvest their social effects generations later. This makes prophecy less
+                      about truth and more about control: a narrative scaffold that lets you steer populations at scale.
+                    </p>
+                    <p>
+                      Paul’s danger is not simply that he is powerful, but that the world is structured to treat his rise
+                      as inevitable — which excuses what happens next.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-ecology">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Ecology as destiny</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Arrakis isn’t “a desert setting.” It is a system that produces a political order. Scarcity creates
+                      discipline; discipline creates culture; culture creates warfare and faith. Even the empire’s dependence
+                      on spice is an ecological dependency disguised as “economics.”
+                    </p>
+                    <p>
+                      The film’s visual emphasis on scale works because it makes the point physically: humans aren’t the
+                      biggest thing in the equation.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-institutions">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Institutions manufacture outcomes</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The Houses, the Emperor, the Guild, and the Bene Gesserit form a self-balancing ecosystem: no one
+                      “rules” alone, but everyone constrains everyone else. This is why the Atreides can’t win by virtue.
+                      In a mature system, goodness is not enough — legitimacy must be engineered, alliances priced, and
+                      threats anticipated.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="critique-risk">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Adaptation risk: making Paul look too clean</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The story is at its strongest when it feels like a trap closing around Paul: visions that promise
+                      meaning while announcing catastrophe. If the film leans too hard into heroic framing, it can soften
+                      the warning embedded in the premise: messiahs don’t only save — they also justify.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+
+              <ul class="story-bullets">
+                <li><strong>Prophecy</strong> functions like governance: belief routes behavior.</li>
+                <li><strong>Ecology</strong> is political: scarcity shapes culture and conflict.</li>
+                <li><strong>Institutions</strong> manufacture outcomes: virtue can’t outmuscle incentives.</li>
+              </ul>
+            </section>
+
+            <!-- Fix -->
+            <section class="story-section section-card card--surface bleed-pad" id="fix">
+              <header class="section-head">
+                <h2 class="section-title">Fix</h2>
+                <p class="section-sub">Three tweaks that sharpen the thesis without changing the story’s spine.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="fix-structure" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Structure: add one “belief proof” sequence</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Show a small, explicit example of Missionaria Protectiva myth-working before Paul arrives:
+                      a local ritual, phrase, or taboo that Jessica can “unlock.” Make it unmistakable that the prophecy
+                      infrastructure is pre-installed — then Paul’s acceptance becomes morally tense, not merely exciting.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-character">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Character: make Paul’s refusal attempt visible</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Give Paul one scene where he tries to reject the role and fails for a concrete reason:
+                      his mother’s survival, the Fremen’s expectations, or the political necessity of signaling strength.
+                      This frames the “chosen one” as a bargain under pressure, not a destiny embraced.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-theme">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Theme: sharpen the cost of myth</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Tie Paul’s visions to a repeating human cost (a face in the crowd, a burned city, a single preventable death).
+                      Keep the scale, but anchor the warning in one intimate, recurring image: prophecy is not free.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="story-section section-card card--surface bleed-pad" id="impact">
+              <header class="section-head">
+                <h2 class="section-title">Impact</h2>
+                <p class="section-sub">Why Dune lands now: narrative is the oldest tool of power — and the easiest to outsource.</p>
+              </header>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="impact-myth" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Myth is how scale is made human</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Empires don’t run on facts. They run on stories that coordinate loyalty, obedience, and sacrifice.
+                      Dune shows how “meaning” can be engineered — and why people accept it: because it compresses chaos
+                      into a role they can live inside.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-warning" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">The messiah is a warning label</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      The story’s lasting cultural contribution is not “cool prophecy.” It’s suspicion: when salvation
+                      arrives too perfectly, ask who benefits, what institutions seeded the desire, and what violence will
+                      be justified once belief hardens into certainty.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Bottom page navigation (inside article column) -->
+            <section class="topic-nav-surface topic-nav-surface--story"
+                     aria-label="Film navigation"
+                     data-topic-nav="film"
+                     data-topic-slug="dune">
+
+              <div class="topic-nav-bg" aria-hidden="true">
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+              </div>
+
+              <div class="topic-nav-card">
+
+                <nav class="crumbs" aria-label="Breadcrumb">
+                  <ol class="crumbs-list">
+                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="sep" aria-hidden="true">›</li>
+
+                    <li class="crumb">
+                      <a href="#" data-crumb-section-link>
+                        <span data-crumb-section-text>Film</span>
+                      </a>
+                    </li>
+
+                    <li class="sep" aria-hidden="true">›</li>
+                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                  </ol>
+                </nav>
+
+                <div class="pager" aria-label="Film navigation">
+                  <div class="pager-edges">
+                    <a class="pager-prev" data-pager-prev href="#">
+                      <span class="arrow" aria-hidden="true">←</span>
+                      <span class="meta">
+                        <span class="kicker">Previous</span>
+                        <span class="title" data-prev-title>Loading…</span>
+                      </span>
+                    </a>
+
+                    <a class="pager-next" data-pager-next href="#">
+                      <span class="meta">
+                        <span class="kicker">Next</span>
+                        <span class="title" data-next-title>Loading…</span>
+                      </span>
+                      <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <!-- Right rail TOC (SIBLING of article — REQUIRED) -->
+          <aside class="story-aside" aria-label="On this page">
+            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+              On this page <span class="nav-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+              <div class="toc-panel-head">
+                <h3 class="toc-panel-title">On this page</h3>
+                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+              </div>
+
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+        <div class="footer-copy">© <span id="year"></span></div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <div class="footer-col">
+          <h4>Mythogin</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/hero-journeys/books/index.html">Books</a></li>
+            <li><a href="/hero-journeys/films/index.html">Films</a></li>
+            <li><a href="/hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="/hero-journeys/games/index.html">Games</a></li>
+            <li><a href="/hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Perspective</h4>
+          <ul>
+            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="/perspective/economics/index.html">Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in touch</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/topic-nav.js"></script>
+</body>
+</html>
