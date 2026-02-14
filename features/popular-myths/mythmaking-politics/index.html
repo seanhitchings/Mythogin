@@ -1,51 +1,50 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="toc-booting">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/" />
+
+  <base href="/">
 
   <title>Mythogin — Mythmaking in Politics</title>
-  <meta name="description" content="An objective (apolitical) analysis of how myths shape political discourse: identity, moral theater, and persuasion." />
-  <link rel="canonical" href="/features/mythmaking-politics/index.html" />
-  <!-- FILE LOCATION: /Mythogin/features/mythmaking-politics/index.html -->
+  <meta name="description"
+        content="An objective (apolitical) analysis of how myths shape political discourse: identity, moral theater, and persuasion." />
+  <!-- FILE LOCATION: /mythogin/features/mythmaking-politics/index.html -->
 
   <!-- Social (safe defaults) -->
   <meta property="og:site_name" content="Mythogin" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Mythmaking in Politics" />
-  <meta property="og:description" content="An objective (apolitical) analysis of how myths shape political discourse: identity, moral theater, and persuasion." />
-  <meta property="og:image" content="/images/topics/politics.webp" />
-  <meta property="og:url" content="/features/mythmaking-politics/index.html" />
+  <meta property="og:description"
+        content="An objective (apolitical) analysis of how myths shape political discourse: identity, moral theater, and persuasion." />
+  <meta property="og:image" content="images/topics/politics.webp" />
+  <meta property="og:url" content="features/mythmaking-politics/index.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0f1319" />
 
   <!-- Core -->
-  <link rel="stylesheet" href="css/tokens.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
 
-  <!-- Components -->
-  <link rel="stylesheet" href="css/components/nav.css" />
-  <link rel="stylesheet" href="css/components/hero.css" />
-  <link rel="stylesheet" href="css/components/card.css" />
-  <link rel="stylesheet" href="css/components/footer.css" />
-  <link rel="stylesheet" href="css/components/utilities.css" />
+  <!-- Components (preload + then apply) -->
+  <link rel="preload" as="style" href="css/components/hero-topics.css">
+  <link rel="preload" as="style" href="css/components/story-card.css">
 
-  <!-- Story layout (grid + toc layout) -->
-  <link rel="stylesheet" href="css/components/story-card.css" />
-
-  <!-- NEW: Features hero (landscape banner) -->
-  <link rel="stylesheet" href="css/components/features-card.css" />
-
-  <!-- TOC / widgets -->
-  <link rel="stylesheet" href="css/components/drawer.css" />
-  <link rel="stylesheet" href="css/components/topic-nav.css" />
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
+  <link rel="stylesheet" href="css/components/story-card.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/topic-nav.css">
+  <link rel="stylesheet" href="css/components/features-card.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/accordion.css">
+  <link rel="stylesheet" href="css/components/drawer.css">
 </head>
 
 <body class="story story--features">
-
-  <a class="skip-link sr-only" href="#main">Skip to content</a>
 
   <!-- Shared Nav -->
   <div class="topbar">
@@ -53,48 +52,46 @@
       <div class="topbar-inner">
 
         <div class="brand-main">
-          <a class="name" href="/home.html" aria-label="Mythogin home">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin" />
+          <a class="name" href="home.html" aria-label="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
           </a>
         </div>
 
         <nav class="navlinks" aria-label="Primary">
-
           <a class="nav-link"
-             href="/recommendations.html"
+             href="recommendations/index.html"
              data-tip="What to read, watch, or play next">
             Recommendations
           </a>
 
-          <!-- NOTE: no aria-current here; main.js will set it for /features/* -->
           <a class="nav-link"
-             href="/features/index.html"
+             href="features/index.html"
              data-tip="Multimedia presentations & debates">
             Features
           </a>
 
-          <div class="nav-item has-submenu">
+          <div class="nav-item has-submenu is-pinned-herojourneys">
             <a class="nav-link"
-               href="/herojourneys/index.html"
+               href="hero-journeys/index.html"
                aria-haspopup="true"
                aria-expanded="false"
                data-tip="Discover epics in these formats">
               Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
             </a>
 
-            <div class="submenu" role="menu" aria-label="Hero-Journeys categories">
-              <a role="menuitem" href="/herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="/herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="/herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="/herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="/herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="/herojourneys/documentaries/index.html">Documentaries</a>
+            <div class="submenu" role="menu" aria-label="Topics categories">
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
             </div>
           </div>
 
-          <div class="nav-item has-submenu">
+          <div class="nav-item has-submenu is-pinned-perspective">
             <a class="nav-link"
-               href="/perspective/index.html"
+               href="perspective/index.html"
                aria-haspopup="true"
                aria-expanded="false"
                data-tip="How meaning is created or lost">
@@ -102,40 +99,43 @@
             </a>
 
             <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="/perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="/perspective/industry/index.html">Industry</a>
+              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
             </div>
           </div>
 
           <a class="nav-link"
-             href="/about.html"
+             href="about.html"
              data-tip="What Mythogin is and who its for">
             About
           </a>
 
-          <form class="nav-search" role="search" action="/topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
           </form>
-
         </nav>
 
       </div>
     </div>
   </div>
 
-  <main id="main" class="story">
+  <main class="story">
 
-    <!-- HERO -->
-    <section class="topics-hero story-hero" aria-label="Feature hero">
+    <!-- HERO (landscape features variant) -->
+    <section class="topics-hero story-hero hero-features" aria-label="Feature hero">
       <div class="container">
         <div class="topics-hero-card story-hero-card bleed-pad">
 
-          <!-- Landscape banner frame (features-card.css controls aspect/fit) -->
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/politics.webp" alt="" loading="eager" decoding="async" />
+            <img
+              src="images/features/mythmaking-politics-ls.webp"
+              alt=""
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              width="1536"
+              height="1024"
+            />
             <div class="topics-hero-overlay"></div>
           </div>
 
@@ -151,16 +151,12 @@
 
             <div class="u-space-10" aria-hidden="true"></div>
 
-            <!-- Audio chip (template-ready) -->
+            <!-- Audio chip -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
-                <button class="audio-chip-btn" type="button" data-audio-action="play" aria-label="Listen">
-                  Listen
-                </button>
-                <a class="audio-chip-btn" href="#" download aria-label="Download audio">
-                  Download
-                </a>
+                <a class="audio-chip-btn" href="features/mythmaking-politics/audio.mp3">Listen</a>
+                <a class="audio-chip-btn" href="features/mythmaking-politics/audio.mp3" download>Download</a>
               </span>
             </div>
 
@@ -172,98 +168,233 @@
 
     <div class="divider" aria-hidden="true"></div>
 
-    <!-- BODY -->
-    <section class="story-body" aria-label="Feature content">
+    <!-- BODY + TOC RAIL -->
+    <section class="story-body bleed-pad" aria-label="Feature">
       <div class="container">
 
         <div class="story-layout story-layout--toc">
 
           <article class="story-article">
 
-            <section class="story-section section-card card--surface bleed-pad" id="thesis">
+            <section class="story-section section-card card--surface bleed-pad" id="discussion">
               <header class="section-head">
-                <h2 class="section-title">Thesis</h2>
-                <p class="section-sub">What “mythmaking” does, regardless of ideology.</p>
+                <h2 class="section-title">Discussion</h2>
+                <p class="section-sub">
+                  What “mythmaking” does, regardless of ideology: it turns complexity into a story that feels morally obvious.
+                </p>
               </header>
 
               <p>
-                Mythmaking is the process of turning complexity into a story that feels morally obvious.
+                Mythmaking is the process of compressing an infinite world into a few emotionally loaded symbols that people can coordinate around.
                 The story produces identity (“who we are”), threat (“what endangers us”), and duty (“what must be done”).
-                It compresses an infinite world into a few emotionally loaded symbols that people can coordinate around.
+                When it works, it organizes attention; when it overheats, it can convert disagreement into moral theater.
               </p>
+
+              <p>
+                This feature aims to keep the analysis neutral: the focus is the mechanism, not the party.
+                The same narrative machinery can be used to stabilize a society, to persuade it, or to possess it.
+              </p>
+
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="discussion-identity" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Identity: who we are</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Myths generate belonging: the in-group face, the shared values, the “real people.”
+                      Identity is emotionally efficient — it turns politics into kinship, and disagreement into betrayal.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="discussion-enemy">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Enemy: what threatens us</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      A simplified antagonist absorbs a system’s anxieties. Complex failure becomes a single cause.
+                      Once an enemy-symbol is installed, the myth can run on autopilot: every fact becomes proof.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="discussion-ritual">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Ritual: how the story is rehearsed</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Slogans, chants, hashtags, spectacles: these are not “extra.” They are the myth’s reinforcement schedule.
+                      Ritual converts belief into a lived identity — and makes exit socially expensive.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
 
               <ul class="story-bullets">
                 <li><strong>Identity:</strong> belonging, status, purity, the in-group face.</li>
-                <li><strong>Enemy:</strong> a simplified antagonist that holds the system’s anxieties.</li>
-                <li><strong>Ritual:</strong> slogans, hashtags, chants, spectacles.</li>
+                <li><strong>Enemy:</strong> a simplified antagonist that holds collective anxieties.</li>
+                <li><strong>Ritual:</strong> slogans, symbols, repetition, spectacle.</li>
                 <li><strong>Permission:</strong> “we’re justified” becomes “we must.”</li>
               </ul>
             </section>
 
-            <section class="story-section section-card card--surface bleed-pad" id="mechanics">
+            <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
-                <h2 class="section-title">Core Mechanics</h2>
-                <p class="section-sub">How the narrative machine runs.</p>
+                <h2 class="section-title">Impact</h2>
+                <p class="section-sub">
+                  Why it matters: myths coordinate groups fast — but they can also distort perception and raise the cost of truth.
+                </p>
               </header>
 
-              <p>
-                Keep this section concrete: show the moving parts. If you have examples, keep them neutral (or use historical examples).
-                The goal is to make the pattern visible without turning the page into a partisan document.
-              </p>
+              <div class="accordion accordion--tight accordion--spaced">
+
+                <details class="accordion-item" id="impact-compression" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Compression makes action possible</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Political life is too complex to compute in real time. Myths provide heuristics that feel like clarity.
+                      This can be adaptive — but it also incentivizes the simplest story over the truest one.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-moralization">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Moral theater replaces problem-solving</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      When disagreement becomes sin, policy becomes identity performance.
+                      “Winning” becomes more important than accuracy, and the public learns to signal virtue instead of reasoning.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="impact-reward-loops">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">Reward loops harden the story</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Outrage and certainty are rewarded with attention. Over time, the myth “overfits”:
+                      one story explains everything; contrary facts become propaganda; correction becomes betrayal.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
 
               <ul class="story-bullets">
-                <li><strong>Compression:</strong> a complex system is reduced to a single cause.</li>
-                <li><strong>Moralization:</strong> disagreement becomes sin.</li>
-                <li><strong>Overfitting:</strong> one story explains everything; contrary facts become “propaganda.”</li>
-                <li><strong>Reward loops:</strong> outrage and certainty are rewarded with attention.</li>
+                <li><strong>Benefit:</strong> coordination, motivation, shared meaning.</li>
+                <li><strong>Cost:</strong> distortion, polarization, truth becomes factional.</li>
+                <li><strong>Failure mode:</strong> overfitting + moralization → coercion pressure.</li>
               </ul>
             </section>
 
-            <section class="story-section section-card card--surface bleed-pad" id="antidotes">
+            <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
-                <h2 class="section-title">Antidotes</h2>
-                <p class="section-sub">How to resist myth when it becomes coercive.</p>
+                <h2 class="section-title">Fix</h2>
+                <p class="section-sub">
+                  Habits of mind that preserve meaning without becoming possessed by narrative.
+                </p>
               </header>
 
-              <p>
-                You can frame the “fix” as habits of mind: how to keep meaning without becoming possessed by narrative.
-              </p>
+              <div class="accordion accordion--tight accordion--spaced">
 
-              <ul class="story-bullets">
-                <li><strong>Multiple models:</strong> hold competing explanations simultaneously.</li>
-                <li><strong>Steelman:</strong> describe the other side in a way they’d recognize.</li>
-                <li><strong>Time horizon:</strong> ask “what happens in 10 years if we do this?”</li>
-                <li><strong>Institutional humility:</strong> incentives distort perception; assume distortion.</li>
-              </ul>
+                <details class="accordion-item" id="fix-multiple-models" open>
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">1) Hold multiple models</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Force your mind to keep competing explanations alive. If one story explains everything, it’s usually too clean.
+                      Multiplicity prevents narrative possession.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-steelman">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">2) Steelman before you criticize</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Describe the other side in a way they would recognize. This single constraint dissolves a lot of caricature-myths —
+                      and lowers the reward for moral theater.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-time-horizon">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">3) Expand the time horizon</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Ask “what happens in 10 years if we do this?” Mythmaking tends to maximize short-term emotional payoff.
+                      Time makes tradeoffs visible.
+                    </p>
+                  </div>
+                </details>
+
+                <details class="accordion-item" id="fix-incentives">
+                  <summary class="accordion-summary">
+                    <h3 class="accordion-title">4) Assume incentive distortion</h3>
+                    <span class="accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="accordion-panel accordion-panel--ruled">
+                    <p>
+                      Institutions, platforms, and social groups reward certain perceptions. Expect distortion.
+                      This protects you from certainty-as-status games.
+                    </p>
+                  </div>
+                </details>
+
+              </div>
             </section>
 
             <div class="divider" aria-hidden="true"></div>
 
-            <!-- Bottom page navigation (INSIDE the article column) -->
+            <!-- Bottom page navigation -->
             <section class="topic-nav-surface topic-nav-surface--story"
                      aria-label="Features navigation"
                      data-topic-nav="features"
-                     data-topic-playlist="popular_myths"
+                     data-topic-json="data/features.json"
+                     data-topic-playlist="popular-myths"
                      data-topic-slug="mythmaking-politics">
 
               <div class="topic-nav-bg" aria-hidden="true">
-                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async" />
+                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
               </div>
 
               <div class="topic-nav-card">
-
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
                     <li class="crumb">
-                      <a href="/features/index.html" data-crumb-topics>Features</a>
+                      <a href="features/index.html" data-crumb-topics>Features</a>
                     </li>
 
                     <li class="sep" aria-hidden="true">›</li>
 
-                    <!-- Playlist / Category crumb (filled by features-nav.js) -->
                     <li class="crumb">
                       <a href="#" data-crumb-playlist-link>
                         <span data-crumb-playlist-text>Loading…</span>
@@ -301,35 +432,23 @@
           </article>
 
           <aside class="story-aside" aria-label="On this page">
-            <button class="toc-toggle" type="button"
-                    data-toc-toggle
-                    aria-expanded="false"
-                    aria-controls="tocPanel">
+            <button class="toc-toggle" type="button" data-toc-open aria-expanded="true" aria-controls="tocPanel">
               On this page <span class="nav-caret" aria-hidden="true">▾</span>
             </button>
 
-            <div class="toc-panel" id="tocPanel" role="dialog"
-                 aria-label="On this page"
-                 aria-hidden="true"
-                 data-toc-panel>
-
+            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="false">
               <div class="toc-panel-head">
                 <h3 class="toc-panel-title">On this page</h3>
-                <button class="toc-panel-close" type="button"
-                        data-toc-close
-                        aria-label="Close">✕</button>
+                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
               </div>
 
-              <nav class="toc-panel-nav" aria-label="Page sections">
-                <!-- If you generate links via JS, keep this empty -->
-              </nav>
-
+              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
             </div>
           </aside>
 
-        </div><!-- /.story-layout -->
-      </div><!-- /.container -->
-    </section><!-- /.story-body -->
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -339,53 +458,59 @@
     <div class="container footer-inner">
 
       <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
         <div class="footer-copy">© <span id="year"></span></div>
       </div>
 
       <nav class="footer-nav" aria-label="Footer navigation">
 
         <div class="footer-col">
-          <h4>Mythogin</h4>
+          <h4><a href="index.html">Mythogin</a></h4>
           <ul>
-            <li><a href="/home.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
           <ul>
-            <li><a href="/recommendations.html">Recommendations</a></li>
-            <li><a href="/features/index.html">Features</a></li>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Hero-Journeys</h4>
+          <h4><a href="features/index.html">Features</a></h4>
           <ul>
-            <li><a href="/herojourneys/books/index.html">Books</a></li>
-            <li><a href="/herojourneys/film/index.html">Film</a></li>
-            <li><a href="/herojourneys/tv/index.html">TV</a></li>
-            <li><a href="/herojourneys/games/index.html">Games</a></li>
-            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Perspective</h4>
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
           <ul>
-            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="/perspective/industry/index.html">Industry</a></li>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/films/index.html">Films</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4><a href="perspective/index.html">Perspective</a></h4>
           <ul>
-            <li><a href="/contact.html">Get in touch</a></li>
+            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
           </ul>
         </div>
 

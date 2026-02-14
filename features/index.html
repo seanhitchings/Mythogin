@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/" />
+  <base href="/mythogin/" />
 
   <title>Mythogin — Features</title>
   <meta name="description" content="Appearances, interviews, podcasts, and conversations where Mythogin’s themes show up in public." />
@@ -28,10 +28,9 @@
 
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css" />
-  <link rel="stylesheet" href="css/components/hero.css" />
+  <link rel="stylesheet" href="css/components/hero-topics.css" />
   <link rel="stylesheet" href="css/components/card.css" />
   <link rel="stylesheet" href="css/components/footer.css" />
-  <link rel="stylesheet" href="css/components/topics.css" />
   <link rel="stylesheet" href="css/components/utilities.css" />
 
   <!-- Page -->
@@ -81,7 +80,7 @@
 
             <div class="submenu" role="menu" aria-label="Topics categories">
               <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
-              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
               <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
               <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
               <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
@@ -101,7 +100,7 @@
 
             <div class="submenu" role="menu" aria-label="Perspective sections">
               <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
             </div>
           </div>
 
@@ -124,36 +123,34 @@
   </div>
 
   <!-- Main -->
-  <main id="main"
-        class="topics features"
-        data-hub
-        data-hub-jsons="data/search-index.json"
-        data-hub-category="features"
-        data-hub-audio="on"
-        data-hub-parent-img="images/topics/features.webp">
+<main id="main"
+      class="topics features"
+      data-hub
+      data-hub-jsons="data/features.json"
+      data-hub-category="features"
+      data-hub-audio="on"
+      data-hub-parent-img="images/topics/features.webp">
 
-    <!-- HERO -->
-    <section class="topics-hero" aria-label="Features hero">
-      <div class="container">
-        <div class="topics-hero-card bleed-pad">
+<!-- HERO -->
+      <section class="topics-hero" aria-label="Features hero">
+        <div class="container">
+          <div class="topics-hero-card bleed-pad">
 
-          <div class="topics-hero-media" aria-hidden="true">
-            <img src="images/features/features.webp" alt="" loading="eager" decoding="async" />
-            <div class="topics-hero-overlay"></div>
+            <div class="topics-hero-media" aria-hidden="true">
+              <img src="images/features/features.webp" alt="" loading="eager" decoding="async" />
+              <div class="topics-hero-overlay"></div>
+            </div>
+
+            <div class="topics-hero-content">
+              <h1 class="topics-hero-title">Features</h1>
+              <p class="topics-hero-lead">
+                Public appearances, interviews, podcasts, and conversations where Mythogin’s themes show up in public.
+              </p>
+            </div>
+
           </div>
-
-          </div>
-          <div class="topics-hero-content">
-            <h1 class="topics-hero-title">Features</h1>
-            <p class="topics-hero-lead">
-            <p>Public appearances, interviews, podcasts, and conversations where Mythogin’s themes show up in public.</p>
-            </p>
-          </div>
-
-
         </div>
-      </div>
-    </section>
+      </section>
 
     <div class="divider" aria-hidden="true"></div>
 
@@ -300,7 +297,7 @@
           <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
           <ul>
             <li><a href="hero-journeys/books/index.html">Books</a></li>
-            <li><a href="hero-journeys/film/index.html">Film</a></li>
+            <li><a href="hero-journeys/films/index.html">Films</a></li>
             <li><a href="hero-journeys/tv/index.html">TV</a></li>
             <li><a href="hero-journeys/games/index.html">Games</a></li>
             <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
@@ -313,7 +310,7 @@
           <h4><a href="perspective/index.html">Perspective</a></h4>
           <ul>
             <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="perspective/industry/index.html">Industry</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
           </ul>
         </div>
 
@@ -323,8 +320,7 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/featured.js"></script>
-  <script src="js/hub-loader.js"></script>
+  <script src="js/highlighted-essay.js"></script>
+  <script src="js/hub-loader-features.js"></script>
 </body>
 </html>
-
