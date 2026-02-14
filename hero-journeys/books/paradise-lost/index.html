@@ -4,279 +4,506 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <base href="/">
+
   <title>Mythogin — Paradise Lost</title>
-  <meta name="description" content="Paradise Lost on Mythogin: rebellion, pride, and the metaphysics of the fall — critique, fix, impact." />
+  <meta name="description"
+        content="Paradise Lost on Mythogin: rebellion, pride, and the metaphysics of the fall — how a mind builds hell from grievance, and why freedom without love becomes self-ruin — critique, fix, impact." />
+  <!-- FILE LOCATION: /mythogin/hero-journeys/books/paradise-lost/index.html -->
+
+  <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/topic-nav.css">
   <link rel="stylesheet" href="css/components/utilities.css">
   <link rel="stylesheet" href="css/components/story-card.css">
   <link rel="stylesheet" href="css/components/drawer.css">
+
+  <!-- Accordion (shared component) -->
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
+
 <body class="story story--books">
 
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
+
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary" data-nav>
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
+          <a class="nav-link"
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html" data-topic-slug="books">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/economics/index.html">Economics</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="perspective/index.html" aria-haspopup="true" aria-expanded="false" data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is and who its for">About</a>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-        </nav>
-      </div>
+      </nav>
+
     </div>
   </div>
+</div>
 
-  <main class="story">
-    <section class="topics-hero story-hero" aria-label="Story hero">
-      <div class="container">
-        <div class="topics-hero-card story-hero-card bleed-pad">
-          <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/books/paradise-lost.webp" alt="" loading="eager" decoding="async">
-            <div class="topics-hero-overlay"></div>
-          </div>
-          <div class="topics-hero-content story-hero-content">
-            <p class="story-kicker">Books</p>
-            <h1 class="topics-hero-title">Paradise Lost</h1>
-            <p class="topics-hero-lead">A cosmic drama of pride: the fall as a psychological event before it is a theological one.</p>
-            <div class="story-meta">
-              <span class="chip">Critique</span>
-              <span class="chip chip--muted">Fix</span>
-              <span class="chip chip--muted">Impact</span>
-            </div>
-          </div>
+<main class="story">
+
+  <!-- HERO -->
+  <section class="topics-hero story-hero" aria-label="Story hero">
+    <div class="container">
+      <div class="topics-hero-card story-hero-card bleed-pad">
+
+        <div class="topics-hero-media story-hero-media" aria-hidden="true">
+          <img src="images/topics/books/paradise-lost.webp" alt="" loading="eager" decoding="async">
+          <div class="topics-hero-overlay"></div>
         </div>
+
+        <div class="topics-hero-content story-hero-content">
+          <p class="story-kicker">Books</p>
+
+          <h1 class="topics-hero-title">Paradise Lost</h1>
+
+          <p class="topics-hero-lead">
+            A cosmic rebellion told as an interior event: hell is built first in the mind, then in the world.
+          </p>
+
+          <!-- Audio chip -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <a class="audio-chip-btn" href="hero-journeys/books/paradise-lost/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/books/paradise-lost/audio.mp3" download aria-label="Download audio">Download</a>
+              </span>
+            </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider" aria-hidden="true"></div>
+  <div class="divider" aria-hidden="true"></div>
 
-    <section class="story-body" aria-label="Essay">
-      <div class="container">
-        <div class="story-layout story-layout--toc">
+  <!-- BODY + TOC RAIL -->
+  <section class="story-body" aria-label="Essay">
+    <div class="container">
 
-          <article class="story-article">
+      <div class="story-layout story-layout--toc">
 
-            <section class="story-section section-card card--surface bleed-pad" id="intro">
-              <header class="section-head">
-                <h2 class="section-title">Intro</h2>
-                <p class="section-sub">John Milton's attempt to justify the ways of God to men.</p>
-              </header>
-              <p>John Milton's 17th-century masterpiece remains the definitive exploration of the Rebel archetype. By centering the narrative on the consciousness of the fallen, Milton creates a landscape where the battle for the universe is fought primarily in the theater of the mind.</p>
-            </section>
+        <!-- Article column -->
+        <article class="story-article">
 
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
-              <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the poem diagnoses — and why it still cuts.</p>
-              </header>
-              <div class="accordion accordion--tight accordion--spaced">
-                <details class="accordion-item" id="critique-pride" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Pride as self-enclosure</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Satan’s famous declaration, "The mind is its own place," is not an anthem of liberation, but a diagnosis of isolation. We examine how pride functions as a psychological wall that prevents any genuine connection to objective reality.</p>
-                  </div>
-                </details>
-                <details class="accordion-item" id="critique-rhetoric">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Rhetoric as spiritual counterfeit</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Milton warns that beautiful language can be a tool of deception. Satan’s rhetoric in Pandemonium shows how political grievance can be used to mask personal failure and deep-seated envy.</p>
-                  </div>
-                </details>
-              </div>
-            </section>
+          <!-- Intro -->
+          <section class="story-section section-card card--surface bleed-pad" id="intro">
+            <header class="section-head">
+              <h2 class="section-title">Intro</h2>
+              <p class="section-sub">
+                Milton attempts to “justify the ways of God to men,” but his deeper achievement is psychological:
+                he shows how pride turns freedom into a prison.
+              </p>
+            </header>
 
-            <section class="story-section section-card card--surface bleed-pad" id="fix">
-              <header class="section-head">
-                <h2 class="section-title">Fix</h2>
-                <p class="section-sub">How to preserve the engine without flattening it.</p>
-              </header>
-              <div class="accordion accordion--tight accordion--spaced">
-                <details class="accordion-item" id="fix-clarity" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Clarity without demythologizing</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>The challenge for modern readers is maintaining the awe of the supernatural while engaging with the humanity of the characters. We must avoid reducing the cosmic entities to mere symbols or allegories.</p>
-                  </div>
-                </details>
-                <details class="accordion-item" id="fix-voice">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Voice that carries metaphysics</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Maintaining the "Miltonic Voice" requires a balance of high-style and emotional vulnerability, ensuring that the philosophical weight doesn't crush the narrative momentum.</p>
-                  </div>
-                </details>
-              </div>
-            </section>
+            <p>
+              <em>Paradise Lost</em> is the definitive anatomy of the Rebel archetype: not rebellion as bravery,
+              but rebellion as <em>self-enclosure</em>—the will refusing reality, then calling refusal “principle.”
+            </p>
 
-            <section class="story-section section-card card--surface bleed-pad" id="impact">
-              <header class="section-head">
-                <h2 class="section-title">Impact</h2>
-                <p class="section-sub">What it reveals about culture — then and now.</p>
-              </header>
-              <div class="accordion accordion--tight accordion--spaced">
-                <details class="accordion-item" id="impact-modern-pride" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Modern pride as style</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Milton’s Satan became the blueprint for the Romantic anti-hero. We look at how modern culture has adopted the aesthetic of the rebel while often forgetting the catastrophic cost of that rebellion.</p>
-                  </div>
-                </details>
-                <details class="accordion-item" id="impact-meaning">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Why metaphysics matters</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Paradise Lost proves that epic storytelling requires a metaphysical framework. Without a sense of ultimate stakes, the journey of the hero loses its transformative power.</p>
-                  </div>
-                </details>
-              </div>
-            </section>
+            <p>
+              For Mythogin, the throughline is this: the fall is not merely a theological event. It is a pattern of consciousness.
+              A mind can choose grievance over gratitude, self-rule over truth, and style over love—then spend the rest of its life
+              building arguments to make the choice feel noble.
+            </p>
+          </section>
 
-            <div class="divider" aria-hidden="true"></div>
+          <!-- Critique -->
+          <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <header class="section-head">
+              <h2 class="section-title">Critique</h2>
+              <p class="section-sub">What the poem diagnoses — and why it still cuts.</p>
+            </header>
 
-            <section class="topic-nav-surface topic-nav-surface--story" 
-                     aria-label="Book navigation" 
-                     data-topic-nav="books" 
-                     data-topic-slug="paradise-lost">
-              
-              <div class="topic-nav-bg" aria-hidden="true">
-                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
-              </div>
+            <div class="accordion accordion--tight accordion--spaced">
 
-              <div class="topic-nav-card">
-                <nav class="crumbs" aria-label="Breadcrumb">
-                  <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/index.html" data-crumb-topics>Hero-Journeys</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="#" data-crumb-section-link><span data-crumb-section-text>Books</span></a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a aria-current="page" data-crumb-current>Paradise Lost</a></li>
-                  </ol>
-                </nav>
+              <details class="accordion-item" id="critique-pride-enclosure" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Pride as self-enclosure</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    “The mind is its own place” reads like liberation—until you see the cost: a sealed interior where no correction can enter.
+                    Pride is not confidence; it is a closed system. Hell is what happens when the self becomes its own horizon.
+                  </p>
+                </div>
+              </details>
 
-                <div class="pager" aria-label="Book navigation">
-                  <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#">
-                      <span class="arrow" aria-hidden="true">←</span>
-                      <span class="meta">
-                        <span class="kicker">Previous</span>
-                        <span class="title" data-prev-title>Loading…</span>
-                      </span>
+              <details class="accordion-item" id="critique-rhetoric-counterfeit">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Rhetoric as spiritual counterfeit</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Milton treats persuasion as a moral technology. Satan’s speeches show how grievance can be aestheticized into “justice,”
+                    and how language can become a mask for envy. The poem trains suspicion toward eloquence that flatters resentment.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-freedom-without-love">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Freedom without love becomes domination</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The rebel’s promise is “freedom,” but the practice is coercion: the drive to rule, to corrupt, to make others share the wound.
+                    Milton’s bleak insight: when love is rejected, freedom collapses into appetite—then into tyranny.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-innocence-fragility">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">The fragility of innocence</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Eden isn’t naïveté; it’s unfractured attention. The fall arrives through misdirection: selective framing, half-truths, and the slow
+                    conversion of wonder into dissatisfaction. The poem understands temptation as a manipulation of perception.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+
+            <ul class="story-bullets">
+              <li><strong>Pride</strong> closes the mind, then calls closure “strength.”</li>
+              <li><strong>Rhetoric</strong> can counterfeit virtue by making resentment sound principled.</li>
+              <li><strong>Temptation</strong> is perceptual warfare: attention is redirected before will is broken.</li>
+            </ul>
+          </section>
+
+          <!-- Fix -->
+          <section class="story-section section-card card--surface bleed-pad" id="fix">
+            <header class="section-head">
+              <h2 class="section-title">Fix</h2>
+              <p class="section-sub">How to preserve the engine without flattening it.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="fix-entry-ramps" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Give readers an “entry ramp” without shrinking the cosmos</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The poem’s scale can turn modern readers into spectators. Anchor each book/section with a simple question:
+                    What does the rebel want <em>right now</em>? What lie is being used? What virtue is being twisted?
+                    This keeps the metaphysics attached to lived psychology.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-miltonic-voice">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Keep the Miltonic voice, but translate the stakes</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Don’t demythologize. Instead, restate stakes in plain terms alongside the grandeur:
+                    not “angels,” but loyalty, hierarchy, trust, gratitude, and the refusal to be limited.
+                    The cosmic imagery is the amplification—psychology is the source.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-satan-not-hero">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Resist the “Satan as hero” drift</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The poem is powerful partly because the rebel is compelling. The fix is interpretive: track the degradation.
+                    Each speech buys less reality. Each act shrinks the self. Make the arc visible: charisma → distortion → compulsion → ruin.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <!-- Impact -->
+          <section class="story-section section-card card--surface bleed-pad" id="impact">
+            <header class="section-head">
+              <h2 class="section-title">Impact</h2>
+              <p class="section-sub">What it reveals about culture — then and now.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="impact-romantic-rebel" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">The blueprint for the modern rebel aesthetic</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Milton’s Satan becomes the ancestor of the charismatic anti-hero: wounded, eloquent, defiant.
+                    Modern culture often keeps the style and discards the warning—celebrating rebellion while ignoring what rebellion does to the soul.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-metaphysics">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Why metaphysics still matters</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Epic needs ultimate stakes. When a culture loses its metaphysical frame, it tends to replace it with politics,
+                    fandom, and identity—smaller heavens, smaller hells. <em>Paradise Lost</em> shows what happens when meaning is treated as real.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-pride-as-politics">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Pride as ideology</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The poem is also a civic warning: rhetoric that sanctifies grievance can assemble a “Pandemonium” anywhere.
+                    The pattern is durable: wounded ego → moralized story → collective permission → cruelty presented as justice.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <!-- Bottom page navigation -->
+          <section class="topic-nav-surface topic-nav-surface--story"
+                   aria-label="Book navigation"
+                   data-topic-nav="books"
+                   data-topic-slug="paradise-lost">
+
+            <div class="topic-nav-bg" aria-hidden="true">
+              <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="topic-nav-card">
+
+              <nav class="crumbs" aria-label="Breadcrumb">
+                <ol class="crumbs-list">
+                  <li class="crumb"><a href="home.html">Home</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb"><a href="hero-journeys/index.html" data-crumb-topics>Hero-Journeys</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb">
+                    <a href="#" data-crumb-section-link>
+                      <span data-crumb-section-text>Books</span>
                     </a>
-                    <a class="pager-next" data-pager-next href="#">
-                      <span class="meta">
-                        <span class="kicker">Next</span>
-                        <span class="title" data-next-title>Loading…</span>
-                      </span>
-                      <span class="arrow" aria-hidden="true">→</span>
-                    </a>
-                  </div>
+                  </li>
+
+                  <li class="sep" aria-hidden="true">›</li>
+                  <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                </ol>
+              </nav>
+
+              <div class="pager" aria-label="Book navigation">
+                <div class="pager-edges">
+
+                  <a class="pager-prev" data-pager-prev href="#">
+                    <span class="arrow" aria-hidden="true">←</span>
+                    <span class="meta">
+                      <span class="kicker">Previous</span>
+                      <span class="title" data-prev-title>Loading…</span>
+                    </span>
+                  </a>
+
+                  <a class="pager-next" data-pager-next href="#">
+                    <span class="meta">
+                      <span class="kicker">Next</span>
+                      <span class="title" data-next-title>Loading…</span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">→</span>
+                  </a>
+
                 </div>
               </div>
-            </section>
-          </article>
 
-          <aside class="story-aside" aria-label="On this page">
-            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
-              On this page <span class="nav-caret" aria-hidden="true">▾</span>
-            </button>
-            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
-              <div class="toc-panel-head">
-                <h3 class="toc-panel-title">On this page</h3>
-                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
-              </div>
-              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
             </div>
-          </aside>
+          </section>
 
-        </div>
+        </article>
+
+        <!-- Right rail TOC -->
+        <aside class="story-aside" aria-label="On this page">
+          <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+            On this page <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+
+          <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+            <div class="toc-panel-head">
+              <h3 class="toc-panel-title">On this page</h3>
+              <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+            </div>
+
+            <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+          </div>
+        </aside>
+
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+</main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
+<div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
         <div class="footer-name">Mythogin</div>
         <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-col"><h4>Mythogin</h4><ul><li><a href="home.html">Home</a></li><li><a href="about.html">About</a></li></ul></div>
-        <div class="footer-col"><h4>Explore</h4><ul><li><a href="recommendations.html">Recommendations</a></li><li><a href="features.html">Features</a></li></ul></div>
-        <div class="footer-col"><h4>Hero-Journeys</h4><ul>
-          <li><a href="herojourneys/books/index.html">Books</a></li><li><a href="herojourneys/film/index.html">Film</a></li><li><a href="herojourneys/tv/index.html">TV</a></li>
-          <li><a href="herojourneys/games/index.html">Games</a></li><li><a href="herojourneys/podcasts/index.html">Podcasts</a></li><li><a href="herojourneys/documentaries/index.html">Documentaries</a></li>
-        </ul></div>
-        <div class="footer-col"><h4>Perspective</h4><ul><li><a href="perspective/philosophy/index.html">Philosophy</a></li><li><a href="perspective/industry/index.html">Industry</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in touch</a></li></ul></div>
-      </nav>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
     </div>
-  </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/drawer.js"></script>
-  <script src="js/topic-nav.js"></script>
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <div class="footer-col">
+        <h4><a href="index.html">Mythogin</a></h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search/index.html">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/films/index.html">Films</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/drawer.js"></script>
+<script src="js/topic-nav.js"></script>
 </body>
 </html>

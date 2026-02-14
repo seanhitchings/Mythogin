@@ -7,7 +7,7 @@
 
   <title>Mythogin — Aristotle’s Children</title>
   <meta name="description" content="Aristotle’s Children on Mythogin: reason inherits the sacred, the medieval mind meets Greece, and metaphysics becomes a shared language — critique, fix, impact." />
-  <!-- FILE LOCATION: /Mythogin/herojourneys/documentaries/aristotles-children/index.html -->
+  <!-- FILE LOCATION: /mythogin/hero-journeys/books/aristotles-children/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -16,7 +16,7 @@
 
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/topic-nav.css">
@@ -28,36 +28,39 @@
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
 
-<body class="story story--documentaries">
+<body class="story story--books">
 
-  <!-- Shared Nav (same as hubs) -->
+  <!-- Shared Nav -->
   <div class="topbar">
     <div class="container container--topbar">
       <div class="topbar-inner">
 
         <div class="brand-main">
           <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+            <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
           </a>
         </div>
 
         <nav class="navlinks" aria-label="Primary">
 
+          <!-- Recommendations -->
           <a class="nav-link"
-             href="recommendations.html"
+             href="recommendations/index.html"
              data-tip="What to read, watch, or play next">
             Recommendations
           </a>
 
+          <!-- Features -->
           <a class="nav-link"
-             href="features.html"
+             href="features/index.html"
              data-tip="Multimedia presentations & debates">
             Features
           </a>
 
-          <div class="nav-item has-submenu">
+          <!-- Hero-Journeys (canonical: hero-journeys) -->
+          <div class="nav-item has-submenu is-pinned-herojourneys">
             <a class="nav-link"
-               href="/herojourneys/index.html"
+               href="hero-journeys/index.html"
                aria-haspopup="true"
                aria-expanded="false"
                data-tip="Discover epics in these formats">
@@ -65,16 +68,17 @@
             </a>
 
             <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
+              <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+              <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+              <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+              <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+              <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+              <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
             </div>
           </div>
 
-          <div class="nav-item has-submenu">
+          <!-- Perspective -->
+          <div class="nav-item has-submenu is-pinned-perspective">
             <a class="nav-link"
                href="perspective/index.html"
                aria-haspopup="true"
@@ -85,21 +89,20 @@
 
             <div class="submenu" role="menu" aria-label="Perspective sections">
               <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
             </div>
           </div>
 
+          <!-- About -->
           <a class="nav-link"
              href="about.html"
              data-tip="What Mythogin is and who its for">
             About
           </a>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
+          <!-- Search -->
+          <form class="nav-search" action="search/index.html" method="get" role="search">
+            <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
           </form>
 
         </nav>
@@ -116,12 +119,12 @@
         <div class="topics-hero-card story-hero-card bleed-pad">
 
           <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/documentaries/aristotles-children.webp" alt="" loading="eager" decoding="async">
+            <img src="images/topics/books/aristotles-children.webp" alt="" loading="eager" decoding="async">
             <div class="topics-hero-overlay"></div>
           </div>
 
           <div class="topics-hero-content story-hero-content">
-            <p class="story-kicker">Documentaries</p>
+            <p class="story-kicker">Books</p>
 
             <h1 class="topics-hero-title">Aristotle’s Children</h1>
 
@@ -131,12 +134,12 @@
 
             <div class="u-space-10" aria-hidden="true"></div>
 
-            <!-- Audio chip (MATCHES TEMPLATE) -->
+            <!-- Audio chip -->
             <div class="audio-chip" aria-label="Audio">
               <span class="audio-chip-label">Audio</span>
               <span class="audio-chip-actions">
-                <a class="audio-chip-btn" href="#" aria-label="Listen to audio">Listen</a>
-                <a class="audio-chip-btn" href="#" aria-label="Download audio">Download</a>
+                <a class="audio-chip-btn" href="hero-journeys/documentaries/aristotles-children/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/documentaries/aristotles-children/audio.mp3" download aria-label="Download audio">Download</a>
               </span>
             </div>
 
@@ -152,10 +155,8 @@
     <section class="story-body" aria-label="Essay">
       <div class="container">
 
-        <!-- IMPORTANT: article + aside MUST be siblings of this grid -->
         <div class="story-layout story-layout--toc">
 
-          <!-- Article column -->
           <article class="story-article">
 
             <!-- Intro -->
@@ -173,7 +174,7 @@
               </p>
 
               <p>
-                The documentary’s deeper theme is psychological. A culture inherits a language for thinking, and suddenly questions become legible that were previously
+                The books’s deeper theme is psychological. A culture inherits a language for thinking, and suddenly questions become legible that were previously
                 inexpressible. Theology doesn’t disappear; it is forced to clarify itself—sometimes to its own surprise.
               </p>
             </section>
@@ -182,7 +183,7 @@
             <section class="story-section section-card card--surface bleed-pad" id="critique">
               <header class="section-head">
                 <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the documentary gets exactly right — and what it can flatten.</p>
+                <p class="section-sub">What the story gets exactly right — and what it can flatten.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
@@ -242,7 +243,7 @@
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
-                <p class="section-sub">Three ways to sharpen the documentary’s explanatory power.</p>
+                <p class="section-sub">Three ways to sharpen the explanatory power.</p>
               </header>
 
               <div class="accordion accordion--tight accordion--spaced">
@@ -329,10 +330,10 @@
 
             <div class="divider" aria-hidden="true"></div>
 
-            <!-- Bottom page navigation (inside article column) -->
+            <!-- Bottom page navigation -->
             <section class="topic-nav-surface topic-nav-surface--story"
-                     aria-label="Documentaries navigation"
-                     data-topic-nav="documentaries"
+                     aria-label="Books navigation"
+                     data-topic-nav="books"
                      data-topic-slug="aristotles-children">
 
               <div class="topic-nav-bg" aria-hidden="true">
@@ -343,15 +344,15 @@
 
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/index.html" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
                     <li class="crumb">
                       <a href="#" data-crumb-section-link>
-                        <span data-crumb-section-text>Documentaries</span>
+                        <span data-crumb-section-text>Books</span>
                       </a>
                     </li>
 
@@ -360,7 +361,7 @@
                   </ol>
                 </nav>
 
-                <div class="pager" aria-label="Documentaries navigation">
+                <div class="pager" aria-label="Books navigation">
                   <div class="pager-edges">
                     <a class="pager-prev" data-pager-prev href="#">
                       <span class="arrow" aria-hidden="true">←</span>
@@ -385,7 +386,7 @@
 
           </article>
 
-          <!-- Right rail TOC (SIBLING of article — REQUIRED) -->
+          <!-- Right rail TOC -->
           <aside class="story-aside" aria-label="On this page">
             <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
               On this page <span class="nav-caret" aria-hidden="true">▾</span>
@@ -409,57 +410,64 @@
 
   <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
 
+  <!-- Full site footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
 
       <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
         <div class="footer-copy">© <span id="year"></span></div>
       </div>
 
       <nav class="footer-nav" aria-label="Footer navigation">
 
         <div class="footer-col">
-          <h4>Mythogin</h4>
+          <h4><a href="index.html">Mythogin</a></h4>
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
           <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Hero-Journeys</h4>
+          <h4><a href="features/index.html">Features</a></h4>
           <ul>
-            <li><a href="/herojourneys/books/index.html">Books</a></li>
-            <li><a href="/herojourneys/film/index.html">Film</a></li>
-            <li><a href="/herojourneys/tv/index.html">TV</a></li>
-            <li><a href="/herojourneys/games/index.html">Games</a></li>
-            <li><a href="/herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="/herojourneys/documentaries/index.html">Documentaries</a></li>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Perspective</h4>
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
           <ul>
-            <li><a href="/perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="/perspective/industry/index.html">Industry</a></li>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/films/index.html">Films</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4><a href="perspective/index.html">Perspective</a></h4>
           <ul>
-            <li><a href="contact.html">Get in touch</a></li>
+            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
           </ul>
         </div>
 
@@ -473,3 +481,4 @@
   <script src="js/topic-nav.js"></script>
 </body>
 </html>
+1

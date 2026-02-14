@@ -65,7 +65,7 @@
 
           <div class="submenu" role="menu" aria-label="Topics categories">
             <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
-            <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+            <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
             <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
             <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
             <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
@@ -85,7 +85,7 @@
 
           <div class="submenu" role="menu" aria-label="Perspective sections">
             <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-            <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+            <a role="menuitem" href="perspective/economics/index.html">Economics</a>
           </div>
         </div>
 
@@ -107,7 +107,11 @@
   </div>
 </div>
 
-<main class="topics books" data-hub data-hub-category="essays" data-hub-type="books" data-hub-jsons="data/search-index.json">
+<!-- toggles audio on entire page-->
+<main class="topics books"
+      data-hub
+      data-hub-jsons="data/essays.json"
+      data-hub-audio="on">
 
 
 
@@ -237,7 +241,7 @@
         <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
         <ul>
           <li><a href="hero-journeys/books/index.html">Books</a></li>
-          <li><a href="hero-journeys/film/index.html">Film</a></li>
+          <li><a href="hero-journeys/films/index.html">Films</a></li>
           <li><a href="hero-journeys/tv/index.html">TV</a></li>
           <li><a href="hero-journeys/games/index.html">Games</a></li>
           <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
@@ -249,7 +253,7 @@
         <h4><a href="perspective/index.html">Perspective</a></h4>
         <ul>
           <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
-          <li><a href="perspective/industry/index.html">Industry</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
         </ul>
       </div>
 
@@ -259,8 +263,7 @@
 </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/featured.js"></script>
-  <script src="js/hub-loader.js"></script>
+  <script src="js/highlighted-essay.js"></script>
+  <script src="js/hub-loader-essays.js"></script>
 </body>
 </html>
-

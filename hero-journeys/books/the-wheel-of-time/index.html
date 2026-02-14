@@ -6,13 +6,18 @@
   <base href="/">
 
   <title>Mythogin — The Wheel of Time</title>
-  <meta name="description" content="The Wheel of Time on Mythogin: fate, cycles, power, and the burden of prophecy — critique, fix, impact." />
+  <meta name="description"
+        content="The Wheel of Time on Mythogin: fate, cycles, power, and the burden of prophecy — recurrence as responsibility, institutions under strain, and agency inside the Pattern — critique, fix, impact." />
+  <!-- FILE LOCATION: /mythogin/hero-journeys/books/the-wheel-of-time/index.html -->
+
+  <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
 
+  <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/topic-nav.css">
@@ -20,353 +25,489 @@
   <link rel="stylesheet" href="css/components/story-card.css">
   <link rel="stylesheet" href="css/components/drawer.css">
 
+  <!-- Accordion (shared component) -->
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
 
 <body class="story story--books">
 
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary" data-nav>
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
+          <a class="nav-link"
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
 
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/economics/index.html">Economics</a>
+          </div>
+        </div>
 
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html" data-topic-slug="books">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+<main class="story">
+
+  <!-- HERO -->
+  <section class="topics-hero story-hero" aria-label="Story hero">
+    <div class="container">
+      <div class="topics-hero-card story-hero-card bleed-pad">
+
+        <div class="topics-hero-media story-hero-media" aria-hidden="true">
+          <img src="images/topics/books/the-wheel-of-time.webp" alt="" loading="eager" decoding="async">
+          <div class="topics-hero-overlay"></div>
+        </div>
+
+        <div class="topics-hero-content story-hero-content">
+          <p class="story-kicker">Books</p>
+
+          <h1 class="topics-hero-title">The Wheel of Time</h1>
+
+          <p class="topics-hero-lead">
+            History repeats and prophecy binds. The Pattern turns—again—and every choice becomes part of the weave.
+          </p>
+
+          <div class="story-meta">
+            <!-- Audio chip -->
+          <div class="audio-chip" aria-label="Audio">
+            <span class="audio-chip-label">Audio</span>
+            <span class="audio-chip-actions">
+              <a class="audio-chip-btn" href="hero-journeys/books/the-wheel-of-time/audio.mp3" aria-label="Listen to audio">Listen</a>
+              <a class="audio-chip-btn" href="hero-journeys/books/the-wheel-of-time/audio.mp3" download aria-label="Download audio">Download</a>
+            </span>
           </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="perspective/index.html" aria-haspopup="true" aria-expanded="false" data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- BODY + TOC RAIL -->
+  <section class="story-body" aria-label="Essay">
+    <div class="container">
+
+      <div class="story-layout story-layout--toc">
+
+        <!-- Article -->
+        <article class="story-article">
+
+          <!-- Intro -->
+          <section class="story-section section-card card--surface bleed-pad" id="intro">
+            <header class="section-head">
+              <h2 class="section-title">Intro</h2>
+              <p class="section-sub">
+                Jordan builds an epic on one metaphysical claim: time is not a line but a wheel. The cost is scale; the reward is inevitability with human texture.
+              </p>
+            </header>
+
+            <p>
+              <em>The Wheel of Time</em> is the quintessential maximalist epic: a geopolitical simulation welded to a mythic engine.
+              The hero’s enemy isn’t only the Dark One—it’s the crushing weight of recurrence: the sense that the struggle has happened
+              before, will happen again, and still demands that <em>you</em> choose.
+            </p>
+
+            <p>
+              Mythogin’s angle: this is an epic of responsibility under repetition. It asks a brutal question: what does agency mean
+              when the Pattern already knows the shape of the war?
+            </p>
+          </section>
+
+          <!-- Critique -->
+          <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <header class="section-head">
+              <h2 class="section-title">Critique</h2>
+              <p class="section-sub">What the series nails—and what its bloat and repetition sometimes blur.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="critique-cycles-prophecy" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Cycles, prophecy, and agency</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Prophecy here isn’t a vague hint; it’s a structural constraint. “Ta’veren” turns narrative gravity into literal gravity:
+                    chance bends, people converge, history tightens. The brilliance is that inevitability does not erase choice—it makes
+                    the cost of choice visible.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-power-systems">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Power systems with consequences</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The One Power isn’t “magic.” It’s a world-changing resource with permanent moral fallout.
+                    The male half’s taint makes the savior a hazard: the person most needed to win is also the person most likely
+                    to break reality while trying.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-institutions">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Institutions as living antagonists</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Nations, towers, ajahs, clans—Jordan makes institutions feel like characters with appetites.
+                    This is part of the series’ realism: most human suffering is produced by systems, not monsters.
+                    The risk is that systems can sprawl until the emotional thread thins.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-bloat-slog">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Bloat, “the slog,” and lost momentum</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Maximalism becomes liability when the world begins to choke the story.
+                    The middle books can lose thematic focus as institutional maneuvering outgrows character transformation.
+                    You don’t feel the Wheel turning—you feel the pages accumulating.
+                  </p>
+                </div>
+              </details>
+
             </div>
+
+            <ul class="story-bullets">
+              <li><strong>Scale</strong> is the signature: nations, factions, myths operating at once.</li>
+              <li><strong>Metaphysics</strong> shapes politics: the Pattern makes power legible.</li>
+              <li><strong>Cost</strong> is pacing: sprawl can dilute tension if not governed.</li>
+            </ul>
+          </section>
+
+          <!-- Fix -->
+          <section class="story-section section-card card--surface bleed-pad" id="fix">
+            <header class="section-head">
+              <h2 class="section-title">Fix</h2>
+              <p class="section-sub">How to preserve the epic engine while tightening the experience.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="fix-structure" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Structure: arcs within the arc</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Treat each volume as a complete movement with an internal climax (not merely a bridge to “the Last Battle”).
+                    When the reader feels closure at the local level, the grand recurrence feels purposeful instead of padded.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-focus">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Focus: fewer POVs at peak tension</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Consolidate POVs during high-stakes windows. The world can remain vast, but the reader should stay tethered
+                    to the moral spine of the primary cast when the Pattern tightens.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-repetition">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Turn repetition into escalation</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The Wheel repeats, but it shouldn’t <em>stall</em>. When motifs return, attach a cost:
+                    a relationship altered, a boundary crossed, a moral compromise that can’t be uncrossed.
+                    Recurrence becomes pressure, not redundancy.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <!-- Impact -->
+          <section class="story-section section-card card--surface bleed-pad" id="impact">
+            <header class="section-head">
+              <h2 class="section-title">Impact</h2>
+              <p class="section-sub">Why the Wheel matters: myth as pattern and history as recurrence.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="impact-myth-pattern" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Myth as pattern</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Jordan popularized a powerful idea: modern myths as distorted memories of a future-past.
+                    It creates a rare sensation of depth—culture as sediment, story as archaeology.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-agency">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Agency inside the Pattern</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The series argues that fate is not an excuse. The Pattern may set the arena, but character sets the action.
+                    Meaning is forged in the small decisions made under cosmic constraints.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-meaning-collapse">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Meaning and modern fatigue</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    In an era where institutions fracture and scale overwhelms individual effort, <em>Wheel</em> offers a thesis:
+                    endurance can be holy. The hero doesn’t transcend history—he carries it.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <!-- Bottom page navigation -->
+          <section class="topic-nav-surface topic-nav-surface--story"
+                   aria-label="Book navigation"
+                   data-topic-nav="books"
+                   data-topic-slug="the-wheel-of-time">
+
+            <div class="topic-nav-bg" aria-hidden="true">
+              <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="topic-nav-card">
+
+              <nav class="crumbs" aria-label="Breadcrumb">
+                <ol class="crumbs-list">
+                  <li class="crumb"><a href="home.html">Home</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb"><a href="hero-journeys/index.html" data-crumb-topics>Hero-Journeys</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb">
+                    <a href="#" data-crumb-section-link>
+                      <span data-crumb-section-text>Books</span>
+                    </a>
+                  </li>
+
+                  <li class="sep" aria-hidden="true">›</li>
+                  <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                </ol>
+              </nav>
+
+              <div class="pager" aria-label="Book navigation">
+                <div class="pager-edges">
+
+                  <a class="pager-prev" data-pager-prev href="#">
+                    <span class="arrow" aria-hidden="true">←</span>
+                    <span class="meta">
+                      <span class="kicker">Previous</span>
+                      <span class="title" data-prev-title>Loading…</span>
+                    </span>
+                  </a>
+
+                  <a class="pager-next" data-pager-next href="#">
+                    <span class="meta">
+                      <span class="kicker">Next</span>
+                      <span class="title" data-next-title>Loading…</span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">→</span>
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </article>
+
+        <!-- Right rail TOC -->
+        <aside class="story-aside" aria-label="On this page">
+          <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+            On this page <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+
+          <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+            <div class="toc-panel-head">
+              <h3 class="toc-panel-title">On this page</h3>
+              <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+            </div>
+
+            <nav class="toc-panel-nav" aria-label="Page sections"></nav>
           </div>
-
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is and who its for">About</a>
-
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
+        </aside>
 
       </div>
     </div>
-  </div>
+  </section>
 
-  <main class="story">
+</main>
 
-    <section class="topics-hero story-hero" aria-label="Story hero">
-      <div class="container">
-        <div class="topics-hero-card story-hero-card bleed-pad">
+<div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
 
-          <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/books/wheel-of-time.webp" alt="" loading="eager" decoding="async">
-            <div class="topics-hero-overlay"></div>
-          </div>
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-          <div class="topics-hero-content story-hero-content">
-            <p class="story-kicker">Books</p>
-            <h1 class="topics-hero-title">The Wheel of Time</h1>
-            <p class="topics-hero-lead">
-              A world where history repeats and prophecy binds. The pattern turns—again—and every choice becomes part of the weave.
-            </p>
-
-            <div class="story-meta">
-              <span class="chip">Critique</span>
-              <span class="chip chip--muted">Fix</span>
-              <span class="chip chip--muted">Impact</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="divider" aria-hidden="true"></div>
-
-    <section class="story-body" aria-label="Essay">
-      <div class="container">
-
-        <div class="story-layout story-layout--toc">
-
-          <article class="story-article">
-
-            <section class="story-section section-card card--surface bleed-pad" id="intro">
-              <header class="section-head">
-                <h2 class="section-title">Intro</h2>
-                <p class="section-sub">
-                  Jordan builds an epic on one metaphysical claim: time is not a line but a wheel. The cost is scale; the reward is inevitability with human texture.
-                </p>
-              </header>
-
-              <p>
-                The Wheel of Time is the quintessential "maximalist" epic. Robert Jordan moves beyond the Tolkienesque quest toward a complex geopolitical and metaphysical simulation, where the hero's greatest enemy is not just the Dark One, but the crushing weight of a destiny that has already happened a thousand times before.
-              </p>
-            </section>
-
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
-              <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the series nails—and what its bloat and repetition sometimes blur.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="critique-cycles-prophecy" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Cycles, prophecy, and agency</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Prophecy in this world isn't a vague hint; it's a structural constraint. We examine how Jordan uses "Ta'veren" to explain the narrative convenience of the hero's journey as a literal gravitational pull of the universe.</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="critique-power-systems">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Power systems with consequences</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>The One Power is not just a tool; it is a gendered, radioactive resource. The cost of male power—madness—serves as a permanent critique of the "chosen one" trope, making the savior a fundamental threat to the world he protects.</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="critique-bloat-slog">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Bloat, “the slog,” and lost momentum</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Maximalism becomes a liability when the "world" begins to choke the "story." We analyze how the middle books suffer from a loss of thematic focus as the institutional politics of the White Tower eclipse the character arcs.</p>
-                  </div>
-                </details>
-
-              </div>
-
-              <ul class="story-bullets">
-                <li><strong>Scale</strong> is the signature: nations, factions, and myths operating at once.</li>
-                <li><strong>Metaphysics</strong> shapes politics: the Pattern makes power legible.</li>
-                <li><strong>Cost</strong> is pacing: sprawl can dilute tension if not governed.</li>
-              </ul>
-            </section>
-
-            <section class="story-section section-card card--surface bleed-pad" id="fix">
-              <header class="section-head">
-                <h2 class="section-title">Fix</h2>
-                <p class="section-sub">How to preserve the epic engine while tightening the experience.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="fix-structure" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Structure: arcs within the arc</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>To prevent the "slog," the narrative must treat each volume as a complete movement with its own internal climax, rather than a mere bridge to the Last Battle.</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="fix-focus">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Focus: fewer POVs at peak tension</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Aggressive consolidation of perspective characters in the middle volumes would ensure that the reader remains tethered to the emotional stakes of the primary cast.</p>
-                  </div>
-                </details>
-
-              </div>
-            </section>
-
-            <section class="story-section section-card card--surface bleed-pad" id="impact">
-              <header class="section-head">
-                <h2 class="section-title">Impact</h2>
-                <p class="section-sub">Why the Wheel matters: myth as pattern and history as recurrence.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="impact-myth-pattern" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Myth as pattern</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Jordan popularized the idea that our modern myths are the distorted memories of a "future" past. This creates a powerful sense of cultural continuity and depth that few other series achieve.</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="impact-meaning-collapse">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Meaning and modern fatigue</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>The series addresses the core Mythogin throughline: how to find meaning when institutions fail and the scale of the world makes individual agency feel like an illusion. The answer lies in the small, human choices made in the shadow of the Wheel.</p>
-                  </div>
-                </details>
-
-              </div>
-            </section>
-
-            <div class="divider" aria-hidden="true"></div>
-
-            <section class="topic-nav-surface topic-nav-surface--story" 
-                     aria-label="Book navigation" 
-                     data-topic-nav="books" 
-                     data-topic-slug="wheel-of-time">
-              
-              <div class="topic-nav-bg" aria-hidden="true">
-                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
-              </div>
-
-              <div class="topic-nav-card">
-                <nav class="crumbs" aria-label="Breadcrumb">
-                  <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="#" data-crumb-section-link><span data-crumb-section-text>Books</span></a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a aria-current="page" data-crumb-current>The Wheel of Time</a></li>
-                  </ol>
-                </nav>
-
-                <div class="pager" aria-label="Book navigation">
-                  <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#">
-                      <span class="arrow" aria-hidden="true">←</span>
-                      <span class="meta">
-                        <span class="kicker">Previous</span>
-                        <span class="title" data-prev-title>Loading…</span>
-                      </span>
-                    </a>
-                    <a class="pager-next" data-pager-next href="#">
-                      <span class="meta">
-                        <span class="kicker">Next</span>
-                        <span class="title" data-next-title>Loading…</span>
-                      </span>
-                      <span class="arrow" aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-          </article>
-
-          <aside class="story-aside" aria-label="On this page">
-            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
-              On this page <span class="nav-caret" aria-hidden="true">▾</span>
-            </button>
-
-            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
-              <div class="toc-panel-head">
-                <h3 class="toc-panel-title">On this page</h3>
-                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
-              </div>
-              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
-            </div>
-          </aside>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
         <div class="footer-name">Mythogin</div>
         <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <div class="footer-col">
+        <h4><a href="index.html">Mythogin</a></h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search/index.html">Search</a></li>
+        </ul>
       </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-col">
-          <h4>Mythogin</h4>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
-          </ul>
-        </div>
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
 
         <div class="footer-col">
           <h4>Hero-Journeys</h4>
           <ul>
-            <li><a href="herojourneys/books/index.html">Books</a></li>
-            <li><a href="herojourneys/film/index.html">Film</a></li>
-            <li><a href="herojourneys/tv/index.html">TV</a></li>
-            <li><a href="herojourneys/games/index.html">Games</a></li>
-            <li><a href="herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="herojourneys/documentaries/index.html">Documentaries</a></li>
+            <li><a href="/hero-journeys/books/index.html">Books</a></li>
+            <li><a href="/hero-journeys/films/index.html">Films</a></li>
+            <li><a href="/hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="/hero-journeys/games/index.html">Games</a></li>
+            <li><a href="/hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/hero-journeys/documentaries/index.html">Documentaries</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Perspective</h4>
-          <ul>
-            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </footer>
+    </nav>
 
-  <script src="js/main.js"></script>
-  <script src="js/drawer.js"></script>
-  <script src="js/topic-nav.js"></script>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/drawer.js"></script>
+<script src="js/topic-nav.js"></script>
 </body>
 </html>

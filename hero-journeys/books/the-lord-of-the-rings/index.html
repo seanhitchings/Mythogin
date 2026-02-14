@@ -6,237 +6,527 @@
   <base href="/">
 
   <title>Mythogin — The Lord of the Rings</title>
-  <meta name="description" content="The Lord of the Rings on Mythogin: power, pity, and the making of a world — critique, fix, impact." />
-  
+  <meta name="description"
+        content="The Lord of the Rings on Mythogin: power, pity, and the making of a world — the Ring as spiritual corrosion, mercy as the hinge of history, and the long defeat as a discipline of hope — critique, fix, impact." />
+  <!-- FILE LOCATION: /mythogin/hero-journeys/books/lord-of-the-rings/index.html -->
+
+  <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/topic-nav.css">
   <link rel="stylesheet" href="css/components/utilities.css">
   <link rel="stylesheet" href="css/components/story-card.css">
   <link rel="stylesheet" href="css/components/drawer.css">
+
+  <!-- Accordion (shared component) -->
   <link rel="stylesheet" href="css/components/accordion.css">
 </head>
 
 <body class="story story--books">
 
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary" data-nav>
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
+          <a class="nav-link"
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats" data-topic-slug="books">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html" data-topic-slug="books">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/economics/index.html">Economics</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-    <a class="nav-link" href="perspective/index.html" aria-haspopup="true" aria-expanded="false" data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is">About</a>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-        </nav>
-      </div>
+      </nav>
+
     </div>
   </div>
+</div>
 
-  <main class="story">
+<main class="story">
 
-    <section class="topics-hero story-hero" aria-label="Story hero">
-      <div class="container">
-        <div class="topics-hero-card story-hero-card bleed-pad">
-          <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/books/lotr.webp" alt="" loading="eager" decoding="async">
-            <div class="topics-hero-overlay"></div>
-          </div>
-          <div class="topics-hero-content story-hero-content">
-            <p class="story-kicker">Books</p>
-            <h1 class="topics-hero-title">The Lord of the Rings</h1>
-            <p class="topics-hero-lead">
-              The ultimate test of power: not whether you can seize it, but whether you can refuse it.
-            </p>
-            <div class="story-meta">
-              <span class="chip">Critique</span>
-              <span class="chip chip--muted">Fix</span>
-              <span class="chip chip--muted">Impact</span>
-            </div>
-          </div>
+  <!-- HERO -->
+  <section class="topics-hero story-hero" aria-label="Story hero">
+    <div class="container">
+      <div class="topics-hero-card story-hero-card bleed-pad">
+
+        <div class="topics-hero-media story-hero-media" aria-hidden="true">
+          <img src="images/topics/books/the-lord-of-the-rings.webp" alt="" loading="eager" decoding="async">
+          <div class="topics-hero-overlay"></div>
         </div>
+
+        <div class="topics-hero-content story-hero-content">
+          <p class="story-kicker">Books</p>
+
+          <h1 class="topics-hero-title">The Lord of the Rings</h1>
+
+          <p class="topics-hero-lead">
+            The ultimate test of power is not whether you can seize it—but whether you can refuse it, carry it, and finally let it go.
+          </p>
+
+          <!-- Audio chip -->
+          <div class="audio-chip" aria-label="Audio">
+            <span class="audio-chip-label">Audio</span>
+            <span class="audio-chip-actions">
+              <a class="audio-chip-btn" href="hero-journeys/books/the-lord-of-the-rings/audio.mp3" aria-label="Listen to audio">Listen</a>
+              <a class="audio-chip-btn" href="hero-journeys/books/the-lord-of-the-rings/audio.mp3" download aria-label="Download audio">Download</a>
+            </span>
+          </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider" aria-hidden="true"></div>
+  <div class="divider" aria-hidden="true"></div>
 
-    <section class="story-body" aria-label="Essay">
-      <div class="container">
-        <div class="story-layout story-layout--toc">
+  <!-- BODY + TOC RAIL -->
+  <section class="story-body" aria-label="Essay">
+    <div class="container">
 
-          <article class="story-article">
+      <div class="story-layout story-layout--toc">
 
-            <section class="story-section section-card card--surface bleed-pad" id="intro">
-              <header class="section-head">
-                <h2 class="section-title">Intro</h2>
-                <p class="section-sub">A study of institutional power vs. the individual conscience.</p>
-              </header>
-              <p>Tolkien’s work is a foundational myth of the modern age, exploring the necessity of the "long defeat" and the power of pity.</p>
-            </section>
+        <!-- Article -->
+        <article class="story-article">
 
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
-              <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the story diagnoses.</p>
-              </header>
-              <div class="accordion accordion--tight accordion--spaced">
-                <details class="accordion-item" id="critique-power" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Power as spiritual corrosion</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>The Ring functions as an externalized ego. To use it is to vanish from the moral world and reappear in a world of shadows, where only the will to dominate exists...</p>
-                  </div>
-                </details>
-                <details class="accordion-item" id="critique-pity">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Pity as a moral key</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Pity is the only force capable of breaking the deterministic cycle of power. By sparing Gollum, the characters introduce a variable that the logic of Mordor cannot compute.</p>
-                  </div>
-                </details>
-              </div>
-            </section>
+          <!-- Intro -->
+          <section class="story-section section-card card--surface bleed-pad" id="intro">
+            <header class="section-head">
+              <h2 class="section-title">Intro</h2>
+              <p class="section-sub">
+                Tolkien builds a myth of moral gravity: not “good guys vs bad guys,” but a world where choices leave residues,
+                mercy has consequences, and victory can still feel like loss.
+              </p>
+            </header>
 
-            <section class="story-section section-card card--surface bleed-pad" id="fix">
-              <header class="section-head">
-                <h2 class="section-title">Fix</h2>
-                <p class="section-sub">How to preserve the engine without flattening it.</p>
-              </header>
-              <div class="accordion accordion--tight accordion--spaced">
-                <details class="accordion-item" id="fix-worldbuilding" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Worldbuilding that serves meaning</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Every ruin in Middle-earth should tell a story of what was lost, ensuring the scale of the world reinforces the theme of the "long defeat."</p>
-                  </div>
-                </details>
-              </div>
-            </section>
+            <p>
+              <em>The Lord of the Rings</em> is a story about power precisely because its hero is not a conqueror. Frodo does not “earn” the Ring by strength,
+              nor does he “solve” it by force. He carries it until it changes him—because that is what corrupt power does: it makes itself feel necessary.
+              The true heroism is endurance, and the true miracle is pity.
+            </p>
 
-            <section class="story-section section-card card--surface bleed-pad" id="impact">
-              <header class="section-head">
-                <h2 class="section-title">Impact</h2>
-                <p class="section-sub">What it reveals about culture.</p>
-              </header>
-              <div class="accordion accordion--tight accordion--spaced">
-                <details class="accordion-item" id="impact-epic" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Epic as meaning-machine</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Tolkien redefined fantasy not as an escape from reality, but as a recovery of a clearer perspective on it.</p>
-                  </div>
-                </details>
-              </div>
-            </section>
+            <p>
+              Mythogin’s angle: the book is an anatomy of domination. The Ring is not a weapon you wield; it is a relationship you enter.
+              The closer you get to using it “for good,” the closer you become to Mordor’s logic. Middle-earth is a moral ecosystem,
+              and its deepest law is simple: evil does not create. It consumes.
+            </p>
+          </section>
 
-            <div class="divider" aria-hidden="true"></div>
+          <!-- Critique -->
+          <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <header class="section-head">
+              <h2 class="section-title">Critique</h2>
+              <p class="section-sub">What Tolkien diagnoses — and why the diagnosis still outclasses most modern epics.</p>
+            </header>
 
-            <section class="topic-nav-surface topic-nav-surface--story" 
-                     aria-label="Book navigation" 
-                     data-topic-nav="books" 
-                     data-topic-slug="lord-of-the-rings">
-              
-              <div class="topic-nav-bg" aria-hidden="true">
-                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
-              </div>
+            <div class="accordion accordion--tight accordion--spaced">
 
-              <div class="topic-nav-card">
-                <nav class="crumbs" aria-label="Breadcrumb">
-                  <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="#" data-crumb-section-link><span data-crumb-section-text>Books</span></a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a aria-current="page" data-crumb-current>The Lord of the Rings</a></li>
-                  </ol>
-                </nav>
+              <details class="accordion-item" id="critique-ring-corrosion" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Power as spiritual corrosion</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The Ring is the cleanest metaphor for corrupt power because it is not just temptation—it is <em>acceleration</em>.
+                    It amplifies your will while narrowing your conscience. It does not ask you to be evil; it asks you to be “practical.”
+                    And once you accept its terms, you start to vanish from the shared moral world—into a private world of necessity.
+                  </p>
+                </div>
+              </details>
 
-                <div class="pager" aria-label="Book navigation">
-                  <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#">
-                      <span class="arrow" aria-hidden="true">←</span>
-                      <span class="meta"><span class="kicker">Previous</span><span class="title" data-prev-title>Loading…</span></span>
+              <details class="accordion-item" id="critique-pity-hinge">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Pity as the hinge of history</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Tolkien’s most radical claim is that mercy is not a sentimental extra—it is a strategic property of reality.
+                    Sparing Gollum introduces a variable Mordor cannot compute: compassion toward the broken.
+                    Evil cannot imagine mercy because it cannot imagine value outside utility. That blind spot becomes its undoing.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-long-defeat">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">The long defeat and disciplined hope</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Middle-earth is full of ruins because the world has been losing for a long time. Yet the book refuses nihilism.
+                    It treats hope as a practice: keep faith with what is good even when you cannot guarantee outcomes.
+                    That is why the story feels older than modern “win conditions.” It is not about victory. It is about fidelity.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-world-memory">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Worldbuilding as memory, not decoration</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Tolkien’s detail isn’t “lore flexing.” It is a philosophy of time. Songs, names, and genealogies are there to show
+                    that lives matter beyond the plot. The world doesn’t exist for the heroes; the heroes exist inside a world that will outlast them.
+                    That scale is what turns sacrifice into something real.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+
+            <ul class="story-bullets">
+              <li><strong>The Ring</strong> is a relationship: power that narrows the soul while expanding the will.</li>
+              <li><strong>Mercy</strong> is the hidden mechanism: pity breaks deterministic domination.</li>
+              <li><strong>Mythic time</strong> gives weight: the story is built on loss, memory, and endurance.</li>
+            </ul>
+          </section>
+
+          <!-- Fix -->
+          <section class="story-section section-card card--surface bleed-pad" id="fix">
+            <header class="section-head">
+              <h2 class="section-title">Fix</h2>
+              <p class="section-sub">How to preserve the engine without flattening it: keep the sacred pressure, keep the cost, keep the quiet.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="fix-refuse-modern-cynicism" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Refuse modern cynicism as “realism”</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Tolkien’s moral clarity is not childish—it is deliberate. The fix for modern retellings is simple:
+                    do not “improve” the story by making everyone compromised. The point is that compromise is precisely what the Ring offers.
+                    Keep at least a few characters oriented toward the good without irony, or the entire metaphysic collapses.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-show-cost-of-good">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Show the cost of goodness</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The book already does this, but readers often miss it: the good does not “win” cleanly.
+                    Frodo is wounded beyond repair; the Shire is scarred; the elves depart. If you want to sharpen Tolkien,
+                    emphasize that the price of resisting power is often permanent change.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-lore-as-theology">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Treat lore as theology: every detail should point to meaning</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The best way to adapt or analyze Tolkien is to read “worldbuilding” as moral education.
+                    Ruins teach humility. Songs teach continuity. Languages teach that people are shaped by what they honor.
+                    Keep the details that reinforce this—and trim only what does not.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-pity-not-weakness">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Make pity legible as strength, not softness</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    In a culture trained to admire dominance, pity can read as naiveté. The fix is framing:
+                    mercy is a kind of foresight—recognition that the world cannot be healed by becoming what you hate.
+                    That is why Gandalf’s warnings matter: not because he is “kind,” but because he understands power’s math.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <!-- Impact -->
+          <section class="story-section section-card card--surface bleed-pad" id="impact">
+            <header class="section-head">
+              <h2 class="section-title">Impact</h2>
+              <p class="section-sub">Why it still matters: power, ecology, memory, and the cultural hunger for meaning-machines.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="impact-epic-meaning" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Epic as a meaning-machine</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Tolkien redefined fantasy as “recovery”: a way to see reality with cleansed eyes.
+                    That’s why the work endures. It doesn’t just entertain—it trains perception:
+                    what matters, what corrupts, what heals, and what must sometimes be surrendered.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-modern-power">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Modern power still offers the Ring</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The Ring’s logic is timeless: “Take control, fix it fast, enforce the good.”
+                    Tolkien’s warning is that the means become the end. The seduction is not evil—
+                    it is the belief that domination can be purified. The story remains a vaccine against that belief.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-pity-and-future">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Mercy as cultural survival</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    In a world sliding toward algorithmic cruelty, Tolkien’s insistence on pity is not quaint—it is urgent.
+                    The future is not secured by purges; it is secured by restraint, memory, and compassion toward the fallen—
+                    because every society eventually produces Gollums, and must decide what to do with them.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <!-- Bottom page navigation -->
+          <section class="topic-nav-surface topic-nav-surface--story"
+                   aria-label="Book navigation"
+                   data-topic-nav="books"
+                   data-topic-slug="lord-of-the-rings">
+
+            <div class="topic-nav-bg" aria-hidden="true">
+              <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="topic-nav-card">
+
+              <nav class="crumbs" aria-label="Breadcrumb">
+                <ol class="crumbs-list">
+                  <li class="crumb"><a href="home.html">Home</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb"><a href="hero-journeys/index.html" data-crumb-topics>Hero-Journeys</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb">
+                    <a href="#" data-crumb-section-link>
+                      <span data-crumb-section-text>Books</span>
                     </a>
-                    <a class="pager-next" data-pager-next href="#">
-                      <span class="meta"><span class="kicker">Next</span><span class="title" data-next-title>Loading…</span></span>
-                      <span class="arrow" aria-hidden="true">→</span>
-                    </a>
-                  </div>
+                  </li>
+
+                  <li class="sep" aria-hidden="true">›</li>
+                  <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                </ol>
+              </nav>
+
+              <div class="pager" aria-label="Book navigation">
+                <div class="pager-edges">
+
+                  <a class="pager-prev" data-pager-prev href="#">
+                    <span class="arrow" aria-hidden="true">←</span>
+                    <span class="meta">
+                      <span class="kicker">Previous</span>
+                      <span class="title" data-prev-title>Loading…</span>
+                    </span>
+                  </a>
+
+                  <a class="pager-next" data-pager-next href="#">
+                    <span class="meta">
+                      <span class="kicker">Next</span>
+                      <span class="title" data-next-title>Loading…</span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">→</span>
+                  </a>
+
                 </div>
               </div>
-            </section>
-          </article>
 
-          <aside class="story-aside" aria-label="On this page">
-            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
-              On this page <span class="nav-caret" aria-hidden="true">▾</span>
-            </button>
-            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
-              <div class="toc-panel-head">
-                <h3 class="toc-panel-title">On this page</h3>
-                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
-              </div>
-              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
             </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
+          </section>
 
-  <script src="js/main.js"></script>
-  <script src="js/drawer.js"></script>
-  <script src="js/topic-nav.js"></script>
+        </article>
+
+        <!-- Right rail TOC -->
+        <aside class="story-aside" aria-label="On this page">
+          <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+            On this page <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+
+          <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+            <div class="toc-panel-head">
+              <h3 class="toc-panel-title">On this page</h3>
+              <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+            </div>
+
+            <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <div class="footer-col">
+        <h4><a href="index.html">Mythogin</a></h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search/index.html">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/hero-journeys/books/index.html">Books</a></li>
+            <li><a href="/hero-journeys/films/index.html">Films</a></li>
+            <li><a href="/hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="/hero-journeys/games/index.html">Games</a></li>
+            <li><a href="/hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/drawer.js"></script>
+<script src="js/topic-nav.js"></script>
 </body>
 </html>

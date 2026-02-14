@@ -6,8 +6,9 @@
   <base href="/">
 
   <title>Mythogin — The Odyssey</title>
-  <meta name="description" content="The Odyssey on Mythogin: homecoming, identity, temptation, and endurance — critique, fix, impact." />
-  <!-- FILE LOCATION: /Mythogin/topics/books/the-odyssey/index.html -->
+  <meta name="description"
+        content="The Odyssey on Mythogin: homecoming, identity, temptation, and endurance — memory as survival, cunning tempered by humility, and the household as a moral order that must be restored — critique, fix, impact." />
+  <!-- FILE LOCATION: /mythogin/hero-journeys/books/the-odyssey/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -16,7 +17,7 @@
 
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/topic-nav.css">
@@ -30,405 +31,500 @@
 
 <body class="story story--books">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
-          </a>
-        </div>
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
 
-        <nav class="navlinks" aria-label="Primary">
+      <nav class="navlinks" aria-label="Primary">
 
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
           <a class="nav-link"
-             href="recommendations.html"
-             data-tip="What to read, watch, or play next">
-            Recommendations
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
+        </div>
+
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
           <a class="nav-link"
-             href="features.html"
-             data-tip="Multimedia presentations & debates">
-            Features
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="/herojourneys/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/economics/index.html">Economics</a>
           </div>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="perspective/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
-
-          <a class="nav-link"
-             href="about.html"
-             data-tip="What Mythogin is and who its for">
-            About
-          </a>
-
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
-
-      </div>
-    </div>
-  </div>
-
-  <main class="story">
-
-    <!-- HERO -->
-    <section class="topics-hero story-hero" aria-label="Story hero">
-      <div class="container">
-        <div class="topics-hero-card story-hero-card bleed-pad">
-
-          <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/books/theodyssey.webp" alt="" loading="eager" decoding="async">
-            <div class="topics-hero-overlay"></div>
-          </div>
-
-          <div class="topics-hero-content story-hero-content">
-            <p class="story-kicker">Books</p>
-
-            <h1 class="topics-hero-title">The Odyssey</h1>
-
-            <p class="topics-hero-lead">
-              A man tries to return home—and finds that “home” is an identity that must be won back from monsters, gods, and time.
-            </p>
-
-            <div class="story-meta">
-              <span class="chip">Critique</span>
-              <span class="chip chip--muted">Fix</span>
-              <span class="chip chip--muted">Impact</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="divider" aria-hidden="true"></div>
-
-    <!-- BODY + TOC RAIL -->
-    <section class="story-body" aria-label="Essay">
-      <div class="container">
-
-        <div class="story-layout story-layout--toc">
-
-          <!-- Article -->
-          <article class="story-article">
-
-            <!-- Intro (leave as normal content) -->
-            <section class="story-section section-card card--surface bleed-pad" id="intro">
-              <header class="section-head">
-                <h2 class="section-title">Intro</h2>
-                <p class="section-sub">
-                  Homer’s epic is not “adventure” in the modern sense—it’s moral navigation: desire vs duty, cleverness vs reverence, survival vs integrity.
-                </p>
-              </header>
-
-              <p>
-                Replace this with your intro. Keep paragraphs short and concrete; let each claim land cleanly.
-              </p>
-            </section>
-
-            <!-- Critique (accordion inside) -->
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
-              <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the poem gets exactly right—and what people misread when they flatten it into “mythic episodes.”</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="critique-home-and-name" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Home is a name you must earn</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="critique-cunning-and-hubris">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Cunning vs hubris</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="critique-temptation">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Temptation as self-erasure</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-              </div>
-
-              <ul class="story-bullets">
-                <li><strong>Monsters</strong> aren’t random obstacles—they’re moral tests in costume.</li>
-                <li><strong>The sea</strong> is time and consequence: you can’t argue with it, only endure it.</li>
-                <li><strong>Return</strong> is restoration: the household must be re-aligned, not merely reclaimed.</li>
-              </ul>
-            </section>
-
-            <!-- Fix (accordion inside) -->
-            <section class="story-section section-card card--surface bleed-pad" id="fix">
-              <header class="section-head">
-                <h2 class="section-title">Fix</h2>
-                <p class="section-sub">How to present the Odyssey so it hits modern readers without dumbing it down.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="fix-frame" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Frame the journey as moral math</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="fix-penelope">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Give Penelope full weight</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="fix-tele-machus">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Make Telemachus’ arc explicit</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-              </div>
-            </section>
-
-            <!-- Impact (accordion inside) -->
-            <section class="story-section section-card card--surface bleed-pad" id="impact">
-              <header class="section-head">
-                <h2 class="section-title">Impact</h2>
-                <p class="section-sub">Why this survives: identity, return, and the fight against meaning-dissolution.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="impact-identity" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Identity is a practice</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="impact-homecoming">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Homecoming as restoration</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="impact-meaning-under-pressure">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Meaning under pressure</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Connect it to your Mythogin throughline: meaning collapse, ethics under scale, institutions vs conscience.</p>
-                  </div>
-                </details>
-
-              </div>
-            </section>
-
-            <div class="divider" aria-hidden="true"></div>
-
-            <!-- Bottom page navigation (inside article column) -->
-            <section class="topic-nav-surface topic-nav-surface--story" aria-label="Book navigation" data-nav>
-              <div class="topic-nav-bg" aria-hidden="true">
-                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
-              </div>
-
-              <div class="topic-nav-card">
-                <nav class="crumbs" aria-label="Breadcrumb">
-                  <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/">Hero Journeys</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a href="/herojourneys/">Books</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a aria-current="page">The Odyssey</a></li>
-                  </ol>
-                </nav>
-
-                <div class="pager" aria-label="Book navigation">
-                  <a class="pager-back" href="/herojourneys/">Back</a>
-
-                  <div class="pager-edges">
-                    <a class="pager-prev" href="/herojourneys/books/the-dark-is-rising/index.html">
-                      <span class="arrow" aria-hidden="true">←</span>
-                      <span class="meta">
-                        <span class="kicker">Previous</span>
-                        <span class="title">The Dark Is Rising</span>
-                      </span>
-                    </a>
-
-                    <a class="pager-next" href="/herojourneys/books/wizard-of-earthsea/index.html">
-                      <span class="meta">
-                        <span class="kicker">Next</span>
-                        <span class="title">Wizard of Earthsea</span>
-                      </span>
-                      <span class="arrow" aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-          </article>
-
-          <!-- Right rail TOC -->
-          <aside class="story-aside" aria-label="On this page">
-            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
-              On this page <span class="nav-caret" aria-hidden="true">▾</span>
-            </button>
-
-            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
-              <div class="toc-panel-head">
-                <h3 class="toc-panel-title">On this page</h3>
-                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
-              </div>
-
-              <!-- JS will populate -->
-              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
-            </div>
-          </aside>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-
-      <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer navigation">
-
-        <div class="footer-col">
-          <h4>Mythogin</h4>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
-          </ul>
-        </div>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-        <div class="footer-col">
-          <h4>Hero-Journeys</h4>
-          <ul>
-            <li><a href="herojourneys/books/index.html">Books</a></li>
-            <li><a href="herojourneys/film/index.html">Film</a></li>
-            <li><a href="herojourneys/tv/index.html">TV</a></li>
-            <li><a href="herojourneys/games/index.html">Games</a></li>
-            <li><a href="herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="herojourneys/documentaries/index.html">Documentaries</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Perspective</h4>
-          <ul>
-            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
-          </ul>
-        </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
       </nav>
 
     </div>
-  </footer>
+  </div>
+</div>
 
-  <script src="js/main.js"></script>
-  <script src="js/drawer.js"></script>
+<main class="story">
+
+  <!-- HERO -->
+  <section class="topics-hero story-hero" aria-label="Story hero">
+    <div class="container">
+      <div class="topics-hero-card story-hero-card bleed-pad">
+
+        <div class="topics-hero-media story-hero-media" aria-hidden="true">
+          <img src="images/topics/books/the-odyssey.webp" alt="" loading="eager" decoding="async">
+          <div class="topics-hero-overlay"></div>
+        </div>
+
+        <div class="topics-hero-content story-hero-content">
+          <p class="story-kicker">Books</p>
+
+          <h1 class="topics-hero-title">The Odyssey</h1>
+
+          <p class="topics-hero-lead">
+            A man tries to return home—and discovers that “home” is an identity that must be won back from monsters, gods, and time.
+          </p>
+
+          <!-- Audio chip -->
+          <div class="audio-chip" aria-label="Audio">
+            <span class="audio-chip-label">Audio</span>
+            <span class="audio-chip-actions">
+              <a class="audio-chip-btn" href="hero-journeys/books/the-odyssey/audio.mp3" aria-label="Listen to audio">Listen</a>
+              <a class="audio-chip-btn" href="hero-journeys/books/the-odyssey/audio.mp3" download aria-label="Download audio">Download</a>
+            </span>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- BODY + TOC RAIL -->
+  <section class="story-body" aria-label="Essay">
+    <div class="container">
+
+      <div class="story-layout story-layout--toc">
+
+        <!-- Article -->
+        <article class="story-article">
+
+          <!-- Intro -->
+          <section class="story-section section-card card--surface bleed-pad" id="intro">
+            <header class="section-head">
+              <h2 class="section-title">Intro</h2>
+              <p class="section-sub">
+                Homer’s epic is not “adventure” in the modern sense—it’s moral navigation: desire vs duty, cleverness vs reverence,
+                survival vs integrity.
+              </p>
+            </header>
+
+            <p>
+              To read the <em>Odyssey</em> is to watch the hero become a discipline. Odysseus is <em>polytropos</em>—“many-turning,” adaptable,
+              inventive, dangerous to himself. He survives by mind more than muscle, but his mind is not automatically virtue; it must be
+              trained by consequence.
+            </p>
+
+            <p>
+              Mythogin’s angle: the poem is about memory as survival. Every temptation in the <em>Odyssey</em> is a form of forgetting—forgetting
+              the purpose of the return, the obligations of the household, and the limits of the self. The journey is long because the soul
+              is slow to stabilize.
+            </p>
+          </section>
+
+          <!-- Critique -->
+          <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <header class="section-head">
+              <h2 class="section-title">Critique</h2>
+              <p class="section-sub">What the poem gets exactly right—and what people miss when they flatten it into “episodic adventure.”</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="critique-home-name" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Home is a name you must earn</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Odysseus becomes “No-man” to survive—but the poem’s arc is the reconstruction of his name, role, and household.
+                    Homer’s claim is harsh and modern: identity is not a feeling. It’s a structure that must be defended against entropy,
+                    parasites, and time.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-cunning-hubris">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Cunning vs hubris</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Cunning saves him—until ego ruins the savings. The Cyclops episode turns on one error: Odysseus shouts his name.
+                    The point isn’t “pride is bad” as a moral bumper sticker; it’s that self-display is expensive. Vanity creates enemies
+                    you didn’t need. Identity must be timed.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-temptation-erasure">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Temptation as self-erasure</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The Lotus-Eaters, Circe, Calypso, the Sirens: different masks of one danger—forgetting the return.
+                    Comfort is not innocent here. It dissolves purpose. Homer understands the enemy of meaning isn’t tragedy.
+                    It’s drift.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-household-order">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">The household as moral order</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Ithaca is not “the prize.” It’s the standard. The suitors aren’t romantic rivals; they’re a civic infection—
+                    consumption without contribution. The poem treats the restoration of order as sacred work: a world where obligation dies
+                    becomes a world where anything can be taken.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+
+            <ul class="story-bullets">
+              <li><strong>Monsters</strong> are moral tests in costume.</li>
+              <li><strong>The sea</strong> is time and consequence: you don’t negotiate with it, you endure it.</li>
+              <li><strong>Return</strong> is restoration: a household must be re-aligned, not merely reclaimed.</li>
+            </ul>
+          </section>
+
+          <!-- Fix -->
+          <section class="story-section section-card card--surface bleed-pad" id="fix">
+            <header class="section-head">
+              <h2 class="section-title">Fix</h2>
+              <p class="section-sub">How to present the Odyssey for modern readers without domesticating it.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="fix-moral-math" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Frame the journey as moral math</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The gods can feel “unfair” if read as characters with random moods. A better frame: divine forces as personified laws—
+                    appetite, pride, hospitality, vengeance, protection. Then each episode becomes legible: Odysseus doesn’t merely “get unlucky.”
+                    He violates a rule of reality and pays.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-penelope-weight">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Give Penelope full weight</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Penelope is not passive. Her weaving is strategy: time-making, boundary-keeping, pressure management.
+                    If Odysseus fights monsters on the sea, Penelope fights social collapse at home. A strong reading treats them as parallel
+                    practitioners of endurance.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-telemachy">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Make Telemachus’ arc explicit</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The Telemachy is not a prelude—it’s the stake. A father must return because the household is where the next generation learns
+                    what “a man” is. When the house is ruled by parasites, identity cannot form; it can only imitate power.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-violence-context">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Explain the violence without apologizing for it</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Modern readers often recoil at the ending. The fix isn’t to soften it; it’s to clarify the poem’s moral world:
+                    hospitality is sacred law, the suitors are an occupation, and the household is a microcosm of order.
+                    The reckoning is not “personal revenge.” It is restoration.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <!-- Impact -->
+          <section class="story-section section-card card--surface bleed-pad" id="impact">
+            <header class="section-head">
+              <h2 class="section-title">Impact</h2>
+              <p class="section-sub">Why this survives: identity, temptation, and the fight against meaning-dissolution.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="impact-identity-practice" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Identity is a practice</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The <em>Odyssey</em> teaches that we are not who we claim to be, but who we remain under pressure.
+                    It establishes a Western template: the self as an agent who must actively preserve meaning against drift, comfort, and chaos.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-memory">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Memory as survival technology</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Homer is already diagnosing a modern problem: when memory collapses, manipulation becomes easy.
+                    The epic’s answer is ritual and story—reminders of who you are and what you owe.
+                    Odysseus survives by not forgetting Ithaca inside himself.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-homecoming">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Homecoming as moral restoration</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    “Return” becomes one of civilization’s deepest metaphors: the journey is not complete when you arrive,
+                    but when the world is re-aligned—relationships repaired, boundaries restored, obligations honored.
+                    The final act is not travel. It’s re-ordering.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <!-- Bottom page navigation -->
+          <section class="topic-nav-surface topic-nav-surface--story"
+                   aria-label="Book navigation"
+                   data-topic-nav="books"
+                   data-topic-slug="the-odyssey">
+
+            <div class="topic-nav-bg" aria-hidden="true">
+              <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="topic-nav-card">
+
+              <nav class="crumbs" aria-label="Breadcrumb">
+                <ol class="crumbs-list">
+                  <li class="crumb"><a href="home.html">Home</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb"><a href="hero-journeys/index.html" data-crumb-topics>Hero-Journeys</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb">
+                    <a href="#" data-crumb-section-link>
+                      <span data-crumb-section-text>Books</span>
+                    </a>
+                  </li>
+
+                  <li class="sep" aria-hidden="true">›</li>
+                  <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                </ol>
+              </nav>
+
+              <div class="pager" aria-label="Book navigation">
+                <div class="pager-edges">
+
+                  <a class="pager-prev" data-pager-prev href="#">
+                    <span class="arrow" aria-hidden="true">←</span>
+                    <span class="meta">
+                      <span class="kicker">Previous</span>
+                      <span class="title" data-prev-title>Loading…</span>
+                    </span>
+                  </a>
+
+                  <a class="pager-next" data-pager-next href="#">
+                    <span class="meta">
+                      <span class="kicker">Next</span>
+                      <span class="title" data-next-title>Loading…</span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">→</span>
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </article>
+
+        <!-- Right rail TOC -->
+        <aside class="story-aside" aria-label="On this page">
+          <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+            On this page <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+
+          <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+            <div class="toc-panel-head">
+              <h3 class="toc-panel-title">On this page</h3>
+              <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+            </div>
+
+            <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <div class="footer-col">
+        <h4><a href="index.html">Mythogin</a></h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search/index.html">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+        <div class="footer-col">
+          <h4>Hero-Journeys</h4>
+          <ul>
+            <li><a href="/hero-journeys/books/index.html">Books</a></li>
+            <li><a href="/hero-journeys/films/index.html">Films</a></li>
+            <li><a href="/hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="/hero-journeys/games/index.html">Games</a></li>
+            <li><a href="/hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="/hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/drawer.js"></script>
+<script src="js/topic-nav.js"></script>
 </body>
 </html>

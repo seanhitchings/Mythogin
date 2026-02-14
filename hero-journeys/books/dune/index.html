@@ -6,8 +6,8 @@
   <base href="/">
 
   <title>Mythogin — Dune</title>
-  <meta name="description" content="Dune on Mythogin: power disguised as destiny, messiah-making, and the ecology of control — critique, fix, impact." />
-  <!-- FILE LOCATION: /herojourneys/books/dune/index.html -->
+  <meta name="description" content="Dune on Mythogin: power, prophecy, ecology, and the moral cost of empire — critique, fix, impact." />
+  <!-- FILE LOCATION: /mythogin/hero-journeys/books/dune/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -16,7 +16,7 @@
 
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/topic-nav.css">
@@ -30,83 +30,86 @@
 
 <body class="story story--books">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys (canonical: hero-journeys) -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
+
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
+          </div>
         </div>
 
-        <nav class="navlinks" aria-label="Primary">
-
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
           <a class="nav-link"
-             href="recommendations.html"
-             data-tip="What to read, watch, or play next">
-            Recommendations
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
 
-          <a class="nav-link"
-             href="features.html"
-             data-tip="Multimedia presentations & debates">
-            Features
-          </a>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="/herojourneys/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/economics/index.html">Economics</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link"
-               href="perspective/index.html"
-               aria-haspopup="true"
-               aria-expanded="false"
-               data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
-          </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-          <a class="nav-link"
-             href="about.html"
-             data-tip="What Mythogin is and who its for">
-            About
-          </a>
+      </nav>
 
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search"
-                   placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-
-        </nav>
-
-      </div>
     </div>
   </div>
+</div>
 
   <main class="story">
 
@@ -126,14 +129,16 @@
             <h1 class="topics-hero-title">Dune</h1>
 
             <p class="topics-hero-lead">
-              A warning masquerading as prophecy: charisma, religion, and ecology fuse into a machine that devours even its chosen one.
+              Power learns to wear prophecy: ecology, empire, and the moral cost of winning.
             </p>
 
-            <div class="story-meta">
-              <span class="chip">Critique</span>
-              <span class="chip chip--muted">Fix</span>
-              <span class="chip chip--muted">Impact</span>
-            </div>
+          <!-- Audio chip -->
+          <div class="audio-chip" aria-label="Audio">
+            <span class="audio-chip-label">Audio</span>
+            <span class="audio-chip-actions">
+              <a class="audio-chip-btn" href="hero-journeys/books/dune/audio.mp3" aria-label="Listen to audio">Listen</a>
+              <a class="audio-chip-btn" href="hero-journeys/books/dune/audio.mp3" download aria-label="Download audio">Download</a>
+            </span>
           </div>
 
         </div>
@@ -156,16 +161,16 @@
               <header class="section-head">
                 <h2 class="section-title">Intro</h2>
                 <p class="section-sub">
-                  Herbert builds a world where “destiny” is manufactured: incentives, scarcity, myth-engineering, and fear align until people call it fate.
+                  Replace this with your intro. Keep paragraphs short and concrete; let each claim land cleanly.
                 </p>
               </header>
 
               <p>
-                Use this page to connect Dune to your Mythogin throughline: meaning collapses when power hijacks the sacred, and survival becomes a justification for domination.
+                ...
               </p>
             </section>
 
-            <!-- Critique (accordion inside) -->
+            <!-- Critique -->
             <section class="story-section section-card card--surface bleed-pad" id="critique">
               <header class="section-head">
                 <h2 class="section-title">Critique</h2>
@@ -174,9 +179,9 @@
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="critique-messiah-machine" open>
+                <details class="accordion-item" id="critique-power-prophecy" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">The messiah machine</h3>
+                    <h3 class="accordion-title">Power and prophecy</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
@@ -184,9 +189,9 @@
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-ecology-control">
+                <details class="accordion-item" id="critique-ecology-empire">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Ecology as control surface</h3>
+                    <h3 class="accordion-title">Ecology as destiny</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
@@ -194,9 +199,9 @@
                   </div>
                 </details>
 
-                <details class="accordion-item" id="critique-institutions">
+                <details class="accordion-item" id="critique-institutions-myth">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Institutions that create inevitability</h3>
+                    <h3 class="accordion-title">Institutions that manufacture belief</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
@@ -205,15 +210,9 @@
                 </details>
 
               </div>
-
-              <ul class="story-bullets">
-                <li><strong>Prophecy</strong> becomes policy: belief is engineered, then exploited.</li>
-                <li><strong>Scarcity</strong> is the lever: the resource defines the ethics people permit.</li>
-                <li><strong>Charisma</strong> is a hazard: awe bypasses judgment and becomes obedience.</li>
-              </ul>
             </section>
 
-            <!-- Fix (accordion inside) -->
+            <!-- Fix -->
             <section class="story-section section-card card--surface bleed-pad" id="fix">
               <header class="section-head">
                 <h2 class="section-title">Fix</h2>
@@ -222,9 +221,9 @@
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="fix-show-cost" open>
+                <details class="accordion-item" id="fix-character-clarity" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Show the cost of “winning” early</h3>
+                    <h3 class="accordion-title">Clarify desire without simplifying</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
@@ -232,19 +231,9 @@
                   </div>
                 </details>
 
-                <details class="accordion-item" id="fix-clarify-choices">
+                <details class="accordion-item" id="fix-structure">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Clarify choice vs trap</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="fix-ground-mystic">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Ground the mystical in consequence</h3>
+                    <h3 class="accordion-title">Structure for long moral weather</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
@@ -255,7 +244,7 @@
               </div>
             </section>
 
-            <!-- Impact (accordion inside) -->
+            <!-- Impact -->
             <section class="story-section section-card card--surface bleed-pad" id="impact">
               <header class="section-head">
                 <h2 class="section-title">Impact</h2>
@@ -264,9 +253,9 @@
 
               <div class="accordion accordion--tight accordion--spaced">
 
-                <details class="accordion-item" id="impact-charisma-politics" open>
+                <details class="accordion-item" id="impact-messiah-trap" open>
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Charisma politics and holy language</h3>
+                    <h3 class="accordion-title">The messiah trap</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
@@ -274,19 +263,9 @@
                   </div>
                 </details>
 
-                <details class="accordion-item" id="impact-systems">
+                <details class="accordion-item" id="impact-scale">
                   <summary class="accordion-summary">
-                    <h3 class="accordion-title">Systems that outlive intentions</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="impact-meaning-collapse">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Meaning collapse as a governance problem</h3>
+                    <h3 class="accordion-title">Ethics under scale</h3>
                     <span class="accordion-caret" aria-hidden="true">▾</span>
                   </summary>
                   <div class="accordion-panel accordion-panel--ruled">
@@ -299,7 +278,7 @@
 
             <div class="divider" aria-hidden="true"></div>
 
-            <!-- Bottom page navigation (inside article column) -->
+            <!-- Bottom page navigation -->
             <section class="topic-nav-surface topic-nav-surface--story"
                      aria-label="Book navigation"
                      data-topic-nav="books"
@@ -313,10 +292,10 @@
 
                 <nav class="crumbs" aria-label="Breadcrumb">
                   <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
+                    <li class="crumb"><a href="home.html">Home</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
+                    <li class="crumb"><a href="hero-journeys/index.html" data-crumb-topics>Hero-Journeys</a></li>
                     <li class="sep" aria-hidden="true">›</li>
 
                     <li class="crumb">
@@ -332,6 +311,7 @@
 
                 <div class="pager" aria-label="Book navigation">
                   <div class="pager-edges">
+
                     <a class="pager-prev" data-pager-prev href="#">
                       <span class="arrow" aria-hidden="true">←</span>
                       <span class="meta">
@@ -347,6 +327,7 @@
                       </span>
                       <span class="arrow" aria-hidden="true">→</span>
                     </a>
+
                   </div>
                 </div>
 
@@ -367,7 +348,6 @@
                 <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
               </div>
 
-              <!-- JS will populate -->
               <nav class="toc-panel-nav" aria-label="Page sections"></nav>
             </div>
           </aside>
@@ -384,53 +364,59 @@
     <div class="container footer-inner">
 
       <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
+        <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+          <div class="footer-name">Mythogin</div>
+          <div class="footer-tagline">creativity · criticism · culture</div>
+        </a>
         <div class="footer-copy">© <span id="year"></span></div>
       </div>
 
       <nav class="footer-nav" aria-label="Footer navigation">
 
         <div class="footer-col">
-          <h4>Mythogin</h4>
+          <h4><a href="index.html">Mythogin</a></h4>
           <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search/index.html">Search</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4><a href="recommendations/index.html">Recommendations</a></h4>
           <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
+            <li><a href="recommendations/index.html">Browse Catalogue</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Hero-Journeys</h4>
+          <h4><a href="features/index.html">Features</a></h4>
           <ul>
-            <li><a href="herojourneys/books/index.html">Books</a></li>
-            <li><a href="herojourneys/film/index.html">Film</a></li>
-            <li><a href="herojourneys/tv/index.html">TV</a></li>
-            <li><a href="herojourneys/games/index.html">Games</a></li>
-            <li><a href="herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="herojourneys/documentaries/index.html">Documentaries</a></li>
+            <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+            <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+            <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+            <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Perspective</h4>
+          <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+          <ul>
+            <li><a href="hero-journeys/books/index.html">Books</a></li>
+            <li><a href="hero-journeys/films/index.html">Films</a></li>
+            <li><a href="hero-journeys/tv/index.html">TV</a></li>
+            <li><a href="hero-journeys/games/index.html">Games</a></li>
+            <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+            <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4><a href="perspective/index.html">Perspective</a></h4>
           <ul>
             <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
           </ul>
         </div>
 

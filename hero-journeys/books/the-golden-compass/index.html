@@ -6,8 +6,9 @@
   <base href="/">
 
   <title>Mythogin — The Golden Compass</title>
-  <meta name="description" content="The Golden Compass on Mythogin: innocence, authority, and cosmic rebellion — critique, fix, impact." />
-  <!-- FILE LOCATION: /herojourneys/books/the-golden-compass/index.html -->
+  <meta name="description"
+        content="The Golden Compass on Mythogin: innocence, authority, and cosmic rebellion — daemons as the visible soul, Dust as awakening, and institutions that fear adulthood — critique, fix, impact." />
+  <!-- FILE LOCATION: /mythogin/hero-journeys/books/the-golden-compass/index.html -->
 
   <!-- Core -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -16,7 +17,7 @@
 
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/hero-topics.css">
   <link rel="stylesheet" href="css/components/card.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/topic-nav.css">
@@ -30,352 +31,499 @@
 
 <body class="story story--books">
 
-  <!-- Shared Nav (same as hubs) -->
-  <div class="topbar">
-    <div class="container container--topbar">
-      <div class="topbar-inner">
+<!-- Shared Nav -->
+<div class="topbar">
+  <div class="container container--topbar">
+    <div class="topbar-inner">
 
-        <div class="brand-main">
-          <a class="name" href="home.html" aria-label="Mythogin">
-            <img class="brand-logo" src="/images/ui/logo.webp" alt="Mythogin">
+      <div class="brand-main">
+        <a class="name" href="home.html" aria-label="Mythogin">
+          <img class="brand-logo" src="images/ui/logo.webp" alt="Mythogin">
+        </a>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+
+        <!-- Recommendations -->
+        <a class="nav-link"
+           href="recommendations/index.html"
+           data-tip="What to read, watch, or play next">
+          Recommendations
+        </a>
+
+        <!-- Features -->
+        <a class="nav-link"
+           href="features/index.html"
+           data-tip="Multimedia presentations & debates">
+          Features
+        </a>
+
+        <!-- Hero-Journeys -->
+        <div class="nav-item has-submenu is-pinned-herojourneys">
+          <a class="nav-link"
+             href="hero-journeys/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="Discover epics in these formats">
+            Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
           </a>
-        </div>
 
-        <nav class="navlinks" aria-label="Primary">
-          <a class="nav-link" href="recommendations.html" data-tip="What to read, watch, or play next">Recommendations</a>
-          <a class="nav-link" href="features.html" data-tip="Multimedia presentations & debates">Features</a>
-
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="/herojourneys/index.html" aria-haspopup="true" aria-expanded="false" data-tip="Discover epics in these formats">
-              Hero-Journeys <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-            <div class="submenu" role="menu" aria-label="Topics categories">
-              <a role="menuitem" href="herojourneys/books/index.html">Books</a>
-              <a role="menuitem" href="herojourneys/film/index.html">Film</a>
-              <a role="menuitem" href="herojourneys/tv/index.html">TV</a>
-              <a role="menuitem" href="herojourneys/games/index.html">Games</a>
-              <a role="menuitem" href="herojourneys/podcasts/index.html">Podcasts</a>
-              <a role="menuitem" href="herojourneys/documentaries/index.html">Documentaries</a>
-            </div>
+          <div class="submenu" role="menu" aria-label="Topics categories">
+            <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
+            <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
+            <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
+            <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
+            <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
+            <a role="menuitem" href="hero-journeys/documentaries/index.html">Documentaries</a>
           </div>
+        </div>
 
-          <div class="nav-item has-submenu">
-            <a class="nav-link" href="perspective/index.html" aria-haspopup="true" aria-expanded="false" data-tip="How meaning is created or lost">
-              Perspective <span class="nav-caret" aria-hidden="true">▾</span>
-            </a>
-            <div class="submenu" role="menu" aria-label="Perspective sections">
-              <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
-            </div>
+        <!-- Perspective -->
+        <div class="nav-item has-submenu is-pinned-perspective">
+          <a class="nav-link"
+             href="perspective/index.html"
+             aria-haspopup="true"
+             aria-expanded="false"
+             data-tip="How meaning is created or lost">
+            Perspective <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+
+          <div class="submenu" role="menu" aria-label="Perspective sections">
+            <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
+            <a role="menuitem" href="perspective/economics/index.html">Economics</a>
           </div>
-
-          <a class="nav-link" href="about.html" data-tip="What Mythogin is and who its for">About</a>
-
-          <form class="nav-search" role="search" action="topics.html" method="get">
-            <label class="sr-only" for="q">Search topics</label>
-            <input id="q" name="q" class="nav-search-input" type="search" placeholder="Search topics…" autocomplete="off" />
-            <button class="nav-search-btn" type="submit">Search</button>
-          </form>
-        </nav>
-
-      </div>
-    </div>
-  </div>
-
-  <main class="story">
-
-    <!-- HERO -->
-    <section class="topics-hero story-hero" aria-label="Story hero">
-      <div class="container">
-        <div class="topics-hero-card story-hero-card bleed-pad">
-
-          <div class="topics-hero-media story-hero-media" aria-hidden="true">
-            <img src="images/topics/books/golden-compass.webp" alt="" loading="eager" decoding="async">
-            <div class="topics-hero-overlay"></div>
-          </div>
-
-          <div class="topics-hero-content story-hero-content">
-            <p class="story-kicker">Books</p>
-
-            <h1 class="topics-hero-title">The Golden Compass</h1>
-
-            <p class="topics-hero-lead">
-              Childhood courage collides with institutional control—and the cosmos becomes a moral battleground.
-            </p>
-
-            <div class="story-meta">
-              <span class="chip">Critique</span>
-              <span class="chip chip--muted">Fix</span>
-              <span class="chip chip--muted">Impact</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="divider" aria-hidden="true"></div>
-
-    <!-- BODY + TOC RAIL -->
-    <section class="story-body" aria-label="Essay">
-      <div class="container">
-
-        <div class="story-layout story-layout--toc">
-
-          <!-- Article -->
-          <article class="story-article">
-
-            <!-- Intro -->
-            <section class="story-section section-card card--surface bleed-pad" id="intro">
-              <header class="section-head">
-                <h2 class="section-title">Intro</h2>
-                <p class="section-sub">
-                  A journey into the heart of Dust, where the transition from innocence to experience is the ultimate act of resistance.
-                </p>
-              </header>
-
-              <p>
-                Use this page to explore how Pullman uses Lyra's journey to challenge the foundations of authority and the sanctity of the human spirit.
-              </p>
-            </section>
-
-            <!-- Critique (accordion inside) -->
-            <section class="story-section section-card card--surface bleed-pad" id="critique">
-              <header class="section-head">
-                <h2 class="section-title">Critique</h2>
-                <p class="section-sub">What the story diagnoses — and why it still cuts.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="critique-authority" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Authority as spiritual surgery</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Analysis of the Magisterium and the literal/metaphorical severing of the soul...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="critique-daemons">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Daemons and the externalized soul</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>The brilliance of the daemon as a narrative device for character interiority...</p>
-                  </div>
-                </details>
-
-              </div>
-            </section>
-
-            <!-- Fix (accordion inside) -->
-            <section class="story-section section-card card--surface bleed-pad" id="fix">
-              <header class="section-head">
-                <h2 class="section-title">Fix</h2>
-                <p class="section-sub">How to preserve the engine without flattening it.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="fix-moral-edges" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Keep the moral edges sharp</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Avoiding the temptation to simplify the complex gray areas of Lord Asriel or Mrs. Coulter...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="fix-empathy">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Do not sanitize the cost</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>Ensuring the emotional weight of intercision remains visceral to the audience...</p>
-                  </div>
-                </details>
-
-              </div>
-            </section>
-
-            <!-- Impact (accordion inside) -->
-            <section class="story-section section-card card--surface bleed-pad" id="impact">
-              <header class="section-head">
-                <h2 class="section-title">Impact</h2>
-                <p class="section-sub">What it reveals about culture — then and now.</p>
-              </header>
-
-              <div class="accordion accordion--tight accordion--spaced">
-
-                <details class="accordion-item" id="impact-institutions" open>
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Institutions that fear adulthood</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>How the fear of "Dust" mirrors modern anxieties about information and autonomy...</p>
-                  </div>
-                </details>
-
-                <details class="accordion-item" id="impact-mythic">
-                  <summary class="accordion-summary">
-                    <h3 class="accordion-title">Modern myth without cynicism</h3>
-                    <span class="accordion-caret" aria-hidden="true">▾</span>
-                  </summary>
-                  <div class="accordion-panel accordion-panel--ruled">
-                    <p>The power of building a fantasy world that respects the reader's intellect...</p>
-                  </div>
-                </details>
-
-              </div>
-            </section>
-
-            <div class="divider" aria-hidden="true"></div>
-
-            <!-- Bottom page navigation (inside article column) -->
-            <section class="topic-nav-surface topic-nav-surface--story"
-                     aria-label="Book navigation"
-                     data-topic-nav="books"
-                     data-topic-slug="the-golden-compass">
-
-              <div class="topic-nav-bg" aria-hidden="true">
-                <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
-              </div>
-
-              <div class="topic-nav-card">
-
-                <nav class="crumbs" aria-label="Breadcrumb">
-                  <ol class="crumbs-list">
-                    <li class="crumb"><a href="/home.html">Home</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-
-                    <li class="crumb"><a href="/herojourneys/" data-crumb-topics>Hero-Journeys</a></li>
-                    <li class="sep" aria-hidden="true">›</li>
-
-                    <li class="crumb">
-                      <a href="#" data-crumb-section-link>
-                        <span data-crumb-section-text>Books</span>
-                      </a>
-                    </li>
-
-                    <li class="sep" aria-hidden="true">›</li>
-                    <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
-                  </ol>
-                </nav>
-
-                <div class="pager" aria-label="Book navigation">
-                  <div class="pager-edges">
-                    <a class="pager-prev" data-pager-prev href="#">
-                      <span class="arrow" aria-hidden="true">←</span>
-                      <span class="meta">
-                        <span class="kicker">Previous</span>
-                        <span class="title" data-prev-title>Loading…</span>
-                      </span>
-                    </a>
-
-                    <a class="pager-next" data-pager-next href="#">
-                      <span class="meta">
-                        <span class="kicker">Next</span>
-                        <span class="title" data-next-title>Loading…</span>
-                      </span>
-                      <span class="arrow" aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-
-          </article>
-
-          <!-- Right rail TOC -->
-          <aside class="story-aside" aria-label="On this page">
-            <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
-              On this page <span class="nav-caret" aria-hidden="true">▾</span>
-            </button>
-
-            <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
-              <div class="toc-panel-head">
-                <h3 class="toc-panel-title">On this page</h3>
-                <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
-              </div>
-
-              <nav class="toc-panel-nav" aria-label="Page sections"></nav>
-            </div>
-          </aside>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-
-      <div class="footer-brand">
-        <div class="footer-name">Mythogin</div>
-        <div class="footer-tagline">creativity · criticism · culture</div>
-        <div class="footer-copy">© <span id="year"></span></div>
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-col">
-          <h4>Mythogin</h4>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="features.html">Features</a></li>
-          </ul>
-        </div>
+        <!-- About -->
+        <a class="nav-link"
+           href="about.html"
+           data-tip="What Mythogin is and who its for">
+          About
+        </a>
 
-        <div class="footer-col">
-          <h4>Hero-Journeys</h4>
-          <ul>
-            <li><a href="herojourneys/books/index.html">Books</a></li>
-            <li><a href="herojourneys/film/index.html">Film</a></li>
-            <li><a href="herojourneys/tv/index.html">TV</a></li>
-            <li><a href="herojourneys/games/index.html">Games</a></li>
-            <li><a href="herojourneys/podcasts/index.html">Podcasts</a></li>
-            <li><a href="herojourneys/documentaries/index.html">Documentaries</a></li>
-          </ul>
-        </div>
+        <!-- Search -->
+        <form class="nav-search" action="search/index.html" method="get" role="search">
+          <input class="nav-search-input" name="q" type="search" placeholder="Search…" aria-label="Search Mythogin">
+        </form>
 
-        <div class="footer-col">
-          <h4>Perspective</h4>
-          <ul>
-            <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="perspective/industry/index.html">Industry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Get in touch</a></li>
-          </ul>
-        </div>
       </nav>
 
     </div>
-  </footer>
+  </div>
+</div>
 
-  <script src="js/main.js"></script>
-  <script src="js/drawer.js"></script>
-  <script src="js/topic-nav.js"></script>
+<main class="story">
+
+  <!-- HERO -->
+  <section class="topics-hero story-hero" aria-label="Story hero">
+    <div class="container">
+      <div class="topics-hero-card story-hero-card bleed-pad">
+
+        <div class="topics-hero-media story-hero-media" aria-hidden="true">
+          <img src="images/topics/books/the-golden-compass.webp" alt="" loading="eager" decoding="async">
+          <div class="topics-hero-overlay"></div>
+        </div>
+
+        <div class="topics-hero-content story-hero-content">
+          <p class="story-kicker">Books</p>
+
+          <h1 class="topics-hero-title">The Golden Compass</h1>
+
+          <p class="topics-hero-lead">
+            A child’s fierce curiosity collides with institutional control—until the cosmos itself becomes a battleground over what humans are allowed to become.
+          </p>
+
+          <!-- Audio chip -->
+            <div class="audio-chip" aria-label="Audio">
+              <span class="audio-chip-label">Audio</span>
+              <span class="audio-chip-actions">
+                <a class="audio-chip-btn" href="hero-journeys/books/the-golden-compass/audio.mp3" aria-label="Listen to audio">Listen</a>
+                <a class="audio-chip-btn" href="hero-journeys/books/the-golden-compass/audio.mp3" download aria-label="Download audio">Download</a>
+              </span>
+            </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- BODY + TOC RAIL -->
+  <section class="story-body" aria-label="Essay">
+    <div class="container">
+
+      <div class="story-layout story-layout--toc">
+
+        <!-- Article -->
+        <article class="story-article">
+
+          <!-- Intro -->
+          <section class="story-section section-card card--surface bleed-pad" id="intro">
+            <header class="section-head">
+              <h2 class="section-title">Intro</h2>
+              <p class="section-sub">
+                Philip Pullman turns the coming-of-age story into a metaphysical revolt: innocence does not “die”—
+                it transforms into knowledge, and knowledge becomes the target of power.
+              </p>
+            </header>
+
+            <p>
+              <em>The Golden Compass</em> (also published as <em>Northern Lights</em>) begins like a classic adventure—Oxford spires, secret societies,
+              missing children—then pivots into something sharper: a war over the soul. In Lyra’s world, the soul is visible as a daemon,
+              and the most horrifying violence is surgical: separating a child from their daemon to “prevent” the wrong kind of adulthood.
+            </p>
+
+            <p>
+              Mythogin’s angle: the story is about institutions that fear the transition from innocence to experience. “Dust” is framed as contamination,
+              but what the narrative insists is more unsettling: Dust is consciousness, and the fear of consciousness is the root of tyranny.
+            </p>
+          </section>
+
+          <!-- Critique -->
+          <section class="story-section section-card card--surface bleed-pad" id="critique">
+            <header class="section-head">
+              <h2 class="section-title">Critique</h2>
+              <p class="section-sub">What the story gets exactly right — and where its moral geometry can polarize or flatten.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="critique-authority-surgery" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Authority as spiritual surgery</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The Magisterium isn’t merely “oppressive”—it is paternalistic in the most literal sense: it claims to protect the soul by controlling it.
+                    Intercision is a terrifying metaphor made concrete: power doesn’t always kill you; sometimes it removes the part of you that can grow,
+                    love, or rebel. Pullman’s genius is to show that “purity” can be a weapon.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-daemons-soul">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Daemons and the externalized soul</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The daemon is one of modern fantasy’s best inventions: interiority rendered as relationship. It makes character psychology visible,
+                    and it makes violation unambiguous. A child separated from their daemon isn’t “sad”—they are amputated.
+                    The device also clarifies the central theme: to mature is not to lose the soul, but to <em>integrate</em> it.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-dust-awakening">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Dust as awakening, not contamination</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Dust is framed as the great scandal because it correlates with adulthood: choice, sexuality, moral responsibility, and self-awareness.
+                    The story’s provocation is clear: the universe may be structured such that consciousness is not a fall, but a calling.
+                    That turns the “sin” narrative inside out.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="critique-moral-polarity">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">The risk: moral polarity can reduce complexity</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The Magisterium can become a symbol so total it flattens individual motives. When institutions are portrayed as purely malignant,
+                    the reader may miss the more realistic horror: sincere people doing harm because they believe harm is mercy.
+                    Pullman hints at this, but the story’s heat can push it toward caricature if read too simply.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+
+            <ul class="story-bullets">
+              <li><strong>Daemons</strong> make the soul legible—and violation unmistakable.</li>
+              <li><strong>Dust</strong> reframes “fall” as awakening: knowledge becomes destiny.</li>
+              <li><strong>Authority</strong> is exposed as fear of adulthood, disguised as protection.</li>
+            </ul>
+          </section>
+
+          <!-- Fix -->
+          <section class="story-section section-card card--surface bleed-pad" id="fix">
+            <header class="section-head">
+              <h2 class="section-title">Fix</h2>
+              <p class="section-sub">How to preserve the engine without flattening it: keep nuance, keep cost, keep the sacred pressure.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="fix-moral-edges" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Keep the moral edges sharp without turning them into cartoons</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    The strongest reading keeps villains human. The Magisterium works because it can recruit decent people—because it offers certainty,
+                    belonging, and the promise of “saving children.” Frame tyranny as a spiritual temptation: the desire to control what you cannot trust.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-do-not-sanitize-cost">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Do not sanitize the cost of intercision</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Intercision should remain unbearable—because it reveals what power most wants: not to defeat you, but to <em>reshape</em> you.
+                    Any adaptation or summary that softens this loses the core moral argument.
+                    The story needs the reader to feel that some lines—soul-lines—cannot be crossed without breaking the world.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-coulter-asriel-ambiguity">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Protect the gray: Asriel and Coulter as moral weather</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Lord Asriel and Mrs. Coulter are compelling because their love and cruelty coexist.
+                    They are not “good” or “evil” so much as elemental: will, intellect, charisma, and hunger.
+                    The fix is interpretive: treat them as forces that teach Lyra what power costs.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="fix-sacred-replacement">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Replace the sacred with the sacred</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    If the narrative critiques religious authority, it must still offer a reverent substitute: a sacredness of truth, freedom, and love.
+                    Otherwise revolt collapses into cynicism. <em>The Golden Compass</em> works best when its rebellion feels like devotion to reality,
+                    not disdain for meaning.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <!-- Impact -->
+          <section class="story-section section-card card--surface bleed-pad" id="impact">
+            <header class="section-head">
+              <h2 class="section-title">Impact</h2>
+              <p class="section-sub">Why it still matters: institutions, information, childhood, and the fight over human development.</p>
+            </header>
+
+            <div class="accordion accordion--tight accordion--spaced">
+
+              <details class="accordion-item" id="impact-institutions-fear" open>
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Institutions that fear adulthood</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Dust maps onto modern anxieties about autonomy: who gets to interpret reality, who gets to decide what is “safe,”
+                    who gets to control the transition into adulthood. The story dramatizes a core political truth:
+                    power prefers citizens who remain children—dependent, frightened, and easy to manage.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-information-ethics">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Information as moral awakening</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Dust is knowledge with consequence. The novel insists that seeing clearly changes what you owe the world.
+                    That’s why institutions fight it: truth makes obedience unstable.
+                    Pullman gives you a myth for a modern dilemma—how to become conscious without becoming cruel.
+                  </p>
+                </div>
+              </details>
+
+              <details class="accordion-item" id="impact-myth-without-cynicism">
+                <summary class="accordion-summary">
+                  <h3 class="accordion-title">Modern myth without cynicism</h3>
+                  <span class="accordion-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="accordion-panel accordion-panel--ruled">
+                  <p>
+                    Whatever one thinks of Pullman’s theology, the craft is instructive: the story treats children as worthy of real metaphysics.
+                    It refuses to condescend. That is a cultural intervention: myth should raise the reader, not lull them.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <!-- Bottom page navigation -->
+          <section class="topic-nav-surface topic-nav-surface--story"
+                   aria-label="Book navigation"
+                   data-topic-nav="books"
+                   data-topic-slug="the-golden-compass">
+
+            <div class="topic-nav-bg" aria-hidden="true">
+              <img src="images/topics/topic-nav.webp" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="topic-nav-card">
+
+              <nav class="crumbs" aria-label="Breadcrumb">
+                <ol class="crumbs-list">
+                  <li class="crumb"><a href="home.html">Home</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb"><a href="hero-journeys/index.html" data-crumb-topics>Hero-Journeys</a></li>
+                  <li class="sep" aria-hidden="true">›</li>
+
+                  <li class="crumb">
+                    <a href="#" data-crumb-section-link>
+                      <span data-crumb-section-text>Books</span>
+                    </a>
+                  </li>
+
+                  <li class="sep" aria-hidden="true">›</li>
+                  <li class="crumb"><a aria-current="page" data-crumb-current>Loading…</a></li>
+                </ol>
+              </nav>
+
+              <div class="pager" aria-label="Book navigation">
+                <div class="pager-edges">
+
+                  <a class="pager-prev" data-pager-prev href="#">
+                    <span class="arrow" aria-hidden="true">←</span>
+                    <span class="meta">
+                      <span class="kicker">Previous</span>
+                      <span class="title" data-prev-title>Loading…</span>
+                    </span>
+                  </a>
+
+                  <a class="pager-next" data-pager-next href="#">
+                    <span class="meta">
+                      <span class="kicker">Next</span>
+                      <span class="title" data-next-title>Loading…</span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">→</span>
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </article>
+
+        <!-- Right rail TOC -->
+        <aside class="story-aside" aria-label="On this page">
+          <button class="toc-toggle" type="button" data-toc-open aria-expanded="false" aria-controls="tocPanel">
+            On this page <span class="nav-caret" aria-hidden="true">▾</span>
+          </button>
+
+          <div class="toc-panel" id="tocPanel" role="dialog" aria-label="On this page" aria-hidden="true">
+            <div class="toc-panel-head">
+              <h3 class="toc-panel-title">On this page</h3>
+              <button class="toc-panel-close" type="button" data-toc-close aria-label="Close">✕</button>
+            </div>
+
+            <nav class="toc-panel-nav" aria-label="Page sections"></nav>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="toc-backdrop" data-toc-backdrop aria-hidden="true"></div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-brand-link" href="index.html" aria-label="Mythogin main">
+        <div class="footer-name">Mythogin</div>
+        <div class="footer-tagline">creativity · criticism · culture</div>
+      </a>
+      <div class="footer-copy">© <span id="year"></span></div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+
+      <div class="footer-col">
+        <h4><a href="index.html">Mythogin</a></h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search/index.html">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="recommendations/index.html">Recommendations</a></h4>
+        <ul>
+          <li><a href="recommendations/index.html">Browse Catalogue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="features/index.html">Features</a></h4>
+        <ul>
+          <li><a href="features/why-myths-matter/index.html">Why Myths Matter</a></li>
+          <li><a href="features/evolution-of-identity/index.html">Evolution of Identity</a></li>
+          <li><a href="features/popular-myths/index.html">Popular Myths</a></li>
+          <li><a href="features/new-frontiers/index.html">New Frontiers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
+        <ul>
+          <li><a href="hero-journeys/books/index.html">Books</a></li>
+          <li><a href="hero-journeys/films/index.html">Films</a></li>
+          <li><a href="hero-journeys/tv/index.html">TV</a></li>
+          <li><a href="hero-journeys/games/index.html">Games</a></li>
+          <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
+          <li><a href="hero-journeys/documentaries/index.html">Documentaries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4><a href="perspective/index.html">Perspective</a></h4>
+        <ul>
+          <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/drawer.js"></script>
+<script src="js/topic-nav.js"></script>
 </body>
 </html>
