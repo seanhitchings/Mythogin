@@ -26,8 +26,12 @@
   --accent:  #d7bca1;
   --accent2: #a1bbd7;
   --accent3: #e5e6fa;
+   --cta-gold: #f0e2a0;
+   --cta-gold-2: #FEE440; /* original Mythogin headline gold */
+
 
   /* #f0e2a0Links */
+  --audio: #FFB13A;
   --link: #FFB13A;
   --link-hover: #ffffff;
   --link-underline: rgba(240,226,160,.42);

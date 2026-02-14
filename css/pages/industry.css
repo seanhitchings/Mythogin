@@ -7,6 +7,10 @@
             - consistent “bleed” widths across hero + cards
    ========================================================================== */
 
+   .topics-hero.hero-nocrop .topics-hero-media img{
+  object-fit: contain;
+  background: rgba(0,0,0,.15); /* optional, avoids empty edge looking harsh */
+}
 /* --------------------------------------------------------------------------
    0) CONSISTENT BLEED WIDTHS (Industry only)
    - Prevent regressions when a bleed utility class is missing.
@@ -171,7 +175,6 @@
   margin: 0;
   color: rgba(170,180,195,.92);
   line-height: 1.45;
-  max-width: 70ch;
 }
 
 .story-actions{

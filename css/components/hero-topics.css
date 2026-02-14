@@ -16,8 +16,9 @@
   --topics-hero-pad: var(--pad);
 }
 
+
 .topics-hero{
-  padding: clamp(18px, 2.6vw, 28px) 0;
+    /*   padding: clamp(18px, 2.6vw, 28px) 0; */
   margin-bottom: 18px;
 }
 
@@ -61,7 +62,8 @@
   display: block;
   object-fit: cover;
   object-position: center center;
-  transform: scale(1.03);
+
+  transform:none; /*scale(1.03); */
 }
 
 /* Overlay belongs to MEDIA only (not the whole card) */
@@ -111,7 +113,7 @@
 
 .topics-hero-lead{
   margin: 0;
-  max-width: 70ch;
+  max-width: auto;
 
   font-family: var(--serif);
   font-weight: 500;
@@ -121,6 +123,22 @@
 
   color: rgba(170,180,195,.9);
   text-wrap: pretty;
+}
+
+/* ==========================================================================
+   Features hero — landscape variant
+   Does NOT affect portrait topic heroes
+   ========================================================================== */
+
+.topics-hero.hero-features{
+  --topics-hero-ar: 3 / 2;       /* matches 1536×1024 */
+  --topics-hero-min-h: 300px;
+  --topics-hero-max-h: 560px;
+}
+
+/* Slightly different scaling looks better on landscape */
+.topics-hero.hero-features .topics-hero-media img{
+  transform: none;
 }
 
 /* --------------------------------------------------------------------------

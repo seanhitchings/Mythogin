@@ -713,9 +713,96 @@ main.topics .books-grid > .section-card:not(.card--surface) .card-question{
   cursor: default;
 }
 
-@media (max-width: 420px){
-  .audio-chip{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+
+/* ======================================================================
+   Transcript chip — CLONE audio chip (same surface + same font)
+   Only difference: label color uses --cta-gold-2
+   ====================================================================== */
+
+.transcript-chip{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+
+  gap: 4px;
+  flex-wrap: nowrap;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin-top: 8px;
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+background: rgba(150,165,185,.12);
+border: 1px solid rgba(150,165,185,.38);
+  /* EXACTLY match audio chip surface 
+  border: 1px solid rgba(215,188,161,.35);
+  background: rgba(215,188,161,.10);
+*/
+  /* match audio chip typography */
+  font-size: 11px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+/* If transcript chip appears in centered card bodies, keep parity */
+.card-body .transcript-chip{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transcript-chip-label{
+  white-space: nowrap;
+  line-height: 1;
+
+  /* your request */
+  color: var(--cta-gold-2);
+}
+
+.transcript-chip-actions{
+  display:flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+
+  /* match audio chip: actions are not spaced-out caps */
+  letter-spacing: normal;
+  text-transform: none;
+  margin-left: 2px;
+}
+
+.transcript-chip-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.03);
+  color: rgba(232,237,245,.92);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  line-height: 1;
+  text-decoration: none;
+
+  cursor: pointer; /* always hand */
+}
+
+.transcript-chip-btn:hover{
+  border-color: rgba(215,188,161,.55);
+  background: rgba(215,188,161,.10);
+}
+
+.transcript-chip-btn:disabled,
+.transcript-chip-btn[aria-disabled="true"]{
+  cursor: default;
+}
+
+.transcript-chip[aria-disabled="true"] .transcript-chip-btn{
+  cursor: default;
 }

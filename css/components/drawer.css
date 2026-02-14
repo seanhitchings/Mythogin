@@ -11,6 +11,20 @@
    - body.story (story pages only)
    ========================================================================== */
 
+/* ==========================================================================
+   TOC boot guard — prevent first-paint transitions/jank
+   drawer.js removes .toc-booting when state is finalized
+   ========================================================================== */
+
+/* While booting, do NOT animate or transition anything TOC-related */
+html.toc-booting body.story .story-layout--toc,
+html.toc-booting body.story .story-aside,
+html.toc-booting body.story .toc-toggle,
+html.toc-booting body.story .toc-panel,
+html.toc-booting body.story .toc-backdrop{
+  transition: none !important;
+  animation: none !important;
+}
 
 /* --------------------------------------------------------------------------
    1) Toggle button (always visible)
@@ -48,7 +62,6 @@ body.story .toc-toggle:focus-visible{
   outline: none;
   border-color: rgba(215,188,161,.6);
 }
-
 
 /* --------------------------------------------------------------------------
    2) Panel styling (shared)
@@ -130,7 +143,6 @@ body.story .toc-panel-nav .toc-link.is-active{
   color: rgba(232,237,245,.96);
 }
 
-
 /* --------------------------------------------------------------------------
    3) Small screens (<640): bottom drawer + backdrop (overlay)
    -------------------------------------------------------------------------- */
@@ -167,7 +179,6 @@ body.story .toc-backdrop{
     pointer-events: auto;
   }
 }
-
 
 /* --------------------------------------------------------------------------
    4) Medium + Desktop (>=640): TOC stays on the RIGHT (no stacking)
@@ -221,25 +232,47 @@ body.story .toc-backdrop{
 
     /* Slight breathing room from the container edge */
     padding-right: 10px;
+
+    /* repaint containment (fine) */
+    contain: paint;
+    transform: translateZ(0);
   }
 
-  /* Hide the panel when closed (right rail collapses to toggle strip) */
-  body.story:not(.toc-open) .toc-panel{
-    display: none;
-  }
-
-  /* Panel stays in-flow inside the sticky rail */
+  /* Panel stays in-flow for desktop rail */
   body.story .toc-panel{
     position: static;
     width: 100%;
+    display: block;
+
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+
+    transition: opacity .14s ease, transform .14s ease, max-height .18s ease;
+    will-change: opacity, transform, max-height;
   }
 
-  /* No backdrop on >=640 (it’s not an overlay drawer anymore) */
+  /* Hide the panel when closed WITHOUT display:none (prevents paint/refresh glitch) */
+  body.story:not(.toc-open) .toc-panel{
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    margin-top: 0;
+  }
+
+  body.story:not(.toc-open) .toc-panel-head,
+  body.story:not(.toc-open) .toc-panel-nav{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Desktop: backdrop is never used */
   body.story .toc-backdrop{
     display: none !important;
   }
 
-  /* When the rail is collapsed, rotate the toggle label */
+  /* Closed rail: rotate the toggle label */
   body.story:not(.toc-open) .toc-toggle{
     justify-content: center;
     padding: 8px 6px;
@@ -251,8 +284,17 @@ body.story .toc-backdrop{
   body.story:not(.toc-open) .toc-toggle .nav-caret{
     display: none;
   }
-}
 
+  /* Desktop rail: remove redundant modal UI */
+  body.story .toc-panel-title{ display: none; }
+  body.story .toc-panel-close{ display: none; }
+
+  body.story .toc-panel-head{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: none;
+  }
+}
 
 /* --------------------------------------------------------------------------
    5) Widescreen polish (>=981): stop any “edge kiss” and micro-overlap feel
@@ -270,7 +312,6 @@ body.story .toc-backdrop{
     column-gap: clamp(34px, 3vw, 52px);
   }
 }
-
 
 /* ==========================================================================
    TOC: second-level (h3) styling
@@ -322,24 +363,4 @@ body.story .toc-sublink.is-active{
   border-color: rgba(215,188,161,.30);
   background: rgba(215,188,161,.08);
   color: rgba(232,237,245,.92);
-}
-
-/* Desktop rail: remove redundant modal UI */
-@media (min-width: 640px){
-  /* Hide inner header title */
-  body.story .toc-panel-title{
-    display: none;
-  }
-
-  /* Hide close button (not a modal on desktop) */
-  body.story .toc-panel-close{
-    display: none;
-  }
-
-  /* Tighten header spacing now that it's empty */
-  body.story .toc-panel-head{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-bottom: none;
-  }
 }

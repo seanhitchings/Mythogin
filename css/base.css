@@ -77,6 +77,10 @@ img{
   display: block;
 }
 
+html{
+  overflow-y: scroll;       /* fallback for older browsers */
+  scrollbar-gutter: stable; /* prevents width changes when scrollbar appears */
+}
 
 
 p,
