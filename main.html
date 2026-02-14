@@ -71,7 +71,7 @@
 
             <div class="submenu" role="menu" aria-label="Hero-Journeys categories">
               <a role="menuitem" href="hero-journeys/books/index.html">Books</a>
-              <a role="menuitem" href="hero-journeys/film/index.html">Film</a>
+              <a role="menuitem" href="hero-journeys/films/index.html">Films</a>
               <a role="menuitem" href="hero-journeys/tv/index.html">TV</a>
               <a role="menuitem" href="hero-journeys/games/index.html">Games</a>
               <a role="menuitem" href="hero-journeys/podcasts/index.html">Podcasts</a>
@@ -91,7 +91,7 @@
 
             <div class="submenu" role="menu" aria-label="Perspective sections">
               <a role="menuitem" href="perspective/philosophy/index.html">Philosophy</a>
-              <a role="menuitem" href="perspective/industry/index.html">Industry</a>
+              <a role="menuitem" href="perspective/economics/index.html">Economics</a>
             </div>
           </div>
 
@@ -120,15 +120,13 @@
 
         <div class="hero-media">
           <img class="hero-bg" src="images/main/hero.webp" alt="Mythogin hero image" />
-          <img class="hero-title-img" src="images/main/title.webp" alt="Mythogin" />
           <div class="hero-media-overlay" aria-hidden="true"></div>
         </div>
 
         <div class="hero-inner hero-inner--overlay">
           <p class="hero-tagline hero-tagline--fancy hero-tagline--funnel hero-tagline--funnel-3">
-            <span class="line line-1">Storytelling in American Culture</span>
-            <span class="line line-2"><span class="key">Books</span>, Film, TV &amp; <span class="key">Games</span></span>
-            <span class="line line-3">and Emerging Media</span>
+            <span class="line line-1">Discover the Stories Shaping Culture</span>
+            <span class="line line-3"><span class="key">Books</span>, Films, TV, Games & Emerging Media</span></span>
           </p>
         </div>
 
@@ -139,6 +137,36 @@
     </div>
   </header>
 
+    <!-- INTRO (standardized template: container > section-card.card--surface.bleed-pad) -->
+    <section class="topics-intro recs-intro" aria-label="Recommendations introduction">
+      <div class="container">
+        <div class="section-card card--surface bleed-pad">
+
+          <header class="section-head">
+            <h2 class="recs-lists-title">The Mythogin Lens</h2>
+          </header>
+
+          <div class="section-text">
+              <p>
+                 Mythogin analyzes the values, principles, and worldviews embedded in stories. These, in turn, influence our beliefs and actions.
+                 We give readers tools to form their own conclusions about the significance of these stories, as we examine storytelling on three levels:
+             </p>
+
+        <ol>
+          <li><strong>Narrative Critique:</strong> analyzing plot, chtaracters, and techniques that determine whether a story is compelling or memorable.</li>
+          <li><strong>Cultural impact:</strong> examining how stories influence, and are influenced by, their historical context.</li>
+          <li><strong>Structural Fix:</strong> exploring how the story could be improved or strengthened.</li>
+        </ol>
+              <p>
+                 We strive to make every discussion available in written format, as well as audio format to stream or download.
+                </p>
+                 
+                <p> Please enjoy your visit. </p>
+
+                      </div><!-- /.section-text -->
+        </div><!-- /.section-card -->
+      </div><!-- /.container -->
+    </section>
 
 <section class="hf" aria-label="Featured story">
   <div class="container">
@@ -171,15 +199,21 @@
             Andor depicts the seeds of rebellion but neglects to describe what's wrong with the empire or why a rebellion is necessary. Here's where all the momentum should have led.
           </p>
 
-          <div class="hf-actions">
-            <a class="btn primary" data-bind="read-url" href="hero-journeys/tv/andor/index.html">Read essay</a>
+            <div class="hf-actions">
+              <a class="btn primary" data-bind="read-url" href="hero-journeys/tv/andor/index.html">Read essay</a>
+              </div>
+              <!-- Audio chip (card system) -->
+              <div class="audio-chip" role="group" aria-label="Audio options">
+                <span class="audio-chip-label">🎧 Audio</span>
+                <div class="audio-chip-actions">
+                  <a class="audio-chip-btn" data-bind="audio-listen-url" href="hero-journeys/tv/andor/audio.mp3">Listen</a>
+                  <a class="audio-chip-btn" data-bind="audio-download-url" href="hero-journeys/tv/andor/audio.mp3" download>Download</a>
+                </div>
 
-            <div class="hf-chip hf-chip--audio" role="group" aria-label="Audio options">
-              <span class="hf-audio-label">🎧 Audio</span>
-              <a class="hf-audio-link" data-bind="audio-listen-url" href="hero-journeys/tv/andor/audio.mp3">Listen</a>
-              <a class="hf-audio-link" data-bind="audio-download-url" href="hero-journeys/tv/andor/audio.mp3" download>Download</a>
+
+              <!-- Transcript chip (card system) -->
+
             </div>
-          </div>
 
         </div>
       </div>
@@ -189,13 +223,12 @@
       <div class="hf-discover">
         <h2 class="section-title">Discover new Stories</h2>
         <p class="section-sub section-sub--split">
-          <span>Mythogin features in-depth discussion on stories selected across culture:</span>
-          <span>Each one includes constructive criticism, creative improvements, and impact upon society.</span>
+          <span>Mythogin features in-depth analysis on stories selected across culture:</span>
+          <span>These include Books, Films, TV Shows, Games, Podcasts, and Documentaries. </span>
         </p>
 
         <div class="cta-row">
-          <a class="btn primary" href="hero-journeys/index.html">Browse Topics</a>
-          <a class="btn" href="features/index.html">See Media</a>
+          <a class="btn primary" href="hero-journeys/index.html">Browse more Hero-Journeys</a>
         </div>
       </div>
 
@@ -224,7 +257,7 @@
             <!-- Highlighted: Podcast -->
             <article class="section-card card--portrait card--stack card--contain">
               <div class="card-media" aria-hidden="true">
-                <img src="images/features/podcasts-ls.webp" alt="" loading="lazy" decoding="async">
+                <img src="images/features/why-myths-matter.webp" alt="" loading="lazy" decoding="async">
               </div>
 
               <div class="card-body">
@@ -258,7 +291,7 @@
             <!-- Highlighted: Talk -->
             <article class="section-card card--portrait card--stack card--contain">
               <div class="card-media" aria-hidden="true">
-                <img src="images/features/dream-ls.webp" alt="" loading="lazy" decoding="async">
+                <img src="images/features/fate-dream.webp" alt="" loading="lazy" decoding="async">
               </div>
 
               <div class="card-body">
@@ -398,7 +431,7 @@
 
           <div class="curtain-grid">
 
-            <a class="curtain-pillar curtain-pillar--system" href="perspective/industry/index.html">
+            <a class="curtain-pillar curtain-pillar--system" href="perspective/economics/index.html">
               <div class="curtain-img" aria-hidden="true">
                 <img class="curtain-photo" src="images/perspective/economy-ls.webp" alt="" loading="lazy" decoding="async">
               </div>
@@ -411,7 +444,7 @@
               </div>
             </a>
 
-            <a class="curtain-pillar curtain-pillar--output" href="perspective/industry/index.html#output">
+            <a class="curtain-pillar curtain-pillar--output" href="perspective/economics/index.html#output">
               <div class="curtain-img" aria-hidden="true">
                 <img class="curtain-photo" src="images/perspective/assembly-ls.webp" alt="" loading="lazy" decoding="async">
               </div>
@@ -481,7 +514,7 @@
           <h4><a href="hero-journeys/index.html">Hero-Journeys</a></h4>
           <ul>
             <li><a href="hero-journeys/books/index.html">Books</a></li>
-            <li><a href="hero-journeys/film/index.html">Film</a></li>
+            <li><a href="hero-journeys/films/index.html">Films</a></li>
             <li><a href="hero-journeys/tv/index.html">TV</a></li>
             <li><a href="hero-journeys/games/index.html">Games</a></li>
             <li><a href="hero-journeys/podcasts/index.html">Podcasts</a></li>
@@ -494,7 +527,7 @@
           <h4><a href="perspective/index.html">Perspective</a></h4>
           <ul>
             <li><a href="perspective/philosophy/index.html">Philosophy</a></li>
-            <li><a href="perspective/industry/index.html">Industry</a></li>
+            <li><a href="perspective/economics/index.html">Economics</a></li>
           </ul>
         </div>
 
@@ -510,4 +543,3 @@
 
 </body>
 </html>
-
