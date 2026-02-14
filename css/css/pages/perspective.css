@@ -1,0 +1,510 @@
+/* ==========================================================================
+   css/pages/perspective.css
+   Clean lens stylesheet — single breakpoint (no deadzone)
+
+   Behavior:
+   - < 960px  : stacked sections, normal cards, no oval mask, no fixed heights
+   - >= 960px : oval “lens” containers + fixed-size cards + fixed lens heights
+   ========================================================================== */
+
+
+/* ==========================================================================
+   0) Shared inner-card surface (keeps cards separated from lens tint)
+   ========================================================================== */
+
+.perspective-page
+.books-catalogue
+.section-card .section-card,
+.perspective-page
+.curtain-wrap
+.section-card .section-card{
+  background: linear-gradient(
+    180deg,
+    rgba(17,21,27,.96),
+    rgba(15,19,25,.96)
+  );
+}
+
+
+/* ==========================================================================
+   1) Philosophy lens tint (purple glass)
+   ========================================================================== */
+
+.perspective-page
+.books-catalogue[aria-label="Philosophy pillars"]
+.container > .section-card{
+  background:
+    /* 1) Tight glossy specular at the very bottom edge */
+    radial-gradient(
+      120% 55% at 50% 112%,
+      rgba(255,255,255,0.30) 0%,
+      rgba(255,255,255,0.14) 22%,
+      rgba(255,255,255,0.00) 55%
+    ),
+
+    /* 2) Broad bottom bloom */
+    radial-gradient(
+      140% 95% at 50% 120%,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.08) 40%,
+      rgba(255,255,255,0.00) 72%
+    ),
+
+    /* 3) Subtle prismatic wash (diffraction hint) */
+    radial-gradient(
+      150% 120% at 18% 98%,
+      rgba(255,120,220,0.07) 0%,
+      rgba(140,200,255,0.05) 34%,
+      rgba(190,255,170,0.035) 58%,
+      rgba(0,0,0,0.00) 80%
+    ),
+
+    /* 4) Main tint (dark top → light bottom) */
+    linear-gradient(
+      180deg,
+      rgba(78, 60, 112, 0.82) 0%,
+      rgba(118, 97, 150, 0.52) 68%,
+      rgba(165, 145, 198, 0.42) 100%
+    );
+
+  backdrop-filter: blur(12px) saturate(150%) contrast(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%) contrast(112%);
+
+  border: 0;
+
+  /* no top rim highlight (prevents “white edge”) */
+  box-shadow:
+    inset 1px 0 0 rgba(255,255,255,0.08),
+    inset -1px 0 0 rgba(255,255,255,0.08),
+    inset 0 -1px 0 rgba(255,255,255,0.18),
+    inset 0 -18px 30px rgba(255,255,255,0.06),
+    0 10px 30px rgba(0,0,0,0.22);
+}
+
+
+/* ==========================================================================
+   2) Economic lens tint (red glass)
+   ========================================================================== */
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.container > .section-card{
+  background:
+    radial-gradient(
+      120% 55% at 50% 112%,
+      rgba(255,235,230,0.30) 0%,
+      rgba(255,195,185,0.14) 22%,
+      rgba(255,195,185,0.00) 55%
+    ),
+    radial-gradient(
+      140% 95% at 50% 120%,
+      rgba(255,215,205,0.22) 0%,
+      rgba(255,175,165,0.09) 40%,
+      rgba(255,175,165,0.00) 72%
+    ),
+    radial-gradient(
+      150% 120% at 18% 98%,
+      rgba(255,150,135,0.075) 0%,
+      rgba(255,200,165,0.05) 34%,
+      rgba(255,235,190,0.035) 58%,
+      rgba(0,0,0,0.00) 80%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(90, 38, 42, 0.86) 0%,
+      rgba(128, 51, 52, 0.56) 68%,
+      rgba(175, 95, 92, 0.44) 100%
+    );
+
+  backdrop-filter: blur(12px) saturate(145%) contrast(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(145%) contrast(112%);
+
+  border: 0;
+
+  box-shadow:
+    inset 1px 0 0 rgba(255,255,255,0.07),
+    inset -1px 0 0 rgba(255,255,255,0.07),
+    inset 0 -1px 0 rgba(255,205,195,0.20),
+    inset 0 -18px 30px rgba(255,190,175,0.08),
+    0 10px 30px rgba(0,0,0,0.24);
+}
+
+
+/* ==========================================================================
+   3) Economic cards: disable hover recolor (only inside storytelling-grid)
+   ========================================================================== */
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid .section-card:hover,
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid .section-card:focus-within{
+  background: linear-gradient(
+    180deg,
+    rgba(17,21,27,.96),
+    rgba(15,19,25,.96)
+  ) !important;
+  filter: none !important;
+}
+
+
+/* ==========================================================================
+   4) Titles centered + remove stray header spacing (both lenses)
+   ========================================================================== */
+
+.perspective-page
+.books-catalogue[aria-label="Philosophy pillars"]
+.section-head,
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.card-body{
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   5) Economic Lens — center the kicker labels
+   ========================================================================== */
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.curtain-kicker{
+  display: inline-flex;          /* keeps it tight to text */
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;             /* centers within parent */
+  margin-right: auto;
+}
+
+
+/* Remove “mystery gap” above title by normalizing margins inside lens cards */
+.perspective-page
+.books-catalogue[aria-label="Philosophy pillars"]
+.section-head,
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.card-body{
+  margin: 0;
+}
+
+.perspective-page
+.books-catalogue[aria-label="Philosophy pillars"]
+.section-head .section-title,
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.section-title{
+  margin: 0;
+  padding: 0;
+}
+
+.perspective-page
+.books-catalogue[aria-label="Philosophy pillars"]
+.section-head .card-desc,
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.card-desc{
+  margin: 0px 0 0;
+}
+
+
+/* ==========================================================================
+   6) Lens ring overlay
+   - Off by default (mobile)
+   - Enabled only in lens mode >= 960px
+   ========================================================================== */
+
+.perspective-page
+.books-catalogue[aria-label="Philosophy pillars"]
+.container > .section-card::after,
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.container > .section-card::after{
+  content: none;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES (ALL AT BOTTOM)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   A) STACKED MODE (< 960px)
+   - single column grids
+   - no oval mask, no fixed heights
+   ========================================================================== */
+
+@media (max-width: 959px){
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .container > .section-card,
+  .perspective-page
+  .curtain-wrap[aria-label="The Storytelling Machine"]
+  .container > .section-card{
+    border-radius: calc(var(--radius) + 8px);
+    overflow: visible;
+    height: auto;
+    max-height: none;
+  }
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .books-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .perspective-page
+  .curtain-wrap[aria-label="The Storytelling Machine"]
+  .storytelling-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 0 !important; /* kills inline style margin-top deadspace */
+  }
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .books-grid > .section-card,
+  .perspective-page
+  .curtain-wrap[aria-label="The Storytelling Machine"]
+  .storytelling-grid > .section-card{
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   B) LENS MODE (>= 960px)
+   - oval mask turns on immediately (no intermediate rectangle)
+   - fixed lens heights
+   - fixed-size cards (no stretch / no fill)
+   - grids centered, margin-top removed
+   ========================================================================== */
+
+@media (min-width: 960px){
+
+  /* ---------- shared lens geometry ---------- */
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"] .container > .section-card,
+  .perspective-page
+  .curtain-wrap[aria-label="The Storytelling Machine"] .container > .section-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px;
+  }
+
+  /* Lens ring overlay (tuned to avoid bright top “white edge”) */
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"] .container > .section-card::after,
+  .perspective-page
+  .curtain-wrap[aria-label="The Storytelling Machine"] .container > .section-card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    /* darker at the very edge; highlight lives slightly inward */
+    background:
+      radial-gradient(120% 120% at 50% 55%,
+        rgba(255,255,255,0.00) 0%,
+        rgba(255,255,255,0.05) 34%,
+        rgba(255,255,255,0.035) 52%,
+        rgba(0,0,0,0.00) 66%,
+        rgba(0,0,0,0.34) 100%
+      );
+
+    mix-blend-mode: soft-light;
+    opacity: 0.75;
+  }
+
+  /* ---------- Philosophy lens container ---------- */
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .container > .section-card{
+    height: 720px;                /* fixed lens height */
+    padding: 14px 0 24px;         /* reduced top padding to kill title gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Force the header block to stop adding vertical drift */
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .container > .section-card .section-head{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* ---------- Philosophy grid + fixed cards ---------- */
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .books-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: start;
+    gap: 18px;
+    margin: 16px 0 0;
+    width: auto;
+    max-width: none;
+  }
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .books-grid > .section-card{
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+
+    height: 520px !important;
+    min-height: 520px !important;
+    max-height: 520px !important;
+
+    flex: 0 0 auto !important;
+    align-self: start !important;
+    justify-self: center !important;
+
+    margin: 0 !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Crop Philosophy media to keep card height under control */
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .books-grid > .section-card .card-media{
+    height: 170px;
+    flex: 0 0 170px;
+    overflow: hidden;
+  }
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .books-grid > .section-card .card-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .perspective-page
+  .books-catalogue[aria-label="Philosophy pillars"]
+  .books-grid > .section-card .card-body{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 18px 16px;
+    box-sizing: border-box;
+  }
+
+/* ---------- Economic lens container ---------- */
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.container > .section-card{
+  height: 720px;                 /* MATCH Philosophy lens */
+  padding: 14px 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Match Philosophy header spacing: remove extra top padding inside Economic card-body */
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.container > .section-card > .card-body{
+  padding-top: 0;                /* fixes the ~48px gap */
+}
+
+/* Remove the inline style="margin-top:18px;" dead space */
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid{
+  margin-top: 0 !important;
+}
+
+/* ---------- Economic grid + fixed cards (MATCH Philosophy) ---------- */
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 260px); /* MATCH Philosophy (3 pillars now) */
+  justify-content: center;
+  align-content: start;
+  gap: 18px;                               /* MATCH Philosophy */
+  width: auto;
+  max-width: none;
+  margin: 16px 0 0;                        /* MATCH Philosophy */
+}
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid > .section-card{
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+
+  height: 520px !important;
+  min-height: 520px !important;
+  max-height: 520px !important;
+
+  flex: 0 0 auto !important;
+  align-self: start !important;
+  justify-self: center !important;
+
+  margin: 0 !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid > .section-card .card-media{
+  height: 170px;               /* MATCH Philosophy */
+  flex: 0 0 170px;
+  overflow: hidden;
+}
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid > .section-card .card-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.perspective-page
+.curtain-wrap[aria-label="The Storytelling Machine"]
+.storytelling-grid > .section-card .card-body{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px 18px 16px;     /* MATCH Philosophy */
+  box-sizing: border-box;
+}
+}

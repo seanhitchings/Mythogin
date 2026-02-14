@@ -1,0 +1,91 @@
+/* ==========================================================================
+   base.css — Reset + global elements + utilities
+   ========================================================================== */
+
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+/* Prevent horizontal overflow from rogue 100vw / positioned elements */
+html,
+body{
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+html,
+body{
+  background: #070a12;
+}
+
+body{
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  line-height: 1.45;
+
+  /* IMPORTANT: solid page surface (no page-level gradients = no banding bleed) */
+  background: #07080a;
+}
+
+a{
+  color: var(--link);
+  text-decoration: none;
+  text-decoration-color: var(--link-underline);
+  transition: color .15s ease, text-decoration-color .15s ease;
+}
+
+a:hover{
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--link-hover);
+}
+
+a:focus-visible{
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--link-hover);
+}
+
+
+/* Screen-reader-only label utility */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html{
+  overflow-y: scroll;       /* fallback for older browsers */
+  scrollbar-gutter: stable; /* prevents width changes when scrollbar appears */
+}
+
+
+p,
+h1,
+h2,
+h3{
+  margin: 0;
+}

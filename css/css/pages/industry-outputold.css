@@ -1,0 +1,45 @@
+/* ==========================================================================
+   pages/industry-output.css
+   Purpose: Industry → Output
+   Scope: content emphasis only (NO layout overrides)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page identity
+-------------------------------------------------------------------------- */
+
+.page--curtain-output .topics-hero-title{
+  letter-spacing: .02em;
+}
+
+/* Cooler, more observational tone */
+.page--curtain-output .topics-hero-lead{
+  max-width: 74ch;
+  color: rgba(232,237,245,.92);
+}
+
+/* --------------------------------------------------------------------------
+   Content tone
+-------------------------------------------------------------------------- */
+
+.page--curtain-output .card-desc{
+  max-width: 82ch;
+}
+
+/* --------------------------------------------------------------------------
+   Optional: output-pattern framing
+-------------------------------------------------------------------------- */
+
+.page--curtain-output .card-title{
+  position: relative;
+}
+
+.page--curtain-output .card-title::after{
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 8px;
+  background: rgba(161,187,215,.55); /* subtle cool accent */
+  border-radius: 2px;
+}

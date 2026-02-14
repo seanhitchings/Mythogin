@@ -1,0 +1,823 @@
+/* ==========================================================================
+   components/hero.css — Hero card + media stack (CLEANED / DEDUPED)
+   Landing/Home hero only (NO Topics page banner rules)
+   ========================================================================== */
+
+.hero{
+  padding-top: 24px;
+  padding-bottom: 72px; /* ensures Media begins fully below the Featured+Discover card */
+}
+
+.hero-card{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 8px);
+  background: linear-gradient(180deg, rgba(17,21,27,.96), rgba(15,19,25,.96));
+  box-shadow: var(--shadow);
+}
+
+/* Keep internal glow INSIDE the card */
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  background:
+    radial-gradient(800px 320px at 14% 12%, rgba(215,188,161,.22), transparent 62%),
+    radial-gradient(640px 260px at 86% 18%, rgba(161,187,215,.18), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0));
+  mix-blend-mode: screen;
+  opacity: .75;
+}
+
+.hero-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity:.05;
+}
+
+/* HERO CARD — Image inside card */
+.hero-card.hero-card--image{
+  padding: 0; /* (position/overflow already handled by .hero-card) */
+}
+
+/* HERO MEDIA STACK */
+.hero-media{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  min-height: 300px;
+  max-height: 520px;
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 6px);
+}
+
+/* Background hero image */
+.hero-media .hero-bg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient overlay */
+.hero-media-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Centered title image */
+.hero-title-img{
+  display: block;
+  margin: 0 auto;
+
+  width: min(780px, 62%);
+  max-width: 780px;
+  height: auto;
+
+  pointer-events: none;
+  filter: drop-shadow(0 10px 28px rgba(0,0,0,.55));
+}
+
+
+.hero{
+  --hero-title-nudge-x: -2px;
+}
+
+/* Tagline overlay sits above everything */
+/* Top tagline overlay */
+.hero-inner.hero-inner--tagline{
+  position: absolute;
+  left: -18px;
+  right: 0;
+  top: -10px;
+  padding: clamp(12px, 2.2vw, 18px);
+  text-align: center;
+  z-index: 4;
+}
+
+/* Bottom title overlay (right above the book glow) */
+.hero-inner.hero-inner--title{
+  position: absolute;
+  left: 8px;
+  right: 0;
+  bottom: -60px; /* adjust to sit just above the book */
+  padding: 0 16px;
+  text-align: center;
+  z-index: 4;
+}
+
+
+/* Stronger “book light” bloom rising into the scene */
+.hero-inner.hero-inner--title::before{
+  content:"";
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  width: min(820px, 94vw);
+  height: 220px;
+  pointer-events:none;
+  background:
+    radial-gradient(50% 100% at 50% 100%,
+    rgba(197,118,3,.42),
+    rgba(197,118,3,.18) 38%
+      rgba(80,200,180,.10) 62%,
+      rgba(0,0,0,0) 78%);
+  filter: blur(18px);
+  opacity: .85;
+  mix-blend-mode: screen;
+}
+
+
+
+/* ==========================================================================
+   Fancy tagline (depth + smoke ribbon + lacquer + motes + shimmer)
+   ========================================================================== */
+
+.hero-tagline--fancy{
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 2px 10px;
+  max-width: min(78ch, 92%);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 18%),
+    linear-gradient(180deg, rgba(0,0,0,.88), rgba(0,0,0,.64));
+
+  border: 1px solid rgba(215,188,161,.22);
+
+  box-shadow:
+    0 22px 60px rgba(0,0,0,.70),
+    0 10px 24px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    inset 0 -10px 18px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(0,0,0,.55);
+
+  color: rgba(248,250,252,.96);
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: clamp(15px, 1.6vw, 19px);
+  font-weight: 500;
+  letter-spacing: .015em;
+  line-height: 1.42;
+
+  text-shadow:
+    0 3px 14px rgba(0,0,0,.92),
+    0 0 1px rgba(0,0,0,.75);
+
+  backdrop-filter: blur(10px) saturate(125%);
+  -webkit-backdrop-filter: blur(10px) saturate(125%);
+
+  transform: translateZ(0);
+  isolation: isolate;
+
+  filter:
+    drop-shadow(0 18px 46px rgba(0,0,0,.65))
+    drop-shadow(0 0 44px rgba(80,200,180,.14))
+    drop-shadow(0 0 34px rgba(161,187,215,.12))
+    drop-shadow(0 0 24px rgba(215,188,161,.10));
+}
+
+.hero-tagline--fancy::before{
+  content:"";
+  position:absolute;
+  inset: -34px -46px -28px -46px;
+  border-radius: 999px;
+  pointer-events:none;
+  z-index: -1;
+  background:
+    radial-gradient(55% 120% at 20% 55%, rgba(80,200,180,.24), rgba(0,0,0,0) 62%),
+    radial-gradient(55% 120% at 80% 55%, rgba(70,160,220,.20), rgba(0,0,0,0) 64%),
+    radial-gradient(70% 120% at 50% 60%, rgba(215,188,161,.16), rgba(0,0,0,0) 70%);
+  filter: blur(22px);
+  opacity: .95;
+  mix-blend-mode: screen;
+}
+
+.hero-tagline--fancy::after{
+  content:"";
+  position:absolute;
+  inset: 1px;
+  border-radius: inherit;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(150,220,255,.00) 35%,
+      rgba(200,255,255,.35) 48%,
+      rgba(255,255,255,.55) 52%,
+      rgba(200,255,255,.35) 56%,
+      rgba(150,220,255,.00) 68%,
+      rgba(255,255,255,0) 100%),
+    radial-gradient(circle at 12% 58%, rgba(255,255,255,.45) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 26% 40%, rgba(215,188,161,.55) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 38% 65%, rgba(80,200,180,.55) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 54% 44%, rgba(255,255,255,.45) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 68% 60%, rgba(161,187,215,.55) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 82% 42%, rgba(215,188,161,.55) 0 1.5px, transparent 3px);
+  background-size:
+    260% 100%,
+    auto,auto,auto,auto,auto,auto;
+  background-position:
+    -200% 0,
+    0 0,0 0,0 0,0 0,0 0,0 0;
+  opacity: .9;
+  mix-blend-mode: screen;
+  filter: blur(.45px);
+  animation: escort-sweep 14s linear infinite reverse;
+}
+
+.hero-tagline--fancy strong{
+  background: linear-gradient(180deg, #ffe2a6, #caa35d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow:
+    0 0 14px rgba(215,188,161,.22),
+    0 2px 10px rgba(0,0,0,.85);
+}
+
+/* Funnel (3 lines) */
+.hero-tagline--funnel-3{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-tagline--funnel-3 .line{
+  display:block;
+  text-align:center;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.hero-tagline--funnel-3 .line-1{
+  font-size: clamp(18px, 2vw, 24px);
+  letter-spacing: .01em;
+  /*
+  color: rgba(248,250,252,.96);
+    */
+    color:#FFFF2D;
+}
+
+.hero-tagline--funnel-3 .line-2{
+  margin-top: 4px;
+  font-size: clamp(16px, 1.7vw, 20px);
+  letter-spacing: .015em;
+    /*
+  color: rgba(248,250,252,.96);
+    */
+    color:#FFFF2D;
+  transform: scaleX(.92);
+}
+
+.hero-tagline--funnel-3 .line-3{
+  margin-top: 6px;
+  font-size: clamp(14px, 1.5vw, 18px);
+  letter-spacing: .06em;
+  text-transform: none;
+
+  color: #FFB13A;
+    /*
+  color: #FD9D03;
+
+  color: rgba(215,188,161,.95);
+  */
+  transform: scaleX(.82);
+}
+
+
+
+@keyframes escort-sweep{
+  from{
+    background-position:
+      -200% 0,
+      0 0,0 0,0 0,0 0,0 0,0 0;
+    opacity: .4;
+  }
+  40%{ opacity: .95; }
+  to{
+    background-position:
+      140% 0,
+      0 0,0 0,0 0,0 0,0 0,0 0;
+    opacity: .4;
+  }
+}
+
+/* Base tagline (if you ever use .hero-tagline without fancy) */
+.hero-tagline{
+  font-size: clamp(16px, 1.8vw, 20px);
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+/* Responsive behavior */
+@media (max-width: 760px){
+  .hero-inner.hero-inner--overlay{
+    bottom: 32px;
+    padding: clamp(12px, 2.2vw, 18px);
+  }
+}
+
+@media (max-width: 640px){
+  .hero-media{
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+  }
+
+  .hero-inner.hero-inner--overlay{
+    bottom: 18px;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 430px){
+  .hero-inner.hero-inner--overlay{
+    bottom: 12px;
+    padding: 10px 12px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1100px){
+  .hero-media{
+    aspect-ratio: 21 / 9;
+    max-height: 540px;
+  }
+}
+
+/* ==========================================================================
+   Mythogin — pages/main.css
+   Home / hub-level compositions and sections (NOT primitives).
+
+   RULES:
+   - NO images load via CSS.
+   - card.css owns ALL card media + <img> behavior.
+   - This file only composes sections (HF Featured, Pillars, Curtain, etc.)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   HOME FEATURE (hf- namespace) — collision-proof
+   NOTE: Your featured asset is 3:2 (1.5 AR).
+   We hard-lock 3:2 using padding ratio (most override-resistant).
+   ========================================================================== */
+
+.hf{ margin-top: 18px; }
+
+.hf-card{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 6px);
+  background: linear-gradient(180deg, rgba(17,21,27,.96), rgba(15,19,25,.96));
+  box-shadow: var(--shadow);
+  padding: var(--pad);
+}
+
+.hf-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hf-title{
+  margin:0;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 22px;
+  letter-spacing: .01em;
+}
+
+.hf-chip{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(215,188,161,.35);
+  background: rgba(215,188,161,.10);
+  color: rgba(215,188,161,.95);
+  font-size: 12px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hf-body{
+  display:grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: 18px;
+  align-items: start;
+}
+
+/* ---- 3:2 media frame (ratio lock) ---- */
+.hf-media{
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 520px;
+
+  /* guard against stray height rules */
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  justify-self: start;
+  align-self: start;
+
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.10);
+  overflow: hidden;
+
+  /* prevent baseline/layout oddities */
+  line-height: 0;
+
+  /* lens vibe without CSS images */
+  background:
+    radial-gradient(520px 260px at 20% 20%, rgba(215,188,161,.22), transparent 60%),
+    radial-gradient(520px 260px at 90% 10%, rgba(161,187,215,.16), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0));
+}
+
+/* the ratio box */
+.hf-media::before{
+  content:"";
+  display:block;
+  padding-top: 66.6667%; /* 3:2 = 2/3 */
+}
+
+/* the actual image fills the ratio box */
+.hf-img{
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+
+  display:block;
+
+  object-fit: cover;
+  object-position: 50% 35%;
+
+  transform: none !important;
+}
+
+/* subtle sheen */
+.hf-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index: 3;
+  background-image: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+  opacity:.10;
+  mix-blend-mode: overlay;
+}
+
+.hf-copy{
+  display:grid;
+  gap: 14px;
+  align-content:start;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+}
+
+.hf-name{
+  margin: 0;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.hf-name-main{ display:block; font-weight: 600; }
+
+.hf-name-sub{
+  display:block;
+  margin-top: 4px;
+  font-size: 0.82em;
+  letter-spacing: .04em;
+  color: rgba(215,188,161,.85);
+  font-style: italic;
+}
+
+.hf-desc{
+  margin:0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 92ch;
+}
+
+.hf-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.hf-chip--audio{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(161,187,215,.35);
+  background: rgba(161,187,215,.10);
+  color: rgba(161,187,215,.95);
+  max-width: 100%;
+}
+
+.hf-audio-label{
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hf-audio-link{
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  color: rgba(232,237,245,.92);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-decoration: none;
+}
+
+.hf-audio-link:hover{
+  border-color: rgba(215,188,161,.45);
+  background: rgba(215,188,161,.10);
+}
+
+.hf-divider{
+  margin: clamp(18px, 2.8vw, 26px) 0;
+  border-top: 1px solid var(--line);
+}
+.hf-divider::after{ content:none; }
+
+.hf-discover .section-title{
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.hf-discover .section-sub{
+  margin: 0 0 18px;
+  max-width: 120ch;
+}
+
+.section-sub--split span{ display:block; }
+
+
+/* ==========================================================================
+   PILLARS (homepage composition only)
+   ========================================================================== */
+
+.pillars-wrap{
+  margin-top: 22px;
+  padding-bottom: clamp(18px, 3vw, 28px);
+}
+
+.pillars{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 0;
+}
+
+.pillar{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(17,21,27,.96), rgba(15,19,25,.96));
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+  overflow: hidden;
+  min-height: 240px;
+  transition: transform .18s ease, border-color .18s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pillar:hover{
+  transform: translateY(-3px);
+  border-color: rgba(161,187,215,.35);
+}
+
+.pillar-img{
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.pillar-photo{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pillar-img::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index: 2;
+  background:
+    radial-gradient(420px 180px at 20% 25%, rgba(215,188,161,.10), transparent 60%),
+    radial-gradient(420px 180px at 90% 10%, rgba(161,187,215,.08), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+}
+
+.pillar-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index: 3;
+  background-image: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+  opacity:.10;
+  mix-blend-mode: overlay;
+}
+
+.pillar-body{
+  padding: 16px 16px 18px;
+  display:grid;
+  gap: 10px;
+}
+
+.meta{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  color: rgba(232,237,245,.85);
+  font-size: 12px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+.meta span{
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,.03);
+}
+
+.pillar-title{
+  margin:0;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.15;
+  letter-spacing: .01em;
+}
+
+.pillar-text{
+  margin:0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+/* ==========================================================================
+   CURTAIN (homepage composition only)
+   ========================================================================== */
+
+.curtain-wrap{
+  margin-top: 28px;
+  padding-bottom: clamp(18px, 3vw, 28px);
+}
+
+.curtain-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.curtain-pillar{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(17,21,27,.96), rgba(15,19,25,.96));
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.curtain-pillar:hover{
+  transform: translateY(-3px);
+  border-color: rgba(161,187,215,.35);
+  box-shadow: 0 16px 34px rgba(0,0,0,.35);
+}
+
+.curtain-img{
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.curtain-photo{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.curtain-img::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index: 2;
+  background:
+    radial-gradient(340px 170px at 18% 30%, rgba(215,188,161,.14), transparent 60%),
+    radial-gradient(340px 170px at 82% 10%, rgba(161,187,215,.12), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+}
+
+.curtain-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index: 3;
+  background-image: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+  opacity:.12;
+  mix-blend-mode: overlay;
+}
+
+.curtain-body{
+  padding: 16px 16px 18px;
+  display:grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.curtain-kicker{
+  display:inline-flex;
+  align-items:center;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  color: rgba(232,237,245,.85);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.curtain-title{
+  margin:0;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.15;
+  letter-spacing: .01em;
+}
+
+.curtain-text{
+  margin:0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: 80ch;
+}
+
+
+/* ==========================================================================
+   Responsive stitching (homepage)
+   ========================================================================== */
+
+@media (max-width: 760px){
+  .curtain-grid{ grid-template-columns: 1fr; }
+  .pillars{ grid-template-columns: 1fr; }
+  .hf-body{ grid-template-columns: 1fr; }
+
+  .hf-media{
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 560px){
+  .hf-actions{ margin-top: 10px; }
+}

@@ -1,0 +1,162 @@
+/* ==========================================================================
+   components/features-card.css — Features story pages ONLY
+   Purpose:
+   - Features hero uses the SAME child-page pattern as other story pages:
+     image LEFT, content RIGHT
+   - But force LANDSCAPE media (not portrait/poster)
+   - Deconflict topics.css + hero.css + story-card.css safely
+   ========================================================================== */
+
+/* ==========================================================================
+   0) Scope lock
+   ========================================================================== */
+
+body.story.story--features{
+  --max: var(--hero-max);
+
+  /* Landscape media sizing knobs (Features only) */
+  --features-hero-ar: 16 / 9;     /* default landscape */
+  --features-hero-min-h: 260px;
+  --features-hero-max-h: 520px;
+
+  /* Spacing / internal padding */
+  --features-hero-gap: clamp(14px, 2vw, 18px);
+  --features-hero-pad: clamp(14px, 2vw, 18px);
+}
+
+/* ==========================================================================
+   1) HERO CARD LAYOUT (MATCH CHILD PAGES: media LEFT, content RIGHT)
+   Markup:
+   .topics-hero-card.story-hero-card
+     .topics-hero-media.story-hero-media
+     .topics-hero-content.story-hero-content
+   ========================================================================== */
+
+body.story.story--features .story-hero .topics-hero-card.story-hero-card{
+  /* Card surface (keep consistent with your surfaces) */
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 8px);
+  background: linear-gradient(180deg, rgba(17,21,27,.92), rgba(15,19,25,.92));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  /* Child-page pattern: media left, content right */
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) 1.05fr;
+  gap: var(--features-hero-gap);
+  align-items: stretch;
+
+  /* Let bleed-pad add the outer padding on the card if you want,
+     but we DO want some internal breathing room for the 2-col layout.
+     If bleed-pad already pads heavily and you want tighter hero, set this to 0. */
+  padding: var(--features-hero-pad);
+}
+
+/* ==========================================================================
+   2) MEDIA FRAME (LANDSCAPE)
+   ========================================================================== */
+
+body.story.story--features .story-hero .topics-hero-media.story-hero-media{
+  position: relative;
+  width: 100%;
+
+  /* Ratio box */
+  aspect-ratio: var(--features-hero-ar);
+  min-height: var(--features-hero-min-h);
+  max-height: var(--features-hero-max-h);
+
+  overflow: hidden;
+
+  /* IMPORTANT: card owns the border/radius; keep media clean */
+  border: 0;
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow: none;
+  background: rgba(0,0,0,.18);
+}
+
+/* Image fill */
+body.story.story--features .story-hero .topics-hero-media.story-hero-media img{
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover !important;
+  object-position: center center;
+
+  /* Hard deconflict poster-style transforms */
+  transform: none !important;
+  aspect-ratio: auto !important;
+  max-height: none !important;
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+
+/* Overlay stays on media only */
+body.story.story--features .story-hero .topics-hero-overlay{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   3) CONTENT COLUMN (RIGHT)
+   ========================================================================== */
+
+body.story.story--features .story-hero .topics-hero-content.story-hero-content{
+  padding: 0;
+  align-content: start;
+
+  /* Keep content in a clean vertical stack like other story pages */
+  display: grid;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   4) HARD DECONFLICTS
+   Prevent hero.css / topics.css / story-card.css from hijacking Features hero
+   ========================================================================== */
+
+/* Neutralize generic story poster rules on Features pages */
+body.story.story--features .story-hero-media img,
+body.story.story--features .topics-hero-media img{
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  transform: none !important;
+}
+
+/* Ensure no max-height clamp from banner rules */
+body.story.story--features .topics-hero-media{
+  max-height: none !important;
+  overflow: hidden !important;
+}
+
+/* If any sheet tries to force stacked layout on .topics-hero-card, override */
+body.story.story--features .topics-hero-card{
+  grid-template-rows: unset !important; /* prevent stacked grid templates */
+}
+
+/* ==========================================================================
+   5) RESPONSIVE: STACK ON SMALL SCREENS (STILL LANDSCAPE MEDIA)
+   ========================================================================== */
+
+@media (max-width: 900px){
+  body.story.story--features .story-hero .topics-hero-card.story-hero-card{
+    grid-template-columns: 1fr;
+    /* stacked: image then text, like a normal mobile hero */
+  }
+
+  body.story.story--features{
+    --features-hero-ar: 16 / 9;
+    --features-hero-min-h: 220px;
+    --features-hero-max-h: 460px;
+  }
+}
+
+/* Optional: widescreen polish */
+@media (min-width: 1200px){
+  body.story.story--features{
+    --features-hero-ar: 21 / 9;
+    --features-hero-max-h: 540px;
+  }
+}
