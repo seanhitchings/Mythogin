@@ -2,239 +2,298 @@
   "why-myths-matter": {
     "genre": "non fiction",
     "name": "Why Myths Matter",
-    "highlighted": false,
+    "highlighted": true,
     "image": { "url": "images/features/why-myths-matter.webp", "has_image": true },
     "stories": [
       {
         "title": "Why Actual Epics are So Rare",
-        "slug": "why-epics",
-        "url": "features/why-myths-matter/why-epics/index.html",
+        "slug": "why-rare",
+        "url": "features/why-myths-matter/why-rare/index.html",
+        "audio": "features/why-myths-matter/why-rare/audio.mp3",
+        "transcript": "features/why-myths-matter/why-rare/transcript.html",
         "highlighted": true,
-        "image": { "url": "images/features/why-epics.webp", "has_image": true }
+        "image": { "url": "images/features/why-rare.webp", "has_image": true }
       },
       {
         "title": "What is an Epic? Distinguishing Myth from Narrative",
         "slug": "anatomy-of-epic",
         "url": "features/why-myths-matter/anatomy-of-epic/index.html",
+        "audio": "features/why-myths-matter/anatomy-of-epic/audio.mp3",
+        "transcript": "features/why-myths-matter/anatomy-of-epic/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/anatomy-of-epic.webp", "has_image": false }
+        "image": { "url": "images/features/what-is-an-epic.webp", "has_image": true }
       },
       {
         "title": "The Ancients: Gilgamesh, Odysseus & The Mosaic Journey",
         "slug": "ancient-epics",
         "url": "features/why-myths-matter/ancient-epics/index.html",
+        "audio": "features/why-myths-matter/ancient-epics/audio.mp3",
+        "transcript": "features/why-myths-matter/ancient-epics/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/ancient-epics.webp", "has_image": false }
+        "image": { "url": "images/features/greeks.webp", "has_image": true }
       }
     ]
   },
 
-  "evolution-of-identity": {
+"evolution-of-identity": {
     "genre": "non fiction",
     "name": "The Evolution of Identity",
-    "highlighted": false,
+    "highlighted": true,
     "image": { "url": "images/features/the-evolution-of-identity.webp", "has_image": true },
     "stories": [
       {
         "title": "Ancient Cycles and Dualities",
         "slug": "ancient-cycles-dualities",
         "url": "features/evolution-of-identity/ancient-cycles-dualities/index.html",
+        "audio": "features/evolution-of-identity/ancient-cycles-dualities/audio.mp3",
+        "transcript": "features/evolution-of-identity/ancient-cycles-dualities/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/ancient-cycles-dualities.webp", "has_image": false }
+        "image": { "url": "images/features/ancient-dualities.webp", "has_image": true }
       },
       {
         "title": "The Birth of the Individual",
         "slug": "birth-of-the-individual",
         "url": "features/evolution-of-identity/birth-of-the-individual/index.html",
+        "audio": "features/evolution-of-identity/birth-of-the-individual/audio.mp3",
+        "transcript": "features/evolution-of-identity/birth-of-the-individual/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/birth-of-the-individual.webp", "has_image": false }
+        "image": { "url": "images/features/birth-of-the-individual.webp", "has_image": true }
       },
       {
         "title": "Breaking the Cycle",
         "slug": "breaking-the-cycle",
         "url": "features/evolution-of-identity/breaking-the-cycle/index.html",
+        "audio": "features/evolution-of-identity/breaking-the-cycle/audio.mp3",
+        "transcript": "features/evolution-of-identity/breaking-the-cycle/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/breaking-the-cycle.webp", "has_image": false }
+        "image": { "url": "images/features/", "has_image": false }
       },
       {
         "title": "The Age of Reason",
         "slug": "age-of-reason",
         "url": "features/evolution-of-identity/age-of-reason/index.html",
+        "audio": "features/evolution-of-identity/age-of-reason/audio.mp3",
+        "transcript": "features/evolution-of-identity/age-of-reason/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/age-of-reason.webp", "has_image": false }
+        "image": { "url": "images/features/new-age-of-reason.webp", "has_image": true }
       },
       {
         "title": "The Industrial and Darwinian Shift",
         "slug": "industrial-darwinian-shift",
         "url": "features/evolution-of-identity/industrial-darwinian-shift/index.html",
+        "audio": "features/evolution-of-identity/industrial-darwinian-shift/audio.mp3",
+        "transcript": "features/evolution-of-identity/industrial-darwinian-shift/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/industrial-darwinian-shift.webp", "has_image": false }
+        "image": { "url": "images/features/economic-revolution.webp", "has_image": true }
       },
       {
         "title": "The Architects of Control",
         "slug": "architects-of-control",
         "url": "features/evolution-of-identity/architects-of-control/index.html",
+        "audio": "features/evolution-of-identity/architects-of-control/audio.mp3",
+        "transcript": "features/evolution-of-identity/architects-of-control/transcript.html",
         "highlighted": false,
-        "image": { "url": "images/features/architects-of-control.webp", "has_image": false }
+        "image": { "url": "images/features/cylons.webp", "has_image": true }
       }
-    ]
+   ]
   },
 
   "popular-myths": {
-    "genre": "non fiction",
-    "name": "Popular Myths",
-    "highlighted": false,
-    "image": { "url": "images/features/popular-myths.webp", "has_image": true },
-    "stories": [
-      {
-        "title": "Mythmaking in Politics",
-        "slug": "mythmaking-politics",
-        "url": "features/popular-myths/mythmaking-politics/index.html",
-        "highlighted": true,
-        "image": { "url": "images/features/mythmaking-politics-ls.webp", "has_image": true }
-      },
-      {
-        "title": "Economics as New Theology",
-        "slug": "economics-as-theology",
-        "url": "features/popular-myths/economics-as-theology/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/economics-as-theology.webp", "has_image": false }
-      },
-      {
-        "title": "The Fate of the American Dream",
-        "slug": "fate-dream",
-        "url": "features/popular-myths/fate-dream/index.html",
-        "highlighted": true,
-        "image": { "url": "images/features/dream-ls.webp", "has_image": true }
-      },
-      {
-        "title": "Weaponized Identity",
-        "slug": "weaponized-identity",
-        "url": "features/popular-myths/weaponized-identity/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/weaponized-identity.webp", "has_image": false }
-      },
-      {
-        "title": "The Trajectory of Systemic Slavery",
-        "slug": "systemic-slavery",
-        "url": "features/popular-myths/systemic-slavery/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/systemic-slavery.webp", "has_image": false }
-      },
-      {
-        "title": "The Myth of Learning",
-        "slug": "myth-of-learning",
-        "url": "features/popular-myths/myth-of-learning/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/myth-of-learning.webp", "has_image": false }
-      },
-      {
-        "title": "American Exceptionalism",
-        "slug": "american-exceptionalism",
-        "url": "features/popular-myths/american-exceptionalism/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/american-exceptionalism.webp", "has_image": false }
-      },
-      {
-        "title": "The Freud-Goebbels Pipeline",
-        "slug": "propaganda-pipeline",
-        "url": "features/popular-myths/propaganda-pipeline/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/propaganda-pipeline.webp", "has_image": false }
-      },
-      {
-        "title": "The Consumerist Religion",
-        "slug": "consumerism-myth",
-        "url": "features/popular-myths/consumerism-myth/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/consumerism-myth.webp", "has_image": false }
-      },
-      {
-        "title": "The Washington Consensus",
-        "slug": "washington-consensus",
-        "url": "features/popular-myths/washington-consensus/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/washington-consensus.webp", "has_image": false }
-      },
-      {
-        "title": "MAGA & Accelerationism",
-        "slug": "maga-accelerationism",
-        "url": "features/popular-myths/maga-accelerationism/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/maga-accelerationism.webp", "has_image": false }
-      }
-    ]
-  },
+  "genre": "non fiction",
+  "name": "Popular Myths",
+  "highlighted": true,
+  "image": { "url": "images/features/popular-myths-p.webp", "has_image": true },
+  "stories": [
+    {
+      "title": "Mythmaking in Politics",
+      "slug": "mythmaking-politics",
+      "url": "features/popular-myths/mythmaking-politics/index.html",
+      "audio": "features/popular-myths/mythmaking-politics/audio.mp3",
+      "transcript": "features/popular-myths/mythmaking-politics/transcript.html",
+      "highlighted": true,
+      "image": { "url": "images/features/mythmaking-politics-ls.webp", "has_image": true }
+    },
+    {
+      "title": "Economics as New Theology",
+      "slug": "economics-as-theology",
+      "url": "features/popular-myths/economics-as-theology/index.html",
+      "audio": "features/popular-myths/economics-as-theology/audio.mp3",
+      "transcript": "features/popular-myths/economics-as-theology/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/popular-myths.webp", "has_image": true }
+    },
+    {
+      "title": "The Fate of the American Dream",
+      "slug": "fate-dream",
+      "url": "features/popular-myths/fate-dream/index.html",
+      "audio": "features/popular-myths/fate-dream/audio.mp3",
+      "transcript": "features/popular-myths/fate-dream/transcript.html",
+      "highlighted": true,
+      "image": { "url": "images/features/fate-dream.webp", "has_image": true }
+    },
+    {
+      "title": "Weaponized Identity",
+      "slug": "weaponized-identity",
+      "url": "features/popular-myths/weaponized-identity/index.html",
+      "audio": "features/popular-myths/weaponized-identity/audio.mp3",
+      "transcript": "features/popular-myths/weaponized-identity/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/weaponized-identity.webp", "has_image": false }
+    },
+    {
+      "title": "The Trajectory of Systemic Slavery",
+      "slug": "systemic-slavery",
+      "url": "features/popular-myths/systemic-slavery/index.html",
+      "audio": "features/popular-myths/systemic-slavery/audio.mp3",
+      "transcript": "features/popular-myths/systemic-slavery/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/slavery-v1.webp", "has_image": true }
+    },
+    {
+      "title": "The Myth of Learning",
+      "slug": "myth-of-learning",
+      "url": "features/popular-myths/myth-of-learning/index.html",
+      "audio": "features/popular-myths/myth-of-learning/audio.mp3",
+      "transcript": "features/popular-myths/myth-of-learning/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/learning.webp", "has_image": true }
+    },
+    {
+      "title": "American Exceptionalism",
+      "slug": "american-exceptionalism",
+      "url": "features/popular-myths/american-exceptionalism/index.html",
+      "audio": "features/popular-myths/american-exceptionalism/audio.mp3",
+      "transcript": "features/popular-myths/american-exceptionalism/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    },
+    {
+      "title": "The Freud-Goebbels Pipeline",
+      "slug": "propaganda-pipeline",
+      "url": "features/popular-myths/propaganda-pipeline/index.html",
+      "audio": "features/popular-myths/propaganda-pipeline/audio.mp3",
+      "transcript": "features/popular-myths/propaganda-pipeline/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/propaganda-v1.webp", "has_image": true }
+    },
+    {
+      "title": "The Consumerist Religion",
+      "slug": "consumerism-myth",
+      "url": "features/popular-myths/consumerism-myth/index.html",
+      "audio": "features/popular-myths/consumerism-myth/audio.mp3",
+      "transcript": "features/popular-myths/consumerism-myth/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    },
+    {
+      "title": "The Washington Consensus",
+      "slug": "washington-consensus",
+      "url": "features/popular-myths/washington-consensus/index.html",
+      "audio": "features/popular-myths/washington-consensus/audio.mp3",
+      "transcript": "features/popular-myths/washington-consensus/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    },
+    {
+      "title": "MAGA & Accelerationism",
+      "slug": "maga-accelerationism",
+      "url": "features/popular-myths/maga-accelerationism/index.html",
+      "audio": "features/popular-myths/maga-accelerationism/audio.mp3",
+      "transcript": "features/popular-myths/maga-accelerationism/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    }
+  ]
+},
 
-  "new-frontiers": {
-    "genre": "non fiction",
-    "name": "New Frontiers",
-    "highlighted": false,
-    "image": { "url": "images/features/new-frontiers.webp", "has_image": true },
-    "stories": [
-      {
-        "title": "The Background Stage",
-        "slug": "background-stage",
-        "url": "features/new-frontiers/background-stage/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/background-stage.webp", "has_image": false }
-      },
-      {
-        "title": "Spacetime & Relativity",
-        "slug": "spacetime-relativity",
-        "url": "features/new-frontiers/spacetime-relativity/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/spacetime-relativity.webp", "has_image": false }
-      },
-      {
-        "title": "Matter & Energy",
-        "slug": "matter-energy",
-        "url": "features/new-frontiers/matter-energy/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/matter-energy.webp", "has_image": false }
-      },
-      {
-        "title": "The Holographic Principle",
-        "slug": "holographic-principle",
-        "url": "features/new-frontiers/holographic-principle/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/holographic-principle.webp", "has_image": false }
-      },
-      {
-        "title": "Quantum: Local vs Global",
-        "slug": "quantum-local-global",
-        "url": "features/new-frontiers/quantum-local-global/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/quantum-local-global.webp", "has_image": false }
-      },
-      {
-        "title": "Darwinism & the Cell",
-        "slug": "darwinism-cell",
-        "url": "features/new-frontiers/darwinism-cell/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/darwinism-cell.webp", "has_image": false }
-      },
-      {
-        "title": "The Quest for AI",
-        "slug": "quest-for-ai",
-        "url": "features/new-frontiers/quest-for-ai/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/quest-for-ai.webp", "has_image": false }
-      },
-      {
-        "title": "GPT as Universal Knowledge",
-        "slug": "gpt-knowledge-system",
-        "url": "features/new-frontiers/gpt-knowledge-system/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/gpt-knowledge-system.webp", "has_image": false }
-      },
-      {
-        "title": "Democracy 2.0",
-        "slug": "democracy-2-0",
-        "url": "features/new-frontiers/democracy-2-0/index.html",
-        "highlighted": false,
-        "image": { "url": "images/features/democracy-2-0.webp", "has_image": false }
-      }
-    ]
-  }
+"new-frontiers": {
+  "genre": "non fiction",
+  "name": "New Frontiers",
+  "highlighted": true,
+  "image": { "url": "images/features/new-frontiers-p.webp", "has_image": true },
+  "stories": [
+    {
+      "title": "The Background Stage",
+      "slug": "background-stage",
+      "url": "features/new-frontiers/background-stage/index.html",
+      "audio": "features/new-frontiers/background-stage/audio.mp3",
+      "transcript": "features/new-frontiers/background-stage/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    },
+    {
+      "title": "Spacetime & Relativity",
+      "slug": "spacetime-relativity",
+      "url": "features/new-frontiers/spacetime-relativity/index.html",
+      "audio": "features/new-frontiers/spacetime-relativity/audio.mp3",
+      "transcript": "features/new-frontiers/spacetime-relativity/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/general-relativity.webp", "has_image": true }
+    },
+    {
+      "title": "Matter & Energy",
+      "slug": "matter-energy",
+      "url": "features/new-frontiers/matter-energy/index.html",
+      "audio": "features/new-frontiers/matter-energy/audio.mp3",
+      "transcript": "features/new-frontiers/matter-energy/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/wave.webp", "has_image": true }
+    },
+    {
+      "title": "The Holographic Principle",
+      "slug": "holographic-principle",
+      "url": "features/new-frontiers/holographic-principle/index.html",
+      "audio": "features/new-frontiers/holographic-principle/audio.mp3",
+      "transcript": "features/new-frontiers/holographic-principle/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/hologram.webp", "has_image": true }
+    },
+    {
+      "title": "Quantum: Local vs Global",
+      "slug": "quantum-local-global",
+      "url": "features/new-frontiers/quantum-local-global/index.html",
+      "audio": "features/new-frontiers/quantum-local-global/audio.mp3",
+      "transcript": "features/new-frontiers/quantum-local-global/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    },
+    {
+      "title": "Darwinism & the Cell",
+      "slug": "darwinism-cell",
+      "url": "features/new-frontiers/darwinism-cell/index.html",
+      "audio": "features/new-frontiers/darwinism-cell/audio.mp3",
+      "transcript": "features/new-frontiers/darwinism-cell/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/economic-revolution.webp", "has_image": true }
+    },
+    {
+      "title": "The Quest for AI",
+      "slug": "quest-for-ai",
+      "url": "features/new-frontiers/quest-for-ai/index.html",
+      "audio": "features/new-frontiers/quest-for-ai/audio.mp3",
+      "transcript": "features/new-frontiers/quest-for-ai/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/ai-machine.webp", "has_image": true }
+    },
+    {
+      "title": "GPT as Universal Knowledge",
+      "slug": "gpt-knowledge-system",
+      "url": "features/new-frontiers/gpt-knowledge-system/index.html",
+      "audio": "features/new-frontiers/gpt-knowledge-system/audio.mp3",
+      "transcript": "features/new-frontiers/gpt-knowledge-system/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    },
+    {
+      "title": "Democracy 2.0",
+      "slug": "democracy-2-0",
+      "url": "features/new-frontiers/democracy-2-0/index.html",
+      "audio": "features/new-frontiers/democracy-2-0/audio.mp3",
+      "transcript": "features/new-frontiers/democracy-2-0/transcript.html",
+      "highlighted": false,
+      "image": { "url": "images/features/", "has_image": false }
+    }
+  ]
+}
+
 }

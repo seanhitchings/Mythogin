@@ -2,7 +2,9 @@
   "philosophy": {
     "genre": "non fiction",
     "name": "Philosophy",
-    "stories": [
+     "intro": "The Significance of Stories to human happiness and prosperity.",
+    "pillars": 
+   [
       {
         "title": "What Stories Do",
         "slug": "meaning",
@@ -20,20 +22,40 @@
       }
     ]
   },
-  "industry": {
+  "Economics": {
     "genre": "non fiction",
-    "name": "Industry",
-    "stories": [
+    "name": "Economics",
+    "intro": "Economic imperatives shape how stories are financed, filtered, and distributed—driving creative risk, institutional behavior, and the kinds of myths that survive.",
+     "pillars": [
       {
-        "title": "Process",
-        "slug": "process",
-        "url": "perspective/industry/process/index.html"
+        "title": "Hollywood Culture",
+        "slug": "hollywood-culture",
+        "url": "perspective/economics/culture/index.html",
+        "kicker": "repeating history",
+        "desc": "The political-economy of an industry that has generated repeated cycles of boom and bust entertainment over the last century."
       },
       {
-        "title": "Output",
-        "slug": "output",
-        "url": "perspective/industry/output/index.html"
-      }
+        "title": "Storytelling Machine",
+        "slug": "storytelling-machine",
+        "url": "perspective/economics/storytelling-machine/index.html",
+        "kicker": "Political economy",
+        "desc": "Why executives can't escape their own ineffectual, transparent business formulas and tropes."
+      },
+
+            {
+        "title": "Industry Machine",
+        "slug": "industry-machine",
+        "url": "perspective/economics/industry-machine/index.html",
+        "kicker": "Platform economics",
+        "desc": "How platform economics select for different story-shapes—and why each “machine” behaves the way it does.",
+        "chapters": [
+          { "title": "Behind the Netflix Machine", "slug": "netflix", "url": "perspective/economics/industry-machine/index.html#netflix" },
+          { "title": "Behind the HBO Machine", "slug": "hbo", "url": "perspective/economics/industry-machine/index.html#hbo" },
+          { "title": "Behind the Amazon Machine", "slug": "amazon", "url": "perspective/economics/industry-machine/index.html#amazon" },
+          { "title": "Behind the Apple Machine", "slug": "apple", "url": "perspective/economics/industry-machine/index.html#apple" },
+          { "title": "Behind the Paramount Machine", "slug": "paramount", "url": "perspective/economics/industry-machine/index.html#paramount" }
+        ]
+        }
     ]
   }
 }
